@@ -66,6 +66,23 @@
   <script src="Handbook/js/three.min.js"></script>
   <script src="Handbook/js/flipbook.webgl.js"></script>
 
+  <!-- QUẬN TRANG -->
+  <script>
+    $(document).ready(function () {
+      var targetOffset = $("stop-District").offset().top;
+
+      $(window).scroll(function () {
+        var scrollPos = $(window).scrollTop();
+
+        if (scrollPos >= targetOffset) {
+          // Đã cuộn đến vị trí mục tiêu, có thể ngăn cuộn trang tiếp
+          $(window).off("stop-District");
+        }
+      });
+    });
+  </script>
+  <!-- QUẬN TRANG END -->
+
   <script type="text/javascript">
     $(document).ready(function () {
       $("#container").flipBook({
@@ -918,6 +935,7 @@
     }
   </style>
   <link rel="stylesheet" href="../dowloadPdf/css/main.85bb2934.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 
   <link rel="stylesheet" href="css/palette.a6bdf11c.min.css">
   <link rel='stylesheet' id='creativ_carousel_styles-css'
@@ -968,6 +986,29 @@
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
   <link rel="stylesheet" href="../dowloadPdf/css/extra.css">
+  <!-- link include -->
+  <script src="https://unpkg.com/htmlincludejs"></script>
+  <style>
+    /* css fixd */
+    .fixed-element {
+      position: fixed;
+      top: 10px;
+      transition: all 0.7s;
+      /* Thêm hiệu ứng chuyển đổi */
+      opacity: 1;
+    }
+
+    .threshold-element {
+      /* height: 200px; */
+    }
+
+    /* .relative {
+      position: relative;
+      opacity: 0;
+    } */
+  </style>
+
+
 </head>
 <!-- 8422 -->
 <style>
@@ -1084,8 +1125,8 @@
       <div class="uk-grid-large" data-uk-grid="">
 
         <div class="sidebar-fixed-width uk-visible@m">
-          <div class="sidebar-docs uk-position-fixed uk-margin-top">
-
+          <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 335px;">
+            <!-- uk-position-fixed -->
             <h5>Mở đầu </h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
               <li class=""><a class="sidebar-item" href="#" data-index="0">Lời nói đầu</a>
@@ -1121,7 +1162,8 @@
 
               <li class=""><a class="sidebar-item" data-index="7" href="#">Hình ảnh văn hóa số</a></li>
 
-              <li class=""><a class="sidebar-item" data-index="26" href="#">Tham gia tổ công nghệ số cộng đồng</a></li>
+              <li class=""><a class="sidebar-item" data-index="26" href="#text-26">Tham gia tổ công nghệ số cộng
+                  đồng</a></li>
 
             </ul>
 
@@ -1185,7 +1227,7 @@
               <li class=""><a class="sidebar-item" href="#" data-index="17">Chợ số</a></li>
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="25">Truyền thanh số</a></li>
+              <li class=""><a class="sidebar-item" href="#text-25" data-index="25">Truyền thanh số</a></li>
 
             </ul>
 
@@ -1233,13 +1275,13 @@
 
         <div class="uk-width-1-1 uk-width-expand@m content">
           <!-- Lời mời cộng tác -->
-          <div id="text-0">
+          <div id="text-0" class="section">
 
             <h1 class="uk-article-title">Lời nói đầu</h1>
 
 
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -1256,9 +1298,9 @@
                 </time>
               </div>
 
-            </div>
+            </div> -->
+            <div class="article-content link-primary ">
 
-            <div class="article-content link-primary">
               <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4>
 
               <p>Cẩm nang là cuốn sách ghi tóm lược những điều quan trọng và thiết yếu về một vấn đề nào đó. Mỗi khi gặp
@@ -1343,11 +1385,11 @@
                 rộng, tạo sự cộng
                 hưởng bao trùm, rộng khắp, từng bước hình thành nên các Làng số kiểu mẫu trên khắp đất nước.
               </p>
-              <p>
+              <p id="stop-District">
                 Những thay đổi, bổ sung sẽ được cập nhật ngay lập tức trong phiên bản điện tử tại địa chỉ:
                 https://langso.dx.gov.vn
               </p>
-              <div class="share uk-text-center uk-margin-medium-top">
+              <div id="stop-District" class=" share uk-text-center uk-margin-medium-top">
 
                 <a class="uk-link-muted"
                   href="https://twitter.com/intent/tweet?text=Lời mời cộng tác&amp;url=http://localhost:4000/docs/loi-moi-cong-tac/&amp;via=&amp;related="
@@ -1417,14 +1459,14 @@
 
           </div>
           <!-- Mở rộng hạ tầng số -->
-          <div id="text-1" class="">
+          <div id="text-1" class="section">
 
             <h1 class="uk-article-title">Mở rộng hạ tầng số trong làng</h1>
 
             <!-- <p class="uk-text-lead uk-text-muted">Chuyển đổi số là quá trình thay đổi tổng thể và toàn diện của cá nhân,
               tổ chức về cách sống, cách làm việc và phương thức sản xuất dựa trên các công nghệ số.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -1440,7 +1482,7 @@
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -1717,13 +1759,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- Được phổ cập kỹ năng số -->
-          <div id="text-2" class="">
+          <div id="text-2" class="section">
 
             <h1 class="uk-article-title">Được phổ cập kỹ năng số</h1>
 
             <!-- <p class="uk-text-lead uk-text-muted">Chuyển đổi số không chỉ giúp tăng năng suất, giảm chi phí mà còn mở ra
               không gian phát triển mới, tạo ra các giá trị mới ngoài các giá trị truyền thống vốn có.</p> -->
-
+            <!-- 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
@@ -1741,7 +1783,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -1822,7 +1864,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Ai cũng có danh tính số -->
-          <div id="text-3" class="">
+          <div id="text-3" class="section">
 
             <h1 class="uk-article-title">Chuyển đổi số là việc của ai?</h1>
 
@@ -1831,7 +1873,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               là sự thay đổi, nên trước tiên đó là việc của lãnh đạo, của người đứng đầu, vì nếu không thì không ai dám
               làm và có
               thể làm. Vì là tổng thể và toàn diện nên đó là việc của tất cả mọi thành viên trong tổ chức.</p> -->
-
+            <!-- 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
@@ -1849,7 +1891,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -1910,7 +1952,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Được trang bị chữ ký số   -->
-          <div id="text-4" class="">
+          <div id="text-4" class="section">
 
             <h1 class="uk-article-title">Được trang bị chữ ký số</h1>
 
@@ -1921,7 +1963,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               cách lớn giữa các tổ chức, doanh nghiệp, lĩnh vực đã thực hiện và chưa thực hiện chuyển đổi số và khoảng
               cách đó sẽ
               dần được nới rộng theo cấp số nhân.</p> -->
-
+            <!-- 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
@@ -1939,7 +1981,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -1996,7 +2038,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- Biết sử dụng nền tảng số -->
-          <div id="text-5" class="">
+          <div id="text-5" class="section">
 
             <h1 class="uk-article-title">Biết sử dụng nền tảng số</h1>
 
@@ -2005,7 +2047,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               thành công khi trở thành chiến lược cốt lõi, thay vì là nỗ lực riêng biệt, chuyển đổi số phải bao trùm lên
               mọi hoạt
               động, mọi bước đi của tổ chức.</p> -->
-
+            <!-- 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
@@ -2023,7 +2065,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2088,7 +2130,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Xây dựng gia đình số -->
-          <div id="text-6">
+          <div id="text-6" class="section">
 
             <h1 class="uk-article-title">Xây dựng gia đình số</h1>
 
@@ -2096,7 +2138,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               chung cho
               tất cả, và do vậy, từng tổ chức, từng cá nhân cần xác định lộ trình riêng, thích hợp với mình.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2113,7 +2155,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2192,7 +2234,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Hình thành văn hóa số -->
-          <div id="text-7">
+          <div id="text-7" class="section">
 
             <h1 class="uk-article-title">Hình thành văn hóa số</h1>
 
@@ -2202,7 +2244,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               hiện đại
               nhất.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2219,7 +2261,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2289,24 +2331,9 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
           </div>
 
           <!-- tham gia tổ công nghệ số cộng đồng -->
-          <!-- chưa có-->
-          <!-- end tham gia tổ công nghệ -->
-          <!-- Dân làng sử dụng dịch vụ tiện ích số -->
+          <div id="text-26" class="section">
 
-          <!-- Dịch vụ công trực tuyền -->
-          <div id="text-8">
-
-            <h1 class="uk-article-title">Dịch vụ công trực tuyến</h1>
-
-            <!-- <p class="uk-text-lead uk-text-muted">Chuyển đổi số trong xã hội nhằm hình thành xã hội số. Xã hội số, xét
-              theo nghĩa
-              rộng, là bao trùm lên mọi hoạt động của con người. Động lực chính của xã hội số là công nghệ số, dựa trên
-              sự tăng
-              trưởng thông tin, dữ liệu một cách nhanh chóng, làm thay đổi mọi khía cạnh của tổ chức xã hội, từ chính
-              phủ, kinh tế
-              cho tới người dân. Xã hội số, xét theo nghĩa hẹp, gồm công dân số và văn hóa số. Theo nghĩa này, xã hội
-              số, cùng với
-              chính phủ số và kinh tế số tạo thành ba trụ cột của một quốc gia số.</p> -->
+            <h1 class="uk-article-title">Tham gia tổ công nghệ số cộng đồng</h1>
 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
@@ -2326,6 +2353,100 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               </div>
 
             </div>
+
+            <div class="article-content link-primary">
+              <p>Một người biết công nghệ có thể hỗ trợ 10 người am hiểu, 10 người am hiểu sẽ hỗ trợ được 100 người, cứ
+                thế người biết hỗ
+                trợ người không biết, vậy thì không mấy chốc mà mọi người đều biết. Sứ mệnh “cầm tay chỉ việc” hướng dẫn
+                từng người đang
+                được thực hiện bởi những thành viên của Tổ công nghệ số cộng đồng, lực lượng này được sinh ra từ làng,
+                và là lực lượng
+                mang tính huy động sức mạnh toàn dân, toàn diện, hiểu được nhu cầu hàng ngày của dân làng nên sẽ đẩy
+                nhanh quá trình phổ
+                cập kiến thức, kỹ năng số đến dân làng. Tổ công nghệ số cộng đồng tại các bản làng, thôn xóm càng đông,
+                càng mạnh, càng
+                tinh nhuệ, càng hăng hái, nhiệt huyết hướng dẫn, hỗ trợ thì người lớn tuổi trong làng cũng có thể chuyển
+                đổi số, người
+                không biết chữ cũng có thể biết cách sử dụng các dịch vụ, tiện ích số.</p>
+              <p>Là một người con của dân tộc Cơ Tu – dân tộc thiểu số chiếm khoảng 0,08% dân số cả nước. Anh Đinh Văn
+                Hin là trưởng ban
+                Nhân dân kiêm tổ trưởng tổ hỗ trợ điểm dịch vụ công trực tuyến của thôn Tà Lang, xã Hòa Bắc, huyện Hòa
+                Vang, TP. Đà
+                Nẵng, đang duy trì thường xuyên sứ mệnh “đi từng ngõ, gõ từng nhà, hướng dẫn từng người” trong thôn
+                chuyển đổi số, công
+                việc gặp không ít khó khăn, thách thức đặt ra, như người dân không có thời gian do công việc cá nhân bận
+                rộn, nhiều bà
+                con chưa hiểu biết về công nghệ, nhiều lần đến nhà nhưng không gặp ai,… Trước những vấn đề đặt ra như
+                vậy, anh Hin và
+                các thành viên trong Tổ công nghệ số cộng đồng đã kiên trì, vận động bà con đến nhà văn hóa thôn để tập
+                trung hướng dẫn.
+                Xây dựng nhóm trên mạng xã hội, thường xuyên đăng tải các thông báo, thông tin để bà con nắm bắt được.
+                Với những hộ gia
+                đình
+                đến hỗ trợ nhưng họ không có nhà thì Tổ sẽ tiếp tục đến lần tiếp theo, phân
+                công thành viên ở gần gia đình họ để hỗ trợ, hướng dẫn. Thực hiện công việc với tất cả nhiệt huyết anh
+                Hin thấy được
+                nghĩa đồng bào rất lớn lao khi được hỗ trợ bà con. Những người cùng dân tộc, là đồng bào của nhau, có
+                cùng ngôn ngữ giúp
+                đỡ nhau cùng tiến bộ, văn minh hơn mỗi ngày, điều đó thật sự rất trân quý.
+              </p>
+
+
+
+              <p>Mỗi một người dân trong làng khi đã có kỹ năng số, có thể hướng dẫn người khác thì hãy tham gia Tổ công
+                nghệ số cộng
+                đồng, nhiều người tham gia thì nhiều gia đình được hưởng lợi, cả làng được hưởng lợi, chỉ cần kiên trì
+                một năm “đi từng
+                ngõ, gõ từng nhà, hướng dẫn từng người”, hướng dẫn dân làng sử dụng dịch vụ công trực tuyến, học tập
+                trực tuyến, mua sắm
+                trực tuyến, bán hàng trực tuyến, khám chữa bệnh từ xa thì kỹ năng số của người dân sẽ nâng cao, nhận
+                thức số nâng cao,
+                cộng đồng số sẽ được mở rộng, cuộc sống dân làng sẽ cải thiện.</p>
+
+
+
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <!-- end tham gia tổ công nghệ -->
+          <!-- Dân làng sử dụng dịch vụ tiện ích số -->
+
+          <!-- Dịch vụ công trực tuyền -->
+          <div id="text-8" class="section">
+
+            <h1 class="uk-article-title">Dịch vụ công trực tuyến</h1>
+
+            <!-- <p class="uk-text-lead uk-text-muted">Chuyển đổi số trong xã hội nhằm hình thành xã hội số. Xã hội số, xét
+              theo nghĩa
+              rộng, là bao trùm lên mọi hoạt động của con người. Động lực chính của xã hội số là công nghệ số, dựa trên
+              sự tăng
+              trưởng thông tin, dữ liệu một cách nhanh chóng, làm thay đổi mọi khía cạnh của tổ chức xã hội, từ chính
+              phủ, kinh tế
+              cho tới người dân. Xã hội số, xét theo nghĩa hẹp, gồm công dân số và văn hóa số. Theo nghĩa này, xã hội
+              số, cùng với
+              chính phủ số và kinh tế số tạo thành ba trụ cột của một quốc gia số.</p> -->
+
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2404,7 +2525,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Khám chữa bệnh từ xa -->
-          <div id="text-9">
+          <div id="text-9" class="section">
 
             <h1 class="uk-article-title">Khám chữa bệnh từ xa</h1>
 
@@ -2413,7 +2534,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               thức, qua đó giúp thu hẹp khoảng cách số thông qua việc phát triển chính phủ số, kinh tế số và xã hội số.
             </p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2430,7 +2551,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2470,7 +2591,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Học tập trực tuyến -->
-          <div id="text-10">
+          <div id="text-10" class="section">
 
             <h1 class="uk-article-title">Học tập trực tuyến</h1>
 
@@ -2480,7 +2601,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               giới số,
               cùng hiện diện và có ảnh hưởng qua lại lẫn nhau, từ đó thay đổi cách thức sống, giao tiếp và làm việc.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2497,7 +2618,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2596,7 +2717,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- Tiếp cận việc làm qua mạng-->
-          <div id="text-11">
+          <div id="text-11" class="section">
 
             <h1 class="uk-article-title">Tiếp cận việc làm qua mạng</h1>
 
@@ -2607,7 +2728,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               Chiếc điện thoại thông minh giờ đây trở thành vật bất ly thân với nhiều người, và vì thế, là điểm yếu
               nhất.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2624,7 +2745,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <!-- <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4> -->
@@ -2701,13 +2822,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Mua sắm trực tuyến -->
-          <div id="text-12">
+          <div id="text-12" class="section">
 
             <h1 class="uk-article-title">Mua sắm trực tuyến</h1>
 
 
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2724,7 +2845,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Bây giờ ra ngoài đường, đâu đâu chúng ta cũng gặp cánh tài xế công nghệ. Từ mọi ngõ ngách, những chiếc
@@ -2790,15 +2911,9 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             </div>
             <hr class="uk-margin-medium">
           </div>
+          <div id="text-27" class="section">
 
-          <!-- DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ -->
-
-          <!-- Nhà văn hóa số -->
-
-          <div id="text-13">
-
-            <h1 class="uk-article-title">Nhà văn hóa số</h1>
-
+            <h1 class="uk-article-title">Thanh toán di động</h1>
 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
@@ -2818,6 +2933,595 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               </div>
 
             </div>
+
+            <div class="article-content link-primary">
+              <p>Thanh toán là công đoạn cuối cùng trong mỗi hoạt động mua bán thường ngày của người dân. Trong đó, tiền
+                mặt hiện nay vẫn
+                là công cụ thanh toán phổ biến. Đại bộ phận người dân trong làng đã quen với việc sử dụng tiền mặt trong
+                các giao dịch.</p>
+              <p>Trước đây, để thanh toán không dùng tiền mặt, người thanh toán cần có tài khoản ngân hàng hoặc một ví
+                điện tử gắn với
+                tài khoản ngân hàng. Nhưng thực tế là không phải người dân nào, đặc biệt là người dân ở những khu vực
+                khó khăn cũng được
+                tiếp cận với dịch vụ tài chính ngân hàng. Vì vậy, các đối tượng này gặp khó khăn trong tiếp cận, sử dụng
+                công cụ thanh
+                toán không dùng tiền mặt.
+              </p>
+
+
+
+              <p>Từ năm 2021, ba doanh nghiệp viễn thông là Viettel, VNPT và MobiFone đã được cấp phép triển khai thí
+                điểm cung cấp dịch
+                vụ thanh toán di động. Trong đó, người dùng có thể sử dụng tài khoản viễn thông là tài khoản gắn với SIM
+                điện thoại để
+                thực hiện thanh toán số như một tài khoản thanh toán mà không cần tài khoản ngân hàng. Điều này tạo ra
+                sự thuận tiện
+                trong giao dịch, giúp hình thành nên thói quen thanh toán số ở mỗi người dân trong làng mà không phụ
+                thuộc vào ngân
+                hàng.</p>
+              <h3>Viettel money: Câu chuyện thanh toán không tiền mặt qua điện thoại di động</h3>
+
+
+              <p>Viettel Money được phát triển bởi tổng công ty dịch vụ số Viettel, có địa chỉ truy cập để cài đặt và sử
+                dụng tại địa chỉ
+                https://viettelmoney.vn, hoặc trên kho ứng dụng với tên gọi “Viettel Money”. Nền tảng này được tích hợp
+                các tính năng
+                phục vụ cho mọi tiện ích, dịch vụ trong cuộc sống như thanh toán học phí, mua vé tàu, xe, chuyển tiền
+                đến số điện thoại
+                khác, trả tiền điện nước,...</p>
+
+              <p>Là hộ nông dân nuôi gà ở huyện Ninh Hải, tỉnh Ninh Thuận, chị Giang cho biết mình chưa có bất cứ tài
+                khoản ngân hàng
+                nào, việc nhận tiền khu mua bán gà thường qua nhiều lớp trung gian nhận tiền mặt và đem về, nên nhiều
+                lúc cũng bất tiện.
+                Với một chiếc điện thoại chỉ dùng để nghe gọi, chị bắt đầu chú ý đến Viettel Money khi được giới thiệu,
+                nhờ có ứng dụng
+                này, việc nhận tiền bán gà của chị dễ dàng hơn trước. Sử dụng Viettel Money, chị dễ dàng nhận tiền trực
+                tiếp khi bán gà
+                cho những khách ở xa qua số điện thoại di động, khi cần, chị rút tiền ở đại lý ngay gần nhà, rất tiện
+                lợi và dễ quản lý
+                tiền nong.</p>
+              <p>Với Viettel Money, người dân trong làng dễ dàng thực hiện việc thanh toán các hóa đơn điện, nước,
+                Internet, mua vé tàu,
+                xe và nhiều tiện ích khác nữa. Việc chuyển, nhận tiền được thực hiện miễn phí giữa các tài khoản và
+                không lo tới phí duy
+                trì, đồng thời thỏa sức thanh toán trên mọi nền tảng bằng ứng dụng trên điện thoại, hoặc qua trình duyệt
+                web, thậm chí
+                chỉ với một chiếc điện thoại “đen trắng” có sóng viễn thông, người dân đã có thể sử dụng tài khoản tiền
+                di động thông
+                qua các thao tác trên bàn phím (*998#). Với ưu điểm nổi bật trên, Tiền di động của Viettel Money đang
+                được triển khai và
+                phủ sóng trên toàn quốc, được sử dụng bởi người dân từ nông thôn, vùng sâu, vùng xa, những nơi đang hạn
+                chế về chi nhánh
+                ngân hàng hay mạng Internet. Dịch vụ cung cấp hơn 300 tiện ích được cá nhân hóa, đáp ứng đầy đủ mọi nhu
+                cầu của người
+                dùng từ nạp, rút, chuyển tiền, thanh toán các hóa đơn cho đến đầu tư, bảo hiểm, giải trí, chăm sóc sức
+                khỏe,…</p>
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-28" class="section">
+
+            <h1 class="uk-article-title">Đặt vé trực tuyến</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Sinh ra từ làng, rồi ra thành phố học tập, làm việc, những đứa con xa quê chỉ mong đến những dịp lễ tết
+                để được trở về
+                đoàn tụ với gia đình, được gặp gỡ người thân, họ hàng, làng xóm. Họ thường đặt vé trước cả một tháng
+                không chỉ vì háo
+                hức bồn chồn, mà còn cả nỗi lo hết vé.</p>
+              <p>Có nhiều người tự hỏi tại sao phải lo lắng như thế, có đủ xe đáp ứng nhu cầu di chuyển của tất cả mọi
+                người. Thế nhưng,
+                những ngày lễ, tết, muốn mua được một chiếc vé theo ý muốn không phải là chuyện dễ dàng, nhiều khi phải
+                xếp hàng chen
+                lấn xô đẩy, vừa mất thời gian, mất công sức nhưng chưa chắc hành khách đã có một chỗ ngồi ưng ý, cũng có
+                khi không thể
+                mua được vé, hay có rất nhiều trường hợp gọi điện đặt chỗ nhưng khi lên xe thì lại bị nhồi nhét, chất
+                lượng thái độ phục
+                vụ thì vô cùng tệ.
+              </p>
+
+
+
+              <p>Mua vé trực tuyến, khách hàng không cần mất thời gian và công sức tới các đại lý, bến xe, hay gọi điện
+                đặt chỗ mà mình
+                không chắc chắn trước, thay vào đó chỉ cần một chiếc máy tính, hay điện thoại thông minh có kết nối mạng
+                Internet là có
+                thể truy cập, tìm kiếm thông tin các chuyến xe, lịch trình, giá vé... tùy vào nhu cầu để chọn được
+                chuyến đi phù hợp
+                nhất.</p>
+              <h3>Vexere: Nền tảng kết nối giữa hành khách và nhà xe, vì hàng chục triệu người Việt Nam không phải xếp
+                hàng mua vé.</h3>
+              <p>Trong một lần đọc báo về tình hình khan vé xe mùa tết, ý tưởng khởi nghiệp trong anh Trần Nguyễn Lê Văn
+                trỗi dậy, anh
+                quyết định bỏ ngang chương trình học quản trị kinh doanh ở Mỹ và về nước tập hợp bạn bè, cùng sáng lập
+                ra Vexere. Nền
+                tảng này đã tạo ra một cuộc cách mạng trong vận tải hành khách, giúp kết nối hành khách với nhà xe, vì
+                hàng chục triệu
+                người Việt Nam không phải xếp hàng mua vé.</p>
+              <p>Gia đình anh Trung là công nhân từ Hà Giang xuống thành phố Hà Nội lập nghiệp. Nếu có ý định về quê, vợ
+                chồng anh đều
+                lên kế hoạch từ sớm, hai vợ chồng còn có con nhỏ nên nhu cầu tìm được chỗ ngồi hợp lý sẽ giúp các con có
+                chuyến đi vui
+                khỏe. Anh chia sẻ, lần đầu đặt trên Vexere, anh choáng ngợp trước hệ thống hãng xe rộng lớn với nhiều
+                mức giá khác nhau.
+                Nỗi lo của vợ chồng anh về việc hết vé, giá vé không phù hợp với năng lực tài chính và nhất là tìm một
+                hãng xe phù hợp
+                khi có em nhỏ đi cùng đã được được giải quyết, giúp yên tâm trên những chuyến đi dài.</p>
+              <p>Hiện tại, Vexere là nền tảng vé xe lớn nhất Việt Nam, với hơn 700 hãng xe hợp tác bán vé với Vexere,
+                phủ rộng hơn 2600
+                tuyến đường trong và ngoài nước giúp người dùng có thể tìm thông tin chuyến xe, hãng xe, và mua vé trực
+                tuyến dễ dàng.
+                Mọi người dân có nhu cầu đi lại, có thể truy cập và đặt vé dễ dàng trên trang web https://vexere.com/
+                hoặc ứng dụng
+                “Vexere” trên điện thoại.</p>
+              <p>Với kho vé xe khách chất lượng, đa dạng dòng xe và giờ xuất bến linh hoạt, người dùng có thể lựa chọn
+                hãng xe, dòng xe
+                phù hợp nhất với nhu cầu di chuyển. Chỉ với một vài giây thao tác, có thể đặt được ngay vé xe khách chất
+                lượng mọi lúc
+                mọi nơi, thanh toán online nhanh chóng, tiện lợi ngay trên điện thoại mà không cần phải ra bến chờ đợi
+                xếp hàng. Khi đến
+                bến xe người dân chỉ cần đưa vé điện tử tích hợp mã QR. Nhà xe thực hiện quét để xác minh là đã có thể
+                lên xe, không còn
+                xảy ra tình trạng hết vé, đi ra bến xe mà không mua được vé.</p>
+              <p>Đi lại là một trong những nhu cầu thiết yếu của con người. Trong thời đại chuyển đổi số, luôn có những
+                giải pháp tối ưu
+                cho cuộc sống của mọi người. Nhờ có giải pháp Vexere, chúng ta tiết kiệm thời gian cho công việc cần
+                thiết hơn, không
+                ngại về quê vì nghĩ đến cảnh bắt xe cực nhọc nữa.</p>
+
+
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-29" class="section">
+
+            <h1 class="uk-article-title">Giao tiếp số trong làng</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Điện thoại từ lâu đã trở thành công cụ hữu hiệu kết nối người dân trong làng với nhau. Trước đây, khi
+                Internet, mạng 3G,
+                4G chưa phổ biến, người dân thực hiện các cuộc gọi qua mạng viễn thông với chi phí tính theo thời gian
+                cuộc gọi. Cuộc
+                gọi càng dài, người gọi sẽ mất càng nhiều phí, nhất là những gia đình có người thân đi làm việc ở nước
+                ngoài, chồng đi
+                mấy năm là bao nhiêu năm vợ không thấy mặt, con lớn chừng nào cũng không hay biết. Vì vậy, phương thức
+                liên hệ qua mạng
+                viễn thông nghe gọi vẫn chưa thực sự thúc đẩy mọi người kết nối, giao tiếp với nhau.</p>
+              <p>Trong những năm gần đây, với sự phát triển của các mạng xã hội, các ứng dụng nhắn tin, nghe gọi bằng
+                hình ảnh qua mạng
+                Internet, việc liên lạc của người dân đã trở nên dễ dàng, tiết kiệm chi phí hơn bao giờ hết.
+              </p>
+
+
+
+              <p>Thay vì chỉ giao tiếp nghe nói, dân làng có thể giao tiếp, bày tỏ tình cảm với những người thân thông
+                qua những tin nhắn
+                chat, những biểu tượng cảm xúc, hay những cuộc gọi video theo thời gian thực để thấy đối phương đang vui
+                hay buồn. Con
+                cái đi học đại học xa nhà có thể hỏi thăm, quan tâm bố mẹ mỗi tối. Người bố đi xuất khẩu lao động tại
+                một quốc gia cách
+                nhà hơn nửa vòng trái đất có thể nhìn thấy đứa con thơ của mình hàng ngày.</p>
+              <h3>Nền tảng Zalo: Thay đổi cách giao tiếp xã hội, đưa mọi người xích lại gần nhau hơn</h3>
+              <p>Zalo là một ứng dụng nhắn tin nhanh đa nền tảng được phát triển bởi công ty cổ phần VNG, một công ty
+                công nghệ hàng đầu
+                Việt Nam, với hệ sinh thái kỹ thuật số phong phú do chính kỹ sư người Việt phát triển. Với lợi thế là
+                nền tảng công nghệ
+                do người Việt sáng tạo dựa trên thói quen sinh hoạt của người Việt. Zalo đã làm thay đổi cuộc sống của
+                con người với
+                cách thức tiếp cận, giao tiếp và xử lý thông tin hoàn toàn mới, con người cảm thấy không còn khoảng cách
+                về địa lý và
+                ngày càng đến gần nhau hơn.</p>
+              <p>Nền tảng Zalo cho phép người dân nhắn tin miễn phí, có thể đính kèm biểu tượng cảm xúc, hình ảnh và
+                video. Ghi âm và gửi
+                tin nhắn thoại, thực hiện các cuộc gọi thoại và gọi video miễn phí giúp tiết kiệm chi phí liên lạc cho
+                người dân. Nền
+                tảng Zalo cho phép người dùng cài đặt, sử dụng ở bất cứ hệ điều hành nào trên chiếc điện thoại thông
+                minh thông qua app
+                CH Play dành cho hệ điều hành Android và Appstore dành cho hệ điều hành IOS.</p>
+              <p>Một cái “chạm” miễn phí qua màn hình, khoảng cách địa lý cũng như được thu hẹp lại. Sợi dây gắn kết và
+                tương tác giữa
+                mọi người cũng không bị mất đi. Nền tảng Zalo hay bất kỳ ứng dụng nghe gọi trực tuyến nào khác đang thay
+                đổi cách thức
+                giao tiếp và kết nối của con người theo hướng tích cực, thuận tiện hơn.</p>
+
+
+
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-30" class="section">
+
+            <h1 class="uk-article-title">Truyền hình số di động</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Ở làng truyền thống, phát thanh - truyền hình đã đi vào vào nhịp sống của người dân như một phần không
+                thể thiếu. Từ
+                sáng sớm đến chiều tà, đều đặn mỗi ngày, loa phát thanh phường xã được bật lên để truyền tin thông báo,
+                tối đến, cả xóm
+                làng rôm rả âm thanh phát ra từ chương trình truyền hình, thời sự từ chiếc tivi đặt ngay ngắn giữa phòng
+                khách mỗi ngôi
+                nhà.</p>
+              <p>Dần dần, cùng sự phát triển của Internet, nếp sống này cũng thay đổi theo thời gian như một quy luật
+                tất yếu. Đài Truyền
+                hình Việt Nam - người bạn thân thiết của mọi nhà vẫn luôn gắn bó với đời sống gia đình Việt Nam qua màn
+                hình tivi nay đã
+                phát triển qua một giai đoạn mới để đồng hành cùng người xem, thay vì chỉ ngồi một chỗ như trước, nay
+                người dân có thể
+                theo dõi chương trình linh hoạt, bất cứ lúc nào và bất cứ nơi đâu.
+              </p>
+
+              <h3>Nền tảng VTVGo: Tăng cường nhu cầu trải nghiệm trực tuyến của người dân</h3>
+
+              <p>Nền tảng truyền hình số quốc gia VTVGo là giải pháp giải quyết nhu cầu giải trí, tiếp cận thông tin
+                chính thống một cách
+                nhanh chóng, thuận lợi và cải thiện đời sống văn hóa của người dân. Với điện thoại thông minh có kết nối
+                Internet, người
+                dân có thể tìm kiếm người bạn này thông qua app CH Play (đối với hệ điều hành Android) hoặc Appstore
+                (đối với hệ điều
+                hành IOS).</p>
+              <p>Ngay từ khi mở ứng dụng, người dùng sẽ được lựa chọn nội dung thuộc các lĩnh vực mình quan tâm, từ đó,
+                VTVGo sẽ đề xuất
+                chương trình phù hợp với sở thích của mỗi người. Không chỉ xem các nội dung của VTV, người dùng VTVGo có
+                thể xem các nội
+                dung của 7 kênh truyền hình thiết yếu quốc gia, các kênh của đài phát thanh - truyền hình địa phương.
+                Nền tảng truyền
+                hình số quốc gia sẽ thiết lập một hệ thống cho phép chia sẻ, lưu trữ nội dung, từ đó phân phối nội dung
+                đến khán giả
+                trong và ngoài nước, phục vụ bà con kiều bào ở nước ngoài.</p>
+              <img src="../image/img-so/09_VTVGo_color.jpg" alt="">
+              <p>Được tận hưởng nhu cầu giải trí ở bất cứ đâu, được đón xem các nội dung đã được kiểm duyệt, thẩm định
+                kỹ càng, đảm bảo
+                sự phù hợp với lứa tuổi…đó là quyền lợi được phát triển con người về mặt tâm hồn mà chuyển đổi số mang
+                lại. Giữa bộn bề
+                những lo toan, phiền muộn, một chút thời gian nghỉ ngơi ít ỏi giờ có thể được tận dụng tối đa nhờ phương
+                tiện giải trí
+                sẵn có luôn ở cạnh mỗi người.</p>
+
+
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-31" class="section">
+
+            <h1 class="uk-article-title">Tiếp cận tín dụng số</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Tiếp cận tín dụng là nhu cầu để người dân trong làng có nguồn lực sản xuất, kinh doanh. Tuy nhiên, việc
+                tiếp cận tín
+                dụng hiện nay vẫn còn gặp nhiều khó khăn với người dân ở vùng nông thôn. Tiếp cận vốn qua các ngân hàng
+                yêu cầu nhiều
+                thủ tục giấy tờ, tài sản thế chấp, việc thiếu thông tin về lịch sử tín dụng dẫn tới việc đánh giá hồ sơ
+                vay mất nhiều
+                thời gian. Ngoài ra, nhiều khu vực ở vùng sâu vùng xa còn chưa có hiện diện, cung cấp dịch vụ của ngân
+                hàng. Hầu hết
+                người nghèo đều tiếp cận dịch vụ phi chính thức như vay từ người thân, bạn bè, cầm đồ, hay vay nặng lãi
+                với chi phí cao,
+                tiềm ẩn nhiều rủi ro.</p>
+              <h3>Câu chuyện về tiếp cận vay vốn cho chị em phụ nữ thông qua ứng dụng của Tổ chức Tài chính Vi mô Trách
+                nhiệm hữu hạn Một
+                thành viên Tình thương (TYM).</h3>
+              <p>TYM (https://tymfund.org.vn/) là đơn vị trực thuộc Hội Liên hiệp Phụ nữ Việt Nam. TYM bắt đầu triển
+                khai hoạt động từ
+                năm 1992 với tên gọi là Quỹ Tình thương, nhằm hỗ trợ phụ nữ phát triển kinh tế, góp phần thực hiện
+                chương trình xóa đói
+                giảm nghèo của Chính phủ. Vốn vay không cần tài sản thế chấp lên đến 100 triệu đồng. Thời gian chờ vốn
+                hiện tại của
+                khách hàng vay vốn tại TYM khoảng 7 ngày.
+              </p>
+
+
+
+              <p>Năm 2022, TYM phát triển và ra mắt ứng dụng TYM Mobile trên thiết bị di động cho khách hàng và cán bộ.
+                Ứng dụng giúp
+                người dùng có thể quản lý các thông tin tài chính như vốn vay, tiết kiệm, thực hiện gửi và xử lý các các
+                đề nghị vay
+                vốn, trả vốn, mở sổ tiết kiệm một cách dễ dàng, thuận tiện. Tính đến thời điểm hiện tại, đã có hơn
+                32.000 khách hàng
+                tương đương 16% số khách hàng toàn TYM cài đặt, sử dụng ứng dụng này.</p>
+
+
+              <p>Chị Phan Thị Hoài Mai quê ở Nam Định, bị liệt ở chân nên đi lại khó khăn, chị cần phải sử dụng nạng
+                hoặc xe 3 bánh để hỗ
+                trợ bản thân trong việc di chuyển. Là một phụ nữ khuyết tật, cơ hội tìm kiếm công việc với chị Mai cũng
+                khó khăn hơn gấp
+                bội so với những người bình thường. Thế nhưng không đầu hàng hoàn cảnh, chị Mai luôn nỗ lực, cố gắng tìm
+                kiếm một công
+                việc phù hợp với nghề làm móng, đây là công việc ít phải di chuyển, đảm bảo sức khỏe của mình và chị có
+                thể làm tại nhà,
+                chị cũng thích những công việc làm đẹp cho đời, cho người. Cũng như nhiều hộ kinh doanh khác, chị Mai
+                nhiều lúc gặp khó
+                khăn trong vấn đề tài chính để duy trì và mở rộng hoạt động kinh doanh.</p>
+              <p>Năm 2018, nhờ giới thiệu của Hội phụ nữ địa phương, chị Mai biết đến TYM khi đang cần vốn bổ sung thêm
+                vào cửa hàng của
+                mình. Ban đầu chị cũng phân vân vì ngại đi lại, chị sợ mình vay ít tiền thôi nhưng thủ tục lằng nhằng,
+                phức tạp. Thế
+                nhưng, trái với những suy nghĩ ban đầu của chị, thủ tục vay vốn không chỉ nhanh chóng, đơn giản, được
+                thực hiện hoàn
+                toàn tại nhà mà chị còn được cán bộ TYM gợi ý vay Vốn Chính sách - loại vốn ưu tiên cho hộ gia đình
+                nghèo, phụ nữ khuyết
+                tật, phụ nữ nhiễm HIV hoặc có chồng/con nhiễm HIV với lãi suất ưu đãi. Tham gia TYM, bên cạnh vay vốn,
+                chị Mai còn gửi
+                tiết kiệm hàng tuần.</p>
+              <img src="../image/img-so/08_Tài chính vi mô_color.jpg" alt="">
+              <p>Những khoản tiết kiệm dù chỉ rất nhỏ nhưng cũng đã giúp chị dần hình thành thói quen tiết kiệm và tích
+                lũy cho tương
+                lai. Cứ thế, từ món vốn ban đầu 20 triệu đồng để kinh doanh, mỗi năm nhờ công việc thuận lợi chị lại
+                tăng mức vốn vay
+                lên 30, rồi 40 triệu đồng.</p>
+              <p>Qua các năm, tổng số vốn vay của chị Mai tại TYM đã lên tới 220.000.000 đồng nhưng cứ vay đến đâu lại
+                trả dần đến đó nên
+                chị Mai thấy rất nhẹ nhõm, cách thức này cũng phù hợp với người có thu nhập hàng ngày như chị. Qua ứng
+                dụng TYM Mobile,
+                chị có thể kiểm soát được mọi giao dịch với TYM như mức vay, mức trả, thời hạn trả, đăng ký vay, đăng ký
+                trả, đăng ký
+                rút và kiểm soát được số dư nợ và dư tiết kiệm của mình.</p>
+              <p>Việc sử dụng ứng dụng TYM Mobile không chỉ giúp khách hàng của TYM tiết kiệm được thời gian, công sức
+                hơn khi không phải
+                tới cụm quản lý tài chính cá nhân mà còn giúp cho các chị em phụ nữ, đặc biệt là phụ nữ ở khu vực nông
+                thôn, vùng sâu,
+                vùng xa quen dần với việc sử dụng công nghệ, giúp cho cuộc sống của họ trở nên thuận tiện hơn, bắt kịp
+                sự phát triển của
+                xã hội. Trong suốt 31 năm qua, TYM đã giải ngân gần 1,9 triệu món vốn cho hàng trăm nghìn phụ nữ. TYM đã
+                đồng hành với
+                chị em phụ nữ từ những thời điểm mà cơ hội được tiếp cận vốn vay của họ còn rất khó khăn.</p>
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-32" class="section">
+
+            <h1 class="uk-article-title">Bảo vệ thiết bị di động người dân</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Trong thời đại công nghệ, kết nối Internet và các thiết bị thông minh hiện diện ở khắp mọi nơi kể cả
+                vùng sâu, vùng xa.
+                Hầu hết bà con đều được kết nối và hoạt động trên Internet, nhưng lại chưa được trang bị kiến thức cũng
+                như các giải
+                pháp để tự bảo vệ trên không gian mạng.</p>
+              <p>Kết nối Internet, đồng nghĩa với việc dân làng tham gia hoạt động trên cả hai môi trường, đó là môi
+                trường thực và môi
+                trường số. Môi trường số là môi trường mới, lạ lẫm và đầy cám dỗ với đại đa số người dân trong làng, vì
+                vậy mỗi người
+                dân cần lựa chọn cho mình một giải pháp bảo vệ để có thể tự bảo vệ khi giao dịch ngân hàng trực tuyến,
+                hay bảo vệ mình
+                trước nguy cơ về lây nhiễm mã độc, lộ lọt thông tin cá nhân, lừa đảo, làm phiền bởi các cuộc gọi rác,
+                tin nhắn rác.
+              </p>
+
+              <h3>Bkav Mobile Security (BMS): Giải pháp bảo vệ thiết bị di động khi sử dụng Internet</h3>
+
+              <p>Hiện nay, tin nhắn có nội dung quảng cáo rác, cuộc gọi có nội dung lừa đảo đã trở thành vấn nạn gây
+                nhức nhối và ám ảnh
+                đối với người dùng điện thoại di động. Chỉ cần một chiếc điện thoại đầy đủ chức năng nghe - gọi và không
+                bị chặn cuộc
+                gọi đến, bất kỳ ai cũng có thể trở thành nạn nhân của những cuộc gọi lừa đảo. Bên cạnh những người dân
+                nâng cao cảnh
+                giác thì vẫn có nhiều trường hợp thiếu tỉnh táo trở thành nạn nhân và sập bẫy lừa đảo chỉ sau một cuộc
+                điện thoại.</p>
+              <p>Trước tình hình đó, tập đoàn BKAV đã phát triển sản phẩm BKAV Mobile Security (BMS) để bảo vệ thiết bị
+                của người dân khi
+                sử dụng Internet, với các tính năng hoàn toàn miễn phí, được tin tưởng bởi hơn 2 triệu người. Để cài đặt
+                BMS, người dân
+                có thể truy cập tải xuống phần mềm tại địa chỉ https://www.bkav.com.vn/bkavpro-mobile. Sau khi cài đặt,
+                nếu có những
+                cuộc gọi hay tin nhắn, BMS sẽ kiểm tra và tự động chặn và khuyến cáo người sử dụng nếu xuất hiện các
+                cuộc gọi lừa đảo,
+                tin nhắn rác. Cài đặt BMS sẽ giúp người dân hạn chế được việc phải nhận được những cuộc gọi, tin nhắn
+                nhằm lừa đảo, đồng
+                thời cảnh báo người dân khi truy cập vào các đường dẫn được sử dụng để chiếm đoạt tài khoản ngân hàng,
+                giúp người dân
+                trong làng an tâm hơn khi tham gia các hoạt động trên không gian mạng.</p>
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <div id="text-33" class="section">
+
+            <h1 class="uk-article-title">Bảo vệ trẻ em trên môi trường số</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div>
+
+            <div class="article-content link-primary">
+              <p>Trẻ em ngày nay được tiếp xúc với Internet từ rất sớm qua các thiết bị như iPad, máy tính, điện thoại
+                thông minh để phục
+                vụ việc học tập được thuận tiện. Tuy nhiên, thay vì học tập và tìm hiểu theo sự chỉ dẫn của thầy cô,
+                không ít học sinh
+                lại lướt Facebook, Tiktok, xem YouTube, thậm chí chơi game trong giờ.</p>
+              <p>Bên cạnh đó, khi trẻ em tham gia môi trường số còn có nguy cơ tiếp xúc với luồng thông tin độc hại, bắt
+                nạt trực tuyến
+                hay chứng “nghiện công nghệ” gây ảnh hưởng tiêu cực đến sự phát triển thể chất và tinh thần. Bảo vệ trẻ
+                trên không gian
+                mạng vì vậy cần sự chung tay của các bậc phụ huynh, nhà trường, xã hội, cùng sự hỗ trợ của các giải pháp
+                công nghệ.
+              </p>
+
+              <h3>SafeGate: Giải pháp làm cho Internet an toàn hơn từ trường học tới gia đình</h3>
+
+              <p>SafeGate (https://safegate.vn) được phát triển bởi công ty an ninh mạng thông minh SCS, đây là giải
+                pháp quản lý, bảo vệ
+                an toàn Internet theo mô hình An toàn thông tin như một dịch vụ - giải được bài toán cần giải pháp công
+                nghệ quản lý,
+                bảo vệ cho mọi kết nối Internet nhưng phải đơn giản, dễ dùng, thuận tiện và không tốn chi phí đầu tư.
+                Nhờ mô hình này,
+                SafeGate có thể triển khai dễ dàng, nhanh chóng kể cả ở quy mô gia đình hay trường học. Chỉ trong vài
+                giờ, đội ngũ kỹ
+                thuật SafeGate đã triển khai, lắp đặt xong SafeGate School cho toàn bộ các trường tại Thị xã Nghĩa Lộ,
+                tỉnh Yên Bái hay
+                12 Trường Hermann Gmeiner của Làng trẻ SOS Việt Nam trên toàn quốc để bảo vệ hơn 30.000 học sinh các cấp
+                và hàng nghìn
+                cán bộ, giáo viên đang sử dụng mạng Internet.</p>
+
+              <p>Với SafeGate, ở bất kỳ nơi đâu, thầy, cô và phụ huynh cũng quản lý, giám sát được các hoạt động nhờ báo
+                cáo, cảnh báo an
+                ninh, tình hình sử dụng Internet thông qua ứng dụng được cài đặt trên điện thoại di động. SafeGate bảo
+                vệ các thiết bị
+                được kết nối mạng khỏi những địa chỉ lừa đảo, mã độc, cảnh báo các virus tấn công, mã hóa dữ liệu, chặn
+                lọc nội dung
+                không phù hợp lứa tuổi các con, cung cấp khả năng giới hạn các ứng dụng được phép hoặc không được phép
+                sử dụng mà không
+                cần cài đặt vào thiết bị cần quản lý.</p>
+              <p>Việc triển khai SafeGate giúp các bậc phụ huynh có thể song hành cùng con em mình trong việc tiếp cận
+                thông tin trên môi
+                trường mạng, đảm bảo trẻ con không phải tiếp cận với những thông tin xấu độc, ảnh hưởng không tốt đến
+                tâm hồn trẻ nhỏ.
+                Đồng thời giúp tăng cường việc đảm bảo an toàn thông tin trước các nguy cơ của virus máy tính và các tấn
+                công lừa đảo
+                người dùng.</p>
+
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <!-- DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ -->
+
+          <!-- Nhà văn hóa số -->
+
+          <div id="text-13" class="section">
+
+            <h1 class="uk-article-title">Nhà văn hóa số</h1>
+
+
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div> -->
 
             <div class="article-content link-primary">
 
@@ -2857,13 +3561,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!--  Thư viện sách số -->
-          <div id="text-14">
+          <div id="text-14" class="section">
 
             <h1 class="uk-article-title">Thư viện sách số</h1>
 
 
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2880,7 +3584,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Sách gắn liền với văn hóa, phát triển văn hóa đọc sách cũng chính là phát triển văn hóa của dân tộc. Từ
@@ -2916,13 +3620,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Mắt thần 24/7 -->
-          <div id="text-15">
+          <div id="text-15" class="section">
 
             <h1 class="uk-article-title">Mắt thần 24/7</h1>
 
 
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -2939,7 +3643,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Trước đây, vùng nông thôn yên ả sau lũy tre làng “đêm không cần đóng cửa, ngoài đường không nhặt của
@@ -3005,13 +3709,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Hệ thống chiếu sáng xanh -->
-          <div id="text-16">
+          <div id="text-16" class="section">
 
             <h1 class="uk-article-title">Hệ thống chiếu sáng xanh</h1>
 
 
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -3028,7 +3732,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Phát triển nông thôn bền vững, xây dựng làng số cần gắn với phát triển xanh, sử dụng năng lượng mặt
@@ -3069,11 +3773,11 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Chợ số -->
-          <div id="text-17">
+          <div id="text-17" class="section">
 
             <h1 class="uk-article-title">Chợ số</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -3090,7 +3794,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Trong không gian làng xã, chợ có vị trí quan trọng, gắn liền với đời sống của người dân, là cầu nối
@@ -3165,28 +3869,10 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
           </div>
 
 
+          <!-- thiếu truyền thanh số -->
+          <div id="text-25" class="section">
 
-          <!-- Dân làng làm kinh tế số -->
-
-
-          <!-- Nông nghiệp số -->
-          <div id="text-18">
-
-            <h1 class="uk-article-title">Nông nghiệp số</h1>
-
-            <p class="uk-text-lead uk-text-muted">Ước mơ tự ngàn xưa của người làm nông là làm chủ được tự nhiên để tạo
-              ra điều kiện tốt nhất cho cây trồng, vật nuôi.
-              Ngày nay, ước mơ đó không còn xa vời, mà đã trở thành hiện thực với sự hỗ trợ của công nghệ. Lần đầu tiên
-              cây trồng, vật
-              nuôi, đất đai cất “tiếng nói” thông qua các cảm biến nhiệt độ, ánh sáng, và rất nhiều các cảm biến khác.
-              Lần đầu tiên
-              máy móc tự động phân tích, điều chỉnh chính xác phù hợp với nhu cầu của từng cây trồng, vật nuôi. Người
-              nông dân từ đó
-              đã làm chủ được chất lượng đất, cường độ ánh sáng, độ ẩm, khắc phục được tính mùa vụ, giảm sự lệ thuộc vào
-              thời tiết,
-              khí hậu, tạo ra môi trường thuận lợi nhất cho cây trồng, vật nuôi sinh trưởng, đạt hiệu suất cao hơn hẳn
-              cách thức canh
-              tác truyền thống.</p>
+            <h1 class="uk-article-title">Truyền thanh số</h1>
 
             <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
@@ -3206,6 +3892,96 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               </div>
 
             </div>
+
+            <div class="article-content link-primary">
+              <p>Từ xa xưa, mõ làng đã trở thành một hình ảnh quen thuộc của làng xã. Khi chưa biết sử dụng loa, anh Mõ
+                cầm mõ đi khắp
+                xóm truyền đi thông tin của chính quyền làng như thuế khóa, hộ đê, cảnh báo thiên tai, hỏa hoạn,… Như
+                vậy mõ là công cụ
+                mà chính quyền làng xã giao tiếp với người dân ở mức rất sơ khai, thủ công. Dần dần, xã hội phát triển,
+                hệ thống loa
+                phường thay thế cho mõ làng, giúp truyền tải thông tin đến người dân thuận tiện, nhanh chóng.</p>
+              <p>Hệ thống loa phường đến nay đã có nhiều cải tiến chất lượng hơn, thông minh hơn, với sự hỗ trợ của công
+                nghệ, phát thanh
+                viên không cần phòng máy mà vẫn phát nội dung từ bất kỳ nơi đâu có kết nối Internet. Phát thanh viên
+                không cần đọc nội
+                dung, thay vào đó, nội dung sẽ do máy tích hợp công nghệ trí tuệ nhân tạo đọc, có thể lựa chọn giọng đọc
+                nam nữ, theo
+                vùng miền bắc, trung, nam, tốc độ đọc tùy chọn. Nội dung đọc được lưu lại, cho phép phát thanh viên phát
+                lại nhiều lần.</p>
+
+
+
+              <p>Đức Lĩnh là một xã miền núi nằm ở phía bắc huyện Vũ Quang, tỉnh Hà Tĩnh có đặc thù địa hình rộng lớn,
+                nhiều đồi núi lại
+                thường xuyên phải chịu ảnh hưởng của thiên tai, lũ lụt. Do vậy, nhiều hệ thống cơ sở hạ tầng bị tác
+                động, hư hỏng, xuống
+                cấp, trong đó có hệ thống đài truyền thanh không dây FM tại các xã, thị trấn. Nhiều nơi, máy phát bị
+                giảm công suất,
+                nhiều cụm loa hư hỏng không khắc phục được nên chất lượng truyền thanh không đảm bảo. Nhằm nâng cao hiệu
+                quả hoạt động
+                thông tin cơ sở dựa trên ứng dụng công nghệ thông tin, khắc phục những hạn chế cơ bản trong truyền thanh
+                hữu tuyến và vô
+                tuyến. Xã Đức Lĩnh đã hợp tác với NextFarm là đơn vị cung cấp kỹ thuật để ứng dụng mạnh mẽ công nghệ số
+                vào cuộc sống,
+                trong đó có lĩnh vực truyền thanh ở cơ sở.</p>
+
+
+
+
+
+              <p>Với sự hỗ trợ của công nghệ, thời gian chuẩn bị nội dung phát sóng đã được rút ngắn hơn rất nhiều, phát
+                thanh xã có thể
+                tùy biến nội dung phát thanh theo từng thôn. Ví dụ ở xã Đức Lĩnh, thôn Mỹ Ngọc phát nội dung về tình
+                hình dịch bệnh,
+                thôn Cừa Lĩnh lựa chọn phát thanh nội dung tuyên truyền về nông thôn mới, các thôn khác phát sóng nội
+                dung về chuyển đổi
+                số.</p>
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
+          <!-- Dân làng làm kinh tế số -->
+
+
+          <!-- Nông nghiệp số -->
+          <div id="text-18" class="section">
+
+            <h1 class="uk-article-title">Nông nghiệp số</h1>
+
+            <p class="uk-text-lead uk-text-muted">Ước mơ tự ngàn xưa của người làm nông là làm chủ được tự nhiên để tạo
+              ra điều kiện tốt nhất cho cây trồng, vật nuôi.
+              Ngày nay, ước mơ đó không còn xa vời, mà đã trở thành hiện thực với sự hỗ trợ của công nghệ. Lần đầu tiên
+              cây trồng, vật
+              nuôi, đất đai cất “tiếng nói” thông qua các cảm biến nhiệt độ, ánh sáng, và rất nhiều các cảm biến khác.
+              Lần đầu tiên
+              máy móc tự động phân tích, điều chỉnh chính xác phù hợp với nhu cầu của từng cây trồng, vật nuôi. Người
+              nông dân từ đó
+              đã làm chủ được chất lượng đất, cường độ ánh sáng, độ ẩm, khắc phục được tính mùa vụ, giảm sự lệ thuộc vào
+              thời tiết,
+              khí hậu, tạo ra môi trường thuận lợi nhất cho cây trồng, vật nuôi sinh trưởng, đạt hiệu suất cao hơn hẳn
+              cách thức canh
+              tác truyền thống.</p>
+            <!-- 
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+
+
+
+
+              <div>
+
+                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                    itemprop="name">Cục tin
+                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+
+                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+
+                  Apr 22, 2023
+                </time>
+              </div>
+
+            </div> -->
 
             <div class="article-content link-primary">
               <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4>
@@ -3594,7 +4370,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Thương mại số -->
-          <div id="text-19">
+          <div id="text-19" class="section">
 
             <h1 class="uk-article-title">Thương mại số</h1>
 
@@ -3605,7 +4381,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               hội tiếp cận với thị trường tiêu thụ rộng lớn trong và ngoài nước, góp phần thúc đẩy kinh tế số nông
               nghiệp, nông thôn.</p>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -3622,7 +4398,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4>
@@ -4023,7 +4799,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Phát triển du lịch địa phương -->
-          <div id="text-20">
+          <div id="text-20" class="section">
             <h1 class="uk-article-title">Phát triển du lịch địa phương</h1>
 
             <p class="uk-text-lead uk-text-muted">Việt Nam là một quốc gia có lãnh thổ trải dài từ bắc tới nam, có đường
@@ -4034,7 +4810,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               những thế
               mạnh riêng, nếu biết tận dụng, khai thác, sẽ giúp thúc đẩy, phát triển du lịch.</p>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
               <div>
                 Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
                     itemprop="name">Cục tin
@@ -4045,7 +4821,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                   Apr 22, 2023
                 </time>
               </div>
-            </div>
+            </div> -->
             <div class="article-content link-primary">
               <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4>
               <ul id="markdown-toc">
@@ -4211,7 +4987,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- Làng kinh tế số đặc thù  -->
-          <div id="text-21">
+          <div id="text-21" class="section">
 
             <h1 class="uk-article-title">Làng kinh tế số đặc thù</h1>
 
@@ -4219,7 +4995,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               làng có đặc điểm riêng có thể lựa chọn làm trọng
               tâm chuyển đổi số. Các câu chuyện dưới đây kể về các ngôi làng như vậy.</p>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -4236,7 +5012,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <h4 class="no_toc" id="tóm-tắt">Tóm tắt</h4>
@@ -4366,13 +5142,13 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- LÝ LUẬN VỀ PHÁT TRIỂN LÀNG SỐ VIỆT NAM NĂM 2023 -->
-          <div id="text-22">
+          <div id="text-22" class="section">
 
             <h1 class="uk-article-title">LÝ LUẬN VỀ PHÁT TRIỂN LÀNG SỐ VIỆT NAM NĂM 2023</h1>
 
             <p class="uk-text-lead uk-text-muted">Chưa có</p>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -4389,7 +5165,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <!-- <div class="article-content link-primary">
               <p>Phát triển cao hơn là chính phủ số. Ở mức độ phát triển này, chính phủ hoạt động, vận hành, ban hành
@@ -4478,7 +5254,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
           <!-- TỔNG KẾT -->
 
           <!-- lời tổng kết -->
-          <div id="text-23">
+          <div id="text-23" class="section">
 
             <h1 class="uk-article-title">PHẦN KẾT</h1>
 
@@ -4494,7 +5270,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               cách tốt
               nhất để bảo vệ quốc gia.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -4511,7 +5287,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Công nghệ thẩm thấu tự nhiên, mặc định vào các hoạt động thường ngày của người dân trong Làng số. Kể từ
@@ -4555,7 +5331,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           </div>
           <!-- lời cảm ơn -->
-          <div id="text-24">
+          <div id="text-24" class="section">
 
             <h1 class="uk-article-title">Lời cảm ơn !</h1>
 
@@ -4565,7 +5341,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               được hoàn
               thành trong vài tháng. Sở dĩ được như vậy là nhờ sự ủng hộ và giúp đỡ của rất nhiều người.</p> -->
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
 
 
@@ -4582,7 +5358,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 </time>
               </div>
 
-            </div>
+            </div> -->
 
             <div class="article-content link-primary">
               <p>Thời gian từ khi bắt đầu đến khi xuất bản một quyển sách thường kéo dài nhiều năm. Nhưng điều đó không
@@ -4623,743 +5399,8 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
 
           </div>
-          <!-- thiếu truyền thanh số -->
-          <div id="text-25">
 
-            <h1 class="uk-article-title">Truyền thanh số</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Từ xa xưa, mõ làng đã trở thành một hình ảnh quen thuộc của làng xã. Khi chưa biết sử dụng loa, anh Mõ
-                cầm mõ đi khắp
-                xóm truyền đi thông tin của chính quyền làng như thuế khóa, hộ đê, cảnh báo thiên tai, hỏa hoạn,… Như
-                vậy mõ là công cụ
-                mà chính quyền làng xã giao tiếp với người dân ở mức rất sơ khai, thủ công. Dần dần, xã hội phát triển,
-                hệ thống loa
-                phường thay thế cho mõ làng, giúp truyền tải thông tin đến người dân thuận tiện, nhanh chóng.</p>
-              <p>Hệ thống loa phường đến nay đã có nhiều cải tiến chất lượng hơn, thông minh hơn, với sự hỗ trợ của công
-                nghệ, phát thanh
-                viên không cần phòng máy mà vẫn phát nội dung từ bất kỳ nơi đâu có kết nối Internet. Phát thanh viên
-                không cần đọc nội
-                dung, thay vào đó, nội dung sẽ do máy tích hợp công nghệ trí tuệ nhân tạo đọc, có thể lựa chọn giọng đọc
-                nam nữ, theo
-                vùng miền bắc, trung, nam, tốc độ đọc tùy chọn. Nội dung đọc được lưu lại, cho phép phát thanh viên phát
-                lại nhiều lần.</p>
-
-
-
-              <p>Đức Lĩnh là một xã miền núi nằm ở phía bắc huyện Vũ Quang, tỉnh Hà Tĩnh có đặc thù địa hình rộng lớn,
-                nhiều đồi núi lại
-                thường xuyên phải chịu ảnh hưởng của thiên tai, lũ lụt. Do vậy, nhiều hệ thống cơ sở hạ tầng bị tác
-                động, hư hỏng, xuống
-                cấp, trong đó có hệ thống đài truyền thanh không dây FM tại các xã, thị trấn. Nhiều nơi, máy phát bị
-                giảm công suất,
-                nhiều cụm loa hư hỏng không khắc phục được nên chất lượng truyền thanh không đảm bảo. Nhằm nâng cao hiệu
-                quả hoạt động
-                thông tin cơ sở dựa trên ứng dụng công nghệ thông tin, khắc phục những hạn chế cơ bản trong truyền thanh
-                hữu tuyến và vô
-                tuyến. Xã Đức Lĩnh đã hợp tác với NextFarm là đơn vị cung cấp kỹ thuật để ứng dụng mạnh mẽ công nghệ số
-                vào cuộc sống,
-                trong đó có lĩnh vực truyền thanh ở cơ sở.</p>
-
-
-
-
-
-              <p>Với sự hỗ trợ của công nghệ, thời gian chuẩn bị nội dung phát sóng đã được rút ngắn hơn rất nhiều, phát
-                thanh xã có thể
-                tùy biến nội dung phát thanh theo từng thôn. Ví dụ ở xã Đức Lĩnh, thôn Mỹ Ngọc phát nội dung về tình
-                hình dịch bệnh,
-                thôn Cừa Lĩnh lựa chọn phát thanh nội dung tuyên truyền về nông thôn mới, các thôn khác phát sóng nội
-                dung về chuyển đổi
-                số.</p>
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-26">
-
-            <h1 class="uk-article-title">Tham gia tổ công nghệ số cộng đồng</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Một người biết công nghệ có thể hỗ trợ 10 người am hiểu, 10 người am hiểu sẽ hỗ trợ được 100 người, cứ
-                thế người biết hỗ
-                trợ người không biết, vậy thì không mấy chốc mà mọi người đều biết. Sứ mệnh “cầm tay chỉ việc” hướng dẫn
-                từng người đang
-                được thực hiện bởi những thành viên của Tổ công nghệ số cộng đồng, lực lượng này được sinh ra từ làng,
-                và là lực lượng
-                mang tính huy động sức mạnh toàn dân, toàn diện, hiểu được nhu cầu hàng ngày của dân làng nên sẽ đẩy
-                nhanh quá trình phổ
-                cập kiến thức, kỹ năng số đến dân làng. Tổ công nghệ số cộng đồng tại các bản làng, thôn xóm càng đông,
-                càng mạnh, càng
-                tinh nhuệ, càng hăng hái, nhiệt huyết hướng dẫn, hỗ trợ thì người lớn tuổi trong làng cũng có thể chuyển
-                đổi số, người
-                không biết chữ cũng có thể biết cách sử dụng các dịch vụ, tiện ích số.</p>
-              <p>Là một người con của dân tộc Cơ Tu – dân tộc thiểu số chiếm khoảng 0,08% dân số cả nước. Anh Đinh Văn
-                Hin là trưởng ban
-                Nhân dân kiêm tổ trưởng tổ hỗ trợ điểm dịch vụ công trực tuyến của thôn Tà Lang, xã Hòa Bắc, huyện Hòa
-                Vang, TP. Đà
-                Nẵng, đang duy trì thường xuyên sứ mệnh “đi từng ngõ, gõ từng nhà, hướng dẫn từng người” trong thôn
-                chuyển đổi số, công
-                việc gặp không ít khó khăn, thách thức đặt ra, như người dân không có thời gian do công việc cá nhân bận
-                rộn, nhiều bà
-                con chưa hiểu biết về công nghệ, nhiều lần đến nhà nhưng không gặp ai,… Trước những vấn đề đặt ra như
-                vậy, anh Hin và
-                các thành viên trong Tổ công nghệ số cộng đồng đã kiên trì, vận động bà con đến nhà văn hóa thôn để tập
-                trung hướng dẫn.
-                Xây dựng nhóm trên mạng xã hội, thường xuyên đăng tải các thông báo, thông tin để bà con nắm bắt được.
-                Với những hộ gia
-                đình
-                đến hỗ trợ nhưng họ không có nhà thì Tổ sẽ tiếp tục đến lần tiếp theo, phân
-                công thành viên ở gần gia đình họ để hỗ trợ, hướng dẫn. Thực hiện công việc với tất cả nhiệt huyết anh
-                Hin thấy được
-                nghĩa đồng bào rất lớn lao khi được hỗ trợ bà con. Những người cùng dân tộc, là đồng bào của nhau, có
-                cùng ngôn ngữ giúp
-                đỡ nhau cùng tiến bộ, văn minh hơn mỗi ngày, điều đó thật sự rất trân quý.
-              </p>
-
-
-
-              <p>Mỗi một người dân trong làng khi đã có kỹ năng số, có thể hướng dẫn người khác thì hãy tham gia Tổ công
-                nghệ số cộng
-                đồng, nhiều người tham gia thì nhiều gia đình được hưởng lợi, cả làng được hưởng lợi, chỉ cần kiên trì
-                một năm “đi từng
-                ngõ, gõ từng nhà, hướng dẫn từng người”, hướng dẫn dân làng sử dụng dịch vụ công trực tuyến, học tập
-                trực tuyến, mua sắm
-                trực tuyến, bán hàng trực tuyến, khám chữa bệnh từ xa thì kỹ năng số của người dân sẽ nâng cao, nhận
-                thức số nâng cao,
-                cộng đồng số sẽ được mở rộng, cuộc sống dân làng sẽ cải thiện.</p>
-
-
-
-
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-27">
-
-            <h1 class="uk-article-title">Thanh toán di động</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Thanh toán là công đoạn cuối cùng trong mỗi hoạt động mua bán thường ngày của người dân. Trong đó, tiền
-                mặt hiện nay vẫn
-                là công cụ thanh toán phổ biến. Đại bộ phận người dân trong làng đã quen với việc sử dụng tiền mặt trong
-                các giao dịch.</p>
-              <p>Trước đây, để thanh toán không dùng tiền mặt, người thanh toán cần có tài khoản ngân hàng hoặc một ví
-                điện tử gắn với
-                tài khoản ngân hàng. Nhưng thực tế là không phải người dân nào, đặc biệt là người dân ở những khu vực
-                khó khăn cũng được
-                tiếp cận với dịch vụ tài chính ngân hàng. Vì vậy, các đối tượng này gặp khó khăn trong tiếp cận, sử dụng
-                công cụ thanh
-                toán không dùng tiền mặt.
-              </p>
-
-
-
-              <p>Từ năm 2021, ba doanh nghiệp viễn thông là Viettel, VNPT và MobiFone đã được cấp phép triển khai thí
-                điểm cung cấp dịch
-                vụ thanh toán di động. Trong đó, người dùng có thể sử dụng tài khoản viễn thông là tài khoản gắn với SIM
-                điện thoại để
-                thực hiện thanh toán số như một tài khoản thanh toán mà không cần tài khoản ngân hàng. Điều này tạo ra
-                sự thuận tiện
-                trong giao dịch, giúp hình thành nên thói quen thanh toán số ở mỗi người dân trong làng mà không phụ
-                thuộc vào ngân
-                hàng.</p>
-              <h3>Viettel money: Câu chuyện thanh toán không tiền mặt qua điện thoại di động</h3>
-
-
-              <p>Viettel Money được phát triển bởi tổng công ty dịch vụ số Viettel, có địa chỉ truy cập để cài đặt và sử
-                dụng tại địa chỉ
-                https://viettelmoney.vn, hoặc trên kho ứng dụng với tên gọi “Viettel Money”. Nền tảng này được tích hợp
-                các tính năng
-                phục vụ cho mọi tiện ích, dịch vụ trong cuộc sống như thanh toán học phí, mua vé tàu, xe, chuyển tiền
-                đến số điện thoại
-                khác, trả tiền điện nước,...</p>
-
-              <p>Là hộ nông dân nuôi gà ở huyện Ninh Hải, tỉnh Ninh Thuận, chị Giang cho biết mình chưa có bất cứ tài
-                khoản ngân hàng
-                nào, việc nhận tiền khu mua bán gà thường qua nhiều lớp trung gian nhận tiền mặt và đem về, nên nhiều
-                lúc cũng bất tiện.
-                Với một chiếc điện thoại chỉ dùng để nghe gọi, chị bắt đầu chú ý đến Viettel Money khi được giới thiệu,
-                nhờ có ứng dụng
-                này, việc nhận tiền bán gà của chị dễ dàng hơn trước. Sử dụng Viettel Money, chị dễ dàng nhận tiền trực
-                tiếp khi bán gà
-                cho những khách ở xa qua số điện thoại di động, khi cần, chị rút tiền ở đại lý ngay gần nhà, rất tiện
-                lợi và dễ quản lý
-                tiền nong.</p>
-              <p>Với Viettel Money, người dân trong làng dễ dàng thực hiện việc thanh toán các hóa đơn điện, nước,
-                Internet, mua vé tàu,
-                xe và nhiều tiện ích khác nữa. Việc chuyển, nhận tiền được thực hiện miễn phí giữa các tài khoản và
-                không lo tới phí duy
-                trì, đồng thời thỏa sức thanh toán trên mọi nền tảng bằng ứng dụng trên điện thoại, hoặc qua trình duyệt
-                web, thậm chí
-                chỉ với một chiếc điện thoại “đen trắng” có sóng viễn thông, người dân đã có thể sử dụng tài khoản tiền
-                di động thông
-                qua các thao tác trên bàn phím (*998#). Với ưu điểm nổi bật trên, Tiền di động của Viettel Money đang
-                được triển khai và
-                phủ sóng trên toàn quốc, được sử dụng bởi người dân từ nông thôn, vùng sâu, vùng xa, những nơi đang hạn
-                chế về chi nhánh
-                ngân hàng hay mạng Internet. Dịch vụ cung cấp hơn 300 tiện ích được cá nhân hóa, đáp ứng đầy đủ mọi nhu
-                cầu của người
-                dùng từ nạp, rút, chuyển tiền, thanh toán các hóa đơn cho đến đầu tư, bảo hiểm, giải trí, chăm sóc sức
-                khỏe,…</p>
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-28">
-
-            <h1 class="uk-article-title">Đặt vé trực tuyến</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Sinh ra từ làng, rồi ra thành phố học tập, làm việc, những đứa con xa quê chỉ mong đến những dịp lễ tết
-                để được trở về
-                đoàn tụ với gia đình, được gặp gỡ người thân, họ hàng, làng xóm. Họ thường đặt vé trước cả một tháng
-                không chỉ vì háo
-                hức bồn chồn, mà còn cả nỗi lo hết vé.</p>
-              <p>Có nhiều người tự hỏi tại sao phải lo lắng như thế, có đủ xe đáp ứng nhu cầu di chuyển của tất cả mọi
-                người. Thế nhưng,
-                những ngày lễ, tết, muốn mua được một chiếc vé theo ý muốn không phải là chuyện dễ dàng, nhiều khi phải
-                xếp hàng chen
-                lấn xô đẩy, vừa mất thời gian, mất công sức nhưng chưa chắc hành khách đã có một chỗ ngồi ưng ý, cũng có
-                khi không thể
-                mua được vé, hay có rất nhiều trường hợp gọi điện đặt chỗ nhưng khi lên xe thì lại bị nhồi nhét, chất
-                lượng thái độ phục
-                vụ thì vô cùng tệ.
-              </p>
-
-
-
-              <p>Mua vé trực tuyến, khách hàng không cần mất thời gian và công sức tới các đại lý, bến xe, hay gọi điện
-                đặt chỗ mà mình
-                không chắc chắn trước, thay vào đó chỉ cần một chiếc máy tính, hay điện thoại thông minh có kết nối mạng
-                Internet là có
-                thể truy cập, tìm kiếm thông tin các chuyến xe, lịch trình, giá vé... tùy vào nhu cầu để chọn được
-                chuyến đi phù hợp
-                nhất.</p>
-              <h3>Vexere: Nền tảng kết nối giữa hành khách và nhà xe, vì hàng chục triệu người Việt Nam không phải xếp
-                hàng mua vé.</h3>
-              <p>Trong một lần đọc báo về tình hình khan vé xe mùa tết, ý tưởng khởi nghiệp trong anh Trần Nguyễn Lê Văn
-                trỗi dậy, anh
-                quyết định bỏ ngang chương trình học quản trị kinh doanh ở Mỹ và về nước tập hợp bạn bè, cùng sáng lập
-                ra Vexere. Nền
-                tảng này đã tạo ra một cuộc cách mạng trong vận tải hành khách, giúp kết nối hành khách với nhà xe, vì
-                hàng chục triệu
-                người Việt Nam không phải xếp hàng mua vé.</p>
-              <p>Gia đình anh Trung là công nhân từ Hà Giang xuống thành phố Hà Nội lập nghiệp. Nếu có ý định về quê, vợ
-                chồng anh đều
-                lên kế hoạch từ sớm, hai vợ chồng còn có con nhỏ nên nhu cầu tìm được chỗ ngồi hợp lý sẽ giúp các con có
-                chuyến đi vui
-                khỏe. Anh chia sẻ, lần đầu đặt trên Vexere, anh choáng ngợp trước hệ thống hãng xe rộng lớn với nhiều
-                mức giá khác nhau.
-                Nỗi lo của vợ chồng anh về việc hết vé, giá vé không phù hợp với năng lực tài chính và nhất là tìm một
-                hãng xe phù hợp
-                khi có em nhỏ đi cùng đã được được giải quyết, giúp yên tâm trên những chuyến đi dài.</p>
-              <p>Hiện tại, Vexere là nền tảng vé xe lớn nhất Việt Nam, với hơn 700 hãng xe hợp tác bán vé với Vexere,
-                phủ rộng hơn 2600
-                tuyến đường trong và ngoài nước giúp người dùng có thể tìm thông tin chuyến xe, hãng xe, và mua vé trực
-                tuyến dễ dàng.
-                Mọi người dân có nhu cầu đi lại, có thể truy cập và đặt vé dễ dàng trên trang web https://vexere.com/
-                hoặc ứng dụng
-                “Vexere” trên điện thoại.</p>
-              <p>Với kho vé xe khách chất lượng, đa dạng dòng xe và giờ xuất bến linh hoạt, người dùng có thể lựa chọn
-                hãng xe, dòng xe
-                phù hợp nhất với nhu cầu di chuyển. Chỉ với một vài giây thao tác, có thể đặt được ngay vé xe khách chất
-                lượng mọi lúc
-                mọi nơi, thanh toán online nhanh chóng, tiện lợi ngay trên điện thoại mà không cần phải ra bến chờ đợi
-                xếp hàng. Khi đến
-                bến xe người dân chỉ cần đưa vé điện tử tích hợp mã QR. Nhà xe thực hiện quét để xác minh là đã có thể
-                lên xe, không còn
-                xảy ra tình trạng hết vé, đi ra bến xe mà không mua được vé.</p>
-              <p>Đi lại là một trong những nhu cầu thiết yếu của con người. Trong thời đại chuyển đổi số, luôn có những
-                giải pháp tối ưu
-                cho cuộc sống của mọi người. Nhờ có giải pháp Vexere, chúng ta tiết kiệm thời gian cho công việc cần
-                thiết hơn, không
-                ngại về quê vì nghĩ đến cảnh bắt xe cực nhọc nữa.</p>
-
-
-
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-29">
-
-            <h1 class="uk-article-title">Giao tiếp số trong làng</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Điện thoại từ lâu đã trở thành công cụ hữu hiệu kết nối người dân trong làng với nhau. Trước đây, khi
-                Internet, mạng 3G,
-                4G chưa phổ biến, người dân thực hiện các cuộc gọi qua mạng viễn thông với chi phí tính theo thời gian
-                cuộc gọi. Cuộc
-                gọi càng dài, người gọi sẽ mất càng nhiều phí, nhất là những gia đình có người thân đi làm việc ở nước
-                ngoài, chồng đi
-                mấy năm là bao nhiêu năm vợ không thấy mặt, con lớn chừng nào cũng không hay biết. Vì vậy, phương thức
-                liên hệ qua mạng
-                viễn thông nghe gọi vẫn chưa thực sự thúc đẩy mọi người kết nối, giao tiếp với nhau.</p>
-              <p>Trong những năm gần đây, với sự phát triển của các mạng xã hội, các ứng dụng nhắn tin, nghe gọi bằng
-                hình ảnh qua mạng
-                Internet, việc liên lạc của người dân đã trở nên dễ dàng, tiết kiệm chi phí hơn bao giờ hết.
-              </p>
-
-
-
-              <p>Thay vì chỉ giao tiếp nghe nói, dân làng có thể giao tiếp, bày tỏ tình cảm với những người thân thông
-                qua những tin nhắn
-                chat, những biểu tượng cảm xúc, hay những cuộc gọi video theo thời gian thực để thấy đối phương đang vui
-                hay buồn. Con
-                cái đi học đại học xa nhà có thể hỏi thăm, quan tâm bố mẹ mỗi tối. Người bố đi xuất khẩu lao động tại
-                một quốc gia cách
-                nhà hơn nửa vòng trái đất có thể nhìn thấy đứa con thơ của mình hàng ngày.</p>
-              <h3>Nền tảng Zalo: Thay đổi cách giao tiếp xã hội, đưa mọi người xích lại gần nhau hơn</h3>
-              <p>Zalo là một ứng dụng nhắn tin nhanh đa nền tảng được phát triển bởi công ty cổ phần VNG, một công ty
-                công nghệ hàng đầu
-                Việt Nam, với hệ sinh thái kỹ thuật số phong phú do chính kỹ sư người Việt phát triển. Với lợi thế là
-                nền tảng công nghệ
-                do người Việt sáng tạo dựa trên thói quen sinh hoạt của người Việt. Zalo đã làm thay đổi cuộc sống của
-                con người với
-                cách thức tiếp cận, giao tiếp và xử lý thông tin hoàn toàn mới, con người cảm thấy không còn khoảng cách
-                về địa lý và
-                ngày càng đến gần nhau hơn.</p>
-              <p>Nền tảng Zalo cho phép người dân nhắn tin miễn phí, có thể đính kèm biểu tượng cảm xúc, hình ảnh và
-                video. Ghi âm và gửi
-                tin nhắn thoại, thực hiện các cuộc gọi thoại và gọi video miễn phí giúp tiết kiệm chi phí liên lạc cho
-                người dân. Nền
-                tảng Zalo cho phép người dùng cài đặt, sử dụng ở bất cứ hệ điều hành nào trên chiếc điện thoại thông
-                minh thông qua app
-                CH Play dành cho hệ điều hành Android và Appstore dành cho hệ điều hành IOS.</p>
-              <p>Một cái “chạm” miễn phí qua màn hình, khoảng cách địa lý cũng như được thu hẹp lại. Sợi dây gắn kết và
-                tương tác giữa
-                mọi người cũng không bị mất đi. Nền tảng Zalo hay bất kỳ ứng dụng nghe gọi trực tuyến nào khác đang thay
-                đổi cách thức
-                giao tiếp và kết nối của con người theo hướng tích cực, thuận tiện hơn.</p>
-
-
-
-
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-30">
-
-            <h1 class="uk-article-title">Truyền hình số di động</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Ở làng truyền thống, phát thanh - truyền hình đã đi vào vào nhịp sống của người dân như một phần không
-                thể thiếu. Từ
-                sáng sớm đến chiều tà, đều đặn mỗi ngày, loa phát thanh phường xã được bật lên để truyền tin thông báo,
-                tối đến, cả xóm
-                làng rôm rả âm thanh phát ra từ chương trình truyền hình, thời sự từ chiếc tivi đặt ngay ngắn giữa phòng
-                khách mỗi ngôi
-                nhà.</p>
-              <p>Dần dần, cùng sự phát triển của Internet, nếp sống này cũng thay đổi theo thời gian như một quy luật
-                tất yếu. Đài Truyền
-                hình Việt Nam - người bạn thân thiết của mọi nhà vẫn luôn gắn bó với đời sống gia đình Việt Nam qua màn
-                hình tivi nay đã
-                phát triển qua một giai đoạn mới để đồng hành cùng người xem, thay vì chỉ ngồi một chỗ như trước, nay
-                người dân có thể
-                theo dõi chương trình linh hoạt, bất cứ lúc nào và bất cứ nơi đâu.
-              </p>
-
-              <h3>Nền tảng VTVGo: Tăng cường nhu cầu trải nghiệm trực tuyến của người dân</h3>
-
-              <p>Nền tảng truyền hình số quốc gia VTVGo là giải pháp giải quyết nhu cầu giải trí, tiếp cận thông tin
-                chính thống một cách
-                nhanh chóng, thuận lợi và cải thiện đời sống văn hóa của người dân. Với điện thoại thông minh có kết nối
-                Internet, người
-                dân có thể tìm kiếm người bạn này thông qua app CH Play (đối với hệ điều hành Android) hoặc Appstore
-                (đối với hệ điều
-                hành IOS).</p>
-              <p>Ngay từ khi mở ứng dụng, người dùng sẽ được lựa chọn nội dung thuộc các lĩnh vực mình quan tâm, từ đó,
-                VTVGo sẽ đề xuất
-                chương trình phù hợp với sở thích của mỗi người. Không chỉ xem các nội dung của VTV, người dùng VTVGo có
-                thể xem các nội
-                dung của 7 kênh truyền hình thiết yếu quốc gia, các kênh của đài phát thanh - truyền hình địa phương.
-                Nền tảng truyền
-                hình số quốc gia sẽ thiết lập một hệ thống cho phép chia sẻ, lưu trữ nội dung, từ đó phân phối nội dung
-                đến khán giả
-                trong và ngoài nước, phục vụ bà con kiều bào ở nước ngoài.</p>
-              <img src="../image/img-so/09_VTVGo_color.jpg" alt="">
-              <p>Được tận hưởng nhu cầu giải trí ở bất cứ đâu, được đón xem các nội dung đã được kiểm duyệt, thẩm định
-                kỹ càng, đảm bảo
-                sự phù hợp với lứa tuổi…đó là quyền lợi được phát triển con người về mặt tâm hồn mà chuyển đổi số mang
-                lại. Giữa bộn bề
-                những lo toan, phiền muộn, một chút thời gian nghỉ ngơi ít ỏi giờ có thể được tận dụng tối đa nhờ phương
-                tiện giải trí
-                sẵn có luôn ở cạnh mỗi người.</p>
-
-
-
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-31">
-
-            <h1 class="uk-article-title">Tiếp cận tín dụng số</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Tiếp cận tín dụng là nhu cầu để người dân trong làng có nguồn lực sản xuất, kinh doanh. Tuy nhiên, việc
-                tiếp cận tín
-                dụng hiện nay vẫn còn gặp nhiều khó khăn với người dân ở vùng nông thôn. Tiếp cận vốn qua các ngân hàng
-                yêu cầu nhiều
-                thủ tục giấy tờ, tài sản thế chấp, việc thiếu thông tin về lịch sử tín dụng dẫn tới việc đánh giá hồ sơ
-                vay mất nhiều
-                thời gian. Ngoài ra, nhiều khu vực ở vùng sâu vùng xa còn chưa có hiện diện, cung cấp dịch vụ của ngân
-                hàng. Hầu hết
-                người nghèo đều tiếp cận dịch vụ phi chính thức như vay từ người thân, bạn bè, cầm đồ, hay vay nặng lãi
-                với chi phí cao,
-                tiềm ẩn nhiều rủi ro.</p>
-              <h3>Câu chuyện về tiếp cận vay vốn cho chị em phụ nữ thông qua ứng dụng của Tổ chức Tài chính Vi mô Trách
-                nhiệm hữu hạn Một
-                thành viên Tình thương (TYM).</h3>
-              <p>TYM (https://tymfund.org.vn/) là đơn vị trực thuộc Hội Liên hiệp Phụ nữ Việt Nam. TYM bắt đầu triển
-                khai hoạt động từ
-                năm 1992 với tên gọi là Quỹ Tình thương, nhằm hỗ trợ phụ nữ phát triển kinh tế, góp phần thực hiện
-                chương trình xóa đói
-                giảm nghèo của Chính phủ. Vốn vay không cần tài sản thế chấp lên đến 100 triệu đồng. Thời gian chờ vốn
-                hiện tại của
-                khách hàng vay vốn tại TYM khoảng 7 ngày.
-              </p>
-
-
-
-              <p>Năm 2022, TYM phát triển và ra mắt ứng dụng TYM Mobile trên thiết bị di động cho khách hàng và cán bộ.
-                Ứng dụng giúp
-                người dùng có thể quản lý các thông tin tài chính như vốn vay, tiết kiệm, thực hiện gửi và xử lý các các
-                đề nghị vay
-                vốn, trả vốn, mở sổ tiết kiệm một cách dễ dàng, thuận tiện. Tính đến thời điểm hiện tại, đã có hơn
-                32.000 khách hàng
-                tương đương 16% số khách hàng toàn TYM cài đặt, sử dụng ứng dụng này.</p>
-
-
-              <p>Chị Phan Thị Hoài Mai quê ở Nam Định, bị liệt ở chân nên đi lại khó khăn, chị cần phải sử dụng nạng
-                hoặc xe 3 bánh để hỗ
-                trợ bản thân trong việc di chuyển. Là một phụ nữ khuyết tật, cơ hội tìm kiếm công việc với chị Mai cũng
-                khó khăn hơn gấp
-                bội so với những người bình thường. Thế nhưng không đầu hàng hoàn cảnh, chị Mai luôn nỗ lực, cố gắng tìm
-                kiếm một công
-                việc phù hợp với nghề làm móng, đây là công việc ít phải di chuyển, đảm bảo sức khỏe của mình và chị có
-                thể làm tại nhà,
-                chị cũng thích những công việc làm đẹp cho đời, cho người. Cũng như nhiều hộ kinh doanh khác, chị Mai
-                nhiều lúc gặp khó
-                khăn trong vấn đề tài chính để duy trì và mở rộng hoạt động kinh doanh.</p>
-              <p>Năm 2018, nhờ giới thiệu của Hội phụ nữ địa phương, chị Mai biết đến TYM khi đang cần vốn bổ sung thêm
-                vào cửa hàng của
-                mình. Ban đầu chị cũng phân vân vì ngại đi lại, chị sợ mình vay ít tiền thôi nhưng thủ tục lằng nhằng,
-                phức tạp. Thế
-                nhưng, trái với những suy nghĩ ban đầu của chị, thủ tục vay vốn không chỉ nhanh chóng, đơn giản, được
-                thực hiện hoàn
-                toàn tại nhà mà chị còn được cán bộ TYM gợi ý vay Vốn Chính sách - loại vốn ưu tiên cho hộ gia đình
-                nghèo, phụ nữ khuyết
-                tật, phụ nữ nhiễm HIV hoặc có chồng/con nhiễm HIV với lãi suất ưu đãi. Tham gia TYM, bên cạnh vay vốn,
-                chị Mai còn gửi
-                tiết kiệm hàng tuần.</p>
-              <img src="../image/img-so/08_Tài chính vi mô_color.jpg" alt="">
-              <p>Những khoản tiết kiệm dù chỉ rất nhỏ nhưng cũng đã giúp chị dần hình thành thói quen tiết kiệm và tích
-                lũy cho tương
-                lai. Cứ thế, từ món vốn ban đầu 20 triệu đồng để kinh doanh, mỗi năm nhờ công việc thuận lợi chị lại
-                tăng mức vốn vay
-                lên 30, rồi 40 triệu đồng.</p>
-              <p>Qua các năm, tổng số vốn vay của chị Mai tại TYM đã lên tới 220.000.000 đồng nhưng cứ vay đến đâu lại
-                trả dần đến đó nên
-                chị Mai thấy rất nhẹ nhõm, cách thức này cũng phù hợp với người có thu nhập hàng ngày như chị. Qua ứng
-                dụng TYM Mobile,
-                chị có thể kiểm soát được mọi giao dịch với TYM như mức vay, mức trả, thời hạn trả, đăng ký vay, đăng ký
-                trả, đăng ký
-                rút và kiểm soát được số dư nợ và dư tiết kiệm của mình.</p>
-              <p>Việc sử dụng ứng dụng TYM Mobile không chỉ giúp khách hàng của TYM tiết kiệm được thời gian, công sức
-                hơn khi không phải
-                tới cụm quản lý tài chính cá nhân mà còn giúp cho các chị em phụ nữ, đặc biệt là phụ nữ ở khu vực nông
-                thôn, vùng sâu,
-                vùng xa quen dần với việc sử dụng công nghệ, giúp cho cuộc sống của họ trở nên thuận tiện hơn, bắt kịp
-                sự phát triển của
-                xã hội. Trong suốt 31 năm qua, TYM đã giải ngân gần 1,9 triệu món vốn cho hàng trăm nghìn phụ nữ. TYM đã
-                đồng hành với
-                chị em phụ nữ từ những thời điểm mà cơ hội được tiếp cận vốn vay của họ còn rất khó khăn.</p>
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-32">
-
-            <h1 class="uk-article-title">Bảo vệ thiết bị di động người dân</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Trong thời đại công nghệ, kết nối Internet và các thiết bị thông minh hiện diện ở khắp mọi nơi kể cả
-                vùng sâu, vùng xa.
-                Hầu hết bà con đều được kết nối và hoạt động trên Internet, nhưng lại chưa được trang bị kiến thức cũng
-                như các giải
-                pháp để tự bảo vệ trên không gian mạng.</p>
-              <p>Kết nối Internet, đồng nghĩa với việc dân làng tham gia hoạt động trên cả hai môi trường, đó là môi
-                trường thực và môi
-                trường số. Môi trường số là môi trường mới, lạ lẫm và đầy cám dỗ với đại đa số người dân trong làng, vì
-                vậy mỗi người
-                dân cần lựa chọn cho mình một giải pháp bảo vệ để có thể tự bảo vệ khi giao dịch ngân hàng trực tuyến,
-                hay bảo vệ mình
-                trước nguy cơ về lây nhiễm mã độc, lộ lọt thông tin cá nhân, lừa đảo, làm phiền bởi các cuộc gọi rác,
-                tin nhắn rác.
-              </p>
-
-              <h3>Bkav Mobile Security (BMS): Giải pháp bảo vệ thiết bị di động khi sử dụng Internet</h3>
-
-              <p>Hiện nay, tin nhắn có nội dung quảng cáo rác, cuộc gọi có nội dung lừa đảo đã trở thành vấn nạn gây
-                nhức nhối và ám ảnh
-                đối với người dùng điện thoại di động. Chỉ cần một chiếc điện thoại đầy đủ chức năng nghe - gọi và không
-                bị chặn cuộc
-                gọi đến, bất kỳ ai cũng có thể trở thành nạn nhân của những cuộc gọi lừa đảo. Bên cạnh những người dân
-                nâng cao cảnh
-                giác thì vẫn có nhiều trường hợp thiếu tỉnh táo trở thành nạn nhân và sập bẫy lừa đảo chỉ sau một cuộc
-                điện thoại.</p>
-              <p>Trước tình hình đó, tập đoàn BKAV đã phát triển sản phẩm BKAV Mobile Security (BMS) để bảo vệ thiết bị
-                của người dân khi
-                sử dụng Internet, với các tính năng hoàn toàn miễn phí, được tin tưởng bởi hơn 2 triệu người. Để cài đặt
-                BMS, người dân
-                có thể truy cập tải xuống phần mềm tại địa chỉ https://www.bkav.com.vn/bkavpro-mobile. Sau khi cài đặt,
-                nếu có những
-                cuộc gọi hay tin nhắn, BMS sẽ kiểm tra và tự động chặn và khuyến cáo người sử dụng nếu xuất hiện các
-                cuộc gọi lừa đảo,
-                tin nhắn rác. Cài đặt BMS sẽ giúp người dân hạn chế được việc phải nhận được những cuộc gọi, tin nhắn
-                nhằm lừa đảo, đồng
-                thời cảnh báo người dân khi truy cập vào các đường dẫn được sử dụng để chiếm đoạt tài khoản ngân hàng,
-                giúp người dân
-                trong làng an tâm hơn khi tham gia các hoạt động trên không gian mạng.</p>
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
-          <div id="text-33">
-
-            <h1 class="uk-article-title">Bảo vệ trẻ em trên môi trường số</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-              <div>
-
-                Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
-                    itemprop="name">Cục tin
-                    học hoá - Bộ Thông tin và Truyền thông</span></span><br>
-
-                <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
-
-                  Apr 22, 2023
-                </time>
-              </div>
-
-            </div>
-
-            <div class="article-content link-primary">
-              <p>Trẻ em ngày nay được tiếp xúc với Internet từ rất sớm qua các thiết bị như iPad, máy tính, điện thoại
-                thông minh để phục
-                vụ việc học tập được thuận tiện. Tuy nhiên, thay vì học tập và tìm hiểu theo sự chỉ dẫn của thầy cô,
-                không ít học sinh
-                lại lướt Facebook, Tiktok, xem YouTube, thậm chí chơi game trong giờ.</p>
-              <p>Bên cạnh đó, khi trẻ em tham gia môi trường số còn có nguy cơ tiếp xúc với luồng thông tin độc hại, bắt
-                nạt trực tuyến
-                hay chứng “nghiện công nghệ” gây ảnh hưởng tiêu cực đến sự phát triển thể chất và tinh thần. Bảo vệ trẻ
-                trên không gian
-                mạng vì vậy cần sự chung tay của các bậc phụ huynh, nhà trường, xã hội, cùng sự hỗ trợ của các giải pháp
-                công nghệ.
-              </p>
-
-              <h3>SafeGate: Giải pháp làm cho Internet an toàn hơn từ trường học tới gia đình</h3>
-
-              <p>SafeGate (https://safegate.vn) được phát triển bởi công ty an ninh mạng thông minh SCS, đây là giải
-                pháp quản lý, bảo vệ
-                an toàn Internet theo mô hình An toàn thông tin như một dịch vụ - giải được bài toán cần giải pháp công
-                nghệ quản lý,
-                bảo vệ cho mọi kết nối Internet nhưng phải đơn giản, dễ dùng, thuận tiện và không tốn chi phí đầu tư.
-                Nhờ mô hình này,
-                SafeGate có thể triển khai dễ dàng, nhanh chóng kể cả ở quy mô gia đình hay trường học. Chỉ trong vài
-                giờ, đội ngũ kỹ
-                thuật SafeGate đã triển khai, lắp đặt xong SafeGate School cho toàn bộ các trường tại Thị xã Nghĩa Lộ,
-                tỉnh Yên Bái hay
-                12 Trường Hermann Gmeiner của Làng trẻ SOS Việt Nam trên toàn quốc để bảo vệ hơn 30.000 học sinh các cấp
-                và hàng nghìn
-                cán bộ, giáo viên đang sử dụng mạng Internet.</p>
-
-              <p>Với SafeGate, ở bất kỳ nơi đâu, thầy, cô và phụ huynh cũng quản lý, giám sát được các hoạt động nhờ báo
-                cáo, cảnh báo an
-                ninh, tình hình sử dụng Internet thông qua ứng dụng được cài đặt trên điện thoại di động. SafeGate bảo
-                vệ các thiết bị
-                được kết nối mạng khỏi những địa chỉ lừa đảo, mã độc, cảnh báo các virus tấn công, mã hóa dữ liệu, chặn
-                lọc nội dung
-                không phù hợp lứa tuổi các con, cung cấp khả năng giới hạn các ứng dụng được phép hoặc không được phép
-                sử dụng mà không
-                cần cài đặt vào thiết bị cần quản lý.</p>
-              <p>Việc triển khai SafeGate giúp các bậc phụ huynh có thể song hành cùng con em mình trong việc tiếp cận
-                thông tin trên môi
-                trường mạng, đảm bảo trẻ con không phải tiếp cận với những thông tin xấu độc, ảnh hưởng không tốt đến
-                tâm hồn trẻ nhỏ.
-                Đồng thời giúp tăng cường việc đảm bảo an toàn thông tin trước các nguy cơ của virus máy tính và các tấn
-                công lừa đảo
-                người dùng.</p>
-
-
-
-
-            </div>
-            <hr class="uk-margin-medium">
-          </div>
           <!-- thiếu -->
           <!-- botton scroll to top -->
           <style>
@@ -5437,7 +5478,91 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
               offset: 120
             });
           </script>
+
+          <style>
+            .sidebar-item {
+              display: block;
+              margin-bottom: 10px;
+              text-decoration: none;
+              color: #333;
+            }
+
+            .content {
+              padding: 20px;
+            }
+
+            .section {
+              display: none;
+            }
+
+            .section.active {
+              display: block;
+            }
+          </style>
           <script>
+            // main.js
+            var sidebar = document.querySelector('.sidebar-docs');
+            var stopElement = document.querySelector('#stop-District');
+
+            window.addEventListener('scroll', function () {
+              var sidebarTop = sidebar.getBoundingClientRect().top;
+              var stopElementTop = stopElement.getBoundingClientRect().top;
+
+              if (sidebarTop >= stopElementTop) {
+                sidebar.classList.add('fixed-sidebar');
+              } else {
+                sidebar.classList.remove('fixed-sidebar');
+              }
+            });
+
+
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+              const sidebarItems = document.querySelectorAll('.sidebar-item');
+              const sections = document.querySelectorAll('.section');
+
+
+
+
+              function showSection(index) {
+                sections.forEach(function (section) {
+                  section.classList.remove('active');
+                });
+                sections[index].classList.add('active');
+                // Loại bỏ lớp 'active' từ tất cả các tiêu đề
+                sidebarItems.forEach(function (item) {
+                  item.classList.remove('active');
+                });
+
+                // Thêm lớp 'active' vào tiêu đề được click
+                sidebarItems[index].classList.add('active');
+              }
+
+              sidebarItems.forEach(function (item, index) {
+                item.addEventListener('click', function (event) {
+                  event.preventDefault();
+                  showSection(index);
+                });
+                // Loại bỏ trạng thái active từ tất cả các sidebar items
+
+              });
+
+              // Kiểm tra hash trong URL để hiển thị đúng nội dung khi trang được tải lại hoặc được mở từ một liên kết trực tiếp.
+              const hash = window.location.hash;
+              const targetSection = document.querySelector(hash);
+              if (targetSection) {
+                const index = Array.from(sections).indexOf(targetSection);
+                showSection(index);
+                // Thêm lớp 'active' vào tiêu đề tương ứng
+                sidebarItems[index].classList.add('active');
+              } else {
+                // Hiển thị nội dung của #section-1 khi không có tiêu đề nào được chọn
+
+              }
+            });
+          </script>
+          <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
               const sidebarItems = document.querySelectorAll('.sidebar-item');
               const contentDivs = document.querySelectorAll('.content > div');
@@ -5448,7 +5573,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
                 });
 
                 // Hiển thị đoạn văn bản tương ứng
-                document.getElementById('text-' + index).style.display = 'block';
+                document.getElementById(index).style.display = 'block';
 
                 // Loại bỏ trạng thái active từ tất cả các sidebar items
                 sidebarItems.forEach(function (item) {
@@ -5487,8 +5612,14 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
                 });
               });
+              const hash = window.location.hash;
+              const targetSection = document.querySelector(hash);
+              if (targetSection) {
+                const index = Array.from(sections).indexOf(targetSection);
+                showContent(index);
+              }
             });
-          </script>
+          </script> -->
           <style>
             a.sidebar-item {
               font-size: 15px;
@@ -5531,19 +5662,19 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
 
 
-          <li class=""><a class="sidebar-item" href="#" data-index="1">Mở rộng hạ tầng số trong làng</a></li>
+          <li class=""><a class="sidebar-item" href="#text-1">Mở rộng hạ tầng số trong làng</a></li>
 
 
 
-          <li class=""><a class="sidebar-item" href="#" data-index="2">Được phổ cập kỹ năng số</a></li>
+          <li class=""><a class="sidebar-item" href="#text-2">Được phổ cập kỹ năng số</a></li>
 
 
 
-          <li><a class="sidebar-item" href="#" data-index="3">Ai cũng có danh tính số</a></li>
+          <li><a class="sidebar-item" href="#text-3" data-index="3">Ai cũng có danh tính số</a></li>
 
 
 
-          <li class=""><a class="sidebar-item" data-index="4" href="#">Được trang bị chữ ký số</a></li>
+          <li class=""><a class="sidebar-item" href="#text-4">Được trang bị chữ ký số</a></li>
 
 
 
@@ -5557,7 +5688,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
           <li class=""><a class="sidebar-item" data-index="7" href="#">Hình ảnh văn hóa số</a></li>
 
-          <li class=""><a class="sidebar-item" data-index="26" href="#">Tham gia tổ công nghệ số cộng đồng</a></li>
+          <li class=""><a class="sidebar-item" href="#text-26">Tham gia tổ công nghệ số cộng đồng</a></li>
 
         </ul>
 
@@ -5703,142 +5834,17 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
     </div>
   </div> -->
   <style>
-    .container h5,
-    h4 {
-      color: #fff !important;
-    }
+
   </style>
-  <footer style="position: relative;background-color: #364c4f ;">
+  <link rel="stylesheet" href="../footer/css/all.css">
 
-    <div class="container">
-      <div id="footer-widgets" class="clearfix">
-        <div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
-          <!-- <div id="nav_menu-3" class="fwidget et_pb_widget widget_nav_menu"> -->
-          <!-- <h4 class="title">
-    							<span class="et_pb_image_wrap ">
-    								<img src="./image/img-so/logo-light.png">
-    							</span>
-    						</h4> -->
-          <!-- <div class="menu-company-container">
-    
-    
-    							<h5 style="color: white;" class="qodef-widget-title">
-    								Vụ Kinh tế số và Xã hội số </h5>
-    
-    
-    						</div> -->
-          <div style="margin-bottom: 30px;" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
-            data-area="qodef-footer-top-area-column-1">
-            <h5 style="color: white;font-size: 20px;" class="qodef-widget-title">
-              Vụ Kinh tế số và Xã hội số </h5>
-          </div>
-          <!-- </div> -->
-          <div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
-            data-area="qodef-footer-top-area-column-1">
-            <h5 style="color: white;" class="qodef-widget-title">
-              LIÊN KẾT </h5>
-          </div>
-          <div id="kamperen_core_social_icons_group-4" class="widget widget_kamperen_core_social_icons_group"
-            data-area="qodef-footer-top-area-column-1">
-            <div class="qodef-social-icons-group">
-              <span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal" style="margin: 0 33px 0 0">
-                <a itemprop="url" href="https://langso.dx.gov.vn/" target="_blank"> <svg
-                    class="svg-inline--fa fa-facebook-f fa-w-9 qodef-icon-font-awesome qodef-icon qodef-e"
-                    style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab" data-icon="facebook-f"
-                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" data-fa-i2svg="">
-                    <path fill="#fff"
-                      d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
-                    </path>
-                  </svg><!-- <span class="qodef-icon-font-awesome fab fa-facebook-f qodef-icon qodef-e" style="color: #bcbcbc;font-size: 20px"></span> -->
-                </a> </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-                style="margin: 0 33px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/" target="_blank"> <svg
-                    class="svg-inline--fa fa-instagram fa-w-14 qodef-icon-font-awesome qodef-icon qodef-e"
-                    style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab" data-icon="instagram"
-                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-                    <path fill="#fff"
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                    </path>
-                  </svg><!-- <span class="qodef-icon-font-awesome fab fa-instagram qodef-icon qodef-e" style="color: #bcbcbc;font-size: 20px"></span> -->
-                </a> </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-                data-hover-color="#ffffff" style="margin: 0 33px 0 0"> <a itemprop="url"
-                  href="https://langso.dx.gov.vn/" target="_blank"> <svg
-                    class="svg-inline--fa fa-tripadvisor fa-w-18 qodef-icon-font-awesome qodef-icon qodef-e"
-                    style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab" data-icon="tripadvisor"
-                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
-                    <path fill="#fff"
-                      d="M166.4 280.521c0 13.236-10.73 23.966-23.966 23.966s-23.966-10.73-23.966-23.966 10.73-23.966 23.966-23.966 23.966 10.729 23.966 23.966zm264.962-23.956c-13.23 0-23.956 10.725-23.956 23.956 0 13.23 10.725 23.956 23.956 23.956 13.23 0 23.956-10.725 23.956-23.956-.001-13.231-10.726-23.956-23.956-23.956zm89.388 139.49c-62.667 49.104-153.276 38.109-202.379-24.559l-30.979 46.325-30.683-45.939c-48.277 60.39-135.622 71.891-197.885 26.055-64.058-47.158-77.759-137.316-30.601-201.374A186.762 186.762 0 0 0 0 139.416l90.286-.05a358.48 358.48 0 0 1 197.065-54.03 350.382 350.382 0 0 1 192.181 53.349l96.218.074a185.713 185.713 0 0 0-28.352 57.649c46.793 62.747 34.964 151.37-26.648 199.647zM259.366 281.761c-.007-63.557-51.535-115.075-115.092-115.068C80.717 166.7 29.2 218.228 29.206 281.785c.007 63.557 51.535 115.075 115.092 115.068 63.513-.075 114.984-51.539 115.068-115.052v-.04zm28.591-10.455c5.433-73.44 65.51-130.884 139.12-133.022a339.146 339.146 0 0 0-139.727-27.812 356.31 356.31 0 0 0-140.164 27.253c74.344 1.582 135.299 59.424 140.771 133.581zm251.706-28.767c-21.992-59.634-88.162-90.148-147.795-68.157-59.634 21.992-90.148 88.162-68.157 147.795v.032c22.038 59.607 88.198 90.091 147.827 68.113 59.615-22.004 90.113-88.162 68.125-147.783zm-326.039 37.975v.115c-.057 39.328-31.986 71.163-71.314 71.106-39.328-.057-71.163-31.986-71.106-71.314.057-39.328 31.986-71.163 71.314-71.106 39.259.116 71.042 31.94 71.106 71.199zm-24.512 0v-.084c-.051-25.784-20.994-46.645-46.778-46.594-25.784.051-46.645 20.994-46.594 46.777.051 25.784 20.994 46.645 46.777 46.594 25.726-.113 46.537-20.968 46.595-46.693zm313.423 0v.048c-.02 39.328-31.918 71.194-71.247 71.173s-71.194-31.918-71.173-71.247c.02-39.328 31.918-71.194 71.247-71.173 39.29.066 71.121 31.909 71.173 71.199zm-24.504-.008c-.009-25.784-20.918-46.679-46.702-46.67-25.784.009-46.679 20.918-46.67 46.702.009 25.784 20.918 46.678 46.702 46.67 25.765-.046 46.636-20.928 46.67-46.693v-.009z">
-                    </path>
-                  </svg><!-- <span class="qodef-icon-font-awesome fab fa-tripadvisor qodef-icon qodef-e" style="color: #bcbcbc;font-size: 20px"></span> -->
-                </a> </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-                data-hover-color="#ffffff" style="margin: 0 0px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/"
-                  target="_blank"> <svg
-                    class="svg-inline--fa fa-twitter fa-w-16 qodef-icon-font-awesome qodef-icon qodef-e"
-                    style="color: rgb(188, 188, 188); font-size: 20px;" aria-hidden="true" data-prefix="fab"
-                    data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                    data-fa-i2svg="">
-                    <path fill="#fff"
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                    </path>
-                  </svg><!-- <span class="qodef-icon-font-awesome fab fa-twitter qodef-icon qodef-e" style="color: rgb(188, 188, 188); font-size: 20px;"></span> -->
-                </a> </span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-widget" style=" width: 29%;">
-          <div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
-            <h4 class="title" style="color: #fff;">LIÊN HỆ</h4>
-            <div class="menu-domains-container">
-              <ul id="menu-domains" class="menu">
-                <li id="menu-item-2331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2331">
-                  <a>Địa chỉ: Tòa nhà Cục Thông Tin,115 Trần Duy
-                    Hưng </a>
-                </li>
-                <li id="menu-item-2330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2330">
-                  <a>Số điện thoại: 012333888</a>
-                </li>
-                <li id="menu-item-2329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329">
-                  <a>Email: langso.dx.com.vn</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-widget texBottomNone" style=" width: 29%;">
-          <div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
-            <h4 class="title" style="color: #fff;">TÌM KIẾM</h4>
-            <div class="menu-solutions-container">
-              <ul id="menu-solutions" class="menu">
-                <li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
-                  <a>Trang chủ</a>
-                </li>
-                <li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-                  <a>Dịch vụ tiện ích</a>
-                </li>
-                <li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
-                  <a>Chuyện làng số</a>
-                </li>
-                <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160">
-                  <a>Công nghệ hỗ trợ</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <!-- footer -->
+  <div class="et_pb_gutters3 threshold-element">
+    <include src="../footer/index.html"></include>
+  </div>
+  <!-- footer End-->
 
 
-
-    <div>
-      <div style="background-color: #364C58;padding: 20px 0;font-size: 13px;">
-        <div style=" width: 100%;justify-content: center; display: flex;">
-          <p id="footer-info" style="color: #999 ;">© Cẩm nang làng số</p>
-        </div>
-      </div> <!-- .container -->
-    </div>
-
-  </footer>
 
   <script src="js/bundle.b4d07000.min.js"></script>
 
@@ -6128,6 +6134,86 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
       background-image: url(/wp-content/uploads/2022/08/CTA-bg.jpg) !important
     }
   </style>
+
+  <!-- <script>
+    const fixedElement = document.querySelector(".fixed-element");
+    const threshold = 970; // Điểm scroll khi nào bạn muốn tắt position: fixed;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > threshold) {
+        fixedElement.classList.add("relative"); // Thêm lớp CSS "relative"
+        setTimeout(() => {
+          fixedElement.style.position = "relative";
+        }, 500); // Chờ 0.5 giây trước khi đặt "position" thành "relative"
+      } else {
+        fixedElement.style.position = "fixed";
+        fixedElement.classList.remove("relative"); // Loại bỏ lớp CSS "relative"
+      }
+    });
+  </script> -->
+
+
+  <!-- <script>
+    const fixedElement = document.querySelector(".fixed-element");
+    const thresholdElement = document.getElementById("threshold-element");
+    const newClass = "new-class";
+
+    window.addEventListener("scroll", () => {
+      const thresholdPosition = thresholdElement.getBoundingClientRect();
+
+      if (thresholdPosition.top < window.innerHeight) {
+        fixedElement.classList.add(newClass);
+      } else {
+        fixedElement.classList.remove(newClass);
+      }
+    });
+  </script> -->
+
+  <!-- <script>
+    const fixedElement = document.querySelector(".fixed-element");
+    const thresholdElement = document.getElementById("threshold-element");
+
+    window.addEventListener("scroll", () => {
+      const thresholdPosition = thresholdElement.getBoundingClientRect();
+
+      if (thresholdPosition.top > window.innerHeight) {
+        fixedElement.classList.add("relative"); // Thêm lớp CSS "relative"
+        setTimeout(() => {
+          fixedElement.style.position = "relative";
+        }, 500); // Chờ 0.5 giây trước khi đặt "position" thành "relative"
+      } else {
+        fixedElement.style.position = "fixed";
+        fixedElement.classList.remove("relative"); // Loại bỏ lớp CSS "relative"
+      }
+    });
+  </script> -->
+  <script>
+    const fixedElement = document.querySelector(".fixed-element");
+    const thresholdElement = document.querySelector(".threshold-element");
+    let isFixed = true;
+
+    window.addEventListener("scroll", () => {
+      const thresholdPosition = thresholdElement.getBoundingClientRect();
+
+      if (thresholdPosition.top < window.innerHeight && isFixed) {
+        // Scroll đến phần tử threshold
+        fixedElement.style.opacity = 0;
+        fixedElement.style.transform = "translateY(50px)"; // Di chuyển yếu 50px
+        isFixed = false;
+        setTimeout(() => {
+          fixedElement.style.position = "relative";
+        }, 700); // Chờ 0.7 giây trước khi đặt "position" thành "relative"
+      } else if (thresholdPosition.top >= window.innerHeight && !isFixed) {
+        // Khi cuộn ra ngoài phần tử threshold
+        fixedElement.style.position = "fixed";
+        setTimeout(() => {
+          fixedElement.style.opacity = 1;
+          fixedElement.style.transform = "translateY(0)";
+        }, 0); // Tắt hiệu ứng từ từ
+        isFixed = true;
+      }
+    });
+  </script>
 </body>
 
 </html>

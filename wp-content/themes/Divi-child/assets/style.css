@@ -2822,7 +2822,7 @@ div.wpcf7 .ajax-loader {
 
 #footer-widgets .footer-widget a,
 #footer-widgets .footer-widget li a {
-  color: #999 !important;
+  color: rgb(82, 96, 107) !important;
 }
 
 #footer-widgets .footer-widget a:hover,

@@ -1,4 +1,10 @@
 /* IconJumb */
+/* div.sidebar-docs {
+  position: sticky;
+  top: 500px;
+  width: 200px;
+  height: 200px;
+} */
 
 .img-jumb {
 	animation: img-jumb 1s both cubic-bezier(.45, 0, .55, 1);

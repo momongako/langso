@@ -8468,6 +8468,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
     position      : relative;
     display       : inline-block;
     width         : 100%;
+    height: 300px;
     vertical-align: top
 }
 
@@ -8520,6 +8521,10 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:768px) {
+    .qodef-image-with-text .qodef-m-content {
+
+    height: auto;
+}
     .qodef-image-with-text.qodef-action--scrolling-image .qodef-m-image-holder .qodef-e-frame {
         max-height: 50vh
     }
@@ -8668,6 +8673,10 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
+       .qodef-image-with-text .qodef-m-content {
+
+    height: auto;
+}
     .qodef-interactive-link-showcase .qodef-m-item {
         font-size  : 35px;
         line-height: 1.2em
