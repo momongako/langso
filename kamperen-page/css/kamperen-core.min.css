@@ -8175,6 +8175,9 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 .qodef-icon-with-text.qodef--has-appear.qodef--jump .qodef-m-svg1 img {
     animation: qode-in-out 1s both cubic-bezier(.45, 0, .55, 1)
 }
+.qodef-icon-with-text.qodef--has-appear.qodef--jump .qodef-m-svg2 img {
+    animation: qode-in-out 1s both cubic-bezier(.45, 0, .55, 1)
+}
 
 
 .qodef-icon-with-text.qodef-layout--before-title .qodef-m-svg {
