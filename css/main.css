@@ -6,6 +6,15 @@
   height: 200px;
 } */
 
+.container1 {
+		margin-top: 0px;
+    margin-bottom: 0px !important;
+    width: 100% !important;
+	  max-width: 1200px;
+	   /* padding-left : 15px;
+  padding-right: 15px; */
+}
+
 .img-jumb {
 	animation: img-jumb 1s both cubic-bezier(.45, 0, .55, 1);
 }
@@ -428,6 +437,9 @@
 }
 
 @media (max-width: 980px) {
+	.hitddenNone{
+		overflow: hidden;
+	}
 	.boderbox {
 		height: 100%;
 		padding: 22px 15px 0px 9px;

@@ -176,7 +176,7 @@
         slidesPerView: 2,
         spaceBetween: 0,
         autoplay: {
-            delay: 35000000,
+            delay: 3500,
             disableOnInteraction: false,
         },
         breakpoints: {
