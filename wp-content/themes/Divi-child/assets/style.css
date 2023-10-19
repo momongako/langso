@@ -626,7 +626,7 @@ div#et-top-navigation {
 }
 
 .mobile_menu_bar::before {
-  color    : #00aa55 !important;
+  color    : white !important;
   font-size: 43px;
 }
 
@@ -2842,7 +2842,7 @@ div.wpcf7 .ajax-loader {
   color         : #00aa55;
   font-weight   : 600;
   line-height   : 34px;
-  font-size     : 25px;
+  font-size     : 22px;
   padding-bottom: 15px;
 }
 
