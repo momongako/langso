@@ -2926,12 +2926,17 @@ div.wpcf7 .ajax-loader {
   }
 
   #footer-widgets .footer-widget:nth-child(n) {
-    margin-bottom: 25px !important
+    margin-bottom: 25px !important;
+
   }
 
   #footer-widgets .footer-widget:last-child {
     margin-bottom: 0 !important;
     margin-top   : 67px !important;
+  }
+
+  div#kamperen_core_title_widget-3 {
+    text-align: left;
   }
 }
 
