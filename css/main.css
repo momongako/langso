@@ -5,7 +5,19 @@
   width: 200px;
   height: 200px;
 } */
+.campaign-section.style-two .section-wrapper .post-item .post-inner .post-content p{
+	text-align: justify;
+}
+.qodef-icon-with-text.qodef-layout--top .qodef-m-text{
+	text-align: justify;
+}
+.qodef-image-with-text .qodef-m-text{
+	text-align: justify;
+}
 
+.project-section .section-wrapper .post-item .post-content p {
+    text-align: justify;
+}
 .container1 {
 		margin-top: 0px;
     margin-bottom: 0px !important;

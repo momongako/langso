@@ -13629,7 +13629,9 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 @media only screen and (max-width:480px) {
     .qodef-section-title .qodef-m-text {
         margin-top : 13px !important;
-        line-height: 29px
+        line-height: 29px;
+        text-align: justify;
+        
     }
 
     .qodef-section-title .qodef-m-tagline-mark {
