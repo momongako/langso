@@ -1361,11 +1361,11 @@ a:hover .nav-title,
 .entry-content a img,
 .comment-content a img,
 .widget a img {
-      object-fit: cover;
-    width: 62%;
-    height: 62%;
+  object-fit           : cover;
+  width                : 62%;
+  height               : 62%;
   /* -webkit-box-shadow: 0 0 0 8px #fff;
-  box-shadow        : 0 0 0 8px #fff; */
+  box-shadow           : 0 0 0 8px #fff; */
 }
 
 .post-navigation a:focus .icon,
@@ -5537,11 +5537,11 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 @media (min-width: 768px) {
   .campaign-section.style-two:after {
-    top       : 0;
+    /* top       : 0;
     right     : 0;
     height    : 100%;
     width     : 437px;
-    background: url(../images/01_9.jpg) no-repeat;
+    background: url(../images/01_9.jpg) no-repeat; */
   }
 }
 
@@ -5580,9 +5580,10 @@ div#scrollbar::-webkit-scrollbar-thumb {
 .post-thumb.style-2 {
   border-top: 4px solid #00aa55;
 }
+
 .post-thumb.style-2a {
-border-radius: 30px !important;
-    border-top: 4px solid green;
+  border-radius: 30px !important;
+  border-top   : 4px solid green;
 }
 
 .campaign-section.style-two .section-wrapper .post-item .post-inner .post-thumb,
@@ -5604,7 +5605,7 @@ border-radius: 30px !important;
 }
 
 .campaign-section.style-two .section-wrapper .post-item .post-inner .post-content {
-  height: 320px;
+  height        : 320px;
   padding-top   : 0px !important;
   padding       : 28px;
   padding-bottom: 45px;
