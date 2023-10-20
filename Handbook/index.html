@@ -1154,8 +1154,7 @@
     top: 34px;
     position: fixed;
     /* margin-top: 60px; */">
-    <nav class="uk-navbar-container"
-      style="align-items: flex-end;display: flex;height: 53px;border-bottom: 2px solid #14aa58;">
+    <nav class="uk-navbar-container" style="align-items: flex-end;display: flex;height: 53px;">
       <div class="uk-container" style="margin: 13px;">
         <div data-uk-navbar="">
           <div class="uk-navbar-left" id="toggleButton">
@@ -1328,11 +1327,13 @@
         <style>
           nav.uk-navbar-container {
             display: none;
+
           }
 
           @media (max-width: 959px) {
             nav.uk-navbar-container {
               display: block;
+              border-bottom: 2px solid #14aa58;
             }
 
             .sidebar-docs {
