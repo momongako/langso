@@ -1796,6 +1796,31 @@
         .footer-widget h4 {
           margin-bottom: 0px;
         }
+
+        @media only screen and (max-width:768px) {
+          #container {
+            width: unset !important;
+            height: 600px;
+          }
+
+          .container.clearfix.et_menu_container {
+            margin-bottom: 2px !important;
+            margin-top: 3px !important;
+          }
+
+          .mobile_menu_bar::before {
+
+            font-size: 22px !important;
+          }
+
+          .et_mobile_menu li a {
+            font-weight: normal;
+            color: #364c4f;
+            padding: 6px 3% !important;
+            font-size: 8px !important;
+            /* padding: 20px 25px; */
+          }
+        }
       </style>
 
       <link rel="stylesheet" href="../footer/css/all.css">
