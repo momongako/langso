@@ -38,10 +38,18 @@
       height: 800px;
     }
 
+    #toggleButton2 {
+      display: none;
+    }
+
     @media only screen and (max-width:768px) {
       #container {
         width: unset !important;
         height: 600px;
+      }
+
+      #toggleButton2 {
+        display: block;
       }
 
       .container.clearfix.et_menu_container {
@@ -1010,7 +1018,7 @@
     /* css fixd */
     .fixed-element {
       position: fixed;
-      top: 10px;
+      top: 78px;
       transition: all 0.7s;
       /* Thêm hiệu ứng chuyển đổi */
       opacity: 1;
@@ -1113,8 +1121,8 @@
           <li id="menu-item-2314" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
             <a href="../developers/index.html">Chuyện làng số</a>
           </li>
-          <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
-              href="../usecases/index.html">Công nghệ hỗ trợ</a></li>
+          <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+              href="../usecases/index.html">Công nghệ hỗ trợ</a></li> -->
           <li id="menu-item-1338"
             class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
             <a href="../dowloadPdf/index.html">Tải tài liệu</a>
@@ -1160,7 +1168,7 @@
           <div class="uk-navbar-left" id="toggleButton">
 
 
-            <span data-uk-navbar-toggle-icon=""></span> <span class="uk-margin-small-left">Đọc</span>
+            <span data-uk-navbar-toggle-icon=""></span> <span class="uk-margin-small-left">Chi tiết</span>
 
 
 
@@ -1177,15 +1185,26 @@
       <div class="uk-grid-large" data-uk-grid="">
 
         <div class="sidebar-fixed-width uk-visible@m context-hide">
-          <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 335px;">
+          <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 335px; padding-right: 10px;">
             <!-- uk-position-fixed -->
-            <h5>Mở đầu </h5>
+            <div style="display: flex;justify-content: space-between;">
+              <h5>Mở đầu </h5>
+
+              <div class="uk-navbar-left" id="toggleButton2">
+                <span class="uk-margin-small-left" style="
+                  font-family: cursive;
+                  font-size: 19px;
+                  float: right;">X</span>
+              </div>
+            </div>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
               <li class=""><a class="sidebar-item" href="#" data-index="0">Lời nói đầu</a>
               </li>
             </ul>
 
-            <h5>Người dân làng số</h5>
+            <h5>
+              <a class="sidebar-item" href="#" data-index="34">Người dân làng số</a>
+            </h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
               <li class=""><a class="sidebar-item" href="#" data-index="1">Mở rộng hạ tầng số trong làng</a></li>
@@ -1219,7 +1238,7 @@
 
             </ul>
 
-            <h5>Dân làng sử dụng dịch vụ, tiện ích số</h5>
+            <h5><a class="sidebar-item" href="#" data-index="35">Dân làng sử dụng dịch vụ, tiện ích số</a></h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
 
@@ -1254,7 +1273,7 @@
 
             </ul>
 
-            <h5>DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ</h5>
+            <h5><a class="sidebar-item" href="#" data-index="36">DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ</a></h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
 
@@ -1283,7 +1302,7 @@
 
             </ul>
 
-            <h5>DÂN LÀNG LÀM KINH TẾ SỐ</h5>
+            <h5><a class="sidebar-item" href="#" data-index="37">DÂN LÀNG LÀM KINH TẾ SỐ</a></h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
 
@@ -1351,9 +1370,20 @@
           // Lấy tham chiếu đến button và div chứa nội dung
           var toggleButton = document.getElementById('toggleButton');
           var contentDiv = document.querySelector('.context-hide');
-
+          var toggleButton2 = document.getElementById('toggleButton2');
           // Thêm sự kiện click vào nút
           toggleButton.addEventListener('click', function () {
+            // Kiểm tra xem div có class "hidden" không
+            if (contentDiv.classList.contains('uk-visible@m')) {
+              // Nếu có, loại bỏ class "hidden" để hiển thị div
+              contentDiv.classList.remove('uk-visible@m');
+
+            } else {
+              // Nếu không, thêm class "hidden" để ẩn div
+              contentDiv.classList.add('uk-visible@m');
+            }
+          });
+          toggleButton2.addEventListener('click', function () {
             // Kiểm tra xem div có class "hidden" không
             if (contentDiv.classList.contains('uk-visible@m')) {
               // Nếu có, loại bỏ class "hidden" để hiển thị div
@@ -1367,7 +1397,7 @@
 
 
         </script>
-        <div class="uk-width-1-1 uk-width-expand@m content" style="min-height: 600px;">
+        <div class="uk-width-1-1 uk-width-expand@m content" style="min-height: 700px;">
           <!-- Lời mời cộng tác -->
           <div id="text-0" class="section">
 
@@ -1483,32 +1513,7 @@
                 Những thay đổi, bổ sung sẽ được cập nhật ngay lập tức trong phiên bản điện tử tại địa chỉ:
                 https://langso.dx.gov.vn
               </p>
-              <div id="stop-District" class=" share uk-text-center uk-margin-medium-top">
 
-                <a class="uk-link-muted"
-                  href="https://twitter.com/intent/tweet?text=Lời mời cộng tác&amp;url=http://localhost:4000/docs/loi-moi-cong-tac/&amp;via=&amp;related="
-                  rel="nofollow" target="_blank" title="Chia sẻ lên Twitter"
-                  onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span
-                    data-uk-icon="icon: twitter; ratio: 1.2" class="uk-icon"><svg width="24" height="24"
-                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74">
-                      </path>
-                    </svg></span></a>
-
-
-                <a class="uk-link-muted uk-margin-small-left"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdx.mic.gov.vnhttp%3A%2F%2Flocalhost%3A4000%2Fdocs%2Floi-moi-cong-tac%2F"
-                  rel="nofollow" target="_blank" title="Chia sẻ lên Facebook"
-                  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span
-                    data-uk-icon="icon: facebook; ratio: 1.2" class="uk-icon"><svg width="24" height="24"
-                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z">
-                      </path>
-                    </svg></span></a>
-
-              </div>
 
 
             </div>
@@ -1541,6 +1546,86 @@
                 </div>
               </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+          <div id="text-34" class="section">
+
+            <h1 class="uk-article-title">Người dân làng số</h1>
+
+
+
+            <!-- <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+          
+          
+          
+          
+                        <div>
+          
+                          Đăng bởi <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span
+                              itemprop="name">Cục tin
+                              học hoá - Bộ Thông tin và Truyền thông</span></span><br>
+          
+                          <time datetime="2023-04-22T01:23:28+00:00" itemprop="datePublished">
+          
+                            Apr 22, 2023
+                          </time>
+                        </div>
+          
+                      </div> -->
+            <div class="article-content link-primary ">
+
+              <!-- <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4> -->
+
+              <p>Để làng trở thành Làng số, người dân là chủ thể, là động lực chính quyết định tương lai phát triển ngôi
+                làng của mình
+                trong kỷ nguyên số. Bằng việc mở rộng hạ tầng số trong làng, người dân bắt đầu tiếp cận với Internet và
+                dần hình thành
+                các kỹ năng số từ cơ bản đến nâng cao từ đó biết ứng dụng công nghệ số để thay đổi thói quen sinh hoạt,
+                thay đổi cách
+                làm việc, từng bước cải thiện, nâng cao đời sống vật chất và tinh thần. Những nền tảng số mang lại nhiều
+                giá trị, lợi
+                ích trở thành một phần trong nhịp sống sinh hoạt hàng ngày của người dân, và được dân làng sử dụng
+                thường xuyên. Các gia
+                đình số dần dần được hình thành và được nhân rộng theo thời gian.</p>
+
+              <!-- <h3 id="1-chia-sẻ-cẩm-nang-chuyển-đổi-số-trên-mạng-xã-hội-để-lan-toả-giá-trị">1. Chia sẻ Cẩm nang Chuyển
+                          đổi số trên
+                          Mạng xã hội để lan toả giá trị</h3> -->
+              <p>Chuyên mục người dân Làng số sẽ nói về những hành trang mà người dân cần trang bị cho mình để từ đó có
+                thể tiếp cận với
+                công nghệ và sử dụng các dịch vụ mà công nghệ số mang lại như những dịch vụ bình dân khác, đồng thời
+                biết ứng dụng công
+                nghệ để làm kinh tế số, và tích lũy để tạo nên không gian kiến trúc Làng số mang đậm những giá trị văn
+                hóa truyền thống
+                và kết hợp được những yếu tố hiện đại do công nghệ mang lại.</p>
+
+
+
+
+
+
+            </div>
+
+
+
+            <hr class="uk-margin-medium">
+
+
+
+
+
+
+
 
 
 
@@ -1786,22 +1871,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
 
 
-              <div class="share uk-text-center uk-margin-medium-top">
 
-                <a class="uk-link-muted"
-                  href="https://twitter.com/intent/tweet?text=Chuyển đổi số là gì?&amp;url=http://localhost:4000/docs/chuyen-doi-so-la-gi/&amp;via=&amp;related="
-                  rel="nofollow" target="_blank" title="Chia sẻ lên Twitter"
-                  onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span
-                    data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-
-
-                <a class="uk-link-muted uk-margin-small-left"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdx.mic.gov.vnhttp%3A%2F%2Flocalhost%3A4000%2Fdocs%2Fchuyen-doi-so-la-gi%2F"
-                  rel="nofollow" target="_blank" title="Chia sẻ lên Facebook"
-                  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span
-                    data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
-
-              </div>
 
 
             </div>
@@ -1809,48 +1879,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
 
             <hr class="uk-margin-medium">
-
-
-
-
-
-
-
-
-
-            <div class="uk-margin-large-top paginate-post">
-              <div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid="">
-                <div>
-
-
-
-
-                  <h5>Lời mời cộng tác</h5>
-                  <div><a class="remove-underline hvr-back" href="/docs/loi-moi-cong-tac/">← Quay lại</a></div>
-
-                </div>
-                <div>
-
-
-
-
-                  <h5>Chuyển đổi số vì sao lại cần?</h5>
-                  <div class="uk-text-right"><a class="remove-underline hvr-forward"
-                      href="/docs/chuyen-doi-so-vi-sao-lai-can/">Đọc tiếp →</a></div>
-
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
           </div>
           <!-- Được phổ cập kỹ năng số -->
           <div id="text-2" class="section">
@@ -2497,7 +2525,38 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
           </div>
           <!-- end tham gia tổ công nghệ -->
           <!-- Dân làng sử dụng dịch vụ tiện ích số -->
+          <div id="text-35" class="section">
 
+            <h1 class="uk-article-title">Dân làng sử dụng dịch vụ, tiện ích số</h1>
+            <div class="article-content link-primary ">
+
+              <!-- <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4> -->
+
+              <p>Trước đây, làng thường được vây quanh bởi lũy tre, vì vậy, các dịch vụ, tiện ích người dân trong làng
+                sử dụng cũng “bị
+                giới hạn bởi chính lũy tre làng”, cùng với sự phát triển của xã hội, hình ảnh làng quê ngày càng thay da
+                đổi thịt, hạ
+                tầng giao thông thuận tiện đã mở rộng không gian kết nối giữa các địa phương, nhưng vẫn bị giới hạn bởi
+                khoảng cách địa
+                lý.</p>
+
+              <p>Ngày nay, với hạ tầng mạng kết nối Internet, cùng với điện thoại thông minh, một người nông dân có thể
+                kết nối với cả
+                thế giới, mọi rào cản địa lý được xóa bỏ, mở toang cánh cửa để bước vào thế giới số với vô vàn các giải
+                pháp công nghệ
+                giúp dân làng có điều kiện tiếp cận với dịch vụ, tiện ích như người dân thành thị, đồng thời mở ra cơ
+                hội làm giàu,
+                thoát nghèo.</p>
+
+              <p>Chuyên mục dịch vụ, tiện ích làng số giới thiệu tới người dân những nền tảng số, dịch vụ số, mà có thể
+                giúp giải quyết
+                những nhu cầu thường gặp phải trong cuộc sống hàng ngày của người dân. Một ngôi làng luôn có sự hiện
+                diện của các nền
+                tảng số, tiện ích số khi người dân cần, là một ngôi làng đang tích lũy để phát triển thành làng số.</p>
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
           <!-- Dịch vụ công trực tuyền -->
           <div id="text-8" class="section">
 
@@ -3509,7 +3568,34 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ -->
+          <div id="text-36" class="section">
 
+            <h1 class="uk-article-title">Dân làng xây dựng không gian kiến trúc làng số</h1>
+            <div class="article-content link-primary ">
+
+              <!-- <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4> -->
+
+              <p>Quá trình cư trú ngàn đời trong không gian kiến trúc làng quê đã quy định bản chất văn hóa, kinh tế,
+                chính trị, tôn giáo
+                của người Việt. Khi nhắc về không gian kiến trúc một làng, quen thuộc và truyền thống, chúng ta đều nghĩ
+                tới ngay đó
+                chính là “cây đa, bến nước, sân đình” hay “lũy tre làng”. Làng dù có thể ổn định cấu trúc nhưng vẫn luôn
+                là một thực thể
+                linh động, liên tục biến thiên trong lịch sử.</p>
+
+              <p>Làng số kế thừa những nét đặc sắc của không gian truyền thống và không thay đổi bản chất cấu trúc của
+                làng. Trong không
+                gian kiến trúc làng số, những “hạng mục công trình” mang dấu ấn thời gian được giữ lại, với những kiến
+                trúc có chiều sâu
+                văn hóa đậm nét làng quê Việt, song với đó là khoác thêm cho mình những nét riêng của công nghệ hiện đại
+                để phù hợp với
+                sự phát triển của xã hội với những nét đặc sắc riêng biệt.</p>
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
           <!-- Nhà văn hóa số -->
 
           <div id="text-13" class="section">
@@ -3945,7 +4031,34 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
             <hr class="uk-margin-medium">
           </div>
           <!-- Dân làng làm kinh tế số -->
+          <div id="text-37" class="section">
 
+            <h1 class="uk-article-title">Dân làng làm kinh tế số</h1>
+            <div class="article-content link-primary ">
+
+              <!-- <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4> -->
+
+              <p>Quá trình cư trú ngàn đời trong không gian kiến trúc làng quê đã quy định bản chất văn hóa, kinh tế,
+                chính trị, tôn giáo
+                của người Việt. Khi nhắc về không gian kiến trúc một làng, quen thuộc và truyền thống, chúng ta đều nghĩ
+                tới ngay đó
+                chính là “cây đa, bến nước, sân đình” hay “lũy tre làng”. Làng dù có thể ổn định cấu trúc nhưng vẫn luôn
+                là một thực thể
+                linh động, liên tục biến thiên trong lịch sử.</p>
+
+              <p>Quá trình cư trú ngàn đời trong không gian kiến trúc làng quê đã quy định bản chất văn hóa, kinh tế,
+                chính trị, tôn giáo
+                của người Việt. Khi nhắc về không gian kiến trúc một làng, quen thuộc và truyền thống, chúng ta đều nghĩ
+                tới ngay đó
+                chính là “cây đa, bến nước, sân đình” hay “lũy tre làng”. Làng dù có thể ổn định cấu trúc nhưng vẫn luôn
+                là một thực thể
+                linh động, liên tục biến thiên trong lịch sử.</p>
+
+
+
+            </div>
+            <hr class="uk-margin-medium">
+          </div>
 
           <!-- Nông nghiệp số -->
           <div id="text-18" class="section">
