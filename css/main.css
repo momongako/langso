@@ -134,6 +134,7 @@
 
 .imgBox {
 	height: 200px;
+	 /* border-radius: 30px;height: 450px; object-fit: cover; */
 }
 
 .imgItem {
