@@ -1130,17 +1130,16 @@
 
   <div style="
     width: 100%;
-    top: 77px;
+    top: 64px;
     position: fixed;
     /* margin-top: 60px; */">
     <nav class="uk-navbar-container">
-      <div class="uk-container">
+      <div class="uk-container" style="margin: 13px;">
         <div data-uk-navbar="">
-          <div class="uk-navbar-left">
+          <div class="uk-navbar-left" id="toggleButton">
 
 
-            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle=""><span
-                data-uk-navbar-toggle-icon=""></span> <span class="uk-margin-small-left">Đọc</span></a>
+            <span data-uk-navbar-toggle-icon=""></span> <span class="uk-margin-small-left">Đọc</span>
 
 
 
@@ -1156,7 +1155,7 @@
     <div class="uk-container">
       <div class="uk-grid-large" data-uk-grid="">
 
-        <div class="sidebar-fixed-width uk-visible@m">
+        <div class="sidebar-fixed-width uk-visible@m context-hide">
           <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 335px;">
             <!-- uk-position-fixed -->
             <h5>Mở đầu </h5>
@@ -1304,7 +1303,47 @@
 
           </div>
         </div>
+        <style>
+          nav.uk-navbar-container {
+            display: none;
+          }
 
+          @media (max-width: 959px) {
+            nav.uk-navbar-container {
+              display: block;
+            }
+
+            .sidebar-docs {
+              padding-left: 20px;
+              background: #f5f5f5;
+              top: 85px !important;
+              left: 0px;
+              width: 50% !important;
+              height: 100vh !important;
+            }
+
+          }
+        </style>
+        <script>
+          // Lấy tham chiếu đến button và div chứa nội dung
+          var toggleButton = document.getElementById('toggleButton');
+          var contentDiv = document.querySelector('.context-hide');
+
+          // Thêm sự kiện click vào nút
+          toggleButton.addEventListener('click', function () {
+            // Kiểm tra xem div có class "hidden" không
+            if (contentDiv.classList.contains('uk-visible@m')) {
+              // Nếu có, loại bỏ class "hidden" để hiển thị div
+              contentDiv.classList.remove('uk-visible@m');
+
+            } else {
+              // Nếu không, thêm class "hidden" để ẩn div
+              contentDiv.classList.add('uk-visible@m');
+            }
+          });
+
+
+        </script>
         <div class="uk-width-1-1 uk-width-expand@m content">
           <!-- Lời mời cộng tác -->
           <div id="text-0" class="section">
@@ -5470,9 +5509,47 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
       </div>
     </div>
   </div>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin-left: -300px;
+      /* Dịch chuyển modal ra bên trái */
+      padding: 20px;
+      width: 300px;
+    }
+
+    /* Đóng modal nếu người dùng nhấp vào nút đóng hoặc nền ngoài modal */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
   <!-- list mobile -->
-  <div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar"><button class="uk-offcanvas-close" type="button" data-uk-close=""></button>
+  <!-- <div>
+    <div>
+      <span class="close">&times;</span>
       <h5>Mở đầu </h5>
       <ul class="uk-nav uk-nav-default doc-nav sidebar">
         <li class=""><a class="sidebar-item" href="text-0" data-index="0">Lời nói đầu</a>
@@ -5536,7 +5613,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
         <li class=""><a class="sidebar-item" href="#" data-index="12">Mua sắm trực tuyến</a></li>
 
-        <!-- chưa có nội dung -->
         <li class=""><a class="sidebar-item" href="#" data-index="27">Thanh toán di động</a></li>
         <li class=""><a class="sidebar-item" href="#" data-index="28">Đặt vé trực tuyến</a></li>
         <li class=""><a class="sidebar-item" href="#" data-index="29">Giao tiếp số trong làng</a></li>
@@ -5544,7 +5620,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
         <li class=""><a class="sidebar-item" href="#" data-index="31">Tiếp cận tín dụng số</a></li>
         <li class=""><a class="sidebar-item" href="#" data-index="32">Bảo vệ thiết bị di động người dân</a></li>
         <li class=""><a class="sidebar-item" href="#" data-index="33">Bảo vệ trẻ em trên môi trường số</a></li>
-        <!-- end chưa có nội dung -->
+     
 
       </ul>
 
@@ -5616,8 +5692,29 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
       </ul>
     </div>
-  </div>
+  </div> -->
+  <script>
+    // Lấy tham chiếu đến modal và nút mở modal
+    var modal = document.getElementById('myModal');
+    var openModalBtn = document.getElementById('openModalBtn');
+    var closeModalBtn = document.querySelector('.close');
 
+    // Mở modal khi người dùng nhấp vào nút mở modal
+    openModalBtn.addEventListener('click', function () {
+      modal.style.display = 'block';
+    });
+
+    // Đóng modal khi người dùng nhấp vào nút đóng hoặc nền ngoài modal
+    closeModalBtn.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
   <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
               const sidebarItems = document.querySelectorAll('.sidebar-item');
