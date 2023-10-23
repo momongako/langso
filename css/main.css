@@ -39,7 +39,7 @@
 	font-size: 18px;
 	font-weight: 600;
 	padding-top: 30px;
-	width: 120px;
+	width: 140px;
 }
 
 /* IconHeadle End*/
@@ -387,7 +387,7 @@
 }
 .qodef-image-with-text .qodef-m-content {
 
-    height: 300px ;
+    height: 320px ;
 }
 
 
@@ -430,7 +430,7 @@
 @media (min-width: 980px) {
 	.qodef-image-with-text .qodef-m-content {
 
-    height: 300px ;
+    height: 320px ;
 }
 	
 	#et-main-area #main-content .container1 {
@@ -444,7 +444,7 @@
 @media (min-width: 768px) {
 	.qodef-image-with-text .qodef-m-content {
 
-    height: 300px ;
+    height: 320px ;
 }
 
 
