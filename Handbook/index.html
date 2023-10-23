@@ -1017,7 +1017,7 @@
   <style>
     /* css fixd */
     .fixed-element {
-      position: fixed;
+      /* position: fixed; */
       top: 78px;
       transition: all 0.7s;
       /* Thêm hiệu ứng chuyển đổi */
@@ -1185,7 +1185,7 @@
       <div class="uk-grid-large" data-uk-grid="">
 
         <div class="sidebar-fixed-width uk-visible@m context-hide">
-          <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 335px; padding-right: 10px;">
+          <div class="sidebar-docs  fixed-element uk-margin-top" style=" height: 100vh; padding-right: 10px;">
             <!-- uk-position-fixed -->
             <div style="display: flex;justify-content: space-between;">
               <h5>Mở đầu </h5>
@@ -1194,11 +1194,22 @@
                 <span class="uk-margin-small-left" style="
                   font-family: cursive;
                   font-size: 19px;
-                  float: right;">X</span>
+                  float: right;">
+                  <svg fill="#000000" height="20px" width="20px" version="1.1" id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 460.775 460.775" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                      </path>
+                    </g>
+                  </svg></span>
               </div>
             </div>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
-              <li class=""><a class="sidebar-item" href="#" data-index="0">Lời nói đầu</a>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="0">Lời nói đầu</a>
               </li>
             </ul>
 
@@ -1207,33 +1218,39 @@
             </h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
-              <li class=""><a class="sidebar-item" href="#" data-index="1">Mở rộng hạ tầng số trong làng</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="1">Mở rộng hạ
+                  tầng số trong
+                  làng</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="2">Được phổ cập kỹ năng số</a></li>
+              <li class="toggle-button"><a class="sidebar-item " href="#" data-index="2">Được phổ cập
+                  kỹ năng
+                  số</a></li>
 
 
 
-              <li><a class="sidebar-item" href="#" data-index="3">Ai cũng có danh tính số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="3">Ai cũng có danh tính số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" data-index="4" href="#">Được trang bị chữ ký số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" data-index="4" href="#">Được trang bị chữ ký số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" data-index="5" href="#">Biết sử dụng nền tảng số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" data-index="5" href="#">Biết sử dụng nền tảng số</a>
+              </li>
 
 
 
-              <li class=""><a class="sidebar-item" data-index="6" href="#">Xây dựng gia đình số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" data-index="6" href="#">Xây dựng gia đình số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" data-index="7" href="#">Hình ảnh văn hóa số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" data-index="7" href="#">Hình ảnh văn hóa số</a></li>
 
-              <li class=""><a class="sidebar-item" data-index="26" href="#text-26">Tham gia tổ công nghệ số cộng
+              <li class="toggle-button"><a class="sidebar-item" data-index="26" href="#">Tham gia tổ công nghệ số
+                  cộng
                   đồng</a></li>
 
             </ul>
@@ -1243,32 +1260,36 @@
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="8">Dịch vụ công trực tuyến</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="8">Dịch vụ công trực tuyến</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="9">Khám chữa bệnh từ xa</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="9">Khám chữa bệnh từ xa</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="10">Học tập trực tuyến</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="10">Học tập trực tuyến</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="11">Tiếp cận việc làm qua mạng</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="11">Tiếp cận việc làm qua mạng</a>
+              </li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="12">Mua sắm trực tuyến</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="12">Mua sắm trực tuyến</a></li>
 
               <!-- chưa có nội dung -->
-              <li class=""><a class="sidebar-item" href="#" data-index="27">Thanh toán di động</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="28">Đặt vé trực tuyến</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="29">Giao tiếp số trong làng</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="30">Truyền hình số di động</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="31">Tiếp cận tín dụng số</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="32">Bảo vệ thiết bị di động người dân</a></li>
-              <li class=""><a class="sidebar-item" href="#" data-index="33">Bảo vệ trẻ em trên môi trường số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="27">Thanh toán di động</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="28">Đặt vé trực tuyến</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="29">Giao tiếp số trong làng</a>
+              </li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="30">Truyền hình số di động</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="31">Tiếp cận tín dụng số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="32">Bảo vệ thiết bị di động người
+                  dân</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="33">Bảo vệ trẻ em trên môi trường
+                  số</a></li>
               <!-- end chưa có nội dung -->
 
             </ul>
@@ -1278,27 +1299,27 @@
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="13">Nhà văn hóa số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="13">Nhà văn hóa số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="14">Thư viện sách số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="14">Thư viện sách số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="15">Mắt thần 24/7</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="15">Mắt thần 24/7</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="16">Hệ thống chiếu sáng xanh</a>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="16">Hệ thống chiếu sáng xanh</a>
               </li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="17">Chợ số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="17">Chợ số</a></li>
 
 
-              <li class=""><a class="sidebar-item" href="#text-25" data-index="25">Truyền thanh số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="25">Truyền thanh số</a></li>
 
             </ul>
 
@@ -1307,23 +1328,26 @@
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="18">Nông nghiệp số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="18">Nông nghiệp số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="19">Thương mại số</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="19">Thương mại số</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="20">Phát triển du lịch địa phương</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="20">Phát triển du lịch địa
+                  phương</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="21">Làng kinh tế số đặc thù</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="21">Làng kinh tế số đặc thù</a>
+              </li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="22">LÝ LUẬN VỀ PHÁT TRIỂN LÀNG SỐ VIỆT NAM NĂM
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="22">LÝ LUẬN VỀ PHÁT TRIỂN LÀNG SỐ
+                  VIỆT NAM NĂM
                   2023</a></li>
 
             </ul>
@@ -1333,11 +1357,11 @@
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="23">Lời tổng kết</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="23">Lời tổng kết</a></li>
 
 
 
-              <li class=""><a class="sidebar-item" href="#" data-index="24">Lời cảm ơn !</a></li>
+              <li class="toggle-button"><a class="sidebar-item" href="#" data-index="24">Lời cảm ơn !</a></li>
 
             </ul>
 
@@ -1355,6 +1379,7 @@
             }
 
             .sidebar-docs {
+              padding-top: 17px;
               position: fixed !important;
               padding-left: 20px;
               background: #f5f5f5;
@@ -1366,38 +1391,8 @@
 
           }
         </style>
-        <script>
-          // Lấy tham chiếu đến button và div chứa nội dung
-          var toggleButton = document.getElementById('toggleButton');
-          var contentDiv = document.querySelector('.context-hide');
-          var toggleButton2 = document.getElementById('toggleButton2');
-          // Thêm sự kiện click vào nút
-          toggleButton.addEventListener('click', function () {
-            // Kiểm tra xem div có class "hidden" không
-            if (contentDiv.classList.contains('uk-visible@m')) {
-              // Nếu có, loại bỏ class "hidden" để hiển thị div
-              contentDiv.classList.remove('uk-visible@m');
 
-            } else {
-              // Nếu không, thêm class "hidden" để ẩn div
-              contentDiv.classList.add('uk-visible@m');
-            }
-          });
-          toggleButton2.addEventListener('click', function () {
-            // Kiểm tra xem div có class "hidden" không
-            if (contentDiv.classList.contains('uk-visible@m')) {
-              // Nếu có, loại bỏ class "hidden" để hiển thị div
-              contentDiv.classList.remove('uk-visible@m');
-
-            } else {
-              // Nếu không, thêm class "hidden" để ẩn div
-              contentDiv.classList.add('uk-visible@m');
-            }
-          });
-
-
-        </script>
-        <div class="uk-width-1-1 uk-width-expand@m content" style="min-height: 700px;">
+        <div class="uk-width-1-1 uk-width-expand@m content toggle-button" style="min-height: 700px;">
           <!-- Lời mời cộng tác -->
           <div id="text-0" class="section">
 
@@ -5623,7 +5618,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             .sidebar-item.active {
               color: #00aa55;
-              /* font-weight: bold; */
+              font-weight: bold;
             }
 
             .sidebar-item {
@@ -5645,7 +5640,64 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
       </div>
     </div>
   </div>
+  <script>
+    // Lấy tham chiếu đến button và div chứa nội dung
+    var toggleButton = document.getElementById('toggleButton');
+    var contentDiv = document.querySelector('.context-hide');
+    var toggleButton2 = document.getElementById('toggleButton2');
+    var toggleButton3 = document.getElementById('toggleButton3');
+    var toggleButtons = document.querySelectorAll('.toggle-button');
+    // Thêm sự kiện click vào nút
+    toggleButton.addEventListener('click', function () {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+        contentDiv.classList.remove('uk-visible@m');
 
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    });
+    toggleButton2.addEventListener('click', function () {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+        contentDiv.classList.remove('uk-visible@m');
+
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    });
+    // toggleButton2.addEventListener('click', function () {
+    //   // Kiểm tra xem div có class "hidden" không
+    //   if (contentDiv.classList.contains('uk-visible@m')) {
+    //     // Nếu có, loại bỏ class "hidden" để hiển thị div
+    //     contentDiv.classList.remove('uk-visible@m');
+
+    //   } else {
+    //     // Nếu không, thêm class "hidden" để ẩn div
+    //     contentDiv.classList.add('uk-visible@m');
+    //   }
+    // });
+    function toggleContent() {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+        contentDiv.classList.remove('uk-visible@m');
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    }
+
+    toggleButtons.forEach(function (button) {
+      button.addEventListener('click', toggleContent);
+    });
+
+
+  </script>
   <style>
     .modal {
       display: none;
@@ -6478,7 +6530,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
       }
     });
   </script> -->
-  <script>
+  <!-- <script>
     const fixedElement = document.querySelector(".fixed-element");
     const thresholdElement = document.querySelector(".threshold-element");
     let isFixed = true;
@@ -6504,7 +6556,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
         isFixed = true;
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
