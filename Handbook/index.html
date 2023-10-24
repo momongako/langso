@@ -82,6 +82,7 @@
     .uk-margin-large-top.paginate-post {
       display: none;
     }
+   
   </style>
 
   <script src="./js/flipbook.min.js"></script>
@@ -93,41 +94,10 @@
   <script src="./js/flipbook.webgl.js"></script>
 
   <!-- QUẬN TRANG -->
-  <script>
-    $(document).ready(function () {
-      var targetOffset = $("stop-District").offset().top;
-
-      $(window).scroll(function () {
-        var scrollPos = $(window).scrollTop();
-
-        if (scrollPos >= targetOffset) {
-          // Đã cuộn đến vị trí mục tiêu, có thể ngăn cuộn trang tiếp
-          $(window).off("stop-District");
-        }
-      });
-    });
-  </script>
+  
   <!-- QUẬN TRANG END -->
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#container").flipBook({
-        pdfUrl: "Handbook/pdf/Handbook.pdf",
-
-        startPage: 1,
-        sound: true,
-        pdfPageScale: 2,
-
-        singlePageModeIfMobile: false,
-        // mobile: {
-        //     singlePage: false
-        // },
-
-        // For 16:9 video
-        // See: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
-      });
-    });
-  </script>
+  
 
 
 
@@ -1185,7 +1155,7 @@
       <div class="uk-grid-large" data-uk-grid="">
 
         <div class="sidebar-fixed-width uk-visible@m context-hide ">
-          <div class="sidebar-docs  fixed-element uk-margin-top"
+          <div class="sidebar-docs  fixed-element uk-margin-top menu-in-from-left" 
             style=" height: 100vh; padding-right: 10px;z-index: 2;padding-bottom: 100px">
             <!-- uk-position-fixed -->
             <div style="display: flex;justify-content: space-between;">
@@ -1295,7 +1265,7 @@
 
             </ul>
 
-            <h5><a class="sidebar-item" href="#" data-index="36">DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ</a></h5>
+            <h5><a class="sidebar-item" href="#" data-index="36">Dân làng xây dựng không gian kiến trúc làng số</a></h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
 
@@ -1324,7 +1294,7 @@
 
             </ul>
 
-            <h5><a class="sidebar-item" href="#" data-index="37">DÂN LÀNG LÀM KINH TẾ SỐ</a></h5>
+            <h5><a class="sidebar-item" href="#" data-index="37">Dân làng làm kinh tế số</a></h5>
             <ul class="uk-nav uk-nav-default doc-nav sidebar">
 
 
@@ -1421,7 +1391,7 @@
             </div> -->
             <div class="article-content link-primary ">
 
-              <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4>
+              <!-- <h4 class="Twitter" id="tóm-tắt">Tóm tắt</h4> -->
 
               <p>Cẩm nang là cuốn sách ghi tóm lược những điều quan trọng và thiết yếu về một vấn đề nào đó. Mỗi khi gặp
                 một chuyện khó,
@@ -1474,7 +1444,7 @@
                 lần tái bản tiếp
                 theo.
               </p>
-              <h3 style="text-align: end;">BỘ THÔNG TIN VÀ TRUYỀN THÔNG</h3>
+              <h3 >BỘ THÔNG TIN VÀ TRUYỀN THÔNG</h3>
               <p>
                 Con đường và cách tiếp cận Việt Nam cho chuyển đổi số là nền tảng số Make in Việt Nam. Mang nền tảng số
                 đến từng hộ gia
@@ -2453,14 +2423,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Tham gia tổ công nghệ số cộng đồng</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Một người biết công nghệ có thể hỗ trợ 10 người am hiểu, 10 người am hiểu sẽ hỗ trợ được 100 người, cứ
@@ -3054,14 +3016,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Thanh toán di động</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Thanh toán là công đoạn cuối cùng trong mỗi hoạt động mua bán thường ngày của người dân. Trong đó, tiền
@@ -3133,15 +3088,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
           <div id="text-28" class="section">
 
             <h1 class="uk-article-title">Đặt vé trực tuyến</h1>
-
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Sinh ra từ làng, rồi ra thành phố học tập, làm việc, những đứa con xa quê chỉ mong đến những dịp lễ tết
@@ -3220,14 +3166,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Giao tiếp số trong làng</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Điện thoại từ lâu đã trở thành công cụ hữu hiệu kết nối người dân trong làng với nhau. Trước đây, khi
@@ -3288,13 +3226,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Truyền hình số di động</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Ở làng truyền thống, phát thanh - truyền hình đã đi vào vào nhịp sống của người dân như một phần không
@@ -3351,14 +3282,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Tiếp cận tín dụng số</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Tiếp cận tín dụng là nhu cầu để người dân trong làng có nguồn lực sản xuất, kinh doanh. Tuy nhiên, việc
@@ -3446,14 +3370,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Bảo vệ thiết bị di động người dân</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Trong thời đại công nghệ, kết nối Internet và các thiết bị thông minh hiện diện ở khắp mọi nơi kể cả
@@ -3501,14 +3417,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Bảo vệ trẻ em trên môi trường số</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
 
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Trẻ em ngày nay được tiếp xúc với Internet từ rất sớm qua các thiết bị như iPad, máy tính, điện thoại
@@ -3969,13 +3878,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
 
             <h1 class="uk-article-title">Truyền thanh số</h1>
 
-            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-
-
-
-
-
-            </div>
 
             <div class="article-content link-primary">
               <p>Từ xa xưa, mõ làng đã trở thành một hình ảnh quen thuộc của làng xã. Khi chưa biết sử dụng loa, anh Mõ
@@ -5645,7 +5547,20 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
     .menu-in-from-left {
       animation: slideInFromLeft 0.5s ease forwards;
     }
+    .menu-in-from-right{
+      animation: slideInFromLeft 0.5s ease forwards;  
+    }
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+        /* Di chuyển phần tử ra ngoài khung nhìn bên trái */
+      }
 
+      to {
+        transform: translateX(0);
+        /* Di chuyển phần tử về vị trí bình thường */
+      }
+    }
     @keyframes slideInFromLeft {
       from {
         transform: translateX(-100%);
@@ -5658,12 +5573,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
       }
     }
 
-    .context-hide-a {
-      /* Thiết lập hiệu ứng cho thuộc tính transform trong 0.5 giây với hàm easing */
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-      /* Di chuyển phần tử ra ngoài khung nhìn bên trái ban đầu */
-    }
+    
   </style>
   <script>
     // Lấy tham chiếu đến button và div chứa nội dung
@@ -5673,6 +5583,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
     var toggleButton3 = document.getElementById('toggleButton3');
     var toggleButtons = document.querySelectorAll('.toggle-button');
     var scrollDiv = document.getElementById("scrollDiv");
+
     // Thêm sự kiện click vào nút
     toggleButton.addEventListener('click', function () {
       // Kiểm tra xem div có class "hidden" không
@@ -5680,7 +5591,7 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
         // Nếu có, loại bỏ class "hidden" để hiển thị div
 
         contentDiv.classList.remove('uk-visible@m');
-
+        
       } else {
         // Nếu không, thêm class "hidden" để ẩn div
         contentDiv.classList.add('uk-visible@m');
@@ -5697,17 +5608,6 @@ Chuyển đổi số, bắt đầu từ những đột phá công nghệ số, n
         contentDiv.classList.add('uk-visible@m');
       }
     });
-    // toggleButton2.addEventListener('click', function () {
-    //   // Kiểm tra xem div có class "hidden" không
-    //   if (contentDiv.classList.contains('uk-visible@m')) {
-    //     // Nếu có, loại bỏ class "hidden" để hiển thị div
-    //     contentDiv.classList.remove('uk-visible@m');
-
-    //   } else {
-    //     // Nếu không, thêm class "hidden" để ẩn div
-    //     contentDiv.classList.add('uk-visible@m');
-    //   }
-    // });
     function toggleContent() {
       // Kiểm tra xem div có class "hidden" không
       if (contentDiv.classList.contains('uk-visible@m')) {
