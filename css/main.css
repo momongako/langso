@@ -5,6 +5,53 @@
   width: 200px;
   height: 200px;
 } */
+.et_pb_text_inner .section-header h2 {
+    text-align: center;
+}
+
+.iconHeadlText{
+	/* color:rgb(30, 194, 57); */
+	color: #00aa55;
+	font-size: 100px;
+	font-weight: bold;
+    font-style: normal;
+	line-height: 0.8;
+}
+.quote-icon{
+	margin-bottom: 0px !important;
+	font-family: none !important;
+    display: flex;
+	justify-content: center;
+    font-size: 100px;
+    height: 60px;
+    line-height: 0.8;
+    margin: 0 auto;
+	font-family: unset;
+	max-width: 100%;
+	font-weight: bold;
+    /* font-style: normal !important; */
+}
+.post-item .post-thumb-fire  {
+    margin: 0px 10px;
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    border: solid 10px #fff;
+    box-shadow: 0 0 6px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+.boxImgStyle{
+	margin: 0px 10px;
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    border: solid 10px #fff;
+    box-shadow: 0 0 6px rgb(15 14 14 / 20%);
+    border-radius: 10px;
+    margin-bottom: 0;
+
+}
 .campaign-section.style-two .section-wrapper .post-item .post-inner .post-content p{
 	text-align: justify;
 }
@@ -428,6 +475,7 @@
 
 }
 @media (min-width: 980px) {
+
 	.qodef-image-with-text .qodef-m-content {
 
     height: 320px ;
@@ -442,6 +490,7 @@
 }
 
 @media (min-width: 768px) {
+
 	.qodef-image-with-text .qodef-m-content {
 
     height: 320px ;
@@ -642,6 +691,11 @@
 
 
 @media (max-width: 479px) {
+	.post-item .imgbox {
+		/* width: auto !important; */
+		height: 190px !important;
+		object-fit: cover;
+	}
 	.qodef-image-with-text .qodef-m-content {
 
     height: auto ;
