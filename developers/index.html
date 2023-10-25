@@ -739,8 +739,8 @@
     	color: #364c4f !important;
 	}*/
 	</style>
-	<link rel="icon" href="../image/logotitle.png" sizes="32x32" />
-	<link rel="icon" href="../image/logotitle.png" sizes="192x192" />
+	<link rel="icon" href="../image//img-so/favicon.ico" sizes="32x32" />
+	<link rel="icon" href="../image//img-so/favicon.ico" sizes="192x192" />
 	<link rel="apple-touch-icon"
 		href="https://openremote.io/wp-content/uploads/2018/06/cropped-OpenRemote-favicon-180x180.png" />
 
@@ -922,83 +922,8 @@
 
 <body style="margin-top: 0px;"
 	class="page-template-default page page-id-28 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
-
 	<script>
-		function fetchDataAndProcess1() {
-			document.addEventListener("DOMContentLoaded", async function () {
-				try {
-					const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4");
-
-					if (response.status !== 200) {
-						throw new Error("Lỗi kết nối API");
-					}
-
-					const data = response.data;
-					const titleContainer = document.querySelector(".titleApi");
-					const contentContainer = document.querySelector(".contenApi");
-
-					data.forEach(item => {
-						const title = item.title;
-						const content = item.excerpt;
-
-						// Tạo các thẻ cho tiêu đề và nội dung
-						const titleElement = document.createElement("h2");
-						const contentElement = document.createElement("p");
-
-						// Gán nội dung cho các thẻ
-						titleElement.textContent = title;
-						contentElement.textContent = content;
-
-						// Thêm các thẻ vào các container tương ứng
-						titleContainer.appendChild(titleElement);
-						contentContainer.appendChild(contentElement);
-
-					});
-
-				} catch (error) {
-					console.error("Lỗi: " + error);
-				}
-			});
-		}
-
-
-		function fetchDataAndProcess() {
-			document.addEventListener("DOMContentLoaded", async function () {
-				try {
-					const postData = {
-						// Dữ liệu bạn muốn gửi đi
-						key1: "value1",
-						key2: "value2",
-					};
-
-					const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4");
-
-					if (response.status !== 200) {
-						throw new Error("Lỗi kết nối API");
-					}
-
-					const data = response.data;
-					// Xử lý dữ liệu từ API ở đây
-
-					// Sử dụng forEach để lặp qua mảng và log ra tiêu đề từ mỗi phần tử
-					data.forEach(item => {
-						const title = item.title;
-						// console.log("Tiêu đề:", title);
-					});
-				} catch (error) {
-					console.error("Lỗi: " + error);
-				}
-			});
-		}
-
-
-
-
-
-
-
-		fetchDataAndProcess1(); // Gọi hàm để lấy và hiển thị dữ liệu từ API
-		fetchDataAndProcess()
+		fetchDataAndProcess(); // Gọi hàm từ tệp main.js
 	</script>
 	<div id="page-container">
 
@@ -1006,12 +931,13 @@
 
 		<header id="main-header" data-height-onload="90" class="white">
 			<div class="container clearfix et_menu_container">
-				<div class="logo_container">
-                    <span class="logo_helper"></span>
-                    <a href="#" style="margin-left: 30px;">
-                        <img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);" src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo" data-height-percentage="54" />
-                    </a>
-                </div>
+				<!-- <div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="../index.html">
+						<img style="height: auto !important;" src="https://dx.gov.vn/img/logo-light.png"
+							alt="OpenRemote" id="logo" data-height-percentage="54" />
+					</a>
+				</div> -->
 				<div id="et-top-navigation" data-height="90" data-fixed-height="40">
 					<nav id="top-menu-nav">
 						<ul id="top-menu" class="nav">
@@ -1202,9 +1128,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div id="dataContainer" class="text-mobile11">
-									<h2></h2>
-								</div> -->
 
 
 
@@ -1398,85 +1321,15 @@
 							</div>
 							<section class="project-section ">
 								<div class="container" style="padding-top: 0px;">
-									
+									<div class="section-header" data-aos="fade-up" data-aos-duration="700">
+										<!-- <h2>CHUYỆN LÀNG SỐ</h2> -->
+										<!-- <h2><span>Go Green, Go Solar &amp; Worldwind!</span></h2> -->
+									</div>
 									<div class="section-wrapper">
-
-										<!-- TEST API -->
-
-										<script>
-											document.addEventListener("DOMContentLoaded", function () {
-												// Chọn phần tử có class là "my-custom-class"
-												const myElement = document.querySelector(".section-wrapper");
-												
-												fetch("http://langso.dx.gov.vn/home_posts?id=4", {
-													method: 'GET',
-												})
-													.then(response => response.json())
-													.then(apiData => {
-														
-														// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
-														const usersHTML = apiData.map(user => {
-															return `
-															<div class="post-item " style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" style="margin-top: 10px;" "
-												data-aos-duration="700">
+										<div class="post-item" style="margin-bottom: 40px;">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
-														style=" border-radius: 0px;height: 450px; object-fit: cover;"
-														src="${user.img}" alt=""></a>
-											</div>
-
-											<div class="post-content post-content1" "
-												data-aos-duration="700">
-
-												<div
-													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
-												</div>
-												<div
-													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-													<div class="et_pb_text_inner">
-														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
-															<h2>${user.title}</h2>
-														</div>
-													</div>
-												</div>
-												<div
-													class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-													<div class="et_pb_text_inner">
-														${user.excerpt}
-														
-													</div>
-												</div>
-											</div>
-										</div>
-										`;
-														}).join(''); // Sử dụng join('') để chuyển mảng thành chuỗi
-
-														// Gán chuỗi HTML vào phần tử có class "my-custom-class"
-														myElement.innerHTML = `${usersHTML}`;
-													})
-													.catch(error => {
-														// Xử lý lỗi nếu có
-														console.error("There has been a problem with your fetch operation:", error);
-													});
-											});
-
-										</script>
-
-
-
-
-
-										<!-- TEST API END -->
-
-
-										 <!-- <div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
-												<a href="#"><img class="imgbox"
-														style=" border-radius: 0px;height: 450px; object-fit: cover;"
+													style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/nguoidansangtao.jpg" alt=""></a>
 											</div>
 											<style>
@@ -1489,7 +1342,7 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">KHÔNG GIAN KIẾN TRÚC</p> -->
 												</div>
 
 												<div
@@ -1497,9 +1350,8 @@
 													<div class="et_pb_text_inner">
 
 														<div class="section-header text-mobile">
-															<p class=" quote-icon"><span class="iconHeadlText">“</span>
-															</p>
-															<h2>Người dân sáng tạo làm kinh tế số với mô hình “cây xoài
+															<p class=" quote-icon"><span class="iconHeadlText" >“</span></p>
+															<h2 >Người dân sáng tạo làm kinh tế số với mô hình “cây xoài
 																nhà tôi”
 															</h2>
 														</div>
@@ -1523,8 +1375,7 @@
 
 
 										<div class="post-item " style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/trienkhaihethongloa.jpg" alt=""></a>
@@ -1535,7 +1386,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">KHÔNG GIAN MẠNG</p> -->
 													</div>
 												</div>
 
@@ -1543,8 +1394,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Triển khai hệ thống loa thông minh</h2>
 														</div>
 													</div>
@@ -1569,13 +1419,13 @@
 
 
 											</div>
-										</div>  -->
+										</div>
 									</div>
 
-									<!-- <div class="section-wrapper">
+									<!-- 2Coming -->
+									<div class="section-wrapper">
 										<div class="post-item " style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/thapsanglangque.jpg" alt=""></a>
@@ -1586,14 +1436,13 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">THƯƠNG MẠI SỐ</p> -->
 												</div>
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Thắp sáng làng quê bằng đèn năng lượng mặt trời</h2>
 														</div>
 													</div>
@@ -1616,8 +1465,7 @@
 
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/cameragiamsat.jpg" alt=""></a>
@@ -1628,7 +1476,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -1636,8 +1484,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Triển khai camera giám sát theo hình thức xã hội hóa
 															</h2>
 														</div>
@@ -1667,8 +1514,7 @@
 
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/chothanhtoanso.jpg" alt=""></a>
@@ -1679,15 +1525,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Chợ thanh toán số</h2>
 														</div>
 													</div>
@@ -1708,8 +1553,7 @@
 											</div>
 										</div>
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/canhdongluathongminh.jpg" alt=""></a>
@@ -1720,7 +1564,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -1728,8 +1572,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Cánh đồng lúa thông minh</h2>
 														</div>
 													</div>
@@ -1756,8 +1599,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700" >
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/truysuatnongsan.jpg" alt=""></a>
@@ -1768,15 +1610,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Truy xuất nguồn gốc nông sản</h2>
 														</div>
 													</div>
@@ -1797,10 +1638,9 @@
 												</div>
 											</div>
 										</div>
-										
+										<!-- hangg tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/tudongtuoitieu.jpg" alt=""></a>
@@ -1811,7 +1651,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -1819,8 +1659,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Tự động tưới tiêu cây trồng</h2>
 														</div>
 													</div>
@@ -1848,8 +1687,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/chieusangthongminh.jpg" alt=""></a>
@@ -1860,15 +1698,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Chiếu sáng thông minh cho nông sản</h2>
 														</div>
 													</div>
@@ -1887,10 +1724,9 @@
 												</div>
 											</div>
 										</div>
-										
+										<!-- hangg tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/mohinhtrangtraithongminh.jpg"
@@ -1902,7 +1738,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -1910,8 +1746,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Mô hình trang trại thông minh</h2>
 														</div>
 													</div>
@@ -1941,8 +1776,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/trongraubangdienthoaithongminh.jpg"
@@ -1954,15 +1788,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-												
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Trồng rau bằng điện thoại thông minh</h2>
 														</div>
 													</div>
@@ -1988,10 +1821,9 @@
 												</div>
 											</div>
 										</div>
-										
+										<!-- hangg tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/nuoitomthongminh.jpg" alt=""></a>
@@ -2002,7 +1834,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -2010,8 +1842,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Nuôi tôm thông minh</h2>
 														</div>
 													</div>
@@ -2041,8 +1872,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/nongsanthuongmaidientu.jpg" alt=""></a>
@@ -2053,15 +1883,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Đưa nông sản lên sàn thương mại điện tử</h2>
 														</div>
 													</div>
@@ -2080,10 +1909,9 @@
 												</div>
 											</div>
 										</div>
-										
+										<!-- hangg tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/thietlapkenhbanhangdfarm1.jpg"
@@ -2095,7 +1923,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-													
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -2103,8 +1931,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Thiết lập kênh bán hàng độc lập</h2>
 														</div>
 													</div>
@@ -2138,8 +1965,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/tiepthiquangcaoso.jpg" alt=""></a>
@@ -2150,15 +1976,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Tiếp thị quảng cáo số trên nền tảng mạng xã hội</h2>
 														</div>
 													</div>
@@ -2180,8 +2005,7 @@
 											</div>
 										</div>
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox imgBox1"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;object-position: -459px 0;"
 														src="../image/img_child/trienkhaibanhangdakenh.jpg" alt=""></a>
@@ -2192,7 +2016,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-													
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -2200,8 +2024,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Triển khai bán hàng đa kênh: Ba Thức Food
 															</h2>
 														</div>
@@ -2233,8 +2056,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/ketnoitieuthunongsan.jpg" alt=""></a>
@@ -2245,15 +2067,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-												
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Kết nối tiêu thụ nông sản</h2>
 														</div>
 													</div>
@@ -2274,10 +2095,9 @@
 												</div>
 											</div>
 										</div>
-								
+										<!-- hang tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/quantruvakinhdoanhdulich.jpg"
@@ -2289,7 +2109,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-														
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -2297,8 +2117,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Quản trị và kinh doanh du lịch
 															</h2>
 														</div>
@@ -2325,8 +2144,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/thamquandisanso.jpg" alt=""></a>
@@ -2337,15 +2155,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Tham quan di sản số</h2>
 														</div>
 													</div>
@@ -2372,10 +2189,9 @@
 												</div>
 											</div>
 										</div>
-									
+										<!-- hang tiep -->
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/langnghesolanggombattrang.jpg"
@@ -2387,7 +2203,7 @@
 												<div
 													class="et_pb_module et_pb_text et_pb_text_4 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
-													
+														<!-- <p style=" margin-bottom: 0;">NÔNG NGHIỆP SỐ</p> -->
 													</div>
 												</div>
 
@@ -2395,8 +2211,7 @@
 													class="et_pb_module et_pb_text et_pb_text_5 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Làng nghề số
 															</h2>
 														</div>
@@ -2428,8 +2243,7 @@
 										</div>
 
 										<div class="post-item" style="margin-bottom: 40px;">
-											<div class="post-thumb post-thumb-fire" data-aos="fade-right"
-												data-aos-duration="700">
+											<div class="post-thumb post-thumb-fire" data-aos="fade-right" data-aos-duration="700">
 												<a href="#"><img class="imgbox"
 														style=" border-radius: 0px;height: 450px; object-fit: cover;"
 														src="../image/img_child/nhatrochuyendoiso.png" alt=""></a>
@@ -2440,15 +2254,14 @@
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-													
+													<!-- <p style=" margin-bottom: 0;">TIỆN ÍCH SỐ</p> -->
 												</div>
 
 												<div
 													class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
 													<div class="et_pb_text_inner">
 														<div class="section-header text-mobile">
-															<p class="quote-icon"><span class="iconHeadlText">“</span>
-															</p>
+															<p class="quote-icon"><span class="iconHeadlText" >“</span></p>
 															<h2>Nhà trọ chuyển đổi Số</h2>
 														</div>
 													</div>
@@ -2473,9 +2286,9 @@
 												</div>
 											</div>
 										</div>
-									</div> -->
+									</div>
 
-									
+									<!-- 2Coming End -->
 								</div>
 							</section>
 						</div>
