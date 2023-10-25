@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>API Data Example</h1>
+    <h2>Users</h2>
+    <ul id="users-list"></ul>
+    <h2>Products</h2>
+    <ul id="products-list"></ul>
+    <!-- <span class="comments"></span> -->
+
+    <!-- <script type="text/javascript">
+        const commentsEl = document.querySelector('.comments');
+        fetch("http://langso.dx.gov.vn/categories")
+            .then((response) => response.json())
+            .then((labels) => {
+                // But when we get the results, we immedietly change the contents of the comments span.
+                console.log('check data', labels.forEach(element => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `ID: ${product.id}, Product Name: ${product.name}`;
+                    commentsEl.appendChild(listItem);
+                }))
+                // commentsEl.innerHTML = labels;
+            });
+        console.log(commentsEl);
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const usersList = document.getElementById("users-list");
+            const productsList = document.getElementById("products-list");
+            const testList = document.getElementById("test-list");
+            // Gửi yêu cầu đến API
+            fetch("http://langso.dx.gov.vn/home_posts?id=4")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                })
+                .then(apiData => {
+                    // Hiển thị danh sách người dùng từ API
+                    apiData.forEach(user => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = `ID: ${user.id}, title: ${user.title}`;
+                        usersList.appendChild(listItem);
+                        testList
+                    });
+
+                    // Hiển thị danh sách sản phẩm từ API
+                    // apiData.forEach(product => {
+                    //     const listItem = document.createElement("li");
+                    //     listItem.textContent = `ID: ${product.id}, Product Name: ${product.name}`;
+                    //     productsList.appendChild(listItem);
+                    // });
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có
+                    console.error("There has been a problem with your fetch operation:", error);
+                });
+        });
+
+
+    </script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                const contentDiv = document.getElementById("content");
+
+                // Gửi yêu cầu đến API
+                fetch("https://api.example.com/data")
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Network response was not ok");
+                        }
+                        return response.json();
+                    })
+                    .then(apiData => {
+                        // Hiển thị dữ liệu từ API
+                        apiData.forEach(item => {
+                            // Tạo ra các thẻ dựa trên kiểu dữ liệu từ API
+                            let element;
+                            if (item.type === "div") {
+                                element = document.createElement("div");
+                            } else if (item.type === "span") {
+                                element = document.createElement("span");
+                            }
+
+                            // Kiểm tra xem đối tượng từ API có thông tin về class không và áp dụng class nếu có
+                            if (element && item.class) {
+                                element.className = item.class;
+                            }
+
+                            // Đặt nội dung cho các thẻ
+                            if (element) {
+                                element.textContent = item.text;
+                                contentDiv.appendChild(element);
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có
+                        console.error("There has been a problem with your fetch operation:", error);
+                    });
+            });
+    </script> -->
+
+</body>
+
+</html>
