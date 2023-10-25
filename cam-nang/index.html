@@ -1146,7 +1146,7 @@
     position: fixed;
     z-index: 1;
     /* margin-top: 60px; */" class="nav-i-detail">
-    <nav class="uk-navbar-container" style="align-items: flex-end;height: 53px;display: flex;align-items: baseline;">
+    <nav class="uk-navbar-container" style="align-items: flex-end;height: 53px;align-items: baseline;">
       <div class="uk-container" style="margin: 13px;">
         <div data-uk-navbar="">
           <div class="uk-navbar-left" id="toggleButton">
@@ -1354,12 +1354,12 @@
         </div>
         <style>
           nav.uk-navbar-container {
-            display: none;
+            display: none !important;
           }
 
           @media (max-width: 959px) {
             nav.uk-navbar-container {
-              display: block;
+              display: flex !important;
               border-bottom: 2px solid #14aa58;
             }
 
