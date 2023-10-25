@@ -11,6 +11,13 @@
 
 /* HEALD */
 /* Animation for text */
+.aStyle{
+
+}
+.boxHeadlEnd{
+	padding-left: 513px !important;
+}
+
 .colerBgHeader{
 	background-color: rgba(0, 0, 0, 0);}
 /* .animated-text {
@@ -528,6 +535,10 @@
 
 }
 @media (min-width: 980px) {
+	
+	.boxHeadlEnd{
+		padding-left: 513px !important;
+	}
 	.colerBgHeader{
 		background-color: rgba(0, 0, 0, 0) !important;}
 	
@@ -577,6 +588,41 @@
 }
 	
 @media (max-width: 980px) {
+	.headTitles{
+		width: 91% !important;
+		justify-content: end !important;
+	}
+	.boxHeadlEnd{
+		padding-left: 0px !important;
+		justify-content: end !important;
+
+	}
+	.et-top-navigation{
+		justify-content: end !important;
+	}
+	.clearfix et_menu_container{
+		z-index: -1 !important;
+	}
+	.imgStyleDowload{
+		height: 21px !important;
+		width: 21px !important;
+
+		border: 2px solid #fff !important;
+	}
+	div#et-top-navigation{
+		padding: 0px 0px 0px 230px !important;
+    float: right !important;
+    height: auto !important;
+	}
+	.aStyle{
+		margin-bottom: 10px !important;
+	}
+	.imghw30{
+		border: 2px solid #fff !important;
+		margin-bottom: 7px !important;
+		height: 21px !important;
+		width: 21px !important;
+	}
 	#top-menu li {
     font-size: 18px !important;
 }

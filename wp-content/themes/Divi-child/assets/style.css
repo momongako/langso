@@ -177,6 +177,10 @@ h6 {}
     transform: rotate(269deg);
   }
 
+  .logo-test {
+    display: none;
+  }
+
   .footer-widget:not(:last-child) h4 {
     color         : #364C4F;
     font-weight   : 700;
@@ -586,6 +590,7 @@ img.alignnone.wp-image-4801.size-medium {
 
 /* .et_header_style_left #et-top-navigation { padding-top:10px !important } */
 div#et-top-navigation {
+
   height     : 100%;
   display    : flex !important;
   padding-top: 0px !important;
