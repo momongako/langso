@@ -5631,7 +5631,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 .campaign-section.style-three .section-wrapper {
   justify-content: center;
-  margin         : -15px;
+  margin         : 0px;
 }
 
 .campaign-section.style-three .section-wrapper .post-item {
