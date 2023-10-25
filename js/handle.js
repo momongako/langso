@@ -8,7 +8,7 @@ function fetchDataAndProcess() {
                 key2: "value2",
             };
 
-            const response = await axios.get("http://langso.dx.gov.vn/categories", postData);
+            const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4");
 
             if (response.status !== 200) {
                 throw new Error("Lỗi kết nối API");
@@ -22,3 +22,26 @@ function fetchDataAndProcess() {
         }
     });
 }
+// function fetchDataAndProcess() {
+//     document.addEventListener("DOMContentLoaded", async function () {
+//         try {
+//             const postData = {
+//                 // Dữ liệu bạn muốn gửi đi
+//                 key1: "value1",
+//                 key2: "value2",
+//             };
+
+//             const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4", postData);
+
+//             if (response.status !== 200) {
+//                 throw new Error("Lỗi kết nối API");
+//             }
+
+//             const data = response.data;
+//             // Xử lý dữ liệu từ API ở đây
+//             console.log("dữ liệu", data);
+//         } catch (error) {
+//             console.error("Lỗi: " + error);
+//         }
+//     });
+// }

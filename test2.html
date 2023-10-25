@@ -815,7 +815,7 @@
 <body style="overflow-x: hidden"
     class="home page-template-default page page-id-6 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
     <div id="page-container">
-        <header id="main-header" data-height-onload="90" class="header" style="background-color: #00aa55;">
+        <header id="main-header" data-height-onload="90" class="header colerBgHeader" >
             <style>
                 .scroll-header {
                     background-color: #00aa55 !important;
@@ -824,6 +824,9 @@
 
 
                 @media (max-width: 980px) {
+                    .colerBgHeader{
+		background-color: #00aa55 !important; 
+	}
 
                     div#project-title {
                         height: 500px !important;
@@ -851,13 +854,12 @@
                 }
             </style>
             <div class="container clearfix et_menu_container">
-                <!-- <div class="logo_container">
-					<span class="logo_helper"></span>
-					<a href="#">
-						<img style="height: auto !important;" src="https://dx.gov.vn/img/logo-light.png"
-							alt="OpenRemote" height="50" width="257" id="logo" data-height-percentage="54" />
-					</a>
-				</div> -->
+                <div class="logo_container">
+                    <span class="logo_helper"></span>
+                    <a href="#" style="margin-left: 30px;">
+                        <img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);" src="./image/logo.png" alt="OpenRemote" height="50" width="57" id="logo" data-height-percentage="54" />
+                    </a>
+                </div>
                 <div id="et-top-navigation" data-height="90" data-fixed-height="40">
                     <nav id="top-menu-nav">
                         <ul id="top-menu" class="nav">
@@ -1027,36 +1029,65 @@
                                                                 class="elementor elementor  elementor-12">
                                                                 <!-- copy page -->
                                                                 <!-- TEST VIDEO -->
-                                                                <div
-                                                                class="et_builder_inner_content et_pb_gutters3 destop">
-                                                                <div id="project-title"
-                                                                    class="et_pb_section et_pb_section_0 project-title-container et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular styleMarginTopLeftHead"
-                                                                    style="height: 100vh;width: 100%;border: none;">
-                                                                    <span class="et_pb_section_video_bg  ">
-                                                                        <video loop="loop" autoplay playsinline
-                                                                            muted style="object-fit: cover;">
-                                                                            <source type="video/mp4"
-                                                                                src="./Video_Draf.mp4" />
-                                                                        </video>
-                                                                    </span>
+                                                                <div class="et_builder_inner_content et_pb_gutters3 destop">
+                                                                    <div id="project-title" class="et_pb_section et_pb_section_0 project-title-container et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular styleMarginTopLeftHead" style="height: 100vh;width: 100%;border: none;">
+                                                                        <span class="et_pb_section_video_bg  ">
+                                                                            <video loop="loop" autoplay playsinline muted style="object-fit: cover;">
+                                                                                <source type="video/mp4" src="./Video_Draf.mp4" />
+                                                                            </video>
+                                                                           
+                                                                            <div class="video-overlay"></div> <!-- Phần lớp phủ -->
+                                                                        </span>
+                                                                        <div class="video-caption ">
+                                                                            LÀNG QUÊ VIỆT NAM
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+                                                                <!-- <div
+                                                                    class="et_pb_fullwidth_header_container center mainBottomHead mainBottomHeadEnd">
+                                                                    <div class="header-content-container center">
+                                                                        <div class="header-content">
+                                                                            <div class="et_pb_header_content_wrapper">
+
+                                                                                <div id="app">
+                                                                                    <div class="ui-slide-in">
+                                                                                        <div class="text-wrapper">
+                                                                                            <div class="line">
+                                                                                                <h1>MANG NỀN TẢNG SỐ
+                                                                                                </h1><br>
+                                                                                                <p
+                                                                                                    class="text-header-slogan">
+                                                                                                    ĐẾN TỪNG HỘ
+                                                                                                    GIA
+                                                                                                    ĐÌNH
+                                                                                                    <span> -
+                                                                                                    </span> TỪNG NGƯỜI
+                                                                                                    DÂN KHU VỰC NÔNG
+                                                                                                    THÔN
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                        </div>
+
+
+                                                                    </div>
+
+                                                                </div> -->
                                                                 <!-- TEST VIDEO END -->
                                                                 <section
                                                                     class="mobile-content-text-top elementor-section elementor-top-section elementor-element elementor-element-2bfd08a elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
                                                                     data-id="2bfd08a" data-element_type="section"
                                                                     data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-
-
-
-
-
                                                                     <div
                                                                         class="elementor-container elementor-column-gap-default">
                                                                         <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e66be58"
                                                                             data-id="e66be58"
                                                                             data-element_type="column">
-
                                                                             <style>
                                                                                 .element-with-background {
                                                                                     animation: moveBackground 3s linear infinite;
@@ -1077,11 +1108,11 @@
                                                                             </style>
 
                                                                             <!-- TESTVIDEO -->
-                                                            
-                                                                            <!-- TESTVIDEO END -->
-                                                                            
 
-                                                                          
+                                                                            <!-- TESTVIDEO END -->
+
+
+
 
                                                                             <div
                                                                                 class="elementor-widget-wrap elementor-element-populated">
@@ -1420,9 +1451,9 @@
                                                                                         <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center "
                                                                                             style="margin-bottom: 25px;">
                                                                                             <div
-                                                                                                class="qodef-m-tagline-mark">
+                                                                                                class="qodef-m-tagline-mark" style="padding-bottom: 30px;"> 
 
-                                                                                                Dân Làng Số</div>
+                                                                                                Dân Làng Số </div>
                                                                                             <style>
                                                                                                 @media only screen and (max-width: 480px) {
                                                                                                     .qodef-m-tagline-mark {
