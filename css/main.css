@@ -32,6 +32,9 @@
 
 /* Styles for video caption */
 
+.et_pb_text_inner{
+	padding-bottom: 120px;
+}
 .video-overlay {
     position: absolute;
     top: 0;

@@ -2954,14 +2954,14 @@ div.wpcf7 .ajax-loader {
 }
 
 .error {
-  text-align: center;
-  padding   : 250px 30px
+
+  /* padding   : 250px 30px */
 }
 
 /*-------------------[768px]------------------*/
 @media only screen and (max-width: 980px) {
   .error {
-    padding: 100px 30px
+    /* padding: 100px 30px */
   }
 }
 
