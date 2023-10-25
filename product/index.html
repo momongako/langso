@@ -609,8 +609,8 @@
     	color: #364c4f !important;
 	}*/
 	</style>
-	<link rel="icon" href="../image//img-so/favicon.ico" sizes="32x32" />
-	<link rel="icon" href="../image//img-so/favicon.ico" sizes="192x192" />
+	<link rel="icon" href="../image/logotitle.png" sizes="32x32" />
+	<link rel="icon" href="../image/logotitle.png" sizes="192x192" />
 	<link rel="apple-touch-icon"
 		href="https://openremote.io/wp-content/uploads/2018/06/cropped-OpenRemote-favicon-180x180.png" />
 
@@ -774,13 +774,14 @@
 
 		<header id="main-header" data-height-onload="90" class="white">
 			<div class="container clearfix et_menu_container">
-				<!-- <div class="logo_container">
+				<div class="logo_container">
 					<span class="logo_helper"></span>
-					<a href="../index.html">
-						<img style="height: auto !important;" src="https://dx.gov.vn/img/logo-light.png"
-							alt="OpenRemote" id="logo" data-height-percentage="54" />
+					<a href="#" style="margin-left: 30px;">
+						<img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
+							src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
+							data-height-percentage="54" />
 					</a>
-				</div> -->
+				</div>
 				<div id="et-top-navigation" data-height="90" data-fixed-height="40">
 					<nav id="top-menu-nav">
 						<ul id="top-menu" class="nav">
@@ -852,29 +853,46 @@
 									class="et_pb_section et_pb_section_3 product-manage-section et_section_regular">
 									<div class="et_pb_row et_pb_row_0 title-row">
 										<div
-											class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-											<div
-												class="et_pb_module et_pb_text et_pb_text_0 et_pb_animation_fade_in et-waypoint  et_pb_text_align_center et_pb_bg_layout_light">
-												<div class="et_pb_text_inner" text-align: justify;>
-													<h2 class="text-service" style="color: #00aa55;">DỊCH VỤ - TIỆN ÍCH
-														LÀNG SỐ</h1>
-														<div class="green-line et-waypoint et_pb_animation_left"></div>
-												</div>
-											</div>
-											<div
-												class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
-												<div class="et_pb_text_inner">
-													&#160Dịch vụ, tiện ích làng số giới thiệu tới người dân những nền
-													tảng số, dịch vụ số, mà có thể giúp giải quyết những nhu
-													cầu thường gặp phải trong cuộc sống hàng ngày của người dân. Một
-													ngôi làng luôn có sự hiện diện của các nền tảng số,
-													tiện ích số khi người dân cần, là một ngôi làng đang tích lũy để
-													phát triển thành làng số.
+											class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child my-custom-class-title">
 
-												</div>
-											</div>
 										</div>
 									</div>
+									<!-- api title -->
+									<script>
+										document.addEventListener("DOMContentLoaded", function () {
+											// Chọn phần tử có class là "my-custom-class"
+											const myElement = document.querySelector(".my-custom-class-title");
+
+											fetch("http://langso.dx.gov.vn/category?id=2", {
+												method: 'GET',
+											})
+												.then(response => response.json())
+												.then(apiData => {
+													// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
+													const usersHTML = `<div
+																			class="et_pb_module et_pb_text et_pb_text_0 et_pb_animation_fade_in et-waypoint  et_pb_text_align_center et_pb_bg_layout_light">
+																			<div class="et_pb_text_inner" text-align: justify;>
+																				<h2 class="text-service" style="color: #00aa55;">${apiData.name}</h1>
+																					<div class="green-line et-waypoint et_pb_animation_left"></div>
+																			</div>
+																		</div>
+																		<div
+																			class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+																			<div class="et_pb_text_inner">
+																				&# ${apiData.description}
+
+																			</div>
+																		</div>` // Sử dụng join('') để chuyển mảng thành chuỗi
+
+													// Gán chuỗi HTML vào phần tử có class "my-custom-class"
+													myElement.innerHTML = `<ul>${usersHTML}</ul>`;
+												})
+												.catch(error => {
+													// Xử lý lỗi nếu có
+													console.error("There has been a problem with your fetch operation:", error);
+												});
+										});
+									</script>
 									<div class="et_pb_row et_pb_row_1">
 										<div
 											class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
@@ -917,134 +935,60 @@
 											right: 0;
 											background: white;
 										}
+
+										.campaign-section.style-two .section-wrapper .post-item .post-inner .post-content {
+											height: auto;
+											padding-bottom: 28px;
+										}
 									</style>
 									<section class="campaign-section style-two style-three padding-tb"
 										style="padding-top:0px !important">
 										<div class="container" style="padding-top:0px !important">
-											<div class="section-wrapper">
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/cls1.html"><img
-																	src="../image/img-so/08_Tài chính vi mô_color.jpg"
-																	alt="campaign"></a>
+											<div class="section-wrapper my-custom-class">
 
-														</div>
-														<div class="post-content">
-															<h4><a href="#">TIẾP CẬN TÍN DỤNG SỐ</a></h4>
-															<p>TYM Là đơn vị trực thuộc Hội Liên hiệp Phụ nữ Việt Nam.
-																TYM bắt đầu triển khai hoạt động từ năm 1992 với tên gọi
-																là Quỹ
-																Tình thương, nhằm hỗ trợ phụ nữ phát triển kinh tế, góp
-																phần thực hiện chương trình xóa...</p>
-															<a href="../Detail/cls1.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/nts2.html"><img
-																	src="../image/img-so/02_Y tế số_color.jpg"
-																	alt="campaign"></a>
 
-														</div>
-														<div class="post-content">
-															<h4><a href="#">KHÁM CHỮA BỆNH TỪ XA</a></h4>
-															<p>Những tiếng cầu cứu trong lúc nguy cấp, sự quá tải, vỡ
-																trận của các bệnh viện trong đại dịch Covid-19 đã cướp
-																đi mạng
-																sống của nhiều người, và để lại biết bao nỗi đau cho các
-																gia đình không may bị mất người thân.</p>
-															<a href="../Detail/nts2.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/ktns3.html"><img
-																	src="../image/img-so/10_Hoctap_color.jpg"
-																	alt="campaign"></a>
+												<!-- api card -->
+												<script>
+													document.addEventListener("DOMContentLoaded", function () {
+														// Chọn phần tử có class là "my-custom-class"
+														const myElement = document.querySelector(".my-custom-class");
+														const urlParams = new URLSearchParams(window.location.search);
+														const id = urlParams.get('id');
+														fetch("http://langso.dx.gov.vn/home_posts?id=2", {
+															method: 'GET',
+														})
+															.then(response => response.json())
+															.then(apiData => {
+																// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
+																const usersHTML = apiData.map(user => {
+																	return `<div class="post-item" data-aos="fade-up" data-aos-duration="700">
+																				<div class="post-inner">
+																					<div class="post-thumb style-2">
+																						<a href=../Detail/cls1.html?id=${user.id}><img
+																								src=${user.img}
+																								alt="campaign"></a>
 
-														</div>
-														<div class="post-content">
-															<h4><a href="#">HỌC TẬP TRỰC TUYẾN</a></h4>
-															<p>Các nền tảng học tập trực tuyến giúp mở ra không
-																gian học tập không biên giới, cho phép học sinh
-																ở các khu vực nông thôn
-																truy cập vào các khóa học, tài liệu và nguồn
-																kiến thức từ xa, mang đến những cơ...</p>
-															<a href="../Detail/ktns3.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/vhs4.html"><img
-																	src="../image/img-so/07_TMĐT PostMart_color.jpg"
-																	alt="campaign"></a>
+																					</div>
+																					<div class="post-content">
+																						<h4><a href=../Detail/cls1.html?id=${user.id}>${user.title}</a></h4>
+																						<p>${user.excerpt}</p>
+																						<a href=../Detail/cls1.html?id=${user.id} class="custom-btn">Chi tiết
+																						</a>
+																					</div>
+																				</div>
+																			</div>`;
+																}).join(''); // Sử dụng join('') để chuyển mảng thành chuỗi
 
-														</div>
-														<div class="post-content">
-															<h4><a href="#">MUA SẮM TRỰC TUYẾN</a></h4>
-															<p>Bên cạnh các sàn giao dịch điện tử đã quá phổ biến như
-																Shoppe, Tiki hay Lazada, chúng ta tự hào khi phát triển
-																được một
-																ứng dụng tương tự, 100% Make in VietNam, đó là
-																Sendo.Sendo là nền tảng mua sắm... </p>
-															<a href="../Detail/vhs4.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/cks5.html"><img
-																	src="../image/img-so/03_Thanh toán số_color.jpg"
-																	alt="campaign"></a>
+																// Gán chuỗi HTML vào phần tử có class "my-custom-class"
+																myElement.innerHTML = `${usersHTML}`;
+															})
+															.catch(error => {
+																// Xử lý lỗi nếu có
+																console.error("There has been a problem with your fetch operation:", error);
+															});
+													});
 
-														</div>
-														<div class="post-content">
-															<h4><a href="#">THANH TOÁN DI ĐỘNG</a></h4>
-															<p>Viettel Money được phát triển bởi tổng công ty dịch vụ số
-																Viettel, có địa chỉ truy cập để cài đặt và sử dụng tại
-																địa chỉ
-																https://viettelmoney.vn, hoặc trên kho ứng dụng với tên
-																gọi “Viettel Money”.Nền tảng này được tích hợp các tính
-																năng...</p>
-															<a href="../Detail/cks5.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-
-												<div class="post-item" data-aos="fade-up" data-aos-duration="700">
-													<div class="post-inner">
-														<div class="post-thumb style-2">
-															<a href="../Detail/dts6.html"><img
-																	src="../image/img-so/09_VTVGo_color.jpg"
-																	alt="campaign"></a>
-
-														</div>
-														<div class="post-content">
-															<h4><a href="#">TRUYỀN HÌNH SỐ DI ĐỘNG</a></h4>
-															<p>Ở làng truyền thống, phát thanh - truyền hình đã đi vào
-																vào nhịp sống của người dân như một phần không thể
-																thiếu. Từ
-																sáng sớm đến chiều tà, đều đặn mỗi ngày, loa phát thanh
-																phường xã được bật lên để truyền tin thông báo...</p>
-															<a href="../Detail/dts6.html" class="custom-btn">Chi tiết
-															</a>
-														</div>
-													</div>
-												</div>
-
+												</script>
 
 
 											</div>
@@ -1165,7 +1109,12 @@
 							<div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
 								data-area="qodef-footer-top-area-column-1">
 								<h4 class="title">
-									VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ </h5>
+									<span class="et_pb_image_wrap ">
+										<img src="../image/logo.png" style="width: 49px;">
+									</span>
+								</h4>
+								<h4 class="title">
+									VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ </h4>
 							</div>
 
 							<div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3"
