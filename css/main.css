@@ -676,11 +676,11 @@
 	.video-bgVd iframe {
 		display: block;
 		position: absolute;
-		top: 55%;
-		left: 55%;
-		transform: translate(-55%, -55%);
+		top: 60%;
+		left: 60%;
+		transform: translate(-60%, -60%);
 		width: 100vw;
-		height: 60vw;
+		height: 62vw;
 		
 	}
 	.headTitles{
