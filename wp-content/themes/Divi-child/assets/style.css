@@ -643,8 +643,8 @@ div#et-top-navigation {
 .et_mobile_menu li a {
   font-weight: normal;
   color      : #364c4f;
-  font-size  : 15px;
-  padding    : 20px 25px
+  font-size  : 24px;
+  padding    : 50px 25px
 }
 
 /*Collapsible mobile sub menu*/
