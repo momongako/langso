@@ -749,6 +749,39 @@
 		font-size: 26px !important;
 		padding-top: 15px !important;
 	}
+	.texEdic{
+		font-size: 32px !important;
+		display: flex !important;
+		text-align: justify;
+		line-height: 1.73 !important;
+	}
+	.align-items-stretch .bg-primary h3 {
+		font-size: 32px!important;
+	}
+	.align-items-stretch .bg-primary p {
+		font-size: 28px!important;
+		line-height: 1.73 !important;
+	}
+	.no-gutters .align-items-stretch .contact-wrap h3{
+		font-size: 32px !important;
+	}
+	.no-gutters .align-items-stretch .contact-wrap form .row  .form-group .label{
+		font-size: 25px !important;
+		line-height: 2 !important;
+	}
+	.no-gutters .align-items-stretch .contact-wrap form .row  .form-group .form-control{
+		font-size: 25px !important;
+		line-height: 2 !important;
+	}
+	.no-gutters .align-items-stretch .contact-wrap h3{
+		font-size: 32px !important;
+	}
+	.btn.btn-primary{
+	width: 100px !important;
+    height: 70px !important;
+    border-radius: 11px !important;
+    font-size: 24px !important;
+	}
 
 	.campaign-section.style-two .section-wrapper .post-item .post-inner .post-content p {
 		font-size: 20px;
