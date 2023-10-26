@@ -8,9 +8,48 @@
 </head>
 
 <body>
+    <!-- <iframe width="727" height="409" src="https://www.youtube.com/embed/3t6xze9fwzM?autoplay=1" title="Video Làng số"
+        frameborder="0" autoplay; " allowfullscreen></iframe> -->
+    <!-- <iframe width="727" height="409" src="https://www.youtube.com/embed/3t6xze9fwzM?autoplay=1" title="Video Làng số"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe> -->
+
+    <div id="player"></div>
+
+    <script>
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: '3t6xze9fwzM',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0, // Ẩn các nút điều khiển
+                    'rel': 0, // Tắt gợi ý video khi kết thúc
+                    'iv_load_policy': 3, // Ẩn các biểu tượng chữ nhỏ
+                    'loop': 1, // Video tự động lặp
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo(); // Phát video khi sẵn sàng
+        }
+    </script>
+
     <h1>API Data Example</h1>
     <h2>Users</h2>
-    <div class="users-list">
+    <div class=" users-list">
         <div>
             <div class="ok"></div>
             <div class="ok"></div>

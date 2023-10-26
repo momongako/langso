@@ -782,46 +782,104 @@
 
 <body>
 
-	<header id="main-header" data-height-onload="90" class="white">
-		<div class="container clearfix et_menu_container">
-			<!-- <div class="logo_container">
-						<span class="logo_helper"></span>
-						<a href="../index.html">
-							<img style="height: auto !important;" src="https://dx.gov.vn/img/logo-light.png"
-								alt="OpenRemote" id="logo" data-height-percentage="54" />
-						</a>
-					</div> -->
-			<div id="et-top-navigation" data-height="90" data-fixed-height="40">
+	<header style=" padding: 1px;background-color: #00aa55;" class="md-header md-header--shadow md-header--lifted white"
+		data-md-component="header">
+		<div class="container clearfix et_menu_container" style="margin-bottom: 19px;
+	    margin-top: 18px;
+	    display: flex;
+	    width: 100%;
+	    justify-content: space-between;
+		align-items: center;
+	    ">
+
+			<div class="logo_container">
+				<span class="logo_helper"></span>
+				<a href="#" style="margin-left: 8px;">
+					<img class="imgStyleDowload"
+						style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
+						src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
+						data-height-percentage="54" />
+				</a>
+			</div>
+			<div class="headTitles" id="et-top-navigation" data-height="90" data-fixed-height="40"
+				style="margin-top: 0px; padding-left: 192px;">
 				<nav id="top-menu-nav">
+
 					<ul id="top-menu" class="nav">
+
 						<li id="menu-item-45"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
-							<a href="../index.html">Làng Số</a>
+							<a href="../index.html">Làng số</a>
 						</li>
 						<li id="menu-item-45"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
 							<a class="myLink" href="../cam-nang/index.html#text-0">Cẩm
 								nang</a>
 						</li>
-
 						<li id="menu-item-44"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44">
-							<a href="#">Dịch vụ tiện ích</a>
+							<a href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a>
 						</li>
-
 						<li id="menu-item-2314"
 							class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
 							<a href="../chuyen-langso/index.html">Chuyện làng số</a>
-
+							<!-- <ul class="sub-menu">
+	    									<li id="menu-item-2172"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2172">
+	    										<a href="../energy-management/">Energy management</a>
+	    									</li>
+	    									<li id="menu-item-2316"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2316">
+	    										<a href="/asset-management/">IoT Device management</a>
+	    									</li>
+	    									<li id="menu-item-2315"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315">
+	    										<a href="/smart-city-mobility/">Smart City</a>
+	    									</li>
+	    									<li id="menu-item-5968"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5968">
+	    										<a href="/iot-for-agriculture/">Agriculture</a>
+	    									</li>
+	    								</ul> -->
 						</li>
-						<!-- <li id="menu-item-43"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
-										href="../usecases/index.html">Công nghệ hỗ trợ</a></li> -->
-
-
+						<li id="menu-item-44"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44">
+							<a href="../dichvu-tienich/index.html">Đóng góp ý kiến</a>
+						</li>
+						<!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+	                href="../usecases/index.html">Công nghệ hỗ trợ</a></li> -->
+						<!-- <li id="menu-item-42"
+	    								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
+	    									href="/developers/">Developers</a></li> -->
+						<!-- <li id="menu-item-2661"
+	    								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2661">
+	    								<a href="#">About</a>
+	    								<ul class="sub-menu">
+	    									<li id="menu-item-2664"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664">
+	    										<a href="/about/">Company</a>
+	    									</li>
+	    									<li id="menu-item-2665"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2665">
+	    										<a href="/news/">News</a>
+	    									</li>
+	    									<li id="menu-item-4376"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4376">
+	    										<a href="/vacancies/">Vacancies</a>
+	    									</li>
+	    									<li id="menu-item-2706"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2706">
+	    										<a href="/open-source/">Our Open Source License</a>
+	    									</li>
+	    									<li id="menu-item-2666"
+	    										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2666">
+	    										<a href="/contact/">Contact</a>
+	    									</li>
+	    								</ul>
+	    							</li> -->
 						<li id="menu-item-1338"
 							class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
-							<a href="../tailieu/index.html">Tải tài liệu</a>
+							<a href="#">Tải tài liệu</a>
 							<!-- <a href="/demo/">Demo</a> -->
 						</li>
 					</ul>
@@ -840,7 +898,7 @@
 		</div> <!-- .container -->
 		<div class="et_search_outer">
 			<div class="container et_search_form_container">
-				<form role="search" method="get" class="et-search-form" action="https://openremote.io/">
+				<form role="search" method="get" class="et-search-form" action="/">
 					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s"
 						title="Search for:" />
 				</form>
