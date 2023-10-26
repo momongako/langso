@@ -2479,9 +2479,9 @@ p>object:only-child {
 --------------------------------------------------------------*/
 /* Adjust positioning of edit shortcuts, override style in customize-preview.css */
 @media screen and (min-width: 576px) {
-  .post-item .post-thumb-fire .imgBox1 {
-    object-position: -126px 0 !important;
-  }
+  .post-item .post-thumb-fire .imgBox1{
+		object-position: -126px 0 !important;
+	}
 
   /* Typography */
   body,
@@ -2794,9 +2794,9 @@ p>object:only-child {
 }
 
 @media screen and (min-width: 992px) {
-  .post-item .post-thumb-fire .imgBox1 {
-    object-position: -459px 0 !important;
-  }
+  .post-item .post-thumb-fire .imgBox1{
+		object-position: -459px 0 !important;
+	}
 
   /* Pagination */
   .page-numbers {
@@ -5612,7 +5612,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 .campaign-section.style-two .section-wrapper .post-item .post-inner .post-content {
   height        : 320px;
-  padding-top   : 15px !important;
+  padding-top   : 0px !important;
   padding       : 28px;
   padding-bottom: 45px;
 }

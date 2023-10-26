@@ -673,8 +673,18 @@
 }
 
 @media (max-width: 980px) {
-	.headTitles {
-		width          : 91% !important;
+	.video-bgVd iframe {
+		display: block;
+		position: absolute;
+		top: 55%;
+		left: 55%;
+		transform: translate(-55%, -55%);
+		width: 100vw;
+		height: 60vw;
+		
+	}
+	.headTitles{
+		width: 91% !important;
 		justify-content: end !important;
 	}
 
