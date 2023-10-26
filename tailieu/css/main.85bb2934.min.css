@@ -189,7 +189,7 @@ pre {
 .md-typeset {
     -webkit-print-color-adjust: exact;
     color-adjust              : exact;
-    font-size                 : 15px;
+    font-size                 : 13px;
     line-height               : 1.6
 }
 
