@@ -641,10 +641,17 @@ div#et-top-navigation {
 }
 
 .et_mobile_menu li a {
-  font-weight: normal;
+  /* font-weight: normal;
   color      : #364c4f;
   font-size  : 24px;
-  padding    : 50px 25px
+  padding    : 50px 25px */
+  border-bottom: 1px solid rgba(0, 0, 0, .03);
+  display: flex;
+  font-weight: normal;
+  color: #364c4f;
+  font-size: 24px;
+  height: 80px;
+  align-items: center;
 }
 
 /*Collapsible mobile sub menu*/
