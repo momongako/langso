@@ -43,6 +43,10 @@
     }
 
     @media only screen and (max-width:768px) {
+      .nav-i-detail {
+        top: 24px !important;
+      }
+
       #container {
         width: unset !important;
         height: 600px;
@@ -77,6 +81,8 @@
         width: unset !important;
         height: 100vh;
       }
+
+
     }
 
     /* .uk-margin-large-top.paginate-post {
@@ -1026,9 +1032,9 @@
   }
 
   @media (max-width:980px) {
-    .nav-i-detail {
-      top: 25px !important;
-    }
+    /* .nav-i-detail {
+      top: 63px !important;
+    } */
   }
 </style>
 
@@ -1090,8 +1096,8 @@
         </div>
       </div>
     </div>
-    <div class="boxHeadlEnd" id="et-top-navigation" data-height="90" data-fixed-height="40" style="margin-top: 0px;padding-bottom: 10px; justify-content: center;
-    width:100%;">
+    <div class="" id="et-top-navigation" data-height="90" data-fixed-height="40" style="margin-top: 0px;padding-bottom: 10px; justify-content: center;
+    width:90%;">
       <nav id="top-menu-nav">
 
         <ul id="top-menu" class="nav">
@@ -1144,7 +1150,7 @@
 
   <div style="
     width: 100%;
-    top: 50px;
+    top: 63px;
     position: fixed;
     z-index: 0;
     /* margin-top: 60px; */" class="nav-i-detail">
@@ -1363,6 +1369,10 @@
             nav.uk-navbar-container {
               display: flex !important;
               border-bottom: 2px solid #14aa58;
+            }
+
+            div#et-top-navigation {
+              width: auto !important;
             }
 
             .sidebar-docs {
@@ -6925,7 +6935,13 @@
       text-align: justify !important
     }
 
-    @media (min-width:981px) {
+    @media (min-width:769px) {
+      .sidebar-docs {
+
+        top: 44px !important;
+
+      }
+
       .bb-tab-panel__heading h3 {
         font-size: 34.5px
       }
