@@ -2908,7 +2908,7 @@ img#about-image {
 }
 
 .logo_container {
-	visibility        : hidden;
+	visibility : hidden;
 	-webkit-transition: all .4s ease-in-out;
 	transition        : all .4s ease-in-out
 }
@@ -9071,12 +9071,11 @@ header.et-l.et-l--header:after {
 }
 
 @media (max-width:980px) {
-	.styleMarginTopLeft {
-		margin-top   : 71px;
+	.styleMarginTopLeft{
+		margin-top: 71px;
 		margin-bottom: 85px;
-		border       : none;
+		border: none;
 	}
-
 	.et_pb_section {
 		padding: 50px 0
 	}

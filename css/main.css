@@ -82,7 +82,7 @@
 
 .colerBgHeader {
 	/* background-color: rgba(0, 0, 0, 0); */
-	background-color:#00aa55 ;
+	background-color: #00aa55;
 }
 
 /* .animated-text {
@@ -625,7 +625,7 @@
 
 	.colerBgHeader {
 		/* background-color: rgba(0, 0, 0, 0) !important; */
-		background-color:#00aa55 !important;
+		background-color: #00aa55 !important;
 	}
 
 	.destop {
@@ -675,24 +675,52 @@
 }
 
 @media (max-width: 980px) {
-	ul#mobile_menu {
-		padding-bottom: 40px !important;
+	.chuyenlangsobody {
+		margin-top: 120px !important;
 	}
+
+	.iconHeadl1 {
+		height: 100%;
+	}
+
+	.white1 {
+		height: 50px !important;
+	}
+
+	.md-header .headleCn {
+		height: 45px !important;
+
+	}
+
+	.uk-navbar-container {
+		margin-top: 25px !important;
+	}
+
+	.headleCn {
+		height: 45px !important;
+	}
+
+	ul#mobile_menu {
+		/* padding-bottom: 40px !important; */
+	}
+
 	.volunteer-tab .tab-list li:not(:last-of-type) {
 		margin-right: 30px !important;
-	  }
-	.video-bgVd iframe {
-		display: block;
-		position: absolute;
-		top: 60%;
-		left: 60%;
-		transform: translate(-60%, -60%);
-		width: 100vw;
-		height: 62vw;
-		
 	}
-	.headTitles{
-		width: 91% !important;
+
+	.video-bgVd iframe {
+		display  : block;
+		position : absolute;
+		top      : 60%;
+		left     : 60%;
+		transform: translate(-60%, -60%);
+		width    : 100vw;
+		height   : 62vw;
+
+	}
+
+	.headTitles {
+		width          : 91% !important;
 		justify-content: end !important;
 	}
 
@@ -721,6 +749,7 @@
 		padding: 0px 0px 0px 230px !important;
 		float  : right !important;
 		height : auto !important;
+		height : 100% !important;
 	}
 
 	.aStyle {
@@ -748,41 +777,49 @@
 	}
 
 	.campaign-section.style-two .section-wrapper .post-item .post-inner .post-content h4 a {
-		font-size: 26px !important;
+		font-size  : 26px !important;
 		padding-top: 15px !important;
 	}
-	.texEdic{
-		font-size: 32px !important;
-		display: flex !important;
-		text-align: justify;
+
+	.texEdic {
+		font-size  : 32px !important;
+		display    : flex !important;
+		text-align : justify;
 		line-height: 1.73 !important;
 	}
+
 	.align-items-stretch .bg-primary h3 {
-		font-size: 32px!important;
+		font-size: 32px !important;
 	}
+
 	.align-items-stretch .bg-primary p {
-		font-size: 28px!important;
+		font-size  : 28px !important;
 		line-height: 1.73 !important;
 	}
-	.no-gutters .align-items-stretch .contact-wrap h3{
+
+	.no-gutters .align-items-stretch .contact-wrap h3 {
 		font-size: 32px !important;
 	}
-	.no-gutters .align-items-stretch .contact-wrap form .row  .form-group .label{
-		font-size: 25px !important;
+
+	.no-gutters .align-items-stretch .contact-wrap form .row .form-group .label {
+		font-size  : 25px !important;
 		line-height: 2 !important;
 	}
-	.no-gutters .align-items-stretch .contact-wrap form .row  .form-group .form-control{
-		font-size: 25px !important;
+
+	.no-gutters .align-items-stretch .contact-wrap form .row .form-group .form-control {
+		font-size  : 25px !important;
 		line-height: 2 !important;
 	}
-	.no-gutters .align-items-stretch .contact-wrap h3{
+
+	.no-gutters .align-items-stretch .contact-wrap h3 {
 		font-size: 32px !important;
 	}
-	.btn.btn-primary{
-	width: 100px !important;
-    height: 70px !important;
-    border-radius: 11px !important;
-    font-size: 24px !important;
+
+	.btn.btn-primary {
+		width        : 100px !important;
+		height       : 70px !important;
+		border-radius: 11px !important;
+		font-size    : 24px !important;
 	}
 
 	.campaign-section.style-two .section-wrapper .post-item .post-inner .post-content p {
@@ -793,12 +830,14 @@
 		font-size  : 24px !important;
 		line-height: 1.73;
 	}
-	.textHealdCenter{
-		font-size: 32px !important;
-    line-height: 1.73;
-    display: flex;
-    text-align: justify;
+
+	.textHealdCenter {
+		font-size  : 32px !important;
+		line-height: 1.73;
+		display    : flex;
+		text-align : justify;
 	}
+
 	/* .texCenterHeadl{
 		font-size: 32px !important;
     line-height: 1.73;
@@ -843,9 +882,9 @@
 
 	.qodef-section-title .qodef-m-text {
 		line-height: 1.73 !important;
-    font-size: 32px !important;
-    display: flex;
-    text-align: justify;
+		font-size  : 32px !important;
+		display    : flex;
+		text-align : justify;
 	}
 
 	.colerBgHeader {
@@ -878,7 +917,7 @@
 
 	.qodef-image-with-text .qodef-m-content {
 
-		height: auto;
+		height        : auto;
 		padding-bottom: 20px
 	}
 
