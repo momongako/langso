@@ -100,7 +100,7 @@ h6 {}
   .et_pb_row,
   #main-header .container,
   #main-footer .container {
-    width       : 100% !important;
+    /* width       : 100% !important; */
     /* max-width: 1166px; */
   }
 
@@ -704,7 +704,8 @@ div#et-top-navigation {
   }
 
   #main-header .container {
-    width: 90%
+    width: 90%;
+    height: 125px !important;
   }
 }
 

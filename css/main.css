@@ -81,7 +81,8 @@
 }
 
 .colerBgHeader {
-	background-color: rgba(0, 0, 0, 0);
+	/* background-color: rgba(0, 0, 0, 0); */
+	background-color:#00aa55 ;
 }
 
 /* .animated-text {
@@ -623,7 +624,8 @@
 	}
 
 	.colerBgHeader {
-		background-color: rgba(0, 0, 0, 0) !important;
+		/* background-color: rgba(0, 0, 0, 0) !important; */
+		background-color:#00aa55 !important;
 	}
 
 	.destop {
