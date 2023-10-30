@@ -645,6 +645,7 @@ div#et-top-navigation {
   color      : #364c4f;
   font-size  : 24px;
   padding    : 50px 25px */
+  
   border-bottom: 1px solid rgba(0, 0, 0, .03);
   display: flex;
   font-weight: normal;

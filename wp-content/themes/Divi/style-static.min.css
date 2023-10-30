@@ -3706,7 +3706,8 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
 	text-align    : left;
 	color         : #666;
 	padding-bottom: 10px;
-	float         : left
+	float         : left;
+	margin: 0px;
 }
 
 #footer-info a {

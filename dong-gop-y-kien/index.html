@@ -931,6 +931,7 @@
 	<script src="../js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<!-- CALL API END -->
+	<script src="../api.js"></script>
 </head>
 
 <body>
@@ -938,7 +939,7 @@
 		function fetchDataAndProcess1() {
 			document.addEventListener("DOMContentLoaded", async function () {
 				try {
-					const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4");
+					const response = await axios.get(`${apiUrl}/home_posts?id=4`);
 
 					if (response.status !== 200) {
 						throw new Error("Lỗi kết nối API");
@@ -982,7 +983,7 @@
 						key2: "value2",
 					};
 
-					const response = await axios.get("http://langso.dx.gov.vn/home_posts?id=4");
+					const response = await axios.get(`${apiUrl}/home_posts?id=4`);
 
 					if (response.status !== 200) {
 						throw new Error("Lỗi kết nối API");
@@ -1029,7 +1030,7 @@
 						<ul id="top-menu" class="nav">
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-									href="#">Làng số</a></li>
+									href="../index.html">Làng số</a></li>
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
 									class="myLink" href="../cam-nang/index.html#text-0">Cẩm
@@ -1110,8 +1111,7 @@
 										<div id="form-message-success" class="mb-4">
 											Your message was sent, thank you!
 										</div>
-										<form method="POST" action="mailto:langso@dx.gov.vn" id="contactForm"
-											name="contactForm" class="contactForm">
+										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
@@ -1123,7 +1123,7 @@
 												<div class="col-md-6">
 													<div class="form-group">
 														<label class="label" for="email">Số điện thoại</label>
-														<input type="email" class="form-control" name="email" id="email"
+														<input type="tel" class="form-control" name="phone"
 															placeholder="Số điện thoại">
 													</div>
 												</div>
@@ -1142,6 +1142,11 @@
 															placeholder="Nội dung đóng góp"></textarea>
 													</div>
 												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<div id="cf-turnstile"></div>
+													</div>
+												</div>
 												<div class="col-md-12" style="
     display: flex;
 
@@ -1155,6 +1160,39 @@
 												</div>
 											</div>
 										</form>
+										<script>
+											let submitting = false
+											document.querySelector('#contactForm').addEventListener('submit', e => {
+												e.preventDefault()
+												if (submitting || !turnstile) return
+												const q = new URLSearchParams()
+												Array.from(document.querySelectorAll('#contactForm [name]')).forEach(x => {
+													q.set(x.name, x.value)
+												})
+												submitting = true
+												document.querySelector('.submitting').innerHTML = 'Đang gửi..'
+
+												if (turnstile) turnstile.render('#cf-turnstile', {
+													sitekey: '0x4AAAAAAAMYyZ693vCTztP2',
+													callback: function (token) {
+														q.set('cf-turnstile-response', token)
+														fetch('${apiUrl}/contact-langso?' + q.toString()).then(r => r.json()).then(r => {
+															if (!r.error) {
+																Array.from(document.querySelectorAll('#contactForm [name]')).forEach(x => {
+																	x.value = ''
+																})
+															}
+															document.querySelector('.submitting').innerHTML = r.error || 'Đã gửi ý kiến đóng góp.'
+														}).catch(e => {
+															document.querySelector('.submitting').innerHTML = 'Lỗi, vui lòng thử lại sau'
+															console.error(e)
+														}).finally(() => {
+															submitting = false
+														})
+													},
+												});
+											})
+										</script>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-12 d-flex align-items-stretch">
@@ -1181,11 +1219,11 @@
 										</div>
 										<div class="dbox w-100 d-flex align-items-center">
 											<div class="icon d-flex align-items-center justify-content-center">
-												<span class="fa fa-paper-plane"></span>
+												<span class="fa fa-envelope"></span>
 											</div>
 											<div class="text pl-3">
 												<p><span>Email:</span> <a
-														href="mailto:info@yoursite.com">langso@dx.com.vn</a></p>
+														href="mailto:langso@dx.com.vn">langso@dx.com.vn</a></p>
 											</div>
 										</div>
 										<div class="dbox w-100 d-flex align-items-center">
@@ -1205,7 +1243,7 @@
 			</div>
 		</section>
 	</div>
-
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 	<style>
 		.footer-widget h4 {
 			margin-bottom: 0px;
@@ -1253,8 +1291,8 @@
 						data-area="qodef-footer-top-area-column-1">
 						<div class="qodef-social-icons-group">
 							<span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-								style="margin: 0 33px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/"
-									target="_blank"> <svg
+								style="margin: 0 33px 0 0">
+								<a itemprop="url" href="https://langso.dx.gov.vn/" target="_blank"> <svg
 										class="svg-inline--fa fa-facebook-f fa-w-9 qodef-icon-font-awesome qodef-icon qodef-e"
 										style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
 										data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -1333,25 +1371,25 @@
 				</div>
 				<div class="footer-widget texBottomNone" style=" width: 29%;">
 					<div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
-						<h4 class="title">TÌM KIẾM</h4>
+						<h4 class="title">DANH MỤC</h4>
 						<div class="menu-solutions-container">
 							<ul id="menu-solutions" class="menu">
 								<li id="menu-item-163"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
-									<a>Làng số</a>
+									<a href="../index.html">Làng số</a>
 								</li>
 								<li id="menu-item-162"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-									<a>Dịch vụ tiện ích</a>
+									<a href="../cam-nang/index.html#text-0" class="myLink">Cẩm nang</a>
 								</li>
 								<li id="menu-item-161"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
-									<a>Chuyện làng số</a>
+									<a href="../chuyen-langso/index.html">Chuyện làng số</a>
 								</li>
 
 								<li id="menu-item-160"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160">
-									<a>Công nghệ hỗ trợ</a>
+									<a href="../dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a>
 								</li>
 
 							</ul>

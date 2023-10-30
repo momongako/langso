@@ -17,41 +17,43 @@
 /* NỀN TẢNG SỐ */
 
 :root {
-    --navy: #38404a;
-    --navy-light: #696D70;
-    --blue: #00aa55;
-    --blue-hover: #00aa55;
-    --mobilewidth-screen: 812px;
-    --sm-screen: 576px;
-    --md-screen: 768px;
-    --lg-screen: 992px;
-    --xl-screen: 1200px;
-    --spacing: 1em;
+	--navy              : #38404a;
+	--navy-light        : #696D70;
+	--blue              : #00aa55;
+	--blue-hover        : #00aa55;
+	--mobilewidth-screen: 812px;
+	--sm-screen         : 576px;
+	--md-screen         : 768px;
+	--lg-screen         : 992px;
+	--xl-screen         : 1200px;
+	--spacing           : 1em;
 }
 
-.titleContens{
-	font-weight: 600;
-    color: #00aa55;
-    font-size: 1.3em;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    line-height: 1.73;
-    padding-bottom: 12px;
+.titleContens {
+	font-weight    : 600;
+	color          : #00aa55;
+	font-size      : 1.3em;
+	width          : 100%;
+	justify-content: center;
+	display        : flex;
+	line-height    : 1.73;
+	padding-bottom : 12px;
 }
-.titleContens1{
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 31px;
-    line-height: 1.5;
+
+.titleContens1 {
+	white-space  : nowrap;
+	overflow     : hidden;
+	text-overflow: ellipsis;
+	height       : 31px;
+	line-height  : 1.5;
 }
 
 
 /* SLIDE NỀN TẢNG SỐ*/
-.et_pb_row1{
+.et_pb_row1 {
 	padding: 15px 0px !important;
 }
+
 /* SLIDE */
 
 
@@ -61,94 +63,108 @@
 
 
 .mainBoxSlide {
-	width: 100%;
+	width  : 100%;
 	display: flex !important;
 }
+
 .mainBoxSlide1 {
-	display: flex;
-	flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng khi không đủ chỗ */
-  }
+	display  : flex;
+	flex-wrap: wrap;
+	/* Cho phép các phần tử tự động xuống dòng khi không đủ chỗ */
+}
 
 .mosaic .mosaic-funding {
-    white-space: nowrap;
+	white-space: nowrap;
 }
+
 .mosaic .mosaic-stars {
-    line-height: 15px;
-    text-align: right;
-    white-space: nowrap;
+	line-height: 15px;
+	text-align : right;
+	white-space: nowrap;
 }
+
 .mosaic .mosaic-stars {
-    line-height: 15px;
-    text-align: right;
-    white-space: nowrap;
+	line-height: 15px;
+	text-align : right;
+	white-space: nowrap;
 }
+
 .mosaic .mosaic-stars {
-    line-height: 15px;
-    text-align: right;
-    white-space: nowrap;
+	line-height: 15px;
+	text-align : right;
+	white-space: nowrap;
 }
-.mosaic-title{
+
+.mosaic-title {
 	line-height: 1.43;
-	width: 100%;
+	width      : 100%;
 }
+
 .mosaic h5 {
-    margin: 0 0 5px 0 !important;
-    color: var(--navy);
-    font-size: 1em;
+	margin     : 0 0 5px 0 !important;
+	color      : var(--navy);
+	font-size  : 1em;
 	line-height: 15px;
 }
+
 .mosaic .mosaic-info {
-    font-size: 0.6em;
-    border-width: 1px 0 0 0;
-    border-style: solid;
-    border-color: #dedede;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    color: var(--navy-light);
-	flex-wrap: wrap;
+	font-size      : 0.6em;
+	border-width   : 1px 0 0 0;
+	border-style   : solid;
+	border-color   : #dedede;
+	padding        : 10px;
+	display        : flex;
+	justify-content: space-between;
+	color          : var(--navy-light);
+	flex-wrap      : wrap;
 }
+
 .mosaic-wrap {
-    padding: 6px;
-    width: 16.666%;
-    display: flex;
+	padding  : 6px;
+	width    : 16.666%;
+	display  : flex;
 	/* height: 280px; */
-	height: 200px;
+	height   : 200px;
 }
+
 .mosaic {
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 1px 1px 3px #d6d6d6;
-    background: #fff;
-    border: 1px solid #fff;
+	width        : 100%;
+	cursor       : pointer;
+	position     : relative;
+	border-radius: 2px;
+	box-shadow   : 1px 1px 3px #d6d6d6;
+	background   : #fff;
+	border       : 1px solid #fff;
 }
+
 .mosaic .logo_wrapper {
-    padding: 2px;
-    width: 100%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	height: 100%;
+	padding        : 2px;
+	width          : 100%;
+	cursor         : pointer;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+	height         : 100%;
 }
+
 .mosaic .logo_wrapper .logo {
-    /* width: 195px;
+	/* width: 195px;
     height: 100px;
     max-width: 100%;
     border-radius: 4px 4px 0 0;
 	object-fit: cover; */
-	width: 100%;
-    height: 100%;
-    max-width: 100%;
-    border-radius: 4px 4px 0 0;
-    object-fit: cover;
+	width        : 100%;
+	height       : 100%;
+	max-width    : 100%;
+	border-radius: 4px 4px 0 0;
+	object-fit   : cover;
 
 }
+
 .logo {
-    fill: #fff;
+	fill: #fff;
 }
+
 /* NỀN TẢNG SỐ END*/
 
 .wrapVd {
@@ -364,7 +380,7 @@
 	font-size  : 18px;
 	font-weight: 600;
 	padding-top: 30px;
-	width      : 140px;
+	width      : 146px;
 }
 
 /* IconHeadle End*/
@@ -814,10 +830,11 @@
 @media (max-width: 980px) {
 	.mosaic-wrap {
 		padding: 15px;
-		width: 33.33%;
+		width  : 33.33%;
 		display: flex;
-		height: 280px;
+		height : 280px;
 	}
+
 	.chuyenlangsobody {
 		margin-top: 120px !important;
 	}
@@ -1211,8 +1228,8 @@
 	}
 
 	.textRespon1 {
-		font-size: 52px !important;
-		font-family: Roboto,sans-serif !important;
+		font-size  : 52px !important;
+		font-family: Roboto, sans-serif !important;
 	}
 
 	/* .textRespon2 {
