@@ -6626,7 +6626,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
+
     .qodef-testimonials-list .qodef-e-text {
         padding: 0
     }
@@ -6640,7 +6640,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 
 
 @media only screen and (max-width:768px) {
-    
+
     .qodef-testimonials-list.qodef-col-num--3 .qodef-grid-item:last-child {
         width  : 100% !important;
         padding: 0 25% !important
@@ -6648,7 +6648,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:480px) {
-    
+
     .qodef-testimonials-list.qodef-col-num--3 .qodef-grid-item:last-child {
         padding: 0 15px !important
     }
@@ -7348,6 +7348,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
     display   : block;
     transition: all .35s ease-out
 }
+
 .qodef-banner .imgBlockStyle img {
     display   : block;
     transition: all .35s ease-out
@@ -7407,7 +7408,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:480px) {
-    
+
     .qodef-button.qodef-size--large {
         padding: 15px 65px
     }
@@ -7959,7 +7960,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
+
     .qodef-dropcaps .qodef-m-letter {
         font-size  : 35px;
         line-height: 1.2em
@@ -7981,7 +7982,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
+
     .qodef-dropcaps:not(.qodef-type--simple) .qodef-m-letter {
         line-height: 1.3em
     }
@@ -8178,9 +8179,11 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 .qodef-icon-with-text.qodef--has-appear.qodef--jump .qodef-m-svg svg {
     animation: qode-in-out 1s both cubic-bezier(.45, 0, .55, 1)
 }
+
 .qodef-icon-with-text.qodef--has-appear.qodef--jump .qodef-m-svg1 img {
     animation: qode-in-out 1s both cubic-bezier(.45, 0, .55, 1)
 }
+
 .qodef-icon-with-text.qodef--has-appear.qodef--jump .qodef-m-svg2 img {
     animation: qode-in-out 1s both cubic-bezier(.45, 0, .55, 1)
 }
@@ -8218,7 +8221,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
+
     .qodef-icon-with-text.qodef-layout--left {
         flex-direction: column
     }
@@ -8241,7 +8244,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
+
     .qodef-icon-with-text.qodef-layout--left .qodef-m-svg {
         margin-right : 0;
         margin-bottom: 30px
@@ -8367,7 +8370,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:480px) {
-    
+
     .qodef-custom-offset .qodef-image-gallery.qodef-swiper-container.qodef-swiper--initialized {
         margin: 0 5%;
         width : 90% !important
@@ -8437,7 +8440,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (min-width:481px) {
-    
+
     .qodef-image-slider.qodef-col-width-auto .swiper-slide {
         width: auto !important
     }
@@ -8468,9 +8471,9 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
     .qodef-image-with-text .qodef-m-image img {
         width: 100%
     }
+
     .qodef-image-with-text .imgBlockStyle img {
-       width: 100%
-        
+        width: 100%
     }
 }
 
@@ -8525,7 +8528,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:768px) {
-    
+
     .qodef-image-with-text.qodef-action--scrolling-image .qodef-m-image-holder .qodef-e-frame {
         max-height: 50vh
     }
@@ -8674,8 +8677,8 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:680px) {
-    
-       
+
+
     .qodef-interactive-link-showcase .qodef-m-item {
         font-size  : 35px;
         line-height: 1.2em
@@ -8767,9 +8770,10 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 
 @media only screen and (max-width:680px) {
     .qodef-image-with-text .qodef-m-content {
-  
-    height: auto !important;
-}
+
+        height: auto !important;
+    }
+
     .qodef-interactive-link-showcase.qodef-layout--interactive-list .qodef-e-follow-title {
         font-size  : 35px;
         line-height: 1.2em
@@ -8952,10 +8956,11 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 @media only screen and (max-width:480px) {
-      .qodef-image-with-text .qodef-m-content {
-  
-    height: auto !important;
-}
+    .qodef-image-with-text .qodef-m-content {
+
+        height: auto !important;
+    }
+
     .qodef-pricing-table .qodef-m-inner {
         padding: 67px 30px
     }
@@ -9319,9 +9324,9 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 }
 
 .qodef-section-title .qodef-m-text {
-    margin     : 31px 0 0;
+    margin     : 50px 0 0;
     line-height: 31px;
-    font-size  : 18px
+    font-size  : 20px
 }
 
 .qodef-section-title .qodef-letter {
@@ -13630,8 +13635,8 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
     .qodef-section-title .qodef-m-text {
         margin-top : 13px !important;
         line-height: 29px;
-        text-align: justify;
-        
+        text-align : justify;
+
     }
 
     .qodef-section-title .qodef-m-tagline-mark {

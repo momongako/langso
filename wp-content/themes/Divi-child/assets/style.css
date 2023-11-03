@@ -5,8 +5,8 @@
 */
 
 #main-header {
-  top     : -1px;
-  position: fixed;
+  top        : -1px;
+  /* position: fixed; */
 }
 
 body {
@@ -530,7 +530,7 @@ img.alignnone.wp-image-4801.size-medium {
 /*-----------------[Main Navigation]---------------*/
 /*------------------------------------------------*/
 #main-header {
-  position: fixed;
+  /* position: fixed; */
 }
 
 #main-header.white {
@@ -561,7 +561,7 @@ img.alignnone.wp-image-4801.size-medium {
 }
 
 #top-menu a {
-  color: #ffffff;
+  color: #00aa55;
 }
 
 #top-menu li {
@@ -645,14 +645,14 @@ div#et-top-navigation {
   color      : #364c4f;
   font-size  : 24px;
   padding    : 50px 25px */
-  
+
   border-bottom: 1px solid rgba(0, 0, 0, .03);
-  display: flex;
-  font-weight: normal;
-  color: #364c4f;
-  font-size: 24px;
-  height: 80px;
-  align-items: center;
+  display      : flex;
+  font-weight  : normal;
+  color        : #364c4f;
+  font-size    : 24px;
+  height       : 80px;
+  align-items  : center;
 }
 
 /*Collapsible mobile sub menu*/
@@ -712,7 +712,7 @@ div#et-top-navigation {
   }
 
   #main-header .container {
-    width: 90%;
+    width : 90%;
     height: 125px !important;
   }
 }

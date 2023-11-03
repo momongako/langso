@@ -811,75 +811,95 @@
 	<link rel="stylesheet" href="./footer/css/all.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/cssButton.css">
 	<link rel="stylesheet" href="./css/cssButtonShowMore.css">
+	<link rel="stylesheet" href="./testcss.css">
 </head>
 
 <body style="overflow-x: hidden"
 	class="home page-template-default page page-id-6 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
-	<div id="page-container">
-		<header id="main-header" data-height-onload="90" class="header colerBgHeader">
-			<style>
-				.scroll-header {
-					background-color: #00aa55 !important;
+	<div>
+		<style>
+			.mobile-mig-decktop {
+				height: 93.8%;
+			}
+
+			@media (max-width: 980px) {
+				.mobile-mig-decktop {
+					height: 100%;
 				}
-
-
-
-				@media (max-width: 980px) {
-					.colerBgHeader {
+			}
+		</style>
+		<div>
+			<img src="./image/Rectangle 27.png" class="mobile-mig-decktop" alt=""
+				style=" position: absolute; width: 100%;">
+		</div>
+		<div id="page-container">
+			<header id="main-header" data-height-onload="90" class="header colerBgHeader">
+				<style>
+					.scroll-header {
 						background-color: #00aa55 !important;
 					}
 
-					div#project-title {
-						height: 500px !important;
+
+
+					@media (max-width: 980px) {
+						.colerBgHeader {
+							background-color: #00aa55 !important;
+						}
+
+						div#project-title {
+							height: 500px !important;
+						}
+
+						.et_pb_fullwidth_section {
+
+							margin: 0px;
+						}
+
+						.scroll-header a {
+							color: #00aa55 !important;
+						}
+
+						.mobile_menu_bar::before {
+							color: white !important;
+
+						}
 					}
 
-					.et_pb_fullwidth_section {
 
-						margin: 0px;
-					}
 
 					.scroll-header a {
-						color: #00aa55 !important;
+						color: white;
 					}
-
-					.mobile_menu_bar::before {
-						color: white !important;
-
-					}
-				}
-
-
-
-				.scroll-header a {
-					color: white;
-				}
-			</style>
-			<div class="container clearfix et_menu_container">
-				<div class="logo_container" style="visibility: hidden;">
-					<span class="logo_helper"></span>
-					<a href="#" style="margin-left: 30px;">
-						<img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
-							src="./image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
-							data-height-percentage="54" />
-					</a>
-				</div>
-				<div id="et-top-navigation" data-height="90" data-fixed-height="40">
-					<nav id="top-menu-nav">
-						<ul id="top-menu" class="nav">
-							<li id="menu-item-45"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-									href="#">Làng số</a></li>
-							<li id="menu-item-45"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-									class="myLink" href="./cam-nang/index.html#text-0">Cẩm
-									nang</a></li>
-							<!-- <li id="menu-item-44"
+				</style>
+				<div class="container clearfix et_menu_container">
+					<div class="logo_container" style="visibility: hidden;">
+						<span class="logo_helper"></span>
+						<a href="#" style="margin-left: 30px;">
+							<img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
+								src="./image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
+								data-height-percentage="54" />
+						</a>
+					</div>
+					<div id="et-top-navigation" data-height="90" data-fixed-height="40">
+						<nav id="top-menu-nav">
+							<ul id="top-menu" class="nav">
+								<li id="menu-item-45"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
+										href="#">Làng số</a></li>
+								<li id="menu-item-45"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
+										class="myLink" href="./cam-nang/index.html#text-0">Cẩm
+										nang</a></li>
+								<li id="menu-item-43"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+										href="./nentang-so/index.html">Nền tảng số</a></li>
+								<!-- <li id="menu-item-44"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
 									href="./dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
-							<li id="menu-item-2314"
-								class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
-								<a href="./chuyen-langso/index.html">Chuyện làng số</a>
-								<!-- <ul class="sub-menu">
+								<li id="menu-item-2314"
+									class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
+									<a href="./chuyen-langso/index.html">Chuyện làng số</a>
+									<!-- <ul class="sub-menu">
 									<li id="menu-item-2172"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2172">
 										<a href="../energy-management/">Energy management</a>
@@ -897,145 +917,156 @@
 										<a href="/iot-for-agriculture/">Agriculture</a>
 									</li>
 								</ul> -->
-							</li>
-							<li id="menu-item-44"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
-									href="./dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a></li>
-							<!-- <li id="menu-item-43"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
-									href="./nentang-so/index.html">Nền tảng số</a></li> -->
+								</li>
+								<li id="menu-item-44"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+										href="./dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a></li>
+								<li id="menu-item-44"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+										href="/tailieu/Lang_So.pdf">Tải tài liệu</a></li>
 
-							<li id="menu-item-1338"
+								<!-- <li id="menu-item-1338"
 								class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
 								<a href="./tailieu/Lang_So.pdf" target="_blank">Tải tài liệu</a>
-								<!-- <a href="/demo/">Demo</a> -->
-							</li>
-						</ul>
-					</nav>
-					<div id="et_mobile_nav_menu">
-						<div class="mobile_nav closed">
-							<span class="select_page">Select Page</span>
-							<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+								
+							</li> -->
+							</ul>
+						</nav>
+						<div id="et_mobile_nav_menu">
+							<div class="mobile_nav closed">
+								<span class="select_page">Select Page</span>
+								<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+							</div>
 						</div>
+					</div> <!-- #et-top-navigation -->
+				</div> <!-- .container -->
+				<div class="et_search_outer">
+					<div class="container et_search_form_container">
+						<form role="search" method="get" class="et-search-form" action="/">
+							<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s"
+								title="Search for:" />
+						</form>
+						<span class="et_close_search_field"></span>
 					</div>
-				</div> <!-- #et-top-navigation -->
-			</div> <!-- .container -->
-			<div class="et_search_outer">
-				<div class="container et_search_form_container">
-					<form role="search" method="get" class="et-search-form" action="/">
-						<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s"
-							title="Search for:" />
-					</form>
-					<span class="et_close_search_field"></span>
 				</div>
-			</div>
 
-		</header> <!-- #main-header -->
-		<div id="et-main-area">
+			</header> <!-- #main-header -->
+			<div id="et-main-area">
 
-			<div id="main-content">
-
+				<div id="main-content">
 
 
-				<article id="post-6" class="post-6 page type-page status-publish has-post-thumbnail hentry">
 
-					<style>
-						@media (max-width: 580px) {
-							.et_pb_fullwidth_section {
-								margin-top: 106px;
-								height: 187px !important;
+					<article id="post-6" class="post-6 page type-page status-publish has-post-thumbnail hentry">
+
+						<style>
+							@media (max-width: 580px) {
+								.et_pb_fullwidth_section {
+									margin-top: 106px;
+									height: 187px !important;
+								}
+
+								div#project-title {
+									height: 300px;
+								}
+
 							}
 
-							div#project-title {
-								height: 300px;
+							.entry-content a img {
+								height: 100%;
+								width: 350px;
+
 							}
+						</style>
+						<div class="entry-content">
+							<div class="et-l et-l--post">
 
-						}
-					</style>
-					<div class="entry-content">
-						<div class="et-l et-l--post">
-
-							<!-- ANIMATION HEAD -->
+								<!-- ANIMATION HEAD -->
 
 
-							<!-- ANIMATION HEAD END -->
+								<!-- ANIMATION HEAD END -->
 
-							<!-- CONTEN  -->
-							<section class="campaign-section style-two padding-tb ">
+								<!-- CONTEN  -->
+								<section class="campaign-section style-two padding-tb ">
 
 
-								<div id="tab-manufacturer" style="padding-top: 0px !important;padding-bottom: 0px;"
-									class="et_pb_section et_pb_section_1 bb-tab-panel activated image-first faded et_section_regular">
-									<!-- <include src="./kamperen-page/index.html"></include> -->
-									<style id="kamperen-style-inline-css" type="text/css">
-										#qodef-page-inner {
-											padding: 0 0 !important;
-										}
+									<div id="tab-manufacturer" style="padding-top: 0px !important;padding-bottom: 0px;"
+										class="et_pb_section et_pb_section_1 bb-tab-panel activated image-first faded et_section_regular">
+										<!-- <include src="./kamperen-page/index.html"></include> -->
+										<style id="kamperen-style-inline-css" type="text/css">
+											#tab-manufacturer {
+												background-color: transparent;
+											}
 
-										@media only screen and (max-width: 1024px) {
 											#qodef-page-inner {
-												padding: 0 0;
-											}
-										}
-
-										#qodef-page-spinner .qodef-m-inner {
-											background-color: #ffffff;
-											color: #ffffff;
-										}
-
-										@media only screen and (max-width: 1024px) {
-											.qodef-page-title {
-												height: 120px;
-											}
-										}
-
-										@media only screen and (max-width: 680px) {
-
-											h1,
-											.qodef-h1 {
-												letter-spacing: 0px;
+												padding: 0 0 !important;
 											}
 
-											h4,
-											.qodef-h4 {
-												letter-spacing: 0px;
-											}
-										}
-
-										@media (max-width: 767px) {
-											.mobile-content-text-top {
-												padding: 257px 0px 0px 0px !important;
+											@media only screen and (max-width: 1024px) {
+												#qodef-page-inner {
+													padding: 0 0;
+												}
 											}
 
-											.feature-one__icon span {
-												font-size: 35px;
+											#qodef-page-spinner .qodef-m-inner {
+												background-color: #ffffff;
+												color: #ffffff;
 											}
 
-											.feature-one__content.a {
-												margin-left: 16px;
+											@media only screen and (max-width: 1024px) {
+												.qodef-page-title {
+													height: 120px;
+												}
 											}
-										}
 
-										img.attachment-full.size-full.wp-image-126 {
-											filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.2));
-										}
-									</style>
+											@media only screen and (max-width: 680px) {
+
+												h1,
+												.qodef-h1 {
+													letter-spacing: 0px;
+												}
+
+												h4,
+												.qodef-h4 {
+													letter-spacing: 0px;
+												}
+											}
+
+											@media (max-width: 767px) {
+												.mobile-content-text-top {
+													padding: 257px 0px 0px 0px !important;
+												}
+
+												.feature-one__icon span {
+													font-size: 35px;
+												}
+
+												.feature-one__content.a {
+													margin-left: 16px;
+												}
+											}
+
+											img.attachment-full.size-full.wp-image-126 {
+												filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.2));
+											}
+										</style>
 
 
-									<div class="et_pb_animation_bottom et-waypoint" data-aos="fade-up"
-										id="qodef-page-wrapper ">
-										<div id="qodef-page-outer">
-											<div id="qodef-page-inner" class="qodef-content-full-width">
-												<main id="qodef-page-content" class="qodef-grid qodef-layout--template "
-													role="main">
-													<div class="qodef-grid-inner clear">
-														<div
-															class="qodef-grid-item qodef-page-content-section qodef-col--12">
-															<div data-elementor-type="wp-page" data-elementor-id="12"
-																class="elementor elementor  elementor-12">
-																<!-- copy page -->
-																<!-- TEST VIDEO -->
-																<!-- <div
+										<div class="et_pb_animation_bottom et-waypoint" data-aos="fade-up"
+											id="qodef-page-wrapper ">
+											<div id="qodef-page-outer">
+												<div id="qodef-page-inner" class="qodef-content-full-width">
+													<main id="qodef-page-content"
+														class="qodef-grid qodef-layout--template " role="main">
+														<div class="qodef-grid-inner clear">
+															<div
+																class="qodef-grid-item qodef-page-content-section qodef-col--12">
+																<div data-elementor-type="wp-page"
+																	data-elementor-id="12"
+																	class="elementor elementor  elementor-12">
+																	<!-- copy page -->
+																	<!-- TEST VIDEO -->
+																	<!-- <div
 																	class="et_builder_inner_content et_pb_gutters3 destop">
 																	<div id="project-title"
 																		class="et_pb_section et_pb_section_0 project-title-container et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular styleMarginTopLeftHead"
@@ -1060,382 +1091,404 @@
 																</div> -->
 
 
-																<!-- TEST VIDEO END -->
-																<section
-																	class="mobile-content-text-top elementor-section elementor-top-section elementor-element elementor-element-2bfd08a elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
-																	data-id="2bfd08a" data-element_type="section"
-																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-																	<div
-																		class="elementor-container elementor-column-gap-default">
-																		<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e66be58"
-																			data-id="e66be58"
-																			data-element_type="column">
-																			<style>
-																				.element-with-background {
-																					animation: moveBackground 3s linear infinite;
-																					/* Di chuyển trong khoảng thời gian 5 giây, lặp vô hạn */
-																				}
-
-																				@keyframes moveBackground {
-																					from {
-																						background-position: 1px 0px;
-																						/* Vị trí ban đầu */
+																	<!-- TEST VIDEO END -->
+																	<section class="qodef-alignment--center"
+																		style="display: flex; justify-content: center;margin-bottom: 10px;">
+																		<div
+																			style="display: flex; justify-content: center;">
+																			<img src="./image/logotitle.png" alt=""
+																				style="width: 35%;">
+																		</div>
+																	</section>
+																	<section style="margin-top: 55px;"
+																		class="mobile-content-text-top elementor-section elementor-top-section elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
+																		data-id="2bfd08a" data-element_type="section"
+																		data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+																		<div
+																			class="elementor-container elementor-column-gap-default">
+																			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e66be58"
+																				data-id="e66be58"
+																				data-element_type="column">
+																				<style>
+																					.element-with-background {
+																						animation: moveBackground 3s linear infinite;
+																						/* Di chuyển trong khoảng thời gian 5 giây, lặp vô hạn */
 																					}
 
-																					to {
-																						background-position: 100% 0px;
-																						/* Vị trí cuối cùng */
+																					@keyframes moveBackground {
+																						from {
+																							background-position: 1px 0px;
+																							/* Vị trí ban đầu */
+																						}
+
+																						to {
+																							background-position: 100% 0px;
+																							/* Vị trí cuối cùng */
+																						}
 																					}
-																				}
-																			</style>
+																				</style>
 
-																			<!-- TESTVIDEO -->
+																				<!-- TESTVIDEO -->
 
-																			<!-- TESTVIDEO END -->
-
+																				<!-- TESTVIDEO END -->
 
 
 
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-6d33657 elementor-widget elementor-widget-kamperen_core_section_title"
-																					data-id="6d33657"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_section_title.default">
-																					<div
-																						class="elementor-widget-container ">
-																						<!-- BACKGROU MAINE -->
-																						<div class="contact-one__bg1 float-bob-x"
-																							style="background-image: url('./images/nha.png');">
-																							<div class="element-with-background"
+
+																				<div
+																					class="elementor-widget-wrap elementor-element-populated">
+																					<div class="elementor-element elementor-element-6d33657 elementor-widget elementor-widget-kamperen_core_section_title"
+																						data-id="6d33657"
+																						data-element_type="widget"
+																						data-widget_type="kamperen_core_section_title.default">
+																						<div
+																							class="elementor-widget-container ">
+																							<!-- BACKGROU MAINE -->
+																							<div class=""
+																								style="background-image: url('./images/nha.png');">
+																								<!-- <div class="element-with-background"
 																								style="background-image: url('./images/may-2.png');
 																									position: absolute;bottom: 99px;left: 165px;width: 417px;height: 100px;background-repeat: no-repeat;background-position: center;background-size: cover;z-index: 0;">
+																							</div> -->
 																							</div>
-																						</div>
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
 																							<div
-																								class="qodef-m-tagline-mark">
+																								class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
+																								<div
+																									class="qodef-m-tagline-mark">
 
-																								Làng Số </div>
-																							<style>
-																								@media only screen and (max-width: 480px) {
-																									.qodef-m-tagline-mark {
-																										font-size: 75px;
+																									Làng Số </div>
+																								<style>
+																									@media only screen and (max-width: 480px) {
+																										.qodef-m-tagline-mark {
+																											font-size: 75px;
+																										}
 																									}
-																								}
-																							</style>
-																							<h1>
-																								<br>
-																							</h1>
+																								</style>
 
-																							<div class="green-line ">
+
+
+
+																								<p class="qodef-m-text"
+																									style="display: flex;justify-content: center;">
+																									<span>
+
+																										Ứng dụng công
+																										nghệ
+																										số để
+																										phục vụ đời sống
+																										sinh
+																										hoạt diễn ra
+																										hằng
+																										ngày
+																										và cải thiện
+																										hiệu
+																										suất
+																										lao động cho
+																										người
+																										dân
+																										khu
+																										vực nông thôn
+																									</span>
+
+																								</p>
 																							</div>
-																							<p class="qodef-m-text">
-																								Làng được xây dựng
-																								trên nền tảng ngôi
-																								làng truyền thống,
-																								mà ở đó, người dân
-																								được trang bị đầy đủ
-																								kỹ năng số, biết sử
-																								dụng các nền tảng số
-																								và ứng dụng công
-																								nghệ số để phục vụ
-																								đời sống sinh hoạt
-																								và hoạt động sản
-																								xuất, kinh doanh
-																								diễn ra
-																								hàng ngày.
-																							</p>
 																						</div>
 																					</div>
 																				</div>
+
 																			</div>
-
 																		</div>
-																	</div>
-																</section>
-																<section
-																	class="elementor-section elementor-top-section elementor-element elementor-element-aa259b8 elementor-section-full_width qodef-elementor-content-grid elementor-section-content-bottom elementor-section-height-default elementor-section-height-default"
-																	data-id="aa259b8" data-element_type="section"
-																	data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-																	<div class="elementor-container elementor-column-gap-default"
-																		style="width: 0px;justify-content: center">
+																	</section>
+																	<!-- css thanh ngang chạy chạy -->
+																	<style>
+																		.left .row-crossbar {
+																			background: #00aa55 none repeat scroll 0 0;
+																			height: 2px;
+																			width: 62px;
+																			margin: 0;
+																		}
 
-																		<div class="page-content">
-																			<style>
-																				.fw-5 .c1 {
-																					width: 100px;
-																					height: 100px;
-																					filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-																					/* Bóng ở phía dưới */
-																				}
+																		.row-crossbar {
+																			display: contents;
+																			background: #00aa55 none repeat scroll 0 0;
+																			height: 2px;
+																			margin: 0 auto 5px;
+																			width: 62px;
 
-																				@media only screen and (max-width: 800px) {
-																					section.qodef-elementor-content-grid>.elementor-container {
-																						.volunteer {
-																							height: 55px;
+																		}
+
+																		.row-crossbar-bg {
+																			height: 5px;
+																			width: 110px;
+																			background: #83d5ac;
+																			margin: 20px auto;
+																			position: relative;
+																			border-radius: 30px;
+																		}
+
+																		.row-crossbar-bg:before {
+																			content: '';
+																			position: absolute;
+																			left: 0;
+																			top: -2.7px;
+																			height: 10px;
+																			width: 10px;
+																			border-radius: 50%;
+																			background: #00aa55;
+																			-webkit-animation-duration: 3s;
+																			animation-duration: 3s;
+																			-webkit-animation-timing-function: linear;
+																			animation-timing-function: linear;
+																			-webkit-animation-iteration-count: infinite;
+																			animation-iteration-count: infinite;
+																			-webkit-animation-name: MOVE-BG;
+																			animation-name: MOVE-BG;
+																		}
+
+																		@-webkit-keyframes MOVE-BG {
+																			from {
+																				-webkit-transform: translateX(0);
+																				transform: translateX(0);
+																			}
+
+																			to {
+																				-webkit-transform: translateX(105px);
+																				transform: translateX(105px);
+																			}
+																		}
+
+																		@keyframes MOVE-BG {
+																			from {
+																				-webkit-transform: translateX(0);
+																				transform: translateX(0);
+																			}
+
+																			to {
+																				-webkit-transform: translateX(105px);
+																				transform: translateX(105px);
+																			}
+																		}
+																	</style>
+																	<section
+																		class="elementor-section elementor-top-section elementor-element elementor-element-aa259b8 elementor-section-full_width qodef-elementor-content-grid elementor-section-content-bottom elementor-section-height-default elementor-section-height-default"
+																		data-id="aa259b8" data-element_type="section"
+																		data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
+																		style="background-color: transparent;">
+																		<div class="elementor-container elementor-column-gap-default"
+																			style="width: 0px;justify-content: center">
+
+																			<div class="page-content">
+																				<style>
+																					.fw-5 .c1 {
+																						width: 100px;
+																						height: 100px;
+																						filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+																						/* Bóng ở phía dưới */
+																					}
+
+																					@media only screen and (max-width: 800px) {
+																						section.qodef-elementor-content-grid>.elementor-container {
+																							.volunteer {
+																								height: 55px;
+																							}
+																						}
+
+																						section.elementor-section.elementor-top-section.elementor-element.elementor-element-aa259b8.elementor-section-full_width.qodef-elementor-content-grid.elementor-section-content-bottom.elementor-section-height-default.elementor-section-height-default {
+																							padding-top: 0px;
 																						}
 																					}
 
-																					section.elementor-section.elementor-top-section.elementor-element.elementor-element-aa259b8.elementor-section-full_width.qodef-elementor-content-grid.elementor-section-content-bottom.elementor-section-height-default.elementor-section-height-default {
-																						padding-top: 0px;
+																					.fw-5 .c1:hover {
+																						transform: scale(1.2);
 																					}
-																				}
 
-																				.fw-5 .c1:hover {
-																					transform: scale(1.2);
-																				}
-
-																				@media (min-width: 1200px) {
-																					ul.tab-list.list-inline.text-center.d-flex {
-																						padding-left: 4em;
+																					@media (min-width: 1200px) {
+																						ul.tab-list.list-inline.text-center.d-flex {
+																							padding-left: 4em;
+																						}
 																					}
-																				}
-																			</style>
-																			<!-- icon page -->
-																			<div class="volunteer">
-																				<div class="container"
-																					style="padding-top: 0px;margin: 0px;">
-																					<div class="col-sm-12">
+
+																					.icon-mobile-top {
+																						padding-top: 45px;
+																					}
+
+																					@media only screen and (max-width: 980px) {
+																						.icon-mobile-top {
+																							padding-top: 0px;
+																						}
+																					}
+																				</style>
+																				<!-- icon page -->
+																				<div class="volunteer">
+																					<div class="container"
+																						style="padding-top: 0px;margin: 0px;">
+
 																						<div
-																							class="volunteer-tab clearfix">
-																							<ul style="display: flex; "
-																								class="tab-list list-inline text-center d-flex">
-																								<li
-																									class=" qodef-icon-with-text qodef--has-appear ">
-																									<a href="./cam-nang/index-api.html?id=96"
-																										data-target="text-1"
-																										data-index="1"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="c1 ">
-																											<img class=""
-																												src="./image/img-meta/muasam.png"
-																												alt="">
-
-																										</i>
-
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Hạ tầng số
-																									</div>
-
-																								</li>
-
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index-api.html?id=106"
-																										data-toggle="text-1"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<!-- <i
-																												class="nivio-newspaper c1"></i> -->
-																										<i class="c1 ">
-																											<img class=""
-																												src="./image/img-meta/hoctap.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Gia đình số
-																									</div>
-																								</li>
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index.html#text-13"
-																										data-toggle="tab"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="  c1">
-																											<img class=""
-																												src="./image/img-meta/khamchuabenh.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Nhà văn hóa
-																										số
-																									</div>
-																								</li>
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index.html#text-15"
-																										data-toggle="tab"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="  c1">
-																											<img class=""
-																												src="./image/img-meta/dichvucong.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Mắt thần
-																										24/7
-																									</div>
-																								</li>
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index.html#text-17"
-																										data-toggle="tab"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="c1 ">
-																											<img class=""
-																												src="./image/img-meta/kynangso.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Chợ số
-																									</div>
-																								</li>
-
-																							</ul>
-
-																						</div>
-																					</div>
-																					<div class="col-sm-12">
-																						<div class="volunteer-tab clearfix"
-																							style="display: flex;justify-content: center;">
-																							<ul style="display: flex; "
-																								class="tab-list list-inline text-center d-flex">
+																							class="col-sm-12 icon-mobile-top">
+																							<div class="volunteer-tab clearfix"
+																								style="display: flex;justify-content: center;">
+																								<ul style="display: flex; "
+																									class="tab-list list-inline text-center d-flex">
 
 
 
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index-api.html?id=106"
-																										data-toggle="text-1"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<!-- <i
-																																																	class="nivio-newspaper c1"></i> -->
-																										<i class="c1 ">
-																											<img class=""
-																												src="./image/img-meta/giaotiep.png"
-																												alt="">
+																									<li
+																										class=" qodef-icon-with-text">
+																										<a href="./cam-nang/index.html#text-15"
+																											data-toggle="tab"
+																											class="fw-5 qodef-m-svg1 myLink">
+																											<i class="">
+																												<img class=""
+																													src="./image/Ellipse 4 (1).png"
+																													alt="">
 
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Giao tiếp số
-																									</div>
-																								</li>
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index.html#text-13"
-																										data-toggle="tab"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="  c1">
-																											<img class=""
-																												src="./image/img-meta/truyenthanh.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Truyền thanh số
-																									</div>
-																								</li>
-
-																								<li
-																									class=" qodef-icon-with-text   qodef--has-appear">
-																									<a href="./cam-nang/index.html#text-15"
-																										data-toggle="tab"
-																										class="fw-5 qodef-m-svg1 myLink">
-																										<i class="  c1">
-																											<img class=""
-																												src="./image/img-meta/chieusang.png"
-																												alt="">
-
-																										</i>
-																									</a>
-																									<div
-																										class="textHeadConten">
-																										Chiếu sáng xanh
-																									</div>
-																								</li>
+																											</i>
+																										</a>
+																										<div
+																											class="textHeadConten">
+																											Mang nền
+																											tảng số
+																											đến từng hộ
+																											gia
+																											đình, từng
+																											người
+																											dân khu vực
+																											nông
+																											thôn
+																										</div>
+																									</li>
 
 
+																									<li
+																										class=" qodef-icon-with-text">
+																										<a href="./cam-nang/index.html#text-17"
+																											data-toggle="tab"
+																											class="fw-5 qodef-m-svg1 myLink">
+																											<i class="">
+																												<img class=""
+																													src="./image/Ellipse 4.png"
+																													alt="">
 
-																							</ul>
+																											</i>
+																										</a>
+																										<div
+																											class="textHeadConten">
+																											Người dân
+																											trong
+																											làng là
+																											trọng
+																											tâm, là chủ
+																											thể
+																											chính đẩy
+																											nhanh
+																											quá trình
+																											phát
+																											triển làng
+																											số.
+																										</div>
+																									</li>
 
+
+																									<li
+																										class=" qodef-icon-with-text">
+																										<a href="./cam-nang/index.html#text-16"
+																											data-toggle="tab"
+																											class="fw-5 qodef-m-svg1 myLink">
+																											<i class="">
+																												<img class=""
+																													src="./image/Ellipse 4 (2).png"
+																													alt="">
+
+																											</i>
+																										</a>
+																										<div
+																											class="textHeadConten">
+																											Sử dụng công
+																											nghệ số để
+																											thay
+																											đổi cách
+																											thức
+																											sản xuất,
+																											phát
+																											triển kinh
+																											tế
+
+																										</div>
+																									</li>
+
+
+
+																								</ul>
+
+																							</div>
 																						</div>
 																					</div>
 																				</div>
+																				<script
+																					src="./icon-page-story/js/jquery-1.12.4.min.js"></script>
+																				<script
+																					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+																				<script
+																					src="./icon-page-storyjs/html5lightbox.js"></script>
+																				<script
+																					src="./icon-page-storyjs/bootstrap.min.js"></script>
+																				<script
+																					src="./icon-page-storyjs/owl.carousel.js"></script>
+																				<script
+																					src="./icon-page-storyjs/numscroller-1.0.js"></script>
+																				<script
+																					src="./icon-page-storyjs/jquery.countdown.min.js"></script>
+																				<script
+																					src="./icon-page-storyjs/jquery.enllax.min.js"></script>
+																				<script
+																					src="./icon-page-storyjs/isotope.js"></script>
+																				<script
+																					src="./icon-page-storyjs/magnific-popup.js"></script>
+																				<script
+																					src="./icon-page-storyjs/main.js"></script>
 																			</div>
-																			<script
-																				src="./icon-page-story/js/jquery-1.12.4.min.js"></script>
-																			<script
-																				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
-																			<script
-																				src="./icon-page-storyjs/html5lightbox.js"></script>
-																			<script
-																				src="./icon-page-storyjs/bootstrap.min.js"></script>
-																			<script
-																				src="./icon-page-storyjs/owl.carousel.js"></script>
-																			<script
-																				src="./icon-page-storyjs/numscroller-1.0.js"></script>
-																			<script
-																				src="./icon-page-storyjs/jquery.countdown.min.js"></script>
-																			<script
-																				src="./icon-page-storyjs/jquery.enllax.min.js"></script>
-																			<script
-																				src="./icon-page-storyjs/isotope.js"></script>
-																			<script
-																				src="./icon-page-storyjs/magnific-popup.js"></script>
-																			<script
-																				src="./icon-page-storyjs/main.js"></script>
+
 																		</div>
+																		<!-- VIDEO MOBILE -->
 
-																	</div>
-																	<!-- VIDEO MOBILE -->
+																		<!-- VIDEO MOBILE END -->
 
-																	<!-- VIDEO MOBILE END -->
-
-																	<!-- <section class="wrapVd" > -->
+																		<!-- <section class="wrapVd" > -->
 
 
-																	<!-- </section> -->
-																	<!-- <div style="text-align: center;" class="custom-btn">
+																		<!-- </section> -->
+																		<!-- <div style="text-align: center;" class="custom-btn">
 
 																		Xem thêm
 																	</div> -->
 
 
-																</section>
-																<style>
+																	</section>
+																	<style>
 
-																</style>
+																	</style>
 
-																<section
-																	class="elementor-section elementor-top-section elementor-element elementor-element-33df2c1 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
-																	data-id="33df2c1" data-element_type="section">
-
-
+																	<section
+																		class="elementor-section elementor-top-section elementor-element elementor-element-33df2c1 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
+																		data-id="33df2c1" data-element_type="section">
 
 
 
 
-																	<div
-																		class="elementor-container elementor-column-gap-default">
-																		<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e66be58"
-																			data-id="e66be58"
-																			data-element_type="column">
 
-																			<!-- <style>
+																		<div style="width: 100%;">
+																			<div class="row-crossbar">
+																				<div class="row-crossbar-bg">
+																				</div>
+																			</div>
+																		</div>
+																		<div
+																			class="elementor-container elementor-column-gap-default">
+																			<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e66be58"
+																				data-id="e66be58"
+																				data-element_type="column">
+
+																				<!-- <style>
 																					.element-with-background {
 																						animation: moveBackground 3s linear infinite;
 																						/* Di chuyển trong khoảng thời gian 5 giây, lặp vô hạn */
@@ -1454,1167 +1507,917 @@
 																					}
 																				</style> -->
 
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-6d33657 elementor-widget elementor-widget-kamperen_core_section_title"
-																					data-id="6d33657"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_section_title.default">
-																					<div
-																						class="elementor-widget-container ">
-																						<!-- BACKGROU MAINE -->
-																						<style>
-																							@media (max-width: 980px) {
-																								.mobile-style {
-																									display: none;
-																								}
-																							}
-																						</style>
-																						<div class="contact-one__bg1 float-bob-x"
-																							style="background-image: url('./images/nha.png'); bottom: 35px;">
-																							<div class="element-with-background mobile-style"
-																								style="background-image: url('./images/may-2.png');bottom: 57px;position: absolute;left: 165px;width: 417px;height: 100px;background-repeat: no-repeat;background-position: center;background-size: cover;z-index: 0;">
-																							</div>
-																						</div>
-																						<div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center "
-																							style="margin-bottom: 25px;">
-																							<div class="qodef-m-tagline-mark"
-																								style="padding-bottom: 30px;">
 
-																								Dân Làng Số </div>
+																				<div
+																					class="elementor-widget-wrap elementor-element-populated">
+																					<div class="elementor-element elementor-element-6d33657 elementor-widget elementor-widget-kamperen_core_section_title"
+																						data-id="6d33657"
+																						data-element_type="widget"
+																						data-widget_type="kamperen_core_section_title.default">
+																						<div
+																							class="elementor-widget-container ">
+																							<!-- BACKGROU MAINE -->
 																							<style>
-																								@media only screen and (max-width: 480px) {
-																									.qodef-m-tagline-mark {
-																										font-size: 75px;
+																								@media (max-width: 980px) {
+																									.mobile-style {
+																										display: none;
 																									}
 																								}
 																							</style>
+																							<!-- <div class="contact-one__bg1 float-bob-x"
+																							style="background-image: url('./images/nha.png'); bottom: 84px;">
+																							<div class="element-with-background mobile-style"
+																								style="background-image: url('./images/may-2.png');bottom: 105px;position: absolute;left: 165px;width: 417px;height: 100px;background-repeat: no-repeat;background-position: center;background-size: cover;z-index: 0;">
+																							</div>
+																						</div> -->
+																							<div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center "
+																								style="margin-bottom: 25px;margin-top: 50px;">
+																								<div class="qodef-m-tagline-mark"
+																									style="padding-bottom: 30px;">
+
+																									Dân Làng Số </div>
+																								<style>
+																									@media only screen and (max-width: 480px) {
+																										.qodef-m-tagline-mark {
+																											font-size: 75px;
+																										}
+																									}
+																								</style>
 
 
-																							<div style="margin-top: 33px;"
-																								class="green-line ">
+
+																								<p class="qodef-m-text"
+																									style="margin-top: 30px;display: flex;justify-content: center;">
+																									<span
+																										class="text-title-center">
+																										Chia sẻ để nhân
+																										rộng
+																										câu chuyện về
+																										cách
+																										người dân tại
+																										các
+																										địa phương khắp
+																										cả
+																										nước đang ứng
+																										dụng
+																										công nghệ để
+																										thay
+																										đổi
+																										diện mạo làng
+																										quê,
+																										tự tin làm giàu
+																										trên
+																										chính quê hương
+																										mình.
+																									</span>
+																								</p>
 																							</div>
 																						</div>
 																					</div>
 																				</div>
 																			</div>
 																		</div>
-																	</div>
 
-																	<!-- 
+																		<!-- 
 																		<div class="green-line "
 																			style="margin-bottom: 50px;">
 																		</div> -->
 
-																	<!-- BACKGROU MAINE -->
-																	<!-- <img class="contact-one__bg2 float-bob-x"
+																		<!-- BACKGROU MAINE -->
+																		<!-- <img class="contact-one__bg2 float-bob-x"
 																			src="./image/imgBg/anhbg8.png"> -->
 
 
 
+																		<!-- mobile -->
 
-
-
-																	<div
-																		class="elementor-container elementor-column-gap-default">
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
-																			data-id="4908d24"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-590c92c elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
-																					data-id="590c92c"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_image_with_text.default">
-																					<style>
-																						.qodef-m-image {
-																							position: relative;
-																							display: inline-block;
-																							overflow: hidden;
-																						}
-
-																						.qodef-m-image img {
-																							width: 100%;
-																							/* Đảm bảo hình ảnh lấp đầy không gian của .image-container */
-																							height: auto;
-																							/* Để giữ tỷ lệ khung hình ảnh */
-																							transition: transform 0.3s ease;
-																							/* Hiệu ứng chuyển động mềm mại */
-																						}
-
-																						.qodef-m-image::before {
-																							content: "";
-																							position: absolute;
-																							top: 0;
-																							left: 0;
-																							right: 0;
-																							bottom: 0;
-																							background: rgba(0, 0, 0, 0.5);
-																							/* Màu nền và độ trong suốt của lớp nổi lên */
-																							opacity: 0;
-																							/* Lúc ban đầu không hiển thị */
-																							transition: opacity 0.3s ease;
-																							/* Hiệu ứng độ trong suốt mềm mại */
-																						}
-
-																						.qodef-m-image:hover img {
-																							transform: scale(1.1);
-																							/* Phóng to hình ảnh khi di chuột qua */
-																						}
-
-																						.qodef-m-image:hover::before {
-																							opacity: 1;
-																							/* Hiển thị lớp nổi lên khi di chuột qua */
-																						}
-																					</style>
-
-																					<div
-																						class="elementor-widget-container">
-
-
-
-
-
-																						<!-- <div class="contact-one__bg1 float-bob-x"
-																								style="background-image: url(images/unbeatable-shape-1.png);">
-																							</div> -->
-
-
-
+																		<div class="section-wrapper new-cards-mobile"
+																			data-aos-duration="700">
+																			<div class="" style="width: 84%;">
+																				<div
+																					class="elementor-container elementor-column-gap-default ">
+																					<div class=" elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																						data-id="4908d24"
+																						data-element_type="column">
 																						<div
-																							class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
-																							<div class=" qodef-m-image">
-																								<img loading="lazy"
-																									width="800"
-																									height="574"
-																									src="./image/img-meta/hatangso.jpg"
-																									class="qodef-e-main-image elementorImg"
-																									alt="c"
-																									decoding="async"
-																									sizes="(max-width: 800px) 100vw, 800px">
-																							</div>
-																							<div
-																								class="qodef-m-content">
-																								<h4 class="qodef-m-title"
-																									style="margin-top: 28px;height: 60px;font-size: 20px;">
-																									ĐƯỢC PHỔ CẬP KỸ
-																									NĂNG SỐ
-																								</h4>
-																								<p class="qodef-m-text"
-																									style="margin-top: 6px;font-size: 18px;">
-																									Dân làng có khả
-																									năng sử dụng các
-																									phương tiện công
-																									nghệ như điện
-																									thoại, máy tính
-																									để sử dụng các
-																									nền tảng, ứng
-																									dụng phục vụ cho
-																									nhu cầu cơ bản
-																									thường ngày như
-																									nhu cầu giao
-																									tiếp, ăn mặc, đi
-																									lại cho đến các
-																									nhu cầu cao hơn
-																									như khám chữa
-																									bệnh từ xa, sản
-																									xuất kinh doanh,
-																									giao tiếp với
-																									chính quyền.
-																								</p>
-																							</div>
-																							<div class="qodef-e-bottom-holder"
-																								style="display: flex;margin-top: 15px;">
+																							class="elementor-widget-wrap elementor-element-populated">
+																							<div class="elementor-element elementor-element-590c92c elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																								data-id="590c92c"
+																								data-element_type="widget"
+																								data-widget_type="kamperen_core_image_with_text.default">
+																								<style>
+																									.qodef-m-image {
+																										position: relative;
+																										display: inline-block;
+																										overflow: hidden;
+																									}
+
+																									.qodef-m-image img {
+																										width: 100%;
+																										/* Đảm bảo hình ảnh lấp đầy không gian của .image-container */
+																										height: auto;
+																										/* Để giữ tỷ lệ khung hình ảnh */
+																										transition: transform 0.3s ease;
+																										/* Hiệu ứng chuyển động mềm mại */
+																									}
+
+																									.qodef-m-image::before {
+																										content: "";
+																										position: absolute;
+																										top: 0;
+																										left: 0;
+																										right: 0;
+																										bottom: 0;
+																										background: rgba(0, 0, 0, 0.5);
+																										/* Màu nền và độ trong suốt của lớp nổi lên */
+																										opacity: 0;
+																										/* Lúc ban đầu không hiển thị */
+																										transition: opacity 0.3s ease;
+																										/* Hiệu ứng độ trong suốt mềm mại */
+																									}
+
+																									.qodef-m-image:hover img {
+																										transform: scale(1.1);
+																										/* Phóng to hình ảnh khi di chuột qua */
+																									}
+
+																									.qodef-m-image:hover::before {
+																										opacity: 1;
+																										/* Hiển thị lớp nổi lên khi di chuột qua */
+																									}
+																								</style>
+
 																								<div
-																									class="qodef-e-left">
+																									class="elementor-widget-container">
+
+
+
+
+
+																									<!-- <div class="contact-one__bg1 float-bob-x"
+																																				style="background-image: url(images/unbeatable-shape-1.png);">
+																																			</div> -->
+
+
+
 																									<div
-																										class="qodef-e-read-more">
-																										<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link myLink"
-																											href="./cam-nang/index.html#text-2"
-																											target="_self">
-																											<span
-																												class="qodef-m-text"
-																												style="margin: 0px;">Chi
-																												Tiết</span>
-																											<span
-																												class="qodef-m-icon">
-																												<svg xmlns="http://www.w3.org/2000/svg"
-																													width="20.053"
-																													height="10.039"
-																													viewBox="0 0 20.053 10.039">
-																													<path
-																														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-																														transform="translate(-2.875 -11.252)">
-																													</path>
-																												</svg>
-																											</span></a>
+																										class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																										<div class=" qodef-m-image"
+																											style="height: auto !important">
+																											<img style="height: 350px !important;width: 900px !important;"
+																												loading="lazy"
+																												width="800"
+																												height="574"
+																												src="./image/dentrang1.jpg"
+																												class="qodef-e-main-image elementorImg"
+																												alt="c"
+																												decoding="async"
+																												sizes="(max-width: 800px) 100vw, 800px">
+																										</div>
+
+
+																										<!-- mũi tên nut chi tiết di chuyển trái phải -->
+																										<style>
+																											.arrow-animation {
+																												position: relative;
+																												-webkit-animation: linear infinite alternate;
+																												-webkit-animation-name: run;
+																												-webkit-animation-duration: 1s;
+																												animation: linear infinite alternate;
+																												animation-name: run;
+																												animation-duration: 2s
+																											}
+
+																											@keyframes run {
+																												0% {
+																													left: 0
+																												}
+
+																												50% {
+																													left: 5px
+																												}
+
+																												100% {
+																													left: 0
+																												}
+																											}
+																										</style>
 																									</div>
 																								</div>
 																							</div>
 																						</div>
 																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-eb6e102"
-																			data-id="eb6e102"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-b4a5613 elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
-																					data-id="b4a5613"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_image_with_text.default">
-																					<div
-																						class="elementor-widget-container">
+																					<div class=" elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																						data-id="eb6e102"
+																						data-element_type="column">
 																						<div
-																							class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
-																							<div class=" imgBlockStyle">
-																								<img loading="lazy"
-																									width="800"
-																									height="574"
-																									src="./image/img-meta/mannentangsodentuongnha.jpg"
-																									class="qodef-e-main-image imgBlockStyle"
-																									alt="c"
-																									decoding="async"
-																									srcset="./image/img-meta/mannentangsodentuongnha.jpg 800w, ./image/img-meta/mannentangsodentuongnha.jpg 300w, ./image/img-meta/mannentangsodentuongnha.jpg 768w, ./image/img-meta/mannentangsodentuongnha.jpg 600w"
-																									sizes="(max-width: 800px) 100vw, 800px">
-
-																							</div>
-																							<!-- <div
-																									class=" imgBlockStyle">
-																									<img loading="lazy"
-																										width="800"
-																										height="574"
-																										src="./image/img-meta/mannentangsodentuongnha.jpg"
-																										class="qodef-e-main-image elementorImg"
-																										alt="c"
-																										decoding="async"
-																										srcset="./image/img-meta/mannentangsodentuongnha.jpg 800w, ./image/img-meta/mannentangsodentuongnha.jpg 300w, ./image/img-meta/mannentangsodentuongnha.jpg 768w, ./image/img-meta/mannentangsodentuongnha.jpg 600w"
-																										sizes="(max-width: 800px) 100vw, 800px">
-																								</div> -->
-
-
-																							<div
-																								class="qodef-m-content">
-																								<h4 class="qodef-m-title"
-																									style="margin-top: 28px;height: 60px;font-size: 20px;">
-																									SỬ DỤNG DỊCH VỤ,
-																									TIỆN ÍCH SỐ
-																								</h4>
-																								<p class="qodef-m-text"
-																									style="margin-top: 6px;font-size: 18px;">
-																									Người dân vùng
-																									nông thôn sử
-																									dụng, dịch vụ
-																									tiện ích như
-																									người dân thành
-																									thị, thu hẹp
-																									khoảng cánh giữa
-																									phố với làng,
-																									góp phần hình
-																									thành thói quen
-																									sử dụng công
-																									nghệ số trong
-																									cuộc sống sinh
-																									hoạt hàng ngày.
-																								</p>
-																							</div>
-																							<div class="qodef-e-bottom-holder"
-																								style="display: flex;margin-top: 15px;">
+																							class="elementor-widget-wrap elementor-element-populated">
+																							<div class="elementor-element elementor-element-b4a5613 elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																								data-id="b4a5613"
+																								data-element_type="widget"
+																								data-widget_type="kamperen_core_image_with_text.default">
 																								<div
-																									class="qodef-e-left">
+																									class="elementor-widget-container">
 																									<div
-																										class="qodef-e-read-more">
-																										<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link myLink"
-																											href="./cam-nang/index.html#text-35"
-																											target="_self">
-																											<span
-																												class="qodef-m-text"
-																												style="margin: 0px;">Chi
-																												Tiết</span>
-																											<span
-																												class="qodef-m-icon">
-																												<svg xmlns="http://www.w3.org/2000/svg"
-																													width="20.053"
-																													height="10.039"
-																													viewBox="0 0 20.053 10.039">
-																													<path
-																														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-																														transform="translate(-2.875 -11.252)">
-																													</path>
-																												</svg>
-																											</span></a>
+																										class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																										<div class=" imgBlockStyle"
+																											style="height: auto !important;">
+																											<img style="height: 350px !important;width: 900px !important;"
+																												loading="lazy"
+																												width="800"
+																												height="574"
+																												src="./image/dentrang3.jpg"
+																												class="qodef-e-main-image imgBlockStyle"
+																												alt="c"
+																												decoding="async"
+																												sizes="(max-width: 800px) 100vw, 800px">
+
+																										</div>
+
+
+
+
+
+
 																									</div>
 																								</div>
 																							</div>
 																						</div>
 																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1b782bb"
-																			data-id="1b782bb"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-0b5e74a elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
-																					data-id="0b5e74a"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_image_with_text.default">
-																					<div
-																						class="elementor-widget-container">
+																					<div class=" elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																						data-id="1b782bb"
+																						data-element_type="column">
 																						<div
-																							class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
-																							<div class="qodef-m-image">
-																								<img loading="lazy"
-																									width="800"
-																									height="574"
-																									src="./image/img-meta/congnghehotro.jpg"
-																									class="qodef-e-main-image"
-																									alt="d"
-																									decoding="async"
-																									sizes="(max-width: 800px) 100vw, 800px">
-																							</div>
-																							<div
-																								class="qodef-m-content">
-																								<h4 class="qodef-m-title"
-																									style="margin-top: 28px;height: 60px;font-size: 20px;">
-																									SỬ DỤNG CÔNG
-																									NGHỆ SỐ ĐỂ SẢN
-																									XUẤT, KINH DOANH
-																								</h4>
-																								<p class="qodef-m-text"
-																									style="margin-top: 6px;font-size: 18px;">
-																									Làm giàu ngay
-																									trên chính mảnh
-																									đất quê hương,
-																									ứng dụng công
-																									nghệ để thay đổi
-																									phương thức sản
-																									xuất, phương
-																									thức tiêu thụ
-																									sản phẩm, giải
-																									phóng sức lao
-																									động, tăng năng
-																									suất, mang lại
-																									giá trị kinh tế
-																									lớn hơn, mở ra
-																									không gian phát
-																									triển mới cho
-																									vùng nông thôn.
-																								</p>
-																							</div>
-																							<div class="qodef-e-bottom-holder"
-																								style="display: flex;margin-top: 15px;">
+																							class="elementor-widget-wrap elementor-element-populated">
+																							<div class="elementor-element elementor-element-0b5e74a elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																								data-id="0b5e74a"
+																								data-element_type="widget"
+																								data-widget_type="kamperen_core_image_with_text.default">
 																								<div
-																									class="qodef-e-left">
+																									class="elementor-widget-container">
 																									<div
-																										class="qodef-e-read-more">
-																										<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link myLink"
-																											href="./cam-nang/index.html#text-37"
-																											target="_self">
-																											<span
-																												class="qodef-m-text"
-																												style="margin: 0px;">Chi
-																												Tiết</span>
-																											<span
-																												class="qodef-m-icon">
-																												<svg xmlns="http://www.w3.org/2000/svg"
-																													width="20.053"
-																													height="10.039"
-																													viewBox="0 0 20.053 10.039">
-																													<path
-																														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-																														transform="translate(-2.875 -11.252)">
-																													</path>
-																												</svg>
-																											</span></a>
+																										class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																										<div class="qodef-m-image"
+																											style="height: auto !important;">
+																											<img style="height: 350px !important;width: 900px !important;"
+																												loading="lazy"
+																												width="800"
+																												height="574"
+																												src="./image/dentrang2.jpg"
+																												class="qodef-e-main-image"
+																												alt="d"
+																												decoding="async"
+																												sizes="(max-width: 800px) 100vw, 800px">
+																										</div>
+
+
 																									</div>
 																								</div>
 																							</div>
 																						</div>
 																					</div>
+
 																				</div>
+
+																				<div class="campaign-pagination"></div>
 																			</div>
+
 																		</div>
-																	</div>
 
-																</section>
-																<center style="margin-top: 20px;">
+																		<!-- mobile -->
+																	</section>
+																	<style>
+																		.new-cards-mobile {
+																			display: none !important;
 
-																	<a href="./cam-nang/index.html#text-34"
-																		class="site-button btn-effect">Xem
-																		thêm</a>
+																		}
 
-
-
-																</center>
-																<div class="green-line " style="margin-top: 30px;">
-																</div>
-
-
-																<section
-																	class="elementor-section elementor-top-section elementor-element elementor-element-88d925d elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default"
-																	data-id="88d925d" data-element_type="section">
-																	<!-- BACKGROU MAINE -->
-																	<div class="healthy-food-one__bg2 float-bob-x"
-																		style="background-image: url(./images/healthy-food-one-shape-1.png);">
-																	</div>
-																	<!-- <div class="healthy-food-one__bg2 float-bob-x"
-																			style="background-image: url(images/healthy-food-one-shape-1.png);">
-																		</div> -->
-																	<div
-																		class="elementor-container elementor-column-gap-default">
-
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b94c912"
-																			data-id="b94c912"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-																				<div class="elementor-element elementor-element-e92cbdf elementor-widget elementor-widget-kamperen_core_section_title"
-																					data-id="e92cbdf"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_section_title.default">
-																					<div
-																						class="elementor-widget-container">
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--right ">
-																							<div style="line-height: 0.8;text-align: center;"
-																								class="qodef-m-tagline-mark">
-																								Nền tảng số
-																							</div>
-																							<h4 class="qodef-m-title"
-																								style="margin-top: 30px;text-align: center; color: #525a6d; font-size: 22px;">
-																								Mang nền tảng số đến
-																								từng hộ gia đình,
-																								từng người dân khu
-																								vực nông thôn, để
-																								dân làng được tận
-																								hưởng lợi ích mà
-																								công nghệ
-																								số mang lại
-																							</h4>
-																						</div>
-																					</div>
-																				</div>
-																				<div class="elementor-element elementor-element-f32a59f  elementor-widget elementor-widget-image"
-																					data-id="f32a59f"
-																					data-element_type="widget"
-																					data-widget_type="image.default">
-																					<div
-																						class="elementor-widget-container">
-																						<img decoding="async"
-																							loading="lazy" width="387"
-																							height="388"
-																							src="./images/vn_green.gif"
-																							class="attachment-full size-full wp-image-126"
-																							alt="s"
-																							srcset="images/vn_green.gif 387w, images/vn_green.gif 300w, images/vn_green.gif 150w, images/vn_green.gif 100w"
-																							sizes="(max-width: 387px) 100vw, 387px">
-																					</div>
-																				</div>
-
-																				<div class="elementor-element elementor-element-071a97c elementor-widget__width-auto elementor-absolute elementor-widget elementor-widget-html"
-																					data-id="071a97c"
-																					data-element_type="widget"
-																					data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
-																					data-widget_type="html.default">
-																					<div
-																						class="elementor-widget-container">
-
-																					</div>
-
-																				</div>
-
-																			</div>
-																		</div>
-																		<style>
-																			.hover-text-next:hover {
-																				color: green;
+																		@media(max-width:1024px) {
+																			.news-card-touw {
+																				display: none;
 																			}
-																		</style>
 
+																			.new-cards-mobile {
+																				display: flex !important;
+																				justify-content: center;
+																			}
 
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-33edd4c"
-																			style="z-index: 3;" data-id="33edd4c"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
+																			.elementor-widget-wrap .elementor-element.elementor-widget__width-auto,
+																			.elementor-widget-wrap .elementor-element.elementor-widget__width-initial {
+																				max-width: 84%;
+																			}
+																		}
+																	</style>
+																	<section
+																		class="elementor-section  elementor-element-33df2c1 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default news-card-touw">
+																		<div class="container"
+																			style="padding-top: 0px; overflow: hidden;">
 
-																				<div class="elementor-element elementor-element-9953559 elementor-widget elementor-widget-kamperen_core_icon_with_text"
-																					data-id="9953559"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_icon_with_text.default">
+																			<div class="section-wrapper"
+																				data-aos-duration="700">
+																				<div class="campaign-slider-two">
 																					<div
-																						class="elementor-widget-container">
-
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--top qodef--custom-svg  qodef-alignment--left">
+																						class="elementor-container elementor-column-gap-default swiper-wrapper">
+																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																							data-id="4908d24"
+																							data-element_type="column">
 																							<div
-																								class="qodef-m-content qodef-m-svg qodef-icon-with-text   qodef--has-appear">
+																								class="elementor-widget-wrap elementor-element-populated">
+																								<div class="elementor-element elementor-element-590c92c elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																									data-id="590c92c"
+																									data-element_type="widget"
+																									data-widget_type="kamperen_core_image_with_text.default">
+																									<style>
+																										.qodef-m-image {
+																											position: relative;
+																											display: inline-block;
+																											overflow: hidden;
+																										}
 
-																								<div
-																									class="qodef-m-svg2">
+																										.qodef-m-image img {
+																											width: 100%;
+																											/* Đảm bảo hình ảnh lấp đầy không gian của .image-container */
+																											height: auto;
+																											/* Để giữ tỷ lệ khung hình ảnh */
+																											transition: transform 0.3s ease;
+																											/* Hiệu ứng chuyển động mềm mại */
+																										}
 
-																									<img width="109.128 "
-																										height="68.755"
-																										src="./image/hatangso.png">
+																										.qodef-m-image::before {
+																											content: "";
+																											position: absolute;
+																											top: 0;
+																											left: 0;
+																											right: 0;
+																											bottom: 0;
+																											background: rgba(0, 0, 0, 0.5);
+																											/* Màu nền và độ trong suốt của lớp nổi lên */
+																											opacity: 0;
+																											/* Lúc ban đầu không hiển thị */
+																											transition: opacity 0.3s ease;
+																											/* Hiệu ứng độ trong suốt mềm mại */
+																										}
+
+																										.qodef-m-image:hover img {
+																											transform: scale(1.1);
+																											/* Phóng to hình ảnh khi di chuột qua */
+																										}
+
+																										.qodef-m-image:hover::before {
+																											opacity: 1;
+																											/* Hiển thị lớp nổi lên khi di chuột qua */
+																										}
+																									</style>
+
+																									<div
+																										class="elementor-widget-container">
+
+
+
+
+
+																										<!-- <div class="contact-one__bg1 float-bob-x"
+																																				style="background-image: url(images/unbeatable-shape-1.png);">
+																																			</div> -->
+
+
+
+																										<div
+																											class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																											<div class=" qodef-m-image"
+																												style="height: auto !important">
+																												<img style="height: 450px !important;width: 900px !important;"
+																													loading="lazy"
+																													width="800"
+																													height="574"
+																													src="./image/dentrang1.jpg"
+																													class="qodef-e-main-image elementorImg"
+																													alt="c"
+																													decoding="async"
+																													sizes="(max-width: 800px) 100vw, 800px">
+																											</div>
+
+
+																											<!-- mũi tên nut chi tiết di chuyển trái phải -->
+																											<style>
+																												.arrow-animation {
+																													position: relative;
+																													-webkit-animation: linear infinite alternate;
+																													-webkit-animation-name: run;
+																													-webkit-animation-duration: 1s;
+																													animation: linear infinite alternate;
+																													animation-name: run;
+																													animation-duration: 2s
+																												}
+
+																												@keyframes run {
+																													0% {
+																														left: 0
+																													}
+
+																													50% {
+																														left: 5px
+																													}
+
+																													100% {
+																														left: 0
+																													}
+																												}
+																											</style>
+																										</div>
+																									</div>
 																								</div>
-																								<h4
-																									class="qodef-m-title">
-																									<span
-																										class="qodef-m-title-text">
-																										<a href="./cam-nang/index.html#text-8"
-																											class="myLink hover-text-next">
-																											Dịch
-																											vụ công
-																											trực
-																											tuyến
-																										</a>
-																									</span>
-																								</h4>
-																								<p class="qodef-m-text">
-																									Thay vì đến cơ
-																									quan chức năng,
-																									dân làng có thể
-																									ngồi bất cứ đâu,
-																									với thời gian
-																									bất kỳ mà vẫn
-																									thực hiện giải
-																									quyết được các
-																									thủ tục hành
-																									chính, giúp giảm
-																									thời gian chờ
-																									đợi, chi phí đi
-																									lại.
-
-																								</p>
 																							</div>
 																						</div>
-																					</div>
-																				</div>
-																				<div class="elementor-element elementor-element-6021491 elementor-widget elementor-widget-kamperen_core_icon_with_text"
-																					data-id="6021491"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_icon_with_text.default">
-																					<div
-																						class="elementor-widget-container">
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--top qodef--custom-svg  qodef-alignment--left">
+																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																							data-id="eb6e102"
+																							data-element_type="column">
 																							<div
-																								class="qodef-m-content qodef-icon-with-text   qodef--has-appear">
-																								<div
-																									class="qodef-m-svg qodef-m-svg2">
+																								class="elementor-widget-wrap elementor-element-populated">
+																								<div class="elementor-element elementor-element-b4a5613 elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																									data-id="b4a5613"
+																									data-element_type="widget"
+																									data-widget_type="kamperen_core_image_with_text.default">
+																									<div
+																										class="elementor-widget-container">
+																										<div
+																											class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																											<div class=" imgBlockStyle"
+																												style="height: auto !important;">
+																												<img style="height: 450px !important;width: 900px !important;"
+																													loading="lazy"
+																													width="800"
+																													height="574"
+																													src="./image/dentrang3.jpg"
+																													class="qodef-e-main-image imgBlockStyle"
+																													alt="c"
+																													decoding="async"
+																													sizes="(max-width: 800px) 100vw, 800px">
 
-																									<img src="./image/morong.png "
-																										width="116.486"
-																										height="87.133"
-																										alt="">
+																											</div>
+
+
+
+
+
+
+																										</div>
+																									</div>
 																								</div>
-																								<h4
-																									class="qodef-m-title">
-																									<span
-																										class="qodef-m-title-text">
-																										<a class="myLink hover-text-next"
-																											href="./cam-nang/index.html#text-9">
-																											Khám
-																											chữa
-																											bệnh từ
-																											xa
-																										</a>
-
-																									</span>
-																								</h4>
-																								<p class="qodef-m-text">
-																									Dân làng, đặc
-																									biệt là người
-																									dân ở vùng sâu,
-																									vùng xa, biên
-																									giới, hải đảo
-																									được tư vấn sức
-																									khoẻ và được
-																									thăm khám, chữa
-																									bệnh bởi các
-																									chuyên gia, bác
-																									sĩ đầu ngành
-																									thông qua nền
-																									tảng khám chữa
-																									bệnh từ xa .
-																								</p>
 																							</div>
 																						</div>
-																					</div>
-																				</div>
-																				<div class="button-show-more">
-
-																					<!-- <center style="margin-top: 20px;">
-																						<button
-																							class="codepro-custom-btn codepro-btn-5"
-																							target="blank"
-																							title="Xem thêm">
-																							<span>
-																								<a class="myLink"
-																									href="./cam-nang/index.html#text-34">Xem
-																									thêm »</a>
-
-																							</span>
-																						</button>
-																					</center> -->
-																					<a href="./cam-nang/index.html#text-36"
-																						class="site-button btn-effect myLink">Xem
-																						thêm</a>
-																				</div>
-																				<style>
-																					.button-show-more {
-																						display: flex;
-																						justify-content: center;
-																						left: 290px;
-																						bottom: 70px;
-																						position: fixed;
-																						width: 100%;
-																					}
-
-																					@media (max-width: 980px) {
-																						.button-show-more {
-																							left: -2px;
-																							bottom: 137px;
-																						}
-																					}
-																				</style>
-																			</div>
-																		</div>
-
-																		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-92a1c01"
-																			data-id="92a1c01"
-																			data-element_type="column">
-																			<div
-																				class="elementor-widget-wrap elementor-element-populated">
-
-
-																				<div class="contact-one__bg3 float-bob-x"
-																					style="background-image: url(./image/imgBg/anhbg7.jpg);">
-																				</div>
-
-
-
-
-																				<div class="elementor-element elementor-element-7498213 elementor-widget elementor-widget-kamperen_core_icon_with_text"
-																					style="z-index: 3;"
-																					data-id="7498213"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_icon_with_text.default">
-
-																					<div
-																						class="elementor-widget-container">
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--top qodef--custom-svg  qodef-alignment--left">
+																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																							data-id="1b782bb"
+																							data-element_type="column">
 																							<div
-																								class="qodef-m-content qodef-icon-with-text   qodef--has-appear">
-																								<div
-																									class="qodef-m-svg qodef-m-svg2">
+																								class="elementor-widget-wrap elementor-element-populated">
+																								<div class="elementor-element elementor-element-0b5e74a elementor-widget__width-auto elementor-widget elementor-widget-kamperen_core_image_with_text"
+																									data-id="0b5e74a"
+																									data-element_type="widget"
+																									data-widget_type="kamperen_core_image_with_text.default">
+																									<div
+																										class="elementor-widget-container">
+																										<div
+																											class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
+																											<div class="qodef-m-image"
+																												style="height: auto !important;">
+																												<img style="height: 450px !important;width: 900px !important;"
+																													loading="lazy"
+																													width="800"
+																													height="574"
+																													src="./image/dentrang2.jpg"
+																													class="qodef-e-main-image"
+																													alt="d"
+																													decoding="async"
+																													sizes="(max-width: 800px) 100vw, 800px">
+																											</div>
 
-																									<img src="./image/ketnoi.png"
-																										width="115.883"
-																										height="86.629"
-																										alt="">
+
+																										</div>
+																									</div>
 																								</div>
-																								<h4
-																									class="qodef-m-title">
-																									<span
-																										class="qodef-m-title-text">
-																										<a class="myLink hover-text-next myLink"
-																											href="./cam-nang/index.html#text-12">Mua
-																											sắm trực
-																											tuyến</a>
-																									</span>
-																								</h4>
-																								<p class="qodef-m-text">
-																									Chỉ ngồi ở nhà,
-																									dân làng có thể
-																									thực hiện mua
-																									sắm trực tuyến
-																									mọi vật dụng,
-																									hàng hoá yêu
-																									thích thông qua
-																									các sàn thương
-																									mại điện tử với
-																									giá cả ưu đãi và
-																									được vận chuyển
-																									đến tận nhà.
-
-																								</p>
 																							</div>
 																						</div>
-																					</div>
-																				</div>
-																				<div class="elementor-element elementor-element-17227b8 elementor-widget elementor-widget-kamperen_core_icon_with_text"
-																					style="z-index: 3;"
-																					data-id="17227b8"
-																					data-element_type="widget"
-																					data-widget_type="kamperen_core_icon_with_text.default">
-																					<div
-																						class="elementor-widget-container">
-																						<div
-																							class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--top qodef--custom-svg  qodef-alignment--left">
-																							<div
-																								class="qodef-m-content qodef-icon-with-text   qodef--has-appear">
-																								<div
-																									class="qodef-m-svg qodef-m-svg2">
 
-
-																									<img src="./image/thuhep.png"
-																										width="124.759"
-																										height="74.434"
-																										alt="">
-																								</div>
-																								<h4
-																									class="qodef-m-title">
-																									<span
-																										class="qodef-m-title-text">
-																										<a class="myLink hover-text-next"
-																											href="./cam-nang/index.html#text-10">
-																											Học
-																											tập trực
-																											tuyến
-																										</a>
-																									</span>
-																								</h4>
-																								<p class="qodef-m-text">
-																									Mở ra cơ hội để
-																									học sinh trường
-																									làng cũng dễ
-																									dàng tiếp cận
-																									với kiến thức
-																									trường chuyên,
-																									cùng đội ngũ gia
-																									sư giỏi, từ đó
-																									rút ngắn khoảng
-																									cách về điều
-																									kiện tiếp cận
-																									giáo dục giữa
-																									các địa phương.
-																								</p>
-																							</div>
-																						</div>
 																					</div>
 
+																					<div class="campaign-pagination">
+																					</div>
 																				</div>
-
-
 
 																			</div>
 																		</div>
+																	</section>
 
 
-																	</div>
 
 
-																</section>
-																<!-- end copy page -->
 
+
+																	<!-- end copy page -->
+
+																</div>
 															</div>
 														</div>
-													</div>
-												</main>
+													</main>
+												</div>
 											</div>
 										</div>
-									</div>
-									<script type="text/javascript" src="./kamperen-page/js/anime.min.js"
-										id="anime-js"></script>
-									<script type="text/javascript" src="./kamperen-page/js/kamperen-core.min.js"
-										id="kamperen-core-script-js"></script>
+										<script type="text/javascript" src="./kamperen-page/js/anime.min.js"
+											id="anime-js"></script>
+										<script type="text/javascript" src="./kamperen-page/js/kamperen-core.min.js"
+											id="kamperen-core-script-js"></script>
 
+
+
+									</div>
+								</section>
+								<!-- CONTEN END  -->
+								<div id="tab-integrator"
+									class="et_pb_section et_pb_section_2 bb-tab-panel et_section_regular">
+
+
+
+
+
+
+									<div class="et_pb_row et_pb_row_6 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_12 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_24 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>USE OUR MQTT/HTTP/WEBSOCKET API OR PROTOCOL AGENTS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_25 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Connect your sites</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_26 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Add remote monitoring and control to your customer sites. Connect
+														to any installed system using (custom) agents or our
+														API&#8217;s. This way all systems will be available in one
+														platform.</p>
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_13 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_27 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_1.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_7 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_14 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_28 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_2.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_15 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_29 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CREATE RULES TO MONITOR YOUR ASSETS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_30 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Maintain and update assets</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_31 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Monitor your sites and receive alarms. This cuts unnecessary
+														maintenance or replacement costs. Errors can be prevented by
+														predictive maintenance without interrupting your customers key
+														processes.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_8 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_16 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_32 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>DEVELOP ALGORITHMS TO IMPROVE YOUR SYSTEM</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_33 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Optimise your sites</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_34 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>With your sites connected, you can optimise individual device
+														settings by adding forecasting and optimisation routines. Some
+														are built in, while we easily can add more.</p>
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_17 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_35 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_3.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_9 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_18 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_36 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_4.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_19 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_37 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>DATA PROCESSING AND ANALYSIS IN WEB UI</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_38 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Learn from your data</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_39 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>In addition to optimisation and maintenance, collecting data
+														gives new insights to your service organisation and domain
+														experts through dedicated dashboards. This helps your engineers
+														to improve the on site installations, or find opportunities for
+														a new service.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_10 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_20 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_40 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CREATE AND SHARE DATA DASHBOARDS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_41 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Insights for your customers</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_42 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Create one page drag-and-drop apps for your customer. These
+														insight apps are made to fit your customers&#8217; role, giving
+														them a quick overview and basic control.</p>
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_21 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_43 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_5.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_11 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_22 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_44 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_6.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_23 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_45 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CONNECT TO EXTERNAL TOOLS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_46 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Integrate your services</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_47 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+												<div class="et_pb_text_inner">
+													<p>Link into your existing workflows. We seamlessly integrate into
+														your business applications like ERP or CRM.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
 
 
 								</div>
-							</section>
-							<!-- CONTEN END  -->
-							<div id="tab-integrator"
-								class="et_pb_section et_pb_section_2 bb-tab-panel et_section_regular">
-
-
-
-
-
-
-								<div class="et_pb_row et_pb_row_6 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_12 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_24 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>USE OUR MQTT/HTTP/WEBSOCKET API OR PROTOCOL AGENTS</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_25 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Connect your sites</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_26 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>Add remote monitoring and control to your customer sites. Connect
-													to any installed system using (custom) agents or our
-													API&#8217;s. This way all systems will be available in one
-													platform.</p>
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_13 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_27 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_1.json
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-								<div class="et_pb_row et_pb_row_7 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_14 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_28 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_2.json
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_15 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_29 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>CREATE RULES TO MONITOR YOUR ASSETS</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_30 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Maintain and update assets</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_31 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>Monitor your sites and receive alarms. This cuts unnecessary
-													maintenance or replacement costs. Errors can be prevented by
-													predictive maintenance without interrupting your customers key
-													processes.</p>
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-								<div class="et_pb_row et_pb_row_8 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_16 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_32 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>DEVELOP ALGORITHMS TO IMPROVE YOUR SYSTEM</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_33 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Optimise your sites</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_34 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>With your sites connected, you can optimise individual device
-													settings by adding forecasting and optimisation routines. Some
-													are built in, while we easily can add more.</p>
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_17 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_35 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_3.json
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-								<div class="et_pb_row et_pb_row_9 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_18 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_36 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_4.json
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_19 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_37 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>DATA PROCESSING AND ANALYSIS IN WEB UI</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_38 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Learn from your data</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_39 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>In addition to optimisation and maintenance, collecting data
-													gives new insights to your service organisation and domain
-													experts through dedicated dashboards. This helps your engineers
-													to improve the on site installations, or find opportunities for
-													a new service.</p>
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-								<div class="et_pb_row et_pb_row_10 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_20 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_40 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>CREATE AND SHARE DATA DASHBOARDS</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_41 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Insights for your customers</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_42 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>Create one page drag-and-drop apps for your customer. These
-													insight apps are made to fit your customers&#8217; role, giving
-													them a quick overview and basic control.</p>
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_21 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_43 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_5.json
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-								<div class="et_pb_row et_pb_row_11 bb-tab-panel__row">
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_22 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_44 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												/wp-content/themes/Divi-child/assets/animations/Integrator_6.json
-											</div>
-										</div>
-									</div>
-									<div
-										class="et_pb_column et_pb_column_1_2 et_pb_column_23 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
-
-
-										<div
-											class="et_pb_module et_pb_text et_pb_text_45 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<p>CONNECT TO EXTERNAL TOOLS</p>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_46 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-
-
-
-
-											<div class="et_pb_text_inner">
-												<h3>Integrate your services</h3>
-											</div>
-										</div>
-										<div
-											class="et_pb_module et_pb_text et_pb_text_47 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-
-											<div class="et_pb_text_inner">
-												<p>Link into your existing workflows. We seamlessly integrate into
-													your business applications like ERP or CRM.</p>
-											</div>
-										</div>
-									</div>
-
-
-
-
-								</div>
-
-
-							</div>
-							<!-- nền móng - kinh tế hide -->
-							<!-- <section id="home-domain" class="project-section padding-tb"
+								<!-- nền móng - kinh tế hide -->
+								<!-- <section id="home-domain" class="project-section padding-tb"
 									style="background-image: url(images/bg-image_1.jpg); background-size: cover; overflow: hidden;background-color: #f4f4f4 !important;">
 									<div class="container">
 										<div class="section-header" data-aos="fade-up" data-aos-duration="700">
@@ -2657,9 +2460,9 @@
 										</div>
 									</div>
 								</section> -->
-							<!-- end nền móng - kinh tế hide -->
+								<!-- end nền móng - kinh tế hide -->
 
-							<!-- <section class="campaign-section style-two padding-tb ">
+								<!-- <section class="campaign-section style-two padding-tb ">
 
 
 									<div class="service-content-box container">
@@ -2795,9 +2598,9 @@
 									</div>
 								</section> -->
 
-							<!-- CÔNG NGHỆ HỖ TRỢ -->
+								<!-- CÔNG NGHỆ HỖ TRỢ -->
 
-							<!-- <div class="container" style="background-color: #fcf9f3;">
+								<!-- <div class="container" style="background-color: #fcf9f3;">
 									<div class="cta-one__bg" data-jarallax="" data-speed="0.2" data-imgposition="50% 0%"
 										style="background-image: url(image/imgBg/bgcongnge.jpg);">
 									</div>
@@ -3080,16 +2883,16 @@
 
 
 								</div> -->
+							</div>
 						</div>
-					</div>
+				</div>
 			</div>
-		</div>
 
 
-		<!-- SỬA CÔNG NGHỆ HỖ TRỌ -->
+			<!-- SỬA CÔNG NGHỆ HỖ TRỌ -->
 
-		<!-- SỬA CÔNG NGHỆ HỖ TRỌ END -->
-		<!-- <div class="container">
+			<!-- SỬA CÔNG NGHỆ HỖ TRỌ END -->
+			<!-- <div class="container">
 				<section class="customer-logos slider">
 					<div class="slide"><img src="../image/img-so/foodmap.png">
 					</div>
@@ -3111,10 +2914,10 @@
 
 				</section>
 			</div> -->
-		<!-- CÔNG NGHỆ HỖ TRỌ END -->
+			<!-- CÔNG NGHỆ HỖ TRỌ END -->
 
 
-	</div>
+		</div>
 	</div>
 	</div>
 
@@ -3134,6 +2937,7 @@
 	</div> -->
 	<style>
 		footer {
+			position: relative;
 			border-top: 4px solid #00aa55;
 		}
 	</style>
@@ -3284,6 +3088,8 @@
 			</div>
 		</div>
 	</footer>
+	</div>
+
 	<!-- #main-footer --> <!-- #main-footer -->
 	</div> <!-- #et-main-area -->
 

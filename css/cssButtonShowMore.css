@@ -25,7 +25,7 @@
 }
 
 .site-button:hover {
-    background-color: #222;
+    background-color: #bfc3cf;
     color           : #fff
 }
 
@@ -38,7 +38,7 @@
 .site-button-secondry:hover,
 .site-button-secondry:focus,
 .active>.site-button-secondry {
-    background-color: #222;
+    background-color: #dcdde1;
     color           : #fff
 }
 
@@ -9212,7 +9212,7 @@ ol.commentlist li::after {
 
 .site-button:hover.btn-effect:before,
 .site-button:hover.btn-effect:after {
-    border-color: #222
+    border-color: #dcdde1
 }
 
 .product-stamp .filter-navigation li {

@@ -67,11 +67,10 @@
 	display: flex !important;
 }
 
-.mainBoxSlide1 {
+/* .mainBoxSlide1 {
 	display  : flex;
 	flex-wrap: wrap;
-	/* Cho phép các phần tử tự động xuống dòng khi không đủ chỗ */
-}
+} */
 
 .mosaic .mosaic-funding {
 	white-space: nowrap;
@@ -377,10 +376,10 @@
 
 /* IconHeadle */
 .textHeadConten {
-	font-size  : 18px;
+	font-size  : 20px;
 	font-weight: 600;
 	padding-top: 30px;
-	width      : 146px;
+	width      : 296px;
 }
 
 /* IconHeadle End*/
@@ -742,7 +741,7 @@
 
 	.imgBlockStyle {
 		/* width: 320px !important; */
-		height        : 230px !important;
+		height        : 230px;
 		position      : relative;
 		display       : inline-block;
 		vertical-align: top;
@@ -806,7 +805,7 @@
 
 	.qodef-image-with-text .qodef-m-content {
 
-		height: 320px;
+		height: 270px;
 	}
 
 
@@ -1032,7 +1031,7 @@
 	}
 
 	.qodef-image-with-text .qodef-m-title {
-		height   : 73px !important;
+		height   : 100px !important;
 		font-size: 36px !important;
 	}
 
@@ -1042,7 +1041,7 @@
 
 	.qodef-section-title .qodef-m-text {
 		line-height: 1.73 !important;
-		font-size  : 32px !important;
+		font-size  : 23px !important;
 		display    : flex;
 		text-align : justify;
 	}
