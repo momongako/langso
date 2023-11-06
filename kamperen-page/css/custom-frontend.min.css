@@ -1012,8 +1012,8 @@ h1.entry-title {
 
 @media (max-width:1024px) {
     .elementor-section .elementor-container {
-        -ms-flex-wrap: wrap;
-        flex-wrap    : wrap
+        /* -ms-flex-wrap: wrap;
+        flex-wrap    : wrap */
     }
 }
 
