@@ -1612,7 +1612,7 @@
 																				style="width: 84%;overflow: hidden;">
 																				<div
 																					class="elementor-container elementor-column-gap-default swiper-wrapper">
-																					<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																					<!-- <div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																						data-id="4908d24"
 																						data-element_type="column">
 																						<div
@@ -1668,14 +1668,6 @@
 
 
 
-
-
-																									<!-- <div class="contact-one__bg1 float-bob-x"
-																																				style="background-image: url(images/unbeatable-shape-1.png);">
-																																			</div> -->
-
-
-
 																									<div
 																										class="qodef-shortcode qodef-m  qodef-image-with-text qodef-layout--text-below  ">
 																										<div class=" qodef-m-image"
@@ -1692,37 +1684,38 @@
 																										</div>
 
 
-																										<!-- mũi tên nut chi tiết di chuyển trái phải -->
-																										<style>
-																											.arrow-animation {
-																												position: relative;
-																												-webkit-animation: linear infinite alternate;
-																												-webkit-animation-name: run;
-																												-webkit-animation-duration: 1s;
-																												animation: linear infinite alternate;
-																												animation-name: run;
-																												animation-duration: 2s
-																											}
-
-																											@keyframes run {
-																												0% {
-																													left: 0
-																												}
-
-																												50% {
-																													left: 5px
-																												}
-
-																												100% {
-																													left: 0
-																												}
-																											}
-																										</style>
+																										
 																									</div>
 																								</div>
 																							</div>
 																						</div>
-																					</div>
+																					</div> -->
+																					<!-- mũi tên nut chi tiết di chuyển trái phải -->
+																					<style>
+																						.arrow-animation {
+																							position: relative;
+																							-webkit-animation: linear infinite alternate;
+																							-webkit-animation-name: run;
+																							-webkit-animation-duration: 1s;
+																							animation: linear infinite alternate;
+																							animation-name: run;
+																							animation-duration: 2s
+																						}
+
+																						@keyframes run {
+																							0% {
+																								left: 0
+																							}
+
+																							50% {
+																								left: 5px
+																							}
+
+																							100% {
+																								left: 0
+																							}
+																						}
+																					</style>
 																					<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																						data-id="eb6e102"
 																						data-element_type="column">
@@ -1898,7 +1891,7 @@
 																							</div>
 																						</div>
 																					</div>
-																					<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																					<!-- <div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																						data-id="1b782bb"
 																						data-element_type="column">
 																						<div
@@ -1929,7 +1922,7 @@
 																								</div>
 																							</div>
 																						</div>
-																					</div>
+																					</div> -->
 																					<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																						data-id="eb6e102"
 																						data-element_type="column">
@@ -2136,6 +2129,47 @@
 																			}
 																		}
 																	</style>
+																	<style>
+																		.qodef-m-image {
+																			position: relative;
+																			display: inline-block;
+																			overflow: hidden;
+																		}
+
+																		.qodef-m-image img {
+																			width: 100%;
+																			/* Đảm bảo hình ảnh lấp đầy không gian của .image-container */
+																			height: auto;
+																			/* Để giữ tỷ lệ khung hình ảnh */
+																			transition: transform 0.3s ease;
+																			/* Hiệu ứng chuyển động mềm mại */
+																		}
+
+																		.qodef-m-image::before {
+																			content: "";
+																			position: absolute;
+																			top: 0;
+																			left: 0;
+																			right: 0;
+																			bottom: 0;
+																			background: rgba(0, 0, 0, 0.5);
+																			/* Màu nền và độ trong suốt của lớp nổi lên */
+																			opacity: 0;
+																			/* Lúc ban đầu không hiển thị */
+																			transition: opacity 0.3s ease;
+																			/* Hiệu ứng độ trong suốt mềm mại */
+																		}
+
+																		.qodef-m-image:hover img {
+																			transform: scale(1.1);
+																			/* Phóng to hình ảnh khi di chuột qua */
+																		}
+
+																		.qodef-m-image:hover::before {
+																			opacity: 1;
+																			/* Hiển thị lớp nổi lên khi di chuột qua */
+																		}
+																	</style>
 																	<section
 																		class="elementor-section  elementor-element-33df2c1 elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default news-card-touw">
 																		<div class="container"
@@ -2146,7 +2180,7 @@
 																				<div class="campaign-slider-two">
 																					<div
 																						class="elementor-container elementor-column-gap-default swiper-wrapper">
-																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																						<!-- <div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																							data-id="4908d24"
 																							data-element_type="column">
 																							<div
@@ -2155,47 +2189,7 @@
 																									data-id="590c92c"
 																									data-element_type="widget"
 																									data-widget_type="kamperen_core_image_with_text.default">
-																									<style>
-																										.qodef-m-image {
-																											position: relative;
-																											display: inline-block;
-																											overflow: hidden;
-																										}
-
-																										.qodef-m-image img {
-																											width: 100%;
-																											/* Đảm bảo hình ảnh lấp đầy không gian của .image-container */
-																											height: auto;
-																											/* Để giữ tỷ lệ khung hình ảnh */
-																											transition: transform 0.3s ease;
-																											/* Hiệu ứng chuyển động mềm mại */
-																										}
-
-																										.qodef-m-image::before {
-																											content: "";
-																											position: absolute;
-																											top: 0;
-																											left: 0;
-																											right: 0;
-																											bottom: 0;
-																											background: rgba(0, 0, 0, 0.5);
-																											/* Màu nền và độ trong suốt của lớp nổi lên */
-																											opacity: 0;
-																											/* Lúc ban đầu không hiển thị */
-																											transition: opacity 0.3s ease;
-																											/* Hiệu ứng độ trong suốt mềm mại */
-																										}
-
-																										.qodef-m-image:hover img {
-																											transform: scale(1.1);
-																											/* Phóng to hình ảnh khi di chuột qua */
-																										}
-
-																										.qodef-m-image:hover::before {
-																											opacity: 1;
-																											/* Hiển thị lớp nổi lên khi di chuột qua */
-																										}
-																									</style>
+																									
 
 																									<div
 																										class="elementor-widget-container">
@@ -2215,37 +2209,12 @@
 																											</div>
 
 
-																											<!-- mũi tên nut chi tiết di chuyển trái phải -->
-																											<style>
-																												.arrow-animation {
-																													position: relative;
-																													-webkit-animation: linear infinite alternate;
-																													-webkit-animation-name: run;
-																													-webkit-animation-duration: 1s;
-																													animation: linear infinite alternate;
-																													animation-name: run;
-																													animation-duration: 2s
-																												}
-
-																												@keyframes run {
-																													0% {
-																														left: 0
-																													}
-
-																													50% {
-																														left: 5px
-																													}
-
-																													100% {
-																														left: 0
-																													}
-																												}
-																											</style>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
+																											
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																</div> -->
 																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																							data-id="eb6e102"
 																							data-element_type="column">
@@ -2411,7 +2380,7 @@
 																								</div>
 																							</div>
 																						</div>
-																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
+																						<!-- <div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																							data-id="1b782bb"
 																							data-element_type="column">
 																							<div
@@ -2442,7 +2411,7 @@
 																									</div>
 																								</div>
 																							</div>
-																						</div>
+																						</div> -->
 																						<div class="swiper-slide elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4908d24"
 																							data-id="1b782bb"
 																							data-element_type="column">
