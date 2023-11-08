@@ -9313,7 +9313,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
     /* color      : rgb(118 221 67 / 50%); */
     color: #00aa55;
 
-    font-size  : 60px;
+    font-size  : 55px;
     font-weight: 600;
     font-family: Prompt, sans-serif
 }
@@ -13559,7 +13559,7 @@ html.elementor-html .qodef-instagram-list #sb_instagram #sbi_images .sbi_item.sb
 
 @media only screen and (max-width:1440px) {
     .qodef-section-title .qodef-m-tagline-mark {
-        font-size    : 60px;
+        font-size    : 55px;
         margin-bottom: -7px
     }
 }
