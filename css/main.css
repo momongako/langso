@@ -30,7 +30,7 @@
 }
 
 .mobile-content-text-top {
-	margin-top: 48px;
+	margin-top: 60px;
 }
 
 @media (max-width:981px) {
@@ -39,7 +39,7 @@
 	}
 
 	.mobile-content-text-top {
-		margin-top: 54px;
+		margin-top: 80px;
 	}
 }
 
