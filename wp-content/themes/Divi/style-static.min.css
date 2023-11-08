@@ -2872,8 +2872,8 @@ img#about-image {
 .et_header_style_left #et-top-navigation {
 	padding-top: 33px;
 	/* THÊM */
-	width: 100% !important;
-	justify-content: center !important;
+	/* width: 100% !important;
+	justify-content: center !important; */
 }
 
 .et_header_style_left #et-top-navigation nav>ul>li>a {

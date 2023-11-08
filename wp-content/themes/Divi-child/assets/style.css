@@ -547,11 +547,11 @@ img.alignnone.wp-image-4801.size-medium {
 }
 
 #main-header .container {
-  /* width : 90%;
-  height: 80px; */
-  width: 100% !important;
+  width : 90%;
   height: 80px;
-  justify-content: center !important;
+  /* width: 100% !important;
+  height: 80px;
+  justify-content: center !important; */
   /* margin-bottom: 30px !important;
     padding-top: 10px !important; */
 }
@@ -719,7 +719,7 @@ div#et-top-navigation {
   #main-header .container {
     width: 100% !important;
     height: 125px !important;
-    justify-content: center;
+    /* justify-content: center; */
   }
 }
 
