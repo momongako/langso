@@ -1078,10 +1078,10 @@
 	}
 
 	.qodef-section-title .qodef-m-text {
-		line-height: 1.73 !important;
-		font-size  : 23px !important;
-		display    : flex;
-		text-align : justify;
+		line-height   : 1.73 !important;
+		font-size     : 23px !important;
+		display       : flex;
+		/* text-align : justify; */
 	}
 
 	.colerBgHeader {
