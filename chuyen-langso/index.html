@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 
 <head>
 	<meta charset="UTF-8" />
@@ -768,7 +768,7 @@
 
 		body {
 			color: #364c4f;
-			font-family: 'Titillium Web ', sans-serif !important;
+			font-family: "IBM Plex Serif", Arial, Helvetica, sans-serif !important;
 		}
 
 		h1,
@@ -783,18 +783,6 @@
 		#footer-widgets .footer-widget li:before {
 			top: 9.75px
 		}
-
-		#main-header .container,
-		#main-footer .container {
-			width: 100% !important;
-			max-width: 1300px;
-		}
-
-		.footer-widget {
-			margin-right: 45px;
-		}
-
-
 
 		@media only screen and (min-width:981px) {
 
@@ -921,9 +909,9 @@
 	<link rel="stylesheet" href="../css/slick-theme.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="./csss/bootstrap.min.css">
-	<link rel="stylesheet" href="./csss/donggopykien.css">
-	<link rel="stylesheet" href="./csss/common.min.09102023-1.css">
+	<link rel="stylesheet" href="./css/chuyenlangso.css" />
+	<link rel="stylesheet" href="./css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./css/common.min.09102023-1.css" />
 	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 	<!-- end new css -->
 
@@ -931,18 +919,88 @@
 	<link rel="stylesheet" type="text/css" href="../icon-page-story/css/style.css">
 	<!-- CALL API -->
 	<script src="../js/handle.js"></script>
-	<script src="../js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<!-- CALL API END -->
 	<script src="../api.js"></script>
 </head>
 
-<body>
+<body style="margin-top: 0px;"
+	class="page-template-default page page-id-28 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	<!-- css thanh ngang chạy chạy -->
+	<style>
+		.left .row-crossbar {
+			background: #00aa55 none repeat scroll 0 0;
+			height: 2px;
+			width: 62px;
+			margin: 0;
+		}
+
+		.row-crossbar {
+			display: contents;
+			background: #00aa55 none repeat scroll 0 0;
+			height: 2px;
+			margin: 0 auto 5px;
+			width: 62px;
+
+		}
+
+		.row-crossbar-bg {
+			height: 5px;
+			width: 110px;
+			background: #83d5ac;
+			margin: auto;
+			position: relative;
+			border-radius: 30px;
+		}
+
+		.row-crossbar-bg:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: -2.7px;
+			height: 10px;
+			width: 10px;
+			border-radius: 50%;
+			background: #00aa55;
+			-webkit-animation-duration: 3s;
+			animation-duration: 3s;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-name: MOVE-BG;
+			animation-name: MOVE-BG;
+		}
+
+		@-webkit-keyframes MOVE-BG {
+			from {
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+			}
+
+			to {
+				-webkit-transform: translateX(105px);
+				transform: translateX(105px);
+			}
+		}
+
+		@keyframes MOVE-BG {
+			from {
+				-webkit-transform: translateX(0);
+				transform: translateX(0);
+			}
+
+			to {
+				-webkit-transform: translateX(105px);
+				transform: translateX(105px);
+			}
+		}
+	</style>
 	<script>
 		function fetchDataAndProcess1() {
 			document.addEventListener("DOMContentLoaded", async function () {
 				try {
-					const response = await axios.get(`${apiUrl}/home_posts?id=4`);
+					const response = await axios.get(`${apiUrl}/home_posts?id=4&per_page=50`);
 
 					if (response.status !== 200) {
 						throw new Error("Lỗi kết nối API");
@@ -986,7 +1044,7 @@
 						key2: "value2",
 					};
 
-					const response = await axios.get(`${apiUrl}/home_posts?id=4`);
+					const response = await axios.get(`${apiUrl}/home_posts?id=4&per_page=50`);
 
 					if (response.status !== 200) {
 						throw new Error("Lỗi kết nối API");
@@ -1019,21 +1077,22 @@
 
 
 
-		<header id="main-header" class="white" data-height-onload="90">
+		<header id="main-header" data-height-onload="90" class="white">
 			<div class="container clearfix et_menu_container">
-				<!-- <div class="logo_container">
-                    <span class="logo_helper"></span>
-                    <a href="../index.html">
-                        <img style="height: auto !important;" src="https://dx.gov.vn/img/logo-light.png"
-                            alt="OpenRemote" id="logo" data-height-percentage="54" />
-                    </a>
-                </div> -->
+				<div class="logo_container" style="visibility: hidden;">
+					<span class="logo_helper"></span>
+					<a href="#" style="margin-left: 30px;">
+						<img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
+							src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
+							data-height-percentage="54" />
+					</a>
+				</div>
 				<div id="et-top-navigation" data-height="90" data-fixed-height="40">
 					<nav id="top-menu-nav">
 						<ul id="top-menu" class="nav">
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-									href="../index.html">Làng số</a></li>
+									href="../index.html">Làng Số</a></li>
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
 									class="myLink" href="../cam-nang/index.html#text-0">Cẩm
@@ -1044,16 +1103,64 @@
 							<!-- <li id="menu-item-44"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
 									href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
+
 							<li id="menu-item-2314"
 								class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
 								<a href="../chuyen-langso/index.html">Chuyện làng số</a>
-
-							</li>
 							<li id="menu-item-44"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
-									href="#">Chia sẻ Câu chuyện</a></li>
+									href="../dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a></li>
+							<!-- <ul class="sub-menu">
+															<li id="menu-item-2172"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2172">
+																<a href="/energy-management/">Energy management</a>
+															</li>
+															<li id="menu-item-2316"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2316">
+																<a href="/asset-management/">IoT Device management</a>
+															</li>
+															<li id="menu-item-2315"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315">
+																<a href="/smart-city-mobility/">Smart City</a>
+															</li>
+															<li id="menu-item-5968"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5968">
+																<a href="/iot-for-agriculture/">Agriculture</a>
+															</li>
+														</ul> -->
+							</li>
 
 
+
+							<!-- <li id="menu-item-42"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
+															href="/developers/">Developers</a></li> -->
+							<!-- <li id="menu-item-2661"
+														class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2661">
+														<a href="#">About</a>
+														<ul class="sub-menu">
+															<li id="menu-item-2664"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664">
+																<a href="/about/">Company</a>
+															</li>
+															<li id="menu-item-2665"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2665">
+																<a href="/news/">News</a>
+															</li>
+															<li id="menu-item-4376"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4376">
+																<a href="/vacancies/">Vacancies</a>
+															</li>
+															<li id="menu-item-2706"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2706">
+																<a href="/open-source/">Our Open Source License</a>
+															</li>
+															<li id="menu-item-2666"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2666">
+																<a href="/contact/">Contact</a>
+															</li>
+														</ul>
+													</li> -->
 							<li id="menu-item-1338"
 								class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
 								<a href="../tailieu/Lang_So.pdf" target="_blank">Tải PDF</a>
@@ -1062,7 +1169,11 @@
 						</ul>
 					</nav>
 
-
+					<style>
+						.section-header>h2 {
+							color: #1faa5b;
+						}
+					</style>
 
 
 					<div id="et_mobile_nav_menu">
@@ -1082,461 +1193,455 @@
 					<span class="et_close_search_field"></span>
 				</div>
 			</div>
-			<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-			<link rel="stylesheet" href="../css/fontawesome.css">
-			<link rel="stylesheet" href="../css/lightcase.css">
-			<link rel="stylesheet" href="../css/swiper.min.css">
-			<link rel="stylesheet" href="../css/slick.css">
-			<link rel="stylesheet" href="../css/slick-theme.css">
-			<link rel="stylesheet" href="../css/style.css">
-			<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-		</header>
-		<!-- HEADLE-V2-->
-		<style>
-			.left .row-crossbar {
-				background: #00aa55 none repeat scroll 0 0;
-				height: 2px;
-				width: 62px;
-				margin: 0;
-			}
+		</header> <!-- #main-header -->
 
-			.row-crossbar {
-				display: contents;
-				background: #00aa55 none repeat scroll 0 0;
-				height: 2px;
-				margin: 0 auto 5px;
-				width: 62px;
+		<div id="et-main-area">
 
-			}
+			<div id="main-content">
 
-			.row-crossbar-bg {
-				height: 5px;
-				width: 110px;
-				background: #83d5ac;
-				margin: auto;
-				position: relative;
-				border-radius: 30px;
-			}
 
-			.row-crossbar-bg:before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: -2.7px;
-				height: 10px;
-				width: 10px;
-				border-radius: 50%;
-				background: #00aa55;
-				-webkit-animation-duration: 3s;
-				animation-duration: 3s;
-				-webkit-animation-timing-function: linear;
-				animation-timing-function: linear;
-				-webkit-animation-iteration-count: infinite;
-				animation-iteration-count: infinite;
-				-webkit-animation-name: MOVE-BG;
-				animation-name: MOVE-BG;
-			}
+				<article id="post-2111" class="post-2111 page type-page status-publish hentry">
 
-			@-webkit-keyframes MOVE-BG {
-				from {
-					-webkit-transform: translateX(0);
-					transform: translateX(0);
-				}
 
-				to {
-					-webkit-transform: translateX(105px);
-					transform: translateX(105px);
-				}
-			}
+					<div class="entry-content">
+						<div class="et-l et-l--post">
+							<!-- <div class="et_builder_inner_content et_pb_gutters3">
 
-			@keyframes MOVE-BG {
-				from {
-					-webkit-transform: translateX(0);
-					transform: translateX(0);
-				}
-
-				to {
-					-webkit-transform: translateX(105px);
-					transform: translateX(105px);
-				}
-			}
-		</style>
-		<div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5"
-			style="background-image: url(../image/img_nentangsov2/bannerchiasecauchuyen.jpg)">
-			<div class="overlay-main bg-black opacity-07"></div>
-			<div class="container containerv2" style="display: flex ;">
-				<div class="mt-bnr-inr-entry">
-					<div class="iconHeadv1     arrow-animation"><img class="imgv2"
-							src="../image/img_nentangsov2/icon.png" alt=""></div>
-					<div class="banner-title-outer">
-						<div class="banner-title-name">
-							<h2 class="m-b0">
-								CHIA SẺ CÂU CHUYỆN
-							</h2>
-							<!-- <div style="width: 100%">
-								<div class="row-crossbar">
-									<div class="row-crossbar-bg">
-										<p class="texEdic">
-											Tri thức xuất sắc là tri thức miễn phí, để làm giàu tri thức cho cẩm nang, đội ngũ biên
-											soạn
-											hi
-											vọng sẽ nhận được nhiều đóng góp quý báu từ người dân, doanh nghiệp, chuyên gia.
-										</p>
+								<div style="margin-top: 50px;" class="post-item chuyenlangsobody" data-aos="fade-right"
+									data-aos-duration="700">
+									<div class="post-inner">
+										<div class="et_pb_text_inner">
+											<h1
+												style="padding: 40px 0px 0px 0px;justify-content: center;align-items: center;display: flex;font-size: 34.5px; color: #00aa55;">
+												CHUYỆN LÀNG SỐ</h1>
+											<div class="green-line "></div>
+										</div>
 									</div>
 								</div>
 							</div> -->
 
 
-						</div>
+							<div class="et_builder_inner_content et_pb_gutters3">
 
+								<!-- chuyenlangsobody" data-aos="fade-right -->
+								<div style="margin-top: 50px;" class="post-item " data-aos-duration="700">
+									<div class="post-inner">
+										<div class="et_pb_text_inner">
+											<!-- HEADLE-V2-->
+											<div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"
+												data-stellar-background-ratio="0.5"
+												style="background-image: url(../image/chuyenlangso.png)">
+												<div class="overlay-main bg-black opacity-07"></div>
+												<div class="container containerv2" style="display: flex ;">
+													<div class="mt-bnr-inr-entry">
+														<div class="iconHeadv1  arrow-animation "><img class="imgv2"
+																src="../image/img_nentangsov2/icon.png" alt=""></div>
+														<div class="banner-title-outer">
+															<div class="banner-title-name">
+																<h2 class="m-b0">
+																	CHUYỆN LÀNG SỐ
+																</h2>
 
+															</div>
 
-						<div style="width: 100%">
-							<div class="row-crossbar">
-								<div class="row-crossbar-bg">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="iconHeadv2   arrow-animation "><img class="imgv2"
-							src="../image/img_nentangsov2/icon.png" alt=""></div>
-				</div>
+															<div style="width: 100%">
+																<div class="row-crossbar">
+																	<div class="row-crossbar-bg">
+																	</div>
+																</div>
+															</div>
+														</div>
 
+														<div class="iconHeadv2   arrow-animation"><img class="imgv2"
+																src="../image/img_nentangsov2/icon.png" alt=""></div>
 
-
-			</div>
-
-
-		</div>
-		<!-- HEADLE-V2 END -->
-
-		<section class="ftco-section">
-			<div class="container">
-				<!-- <div class="row justify-content-center">
-					<div class="col-lg-8 col-md-12 text-center mb-4">
-						<h2 style="font-size: 40px;color: #00aa55;" class="heading-section">CHIA SẺ CÂU CHUYỆN</h2>
-						<p class="texEdic">
-							Tri thức xuất sắc là tri thức miễn phí, để làm giàu tri thức cho cẩm nang, đội ngũ biên soạn
-							hi
-							vọng sẽ nhận được nhiều đóng góp quý báu từ người dân, doanh nghiệp, chuyên gia.
-						</p>
-					</div>
-				</div> -->
-
-
-
-				<div class="row justify-content-center">
-					<div class="col-md-12">
-						<div class="wrapper">
-							<div class="row no-gutters">
-								<div class="col-lg-8 col-md-12 order-md-last d-flex align-items-stretch">
-									<div class="contact-wrap w-100 p-md-12 p-4">
-										<h3 class="mb-4">Thông tin người gửi</h3>
-										<div id="form-message-warning" class="mb-4"></div>
-										<div id="form-message-success" class="mb-4">
-											Your message was sent, thank you!
-										</div>
-										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group">
-														<label class="label" for="name">Họ Tên</label>
-														<input type="text" class="form-control" name="name" id="name"
-															placeholder="Họ Tên">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<label class="label" for="email">Số điện thoại</label>
-														<input type="tel" class="form-control" name="phone"
-															placeholder="Số điện thoại">
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<label class="label" for="subject">Ý kiến đóng góp</label>
-														<input type="text" class="form-control" name="subject"
-															id="subject" placeholder="Ý kiến đóng góp">
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<label class="label" for="#">Nội dung đóng góp</label>
-														<textarea name="message" class="form-control" id="message"
-															cols="30" rows="4"
-															placeholder="Nội dung đóng góp"></textarea>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group">
-														<div id="cf-turnstile"></div>
-													</div>
-												</div>
-												<div class="col-md-12" style="
-    display: flex;
-
-    justify-content: end;">
-													<div class="form-group">
-														<input type="submit" value="Gửi" class="btn btn-primary" style="
-    width: 75px;
-    border-radius: 11px;">
-														<div class="submitting"></div>
 													</div>
 												</div>
 											</div>
-										</form>
+											<!-- HEADLE-V2 END -->
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<style>
+								figure.wp-block-image.size-full img {
+									display: none;
+								}
+							</style>
+							<section class="project-section ">
+								<div class="container" style="padding-top: 0px;">
+
+									<div class="section-wrapper">
+
+										<!-- TEST API -->
+
 										<script>
-											let submitting = false
-											document.querySelector('#contactForm').addEventListener('submit', e => {
-												e.preventDefault()
-												if (submitting || !turnstile) return
-												const q = new URLSearchParams()
-												Array.from(document.querySelectorAll('#contactForm [name]')).forEach(x => {
-													q.set(x.name, x.value)
-												})
-												submitting = true
-												document.querySelector('.submitting').innerHTML = 'Đang gửi..'
+											const perPage = 10; // Số bài viết trên mỗi trang
+											let currentPage = 1; // Trang hiện tại
+											const elementToScroll = document.querySelector('.scroll-to-element'); // class scroll đến phần tử chỉ địnhs
 
-												if (turnstile) turnstile.render('#cf-turnstile', {
-													sitekey: '0x4AAAAAAAMYyZ693vCTztP2',
-													callback: function (token) {
-														q.set('cf-turnstile-response', token)
-														fetch('${apiUrl}/contact-langso?' + q.toString()).then(r => r.json()).then(r => {
-															if (!r.error) {
-																Array.from(document.querySelectorAll('#contactForm [name]')).forEach(x => {
-																	x.value = ''
-																})
-															}
-															document.querySelector('.submitting').innerHTML = r.error || 'Đã gửi ý kiến đóng góp.'
-														}).catch(e => {
-															document.querySelector('.submitting').innerHTML = 'Lỗi, vui lòng thử lại sau'
-															console.error(e)
-														}).finally(() => {
-															submitting = false
+											document.addEventListener("DOMContentLoaded", function () {
+												// Chọn phần tử có class là "my-custom-class"
+												const myElement = document.querySelector(".section-wrapper");
+												fetchPosts(1)
+												function fetchPosts(page) {
+													fetch(`${apiUrl}/home_posts?id=4&per_page=10&page=${page}&content=1`, {
+														method: 'GET',
+													})
+														.then(response => response.json())
+														.then(apiData => {
+
+															// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
+															const usersHTML = apiData.map(user => {
+																return `
+															<div class="post-item " style="margin-bottom: 40px;">
+																<div class="post-thumb post-thumb-fire" style="margin-top: 10px;" "
+																	data-aos-duration="700">
+																	<a href="#"><img class="imgbox"
+																			style=" border-radius: 0px;height: 450px; object-fit: cover;"
+																			src="${user.img}" alt=""></a>
+																</div>
+
+																<div class="post-content post-content1" "
+																	data-aos-duration="700">
+
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+																		
+																	</div>
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+																		<div class="et_pb_text_inner">
+																			<div class="section-header text-mobile">
+																				<p class="quote-icon"><span class="iconHeadlText">“</span>
+																				</p>
+																				<h2>${user.title}</h2>
+																			</div>
+																		</div>
+																	</div>
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+																		<div class="et_pb_text_inner">
+																			${user.content}
+																			
+																		</div>
+																	</div>
+																</div>
+															</div>
+															`;
+															}).join(''); // Sử dụng join('') để chuyển mảng thành chuỗi
+
+															// Gán chuỗi HTML vào phần tử có class "my-custom-class"
+															myElement.innerHTML = `${usersHTML}`;
+															displayPagination(3);
+															window.scrollTo(0, 0);
+															console.log(user.headers)
 														})
-													},
-												});
-											})
+														.catch(error => {
+															// Xử lý lỗi nếu có
+															console.error("There has been a problem with your fetch operation:", error);
+														});
+												}
+
+
+
+												function displayPagination(totalPages) {
+													const paginationContainer = document.getElementById('pagination');
+													paginationContainer.innerHTML = '';
+
+													// Tạo nút "Quay lại"
+													const prevButton = document.createElement('a');
+													prevButton.innerHTML = '<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>';
+													prevButton.href = '#';
+													prevButton.classList.add('pagination-button');
+													prevButton.addEventListener('click', function (event) {
+														event.preventDefault();
+														if (currentPage > 1) {
+															currentPage--;
+															fetchPosts(currentPage);
+															updateActiveButton();
+															scrollToTop();
+															window.scrollTo(0, 0);
+														}
+													});
+													paginationContainer.appendChild(prevButton);
+
+													for (let i = 1; i <= totalPages; i++) {
+														const button = document.createElement('a');
+														button.innerText = i;
+														button.href = '#';
+														// Thêm lớp active khi nút được nhấp vào
+														if (i === currentPage) {
+
+															button.classList.add('show-botton');
+														}
+
+
+
+														button.addEventListener('click', function () {
+															event.preventDefault(); // Ngừng sự kiện mặc định của thẻ a
+															currentPage = i;
+															fetchPosts(currentPage); // Cập nhật trang và gọi API với trang mới
+															pdateActiveButton(); // Cập nhật lớp active khi nút được nhấp vào
+															scrollToTop();
+															window.scrollTo(0, 0);
+														});
+														paginationContainer.appendChild(button);
+													}
+													// Tạo nút "Tiếp theo"
+													const nextButton = document.createElement('a');
+													nextButton.innerHTML = `
+    <svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>
+`; nextButton.href = '#';
+													nextButton.classList.add('pagination-button');
+													nextButton.addEventListener('click', function (event) {
+														event.preventDefault();
+														if (currentPage < totalPages) {
+															currentPage++;
+															fetchPosts(currentPage);
+															updateActiveButton();
+															scrollToTop();
+															window.scrollTo(0, 0);
+														}
+													});
+													paginationContainer.appendChild(nextButton);
+												}
+												function updateActiveButton() {
+													const buttons = document.querySelectorAll('#pagination a');
+													buttons.forEach(button => {
+
+														if (parseInt(button.innerText) === currentPage) {
+															button.classList.add('show-botton');
+														}
+													});
+												}
+												function scrollToTop() {
+													window.scrollTo({
+														top: 0,
+														behavior: 'smooth',
+														objectFit: 'contain',
+														transition: 'all 0.3s ease'
+
+													});
+												}
+
+
+											});
+
 										</script>
+
+
+
+
+
+
+
+
 									</div>
-								</div>
-								<div class="col-lg-4 col-md-12 d-flex align-items-stretch">
-									<div class="info-wrap bg-primary w-100 p-md-5 p-4">
-										<h3>Địa chỉ liên lạc</h3>
-										<p class="mb-4" style="color: white;">VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ</p>
-										<div class="dbox w-100 d-flex align-items-center">
-											<div class="icon d-flex align-items-center justify-content-center">
-												<span class="fa fa-map-marker"></span>
-											</div>
-											<div class="text pl-3">
-												<p style="color: white;"><span>Địa chỉ:</span> 18 Nguyễn Du, quận Hai Bà
-													Trưng, TP. Hà Nội
-												</p>
-											</div>
-										</div>
-										<div class="dbox w-100 d-flex align-items-center">
-											<div class="icon d-flex align-items-center justify-content-center">
-												<span class="fa fa-phone"></span>
-											</div>
-											<div class="text pl-3">
-												<p><span>Số điện thoại:</span> <a href="012333888">012333888</a></p>
-											</div>
-										</div>
-										<div class="dbox w-100 d-flex align-items-center">
-											<div class="icon d-flex align-items-center justify-content-center">
-												<span class="fa fa-envelope"></span>
-											</div>
-											<div class="text pl-3">
-												<p><span>Email:</span> <a
-														href="mailto:langso@dx.com.vn">langso@dx.com.vn</a></p>
-											</div>
-										</div>
-										<div class="dbox w-100 d-flex align-items-center">
-											<div class="icon d-flex align-items-center justify-content-center">
-												<span class="fa fa-globe"></span>
-											</div>
-											<div class="text pl-3">
-												<p><span>Website:</span> <a href="#">langso.dx.gov.vn</a></p>
-											</div>
-										</div>
-									</div>
-								</div>
+									<style>
+										.pagination {
+											display: flex;
+											justify-content: center;
+										}
+
+										.pagination a {
+											color: black;
+											float: left;
+											padding: 8px 16px;
+											text-decoration: none;
+											transition: background-color .3s;
+										}
+
+										.show-botton {
+											background-color: #00aa55;
+											color: #fff !important;
+										}
+									</style>
+									<div id="pagination" class="pagination"></div>
+							</section>
+						</div>
+				</article>
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<style>
+			.footer-widget h4 {
+				margin-bottom: 0px;
+			}
+		</style>
+
+		<link rel="stylesheet" href="../footer/css/all.css">
+		<!-- footer -->
+		<!-- <div class="et_pb_gutters3">
+			<include src="../footer/index.html"></include>
+		</div> -->
+		<style>
+			footer {
+				border-top: 4px solid #00aa55;
+			}
+		</style>
+		<!-- <include src="./footer/index.html"></include> -->
+		<style>
+			footer {
+				border-top: 4px solid #00aa55;
+			}
+		</style>
+		<footer>
+			<div class="container">
+				<div id="footer-widgets" class="clearfix">
+					<div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
+
+						<div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
+							data-area="qodef-footer-top-area-column-1">
+							<h4 class="title">
+								<span class="et_pb_image_wrap ">
+									<img src="../image/logo.png" style="width: 49px;">
+								</span>
+							</h4>
+							<h4 class="title">
+								VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ </h4>
+						</div>
+
+						<div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3"
+							class="widget_kamperen_core_title_widget" data-area="qodef-footer-top-area-column-1">
+							<!-- <h5 class="qodef-widget-title" style="color: #52606b;">
+											LIÊN KẾT </h5> -->
+						</div>
+						<div id="kamperen_core_social_icons_group-4"
+							class="widget widget_kamperen_core_social_icons_group"
+							data-area="qodef-footer-top-area-column-1">
+							<div class="qodef-social-icons-group">
+								<span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
+									style="margin: 0 33px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/"
+										target="_blank"> <svg
+											class="svg-inline--fa fa-facebook-f fa-w-9 qodef-icon-font-awesome qodef-icon qodef-e"
+											style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
+											data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 264 512" data-fa-i2svg="">
+											<path fill="#bcbcbc"
+												d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
+											</path>
+										</svg>
+									</a> </span><span
+									class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
+									style="margin: 0 33px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/"
+										target="_blank"> <svg
+											class="svg-inline--fa fa-instagram fa-w-14 qodef-icon-font-awesome qodef-icon qodef-e"
+											style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
+											data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 448 512" data-fa-i2svg="">
+											<path fill="#bcbcbc"
+												d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+											</path>
+										</svg>
+									</a> </span><span
+									class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
+									data-hover-color="#ffffff" style="margin: 0 33px 0 0"> <a itemprop="url"
+										href="https://langso.dx.gov.vn/" target="_blank"> <svg
+											class="svg-inline--fa fa-tripadvisor fa-w-18 qodef-icon-font-awesome qodef-icon qodef-e"
+											style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
+											data-icon="tripadvisor" role="img" xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 576 512" data-fa-i2svg="">
+											<path fill="#bcbcbc"
+												d="M166.4 280.521c0 13.236-10.73 23.966-23.966 23.966s-23.966-10.73-23.966-23.966 10.73-23.966 23.966-23.966 23.966 10.729 23.966 23.966zm264.962-23.956c-13.23 0-23.956 10.725-23.956 23.956 0 13.23 10.725 23.956 23.956 23.956 13.23 0 23.956-10.725 23.956-23.956-.001-13.231-10.726-23.956-23.956-23.956zm89.388 139.49c-62.667 49.104-153.276 38.109-202.379-24.559l-30.979 46.325-30.683-45.939c-48.277 60.39-135.622 71.891-197.885 26.055-64.058-47.158-77.759-137.316-30.601-201.374A186.762 186.762 0 0 0 0 139.416l90.286-.05a358.48 358.48 0 0 1 197.065-54.03 350.382 350.382 0 0 1 192.181 53.349l96.218.074a185.713 185.713 0 0 0-28.352 57.649c46.793 62.747 34.964 151.37-26.648 199.647zM259.366 281.761c-.007-63.557-51.535-115.075-115.092-115.068C80.717 166.7 29.2 218.228 29.206 281.785c.007 63.557 51.535 115.075 115.092 115.068 63.513-.075 114.984-51.539 115.068-115.052v-.04zm28.591-10.455c5.433-73.44 65.51-130.884 139.12-133.022a339.146 339.146 0 0 0-139.727-27.812 356.31 356.31 0 0 0-140.164 27.253c74.344 1.582 135.299 59.424 140.771 133.581zm251.706-28.767c-21.992-59.634-88.162-90.148-147.795-68.157-59.634 21.992-90.148 88.162-68.157 147.795v.032c22.038 59.607 88.198 90.091 147.827 68.113 59.615-22.004 90.113-88.162 68.125-147.783zm-326.039 37.975v.115c-.057 39.328-31.986 71.163-71.314 71.106-39.328-.057-71.163-31.986-71.106-71.314.057-39.328 31.986-71.163 71.314-71.106 39.259.116 71.042 31.94 71.106 71.199zm-24.512 0v-.084c-.051-25.784-20.994-46.645-46.778-46.594-25.784.051-46.645 20.994-46.594 46.777.051 25.784 20.994 46.645 46.777 46.594 25.726-.113 46.537-20.968 46.595-46.693zm313.423 0v.048c-.02 39.328-31.918 71.194-71.247 71.173s-71.194-31.918-71.173-71.247c.02-39.328 31.918-71.194 71.247-71.173 39.29.066 71.121 31.909 71.173 71.199zm-24.504-.008c-.009-25.784-20.918-46.679-46.702-46.67-25.784.009-46.679 20.918-46.67 46.702.009 25.784 20.918 46.678 46.702 46.67 25.765-.046 46.636-20.928 46.67-46.693v-.009z">
+											</path>
+										</svg>
+									</a> </span><span
+									class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
+									data-hover-color="#ffffff" style="margin: 0 0px 0 0"> <a itemprop="url"
+										href="https://langso.dx.gov.vn/" target="_blank"> <svg
+											class="svg-inline--fa fa-twitter fa-w-16 qodef-icon-font-awesome qodef-icon qodef-e"
+											style="color: rgb(188, 188, 188); font-size: 20px;" aria-hidden="true"
+											data-prefix="fab" data-icon="twitter" role="img"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+											<path fill="#bcbcbc"
+												d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+											</path>
+										</svg>
+									</a> </span>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-	<style>
-		.footer-widget h4 {
-			margin-bottom: 0px;
-		}
-	</style>
+					<div class="footer-widget" style=" width: 29%;">
+						<div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
+							<h4 class="title">LIÊN HỆ</h4>
+							<div class="menu-domains-container">
+								<ul id="menu-domains" class="menu">
+									<li id="menu-item-2331"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2331">
 
-	<link rel="stylesheet" href="../footer/css/all.css">
-	<!-- footer -->
-	<!-- <div class="et_pb_gutters3">
-				<include src="../footer/index.html"></include>
-			</div> -->
-	<style>
-		footer {
-			border-top: 4px solid #00aa55;
-		}
-	</style>
-	<!-- <include src="./footer/index.html"></include> -->
-	<style>
-		footer {
-			border-top: 4px solid #00aa55;
-		}
-	</style>
-	<footer>
-		<div class="container">
-			<div id="footer-widgets" class="clearfix">
-				<div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
-
-					<div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
-						data-area="qodef-footer-top-area-column-1">
-						<h4 class="title">
-							<span class="et_pb_image_wrap ">
-								<img src="../image/logo.png" style="width: 49px;">
-							</span>
-						</h4>
-						<h4 class="title">
-							VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ </h4>
-					</div>
-
-					<div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3"
-						class="widget_kamperen_core_title_widget" data-area="qodef-footer-top-area-column-1">
-						<!-- <h5 class="qodef-widget-title" style="color: #52606b;">
-												LIÊN KẾT </h5> -->
-					</div>
-					<div id="kamperen_core_social_icons_group-4" class="widget widget_kamperen_core_social_icons_group"
-						data-area="qodef-footer-top-area-column-1">
-						<div class="qodef-social-icons-group">
-							<span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-								style="margin: 0 33px 0 0">
-								<a itemprop="url" href="https://langso.dx.gov.vn/" target="_blank"> <svg
-										class="svg-inline--fa fa-facebook-f fa-w-9 qodef-icon-font-awesome qodef-icon qodef-e"
-										style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
-										data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 264 512" data-fa-i2svg="">
-										<path fill="#bcbcbc"
-											d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
-										</path>
-									</svg>
-								</a> </span><span
-								class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-								style="margin: 0 33px 0 0"> <a itemprop="url" href="https://langso.dx.gov.vn/"
-									target="_blank"> <svg
-										class="svg-inline--fa fa-instagram fa-w-14 qodef-icon-font-awesome qodef-icon qodef-e"
-										style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
-										data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 448 512" data-fa-i2svg="">
-										<path fill="#bcbcbc"
-											d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-										</path>
-									</svg>
-								</a> </span><span
-								class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-								data-hover-color="#ffffff" style="margin: 0 33px 0 0"> <a itemprop="url"
-									href="https://langso.dx.gov.vn/" target="_blank"> <svg
-										class="svg-inline--fa fa-tripadvisor fa-w-18 qodef-icon-font-awesome qodef-icon qodef-e"
-										style="color: #bcbcbc;font-size: 20px;" aria-hidden="true" data-prefix="fab"
-										data-icon="tripadvisor" role="img" xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 576 512" data-fa-i2svg="">
-										<path fill="#bcbcbc"
-											d="M166.4 280.521c0 13.236-10.73 23.966-23.966 23.966s-23.966-10.73-23.966-23.966 10.73-23.966 23.966-23.966 23.966 10.729 23.966 23.966zm264.962-23.956c-13.23 0-23.956 10.725-23.956 23.956 0 13.23 10.725 23.956 23.956 23.956 13.23 0 23.956-10.725 23.956-23.956-.001-13.231-10.726-23.956-23.956-23.956zm89.388 139.49c-62.667 49.104-153.276 38.109-202.379-24.559l-30.979 46.325-30.683-45.939c-48.277 60.39-135.622 71.891-197.885 26.055-64.058-47.158-77.759-137.316-30.601-201.374A186.762 186.762 0 0 0 0 139.416l90.286-.05a358.48 358.48 0 0 1 197.065-54.03 350.382 350.382 0 0 1 192.181 53.349l96.218.074a185.713 185.713 0 0 0-28.352 57.649c46.793 62.747 34.964 151.37-26.648 199.647zM259.366 281.761c-.007-63.557-51.535-115.075-115.092-115.068C80.717 166.7 29.2 218.228 29.206 281.785c.007 63.557 51.535 115.075 115.092 115.068 63.513-.075 114.984-51.539 115.068-115.052v-.04zm28.591-10.455c5.433-73.44 65.51-130.884 139.12-133.022a339.146 339.146 0 0 0-139.727-27.812 356.31 356.31 0 0 0-140.164 27.253c74.344 1.582 135.299 59.424 140.771 133.581zm251.706-28.767c-21.992-59.634-88.162-90.148-147.795-68.157-59.634 21.992-90.148 88.162-68.157 147.795v.032c22.038 59.607 88.198 90.091 147.827 68.113 59.615-22.004 90.113-88.162 68.125-147.783zm-326.039 37.975v.115c-.057 39.328-31.986 71.163-71.314 71.106-39.328-.057-71.163-31.986-71.106-71.314.057-39.328 31.986-71.163 71.314-71.106 39.259.116 71.042 31.94 71.106 71.199zm-24.512 0v-.084c-.051-25.784-20.994-46.645-46.778-46.594-25.784.051-46.645 20.994-46.594 46.777.051 25.784 20.994 46.645 46.777 46.594 25.726-.113 46.537-20.968 46.595-46.693zm313.423 0v.048c-.02 39.328-31.918 71.194-71.247 71.173s-71.194-31.918-71.173-71.247c.02-39.328 31.918-71.194 71.247-71.173 39.29.066 71.121 31.909 71.173 71.199zm-24.504-.008c-.009-25.784-20.918-46.679-46.702-46.67-25.784.009-46.679 20.918-46.67 46.702.009 25.784 20.918 46.678 46.702 46.67 25.765-.046 46.636-20.928 46.67-46.693v-.009z">
-										</path>
-									</svg>
-								</a> </span><span
-								class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal"
-								data-hover-color="#ffffff" style="margin: 0 0px 0 0"> <a itemprop="url"
-									href="https://langso.dx.gov.vn/" target="_blank"> <svg
-										class="svg-inline--fa fa-twitter fa-w-16 qodef-icon-font-awesome qodef-icon qodef-e"
-										style="color: rgb(188, 188, 188); font-size: 20px;" aria-hidden="true"
-										data-prefix="fab" data-icon="twitter" role="img"
-										xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-										<path fill="#bcbcbc"
-											d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-										</path>
-									</svg>
-								</a> </span>
+										<a><i class="fas fa-map-marker-alt"
+												style="display: inline-block; margin-right: 10px"></i> Địa chỉ: 18
+											Nguyễn
+											Du, quận Hai Bà Trưng, TP. Hà Nội </a>
+									</li>
+									<li id="menu-item-2330"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2330">
+										<a><i style=" transform: rotateY(180deg); display: inline-block; margin-right: 10px" "="" class="
+												fas fa-phone"></i>Số điện thoại: 012333888</a>
+									</li>
+									<li id="menu-item-2329"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329">
+										<a><i class="far fa-envelope"
+												style="display: inline-block; margin-right: 10px"></i>Email:
+											langso@dx.com.vn</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="footer-widget" style=" width: 29%;">
-					<div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
-						<h4 class="title">LIÊN HỆ</h4>
-						<div class="menu-domains-container">
-							<ul id="menu-domains" class="menu">
-								<li id="menu-item-2331"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2331">
+					<div class="footer-widget texBottomNone" style=" width: 29%;">
+						<div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
+							<h4 class="title">DANH MỤC</h4>
+							<div class="menu-solutions-container">
+								<ul id="menu-solutions" class="menu">
+									<li id="menu-item-163"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
+										<a href="../index.html">Làng số</a>
+									</li>
+									<li id="menu-item-162"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
+										<a href="../cam-nang/index.html#text-0" class="myLink">Cẩm nang</a>
+									</li>
+									<li id="menu-item-161"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
+										<a href="../chuyen-langso/index.html">Chuyện làng số</a>
+									</li>
 
-									<a><i class="fas fa-map-marker-alt"
-											style="display: inline-block; margin-right: 10px"></i> Địa chỉ: 18
-										Nguyễn
-										Du, quận Hai Bà Trưng, TP. Hà Nội </a>
-								</li>
-								<li id="menu-item-2330"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2330">
-									<a><i style=" transform: rotateY(180deg); display: inline-block; margin-right: 10px" "="" class="
-											fas fa-phone"></i>Số điện thoại: 012333888</a>
-								</li>
-								<li id="menu-item-2329"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329">
-									<a><i class="far fa-envelope"
-											style="display: inline-block; margin-right: 10px"></i>Email:
-										langso@dx.com.vn</a>
-								</li>
-							</ul>
+									<li id="menu-item-160"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160">
+										<a href="../dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a>
+									</li>
+
+								</ul>
+							</div>
 						</div>
 					</div>
+
 				</div>
-				<div class="footer-widget texBottomNone" style=" width: 29%;">
-					<div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
-						<h4 class="title">DANH MỤC</h4>
-						<div class="menu-solutions-container">
-							<ul id="menu-solutions" class="menu">
-								<li id="menu-item-163"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163">
-									<a href="../index.html">Làng số</a>
-								</li>
-								<li id="menu-item-162"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-									<a href="../cam-nang/index.html#text-0" class="myLink">Cẩm nang</a>
-								</li>
-								<li id="menu-item-161"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
-									<a href="../chuyen-langso/index.html">Chuyện làng số</a>
-								</li>
+			</div>
 
-								<li id="menu-item-160"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160">
-									<a href="../dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a>
-								</li>
 
-							</ul>
-						</div>
+
+			<div>
+				<div style="background-color: #00aa55;font-size: 13px;">
+					<div style=" width: 100%;justify-content: center; display: flex;">
+						<p id="footer-info" style="padding-bottom: 0px;color: white">© Cẩm nang làng số</p>
 					</div>
 				</div>
-
 			</div>
-		</div>
-
-
-
-		<div>
-			<div style="background-color: #00aa55;font-size: 13px;">
-				<div style=" width: 100%;justify-content: center; display: flex;">
-					<p id="footer-info" style="padding-bottom: 0px;color: white">© Cẩm nang làng số</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="https://unpkg.com/htmlincludejs"></script>
-	<!-- #main-footer --> <!-- #main-footer -->
+		</footer>
+		<script src="https://unpkg.com/htmlincludejs"></script>
+		<!-- #main-footer --> <!-- #main-footer -->
 	</div> <!-- #et-main-area -->
 
 
@@ -1616,33 +1721,33 @@
 	<script type='text/javascript' src='https://openremote.io/wp-content/themes/Divi/core/admin/js/common.js?ver=4.17.6'
 		id='et-core-common-js'></script>
 	<!-- <style id="et-builder-module-design-28-cached-inline-styles">
-			.et_pb_divider_0,
-			.et_pb_divider_1,
-			.et_pb_divider_2 {
-				height: 0px
-			}
-	
-			.et_pb_divider_0:before,
-			.et_pb_divider_1:before,
-			.et_pb_divider_2:before {
-				border-top-color: #cdcdcd
-			}
-	
-			.et_pb_toggle_9.et_pb_toggle h5,
-			.et_pb_toggle_9.et_pb_toggle h1.et_pb_toggle_title,
-			.et_pb_toggle_9.et_pb_toggle h2.et_pb_toggle_title,
-			.et_pb_toggle_9.et_pb_toggle h3.et_pb_toggle_title,
-			.et_pb_toggle_9.et_pb_toggle h4.et_pb_toggle_title,
-			.et_pb_toggle_9.et_pb_toggle h6.et_pb_toggle_title {
-				color: #000000 !important
-			}
-	
-			div.et_pb_section.et_pb_section_2,
-			div.et_pb_section.et_pb_section_3 {
-				background-position: left center;
-				background-image: url(https://openremote.io/wp-content/uploads/2022/08/CTA-bg.jpg) !important
-			}
-		</styl> -->
+		.et_pb_divider_0,
+		.et_pb_divider_1,
+		.et_pb_divider_2 {
+			height: 0px
+		}
+
+		.et_pb_divider_0:before,
+		.et_pb_divider_1:before,
+		.et_pb_divider_2:before {
+			border-top-color: #cdcdcd
+		}
+
+		.et_pb_toggle_9.et_pb_toggle h5,
+		.et_pb_toggle_9.et_pb_toggle h1.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h2.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h3.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h4.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h6.et_pb_toggle_title {
+			color: #000000 !important
+		}
+
+		div.et_pb_section.et_pb_section_2,
+		div.et_pb_section.et_pb_section_3 {
+			background-position: left center;
+			background-image: url(https://openremote.io/wp-content/uploads/2022/08/CTA-bg.jpg) !important
+		}
+	</styl> -->
 	<div class="xxx17" style="display:none;"></div>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/waypoints.min.js"></script>
@@ -1659,44 +1764,6 @@
 	<script src="../js/slick.min.js"></script>
 	<script src="../js/theia-sticky-sidebar.js"></script>
 	<script src="../js/functions.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" href="css/style.css">
-	<style>
-		#top-menu li {
-			align-items: center;
-			display: flex;
-			font-size: 15px;
-			padding-right: 22px;
-		}
-
-		.logo_container {
-			/* width: 30%; */
-		}
-
-		@media (max-width: 980px) {
-			div#et-top-navigation {
-				justify-content: end !important;
-				width: 90% !important;
-			}
-
-			.ftco-section {
-				padding-top: 100px;
-			}
-
-			.logo_container {
-				padding-left: 10px;
-			}
-
-		}
-	</style>
 </body>
 
 </html>
-<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="css/style.css"> -->
