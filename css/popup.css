@@ -41,7 +41,8 @@
 }
 
 .popup h2 {
-    margin-top : 10;
+    font-weight: 800;
+    margin-top : 20px;
     font-family: Tahoma, Arial, sans-serif;
 }
 
