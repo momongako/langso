@@ -712,8 +712,9 @@ div#et-top-navigation {
   }
 
   #main-header .container {
-    width : 90%;
+    width: 100% !important;
     height: 125px !important;
+    justify-content: center;
   }
 }
 
