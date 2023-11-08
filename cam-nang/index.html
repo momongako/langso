@@ -31,7 +31,8 @@
 
   <link rel="stylesheet" type="text/css" href="./css/flipbook.style.css">
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="./css/camnang.css">
+  <!-- image -->
+
   <style>
     .arrow-animation {
       position: relative;
@@ -1030,6 +1031,41 @@
   <link rel="stylesheet" href="../dowloadPdf/css/extra.css">
   <!-- link include -->
   <script src="https://unpkg.com/htmlincludejs"></script>
+  <!-- style <p> -->
+  <style>
+    .indented-p {
+      margin-left: 3em;
+      color: #555;
+      /* Lùi vào bằng 3em cho các thẻ có lớp .indented-p */
+    }
+
+    p {
+      margin-left: 0;
+      /* Đặt lề trái và phải thành 0 */
+    }
+
+    .indented-p-5 {
+      margin-left: 5em;
+      color: #555;
+      /* Lùi vào bằng 3em cho các thẻ có lớp .indented-p */
+    }
+
+    .indented-p-w {
+      margin-left: 3em;
+      font-weight: bold;
+    }
+
+    .indented-p-w0 {
+      font-weight: bold;
+    }
+
+    .italic-p {
+      margin-left: 3em;
+      /* Lùi vào bằng 3em cho các thẻ có lớp .italic-p */
+      font-style: italic;
+      /* Đặt font style là italic cho nội dung trong thẻ p */
+    }
+  </style>
   <style>
     /* css fixd */
     .fixed-element {
@@ -1039,6 +1075,8 @@
       /* Thêm hiệu ứng chuyển đổi */
       opacity: 1;
     }
+
+
 
     .threshold-element {
       /* height: 200px; */
@@ -1113,8 +1151,8 @@
             <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
                 class="" href="../cam-nang/index.html#text-0">Cẩm
                 nang</a></li>
-            <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
-                href="../nentang-so/index.html">Nền tảng số</a></li> -->
+            <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+                href="../nentang-so/index.html">Nền tảng số</a></li>
 
             <!-- <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
                 href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
@@ -1499,13 +1537,6 @@
               <div id="text-0" class="section">
 
                 <h1 class="uk-article-title">Lời nói đầu</h1>
-
-
-
-
-
-
-
                 <p>
                   Cẩm nang là cuốn sách ghi tóm lược những điều quan trọng và thiết yếu về một vấn đề nào đó. Mỗi khi
                   gặp
@@ -1785,17 +1816,18 @@
               </ul> -->
 
               <p>
-                Ngày nay, bên cạnh sự phát triển của hạ tầng kỹ thuật truyền thống như điện - đường - trường - trạm, một
-                vùng nông thôn được xem là hiện đại khi hạ tầng số ở nơi đó phát triển; có kết nối mạng bao phủ đến từng
-                đường làng, ngõ xóm; nhà nhà kết nối Internet, người người có điện thoại thông minh.
+                Ngày nay, bên cạnh sự phát triển của hạ tầng kỹ thuật truyền thống như điện - đường
+                - trường - trạm, một vùng nông thôn được xem là hiện đại khi hạ tầng số ở nơi đó
+                phát triển; có kết nối mạng bao phủ đến từng đường làng, ngõ xóm; nhà nhà kết nối
+                Internet, người người có điện thoại thông minh.
               </p>
 
-              <p>
+              <p class="indented-p-w">
                 Mở rộng hạ tầng số giúp mở rộng không gian kết nối của dân làng với thế giới, hạ tầng số càng mở rộng,
                 dân làng càng hưởng lợi
               </p>
 
-              <p>
+              <p class="indented-p">
                 Chính quyền đầu tư cơ sở hạ tầng số, nhưng để mở rộng, bao phủ hạ tầng số đến từng gia đình thì phải dựa
                 vào sức mạnh của dân làng. Giống như ngày xưa, dù hạ tầng điện lưới được kéo về làng, nhưng để điện thắp
                 sáng từng nhà, rồi thắp sáng một vùng quê lại phải dựa vào người dân. Khi hạ tầng số được mở rộng, không
@@ -1803,7 +1835,7 @@
                 bởi phạm vi địa lý.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Ở bản Khúa xa xôi của xã Châu Lý, huyện miền núi Quỳ Hợp, tỉnh Nghệ An, kể từ khi mạng Internet phủ
                 sóng trong bản, dân bản bắt đầu tiếp xúc với các tiện ích như: nạp tiền điện, tiền điện thoại thông qua
                 các dịch vụ sử dụng mạng Internet; hay tham gia giao tiếp mọi người qua các mạng xã hội như Zalo,
@@ -1943,11 +1975,11 @@
                 xuất kinh doanh, giao tiếp trực tuyến với chính quyền.
               </p>
 
-              <p>
-                <b>Người dân trong làng tự trang bị cho mình kỹ năng số thông qua nền tảng số</b>
+              <p class="indented-p-w">
+                Người dân trong làng tự trang bị cho mình kỹ năng số thông qua nền tảng số
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để trang bị cho mình kỹ năng số, dân làng có thể tham gia khóa học “Phổ cập kỹ năng số cộng đồng” hoàn
                 toàn miễn phí ngay trên nền tảng đào tạo học trực tuyến mở đại trà OneTouch, do Bộ thông tin và Truyền
                 thông phát triển. Chỉ cần đăng ký một tài khoản và đăng nhập vào nền tảng, người dân ở khắp các làng quê
@@ -1956,41 +1988,45 @@
                 tự nhiên, xuất phát từ nhu cầu của người dân và có thể ứng dụng trong cuộc sống hàng ngày.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Ngoài ra, trên nền tảng OneTouch còn có nhiều khóa học miễn phí hữu ích khác như: làm bạn cùng con trên
                 môi trường số, hướng dẫn thanh toán không dùng tiền mặt, an toàn thông tin cá nhân trên môi trường
                 số,... Người dân có thể trang bị thêm cho mình và gia đình kiến thức, kỹ năng tại liên kết
                 https://onetouch.mic.gov.vn/danh-sach-khoa-hoc.
               </p>
 
-              <p>
-                <b>Người dân trong làng nhận được nhiều lợi ích sau khi học xong khóa học “Phổ cập kỹ năng số cộng
-                  đồng”</b>
+              <p class="indented-p-w">
+                Người dân trong làng nhận được nhiều lợi ích sau khi học xong khóa học
+                “Phổ cập kỹ năng số cộng đồng”
               </p>
 
-              <p>
-                Thứ nhất, dân làng có thể biết cách giải quyết các thủ tục hành chính mà không cần đến cơ quan chức năng
+              <p class="indented-p">
+                <i>Thứ nhất,</i> dân làng có thể biết cách giải quyết các thủ tục hành chính mà không cần đến cơ quan
+                chức năng
                 thông qua cổng dịch vụ công trực tuyến.
               </p>
 
-              <p>
-                Thứ hai, dân làng biết được cách thực hiện thanh toán không dùng tiền mặt để sử dụng khi mua sắm, giao
+              <p class="indented-p">
+                <i>Thứ hai,</i> dân làng biết được cách thực hiện thanh toán không dùng tiền mặt để sử dụng khi mua sắm,
+                giao
                 dịch.
               </p>
 
-              <p>
-                Thứ ba, dân làng biết được cách thức mua bán trên sàn thương mại điện tử để có thể bán hàng qua mạng,
+              <p class="indented-p">
+                <i>Thứ ba,</i> dân làng biết được cách thức mua bán trên sàn thương mại điện tử để có thể bán hàng qua
+                mạng,
                 hay đơn giản là dễ dàng mua sắm những vật dụng mình yêu thích mà không cần đến chợ.
               </p>
 
-              <p>
-                Thứ tư, dân làng cũng có thể sử dụng các nền tảng số Việt Nam, như: Viettel Money, Postmart, VOV
+              <p class="indented-p">
+                <i>Thứ tư,</i> dân làng cũng có thể sử dụng các nền tảng số Việt Nam, như: Viettel Money, Postmart, VOV
                 Bacsi24,… để phục vụ nhu cầu trong cuộc sống. Lợi ích của những dịch nền tảng này giới thiệu trong phần
                 tiếp theo.
               </p>
 
-              <p>
-                Thứ năm, dân làng biết sử dụng các phần mềm bảo đảm an toàn thông tin mạng cơ bản để bảo vệ mình và gia
+              <p class="indented-p">
+                <i>Thứ năm,</i> dân làng biết sử dụng các phần mềm bảo đảm an toàn thông tin mạng cơ bản để bảo vệ mình
+                và gia
                 đình khỏi những mối đe dọa trên mạng như lừa đảo trực tuyến, phần mềm mã độc.
               </p>
 
@@ -2116,12 +2152,13 @@
                 trị sử dụng thay thế các giấy tờ truyền thống.
               </p>
 
-              <p>
-                <b>Mọi người dân đều cài đặt VneID sẽ giúp dân làng thuận tiện hơn khi xử lý các công việc cần yêu cầu
-                  xác minh danh tính</b>
+              <p class="indented-p-w">
+                Mọi người dân đều cài đặt VneID sẽ giúp dân làng thuận tiện hơn khi xử lý các công việc cần yêu cầu
+                xác minh danh tính
               </p>
 
-              <p>Sau khi cài đặt VneID, khi đi ra ngoài, thay vì phải mang theo đủ loại giấy tờ như trước đây, người dân
+              <p class="indented-p">Sau khi cài đặt VneID, khi đi ra ngoài, thay vì phải mang theo đủ loại giấy tờ như
+                trước đây, người dân
                 trong làng chỉ cần mang theo điện thoại thông minh là có thể xuất trình khi có yêu cầu kiểm tra. Ngoài
                 ra VneID còn giúp dân làng nhanh chóng, đơn giản và thuận tiện trong quá trình xử lý công việc liên quan
                 tới thủ tục hành chính, du lịch, lưu trú, giúp tiết kiệm tối đa về thời gian cũng như có thể hạn chế
@@ -2215,29 +2252,29 @@
                 công sức, tiền bạc.
               </p>
 
-              <p>
-                <b>Chữ ký số giúp khắc phục những hạn chế của chữ ký tay, có giá trị sử dụng tương đương chữ ký tay và
-                  được pháp luật thừa nhận</b>
+              <p class="indented-p-w">
+                Chữ ký số giúp khắc phục những hạn chế của chữ ký tay, có giá trị sử dụng tương đương chữ ký tay và
+                được pháp luật thừa nhận
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trước đây, người dân đến cơ quan chức năng đăng ký khai sinh cho con thì viết tờ khai sau đó ký tên. Bây
                 giờ, chỉ cần ngồi ở nhà điền vào mẫu khai thông tin và thực hiện ký số qua hệ thống dịch vụ công là có
                 thể hoàn thành mọi thủ tục khai sinh.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trước đây, để ký một hợp đồng với đối tác ở xa thì phải đến tận nơi hoặc hai bên ký xong rồi gửi bản
                 giấy qua bưu điện, gây ra nhiều bất tiện, tốn thời gian, công sức, chi phí đi lại của các bên. Bây giờ,
                 nếu sử dụng chữ ký số thì chỉ mất chưa đầy 5 phút, hai bên đối tác có thể ký xong một hợp đồng.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Chữ ký số có vai trò tương tự chữ ký tay của cá nhân, hay một con dấu của cơ quan, doanh nghiệp và được
                 pháp luật thừa nhận về mặt pháp lý khi thực hiện giao dịch trên môi trường điện tử.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Khi sử dụng chữ ký số, các hộ kinh doanh, các hợp tác xã, doanh nghiệp địa phương chỉ cần ngồi tại làng
                 mình, mà vẫn có thể ký kết các hợp đồng mua bán từ xa với đối tác, hay giải quyết các thủ tục hành chính
                 dễ dàng qua hệ thống dịch vụ công mà không cần đến trực tiếp cơ quan chức năng.
@@ -2359,12 +2396,13 @@
                 bên ngoài đời thật lên không gian mạng, giống như trường học, bệnh viện, hay siêu thị, để bất cứ ai cũng
                 có thể sử dụng, tại bất cứ nơi nào, bất cứ thời gian nào mà không cần phải đến trực tiếp tận nơi.</p>
 
-              <p>
-                <b>Nền tảng số đang xuất hiện ngày càng nhiều trong cuộc sống của người dân tại các vùng nông thôn, càng
-                  nhiều người sử dụng, lợi ích mang lại càng lớn</b>
+              <p class="indented-p-w">
+                Nền tảng số đang xuất hiện ngày càng nhiều trong cuộc sống của người dân tại các
+                vùng nông thôn, càng
+                nhiều người sử dụng, lợi ích mang lại càng lớn
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hiện nay, đi về các vùng nông thôn, chúng ta dễ dàng bắt gặp nền tảng số Viettel Money, được triển khai
                 ở các khu chợ. Nếu biết sử dụng thì người dân đi chợ có thể thực hiện mua bán mà không cần dùng tiền
                 mặt. Ngoài ra, biết sử dụng nền tảng số còn giúp các vị phụ huynh đồng hành cùng con em trong học tập
@@ -2504,14 +2542,15 @@
                 mạng; ông bà sử dụng công nghệ cho liên lạc, cập nhật thông tin, chăm sóc y tế.
               </p>
 
-              <P>
-                <b>Càng nhiều gia đình ứng dụng công nghệ số vào cuộc sống, càng giúp đẩy nhanh quá trình hình thành các
-                  Làng số</b>
+              <P class="indented-p-w">
+                Càng nhiều gia đình ứng dụng công nghệ số vào cuộc sống, càng giúp đẩy nhanh quá
+                trình hình thành các
+                Làng số
               </P>
 
               <!-- <h3 id="có-một-lộ-trình-chung-để-tham-khảo-hay-không">Có một lộ trình chung để tham khảo hay không?</h3> -->
 
-              <p>
+              <p class="indented-p">
                 Khi các thành viên trong nhà đang dần được trang bị những kỹ năng số cơ bản để phục vụ nhu cầu cuộc sống
                 hàng ngày: từ sử dụng mạng xã hội để kết nối mọi người, đọc báo cập nhật tin tức, gọi điện với các thành
                 viên thông qua ứng dụng như Facebook, Zalo,...; đến những việc nhỏ như thanh toán tiền học cho con,
@@ -2528,7 +2567,8 @@
                 thông tin xấu độc, tiêu cực không tốt cho xã hội.
               </p>
 
-              <img src="../image/img-so/01_Tranh tong hop_color.jpg" alt="">
+              <img src="./images/01.jpg" alt="">
+              <!-- <div class="image-1"></div> -->
 
               <p>
                 Trong mỗi một gia đình, cũng cần có một “thủ lĩnh số” làm hạt nhân. Thủ lĩnh số là người hướng dẫn các
@@ -2653,15 +2693,15 @@
                 ứng xử của một người trong thế giới thực.
               </p>
 
-              <p>
-                <b>
-                  Hình thành văn hóa ứng xử trên môi trường mạng để giữ gìn những nét đẹp văn hóa truyền thống của các
-                  làng quê trong thời đại công nghệ số
-                </b>
+              <p class="indented-p-w">
+
+                Hình thành văn hóa ứng xử trên môi trường mạng để giữ gìn những nét đẹp văn hóa truyền thống của các
+                làng quê trong thời đại công nghệ số
+
               </p>
 
               <!-- <h3 id="chi-cho-chuyển-đổi-số-thế-nào-cho-phù-hợp">Chi cho chuyển đổi số thế nào cho phù hợp?</h3> -->
-              <p>
+              <p class="indented-p">
                 Trước đây trong môi trường thực, một người nói cũng chỉ chục người nghe, bây giờ trong môi trường số,
                 một người nói có trăm, cả ngàn, thậm chí cả triệu người nghe/ thấy, cho nên, kỹ năng ứng xử cũng phải
                 khác, trách nhiệm cũng phải khác. Văn hóa làng quê trải qua bao nhiêu biến đổi của lịch sử dân tộc, vẫn
@@ -2744,6 +2784,7 @@
                 được nhu cầu hàng ngày của dân làng nên sẽ đẩy nhanh quá trình phổ cập kiến thức, kỹ năng số đến dân
                 làng.
               </p>
+              <img src="./images/12_To_Cong_Nghe_So_color.jpg" alt="">
 
               <p>
                 Với sự hoạt động của lực lượng này, thì một người biết công nghệ có thể hỗ trợ 10 người biết, 10 người
@@ -2753,14 +2794,14 @@
                 các dịch vụ, tiện ích số.
               </p>
 
-              <img src="../image/img-so/02_Tranh tong hop_color.jpg" alt="">
 
-              <p>
-                <b>Cảm hứng cho tổ công nghệ số cộng đồng từ câu chuyện phổ cập kỹ năng số tới bà con dân tộc thiểu số
-                  tại thôn Tà Lang</b>
+
+              <p class="indented-p-w">
+                Cảm hứng cho tổ công nghệ số cộng đồng từ câu chuyện phổ cập kỹ năng số tới bà con dân tộc thiểu số
+                tại thôn Tà Lang
               </p>
 
-              <p>
+              <p class="indented-p">
                 Là một người con của dân tộc Cơ Tu – dân tộc thiểu số chiếm khoảng 0,08% dân số cả nước. Anh Đinh Văn
                 Hin là trưởng ban Nhân dân kiêm tổ trưởng tổ hỗ trợ điểm dịch vụ công trực tuyến của thôn Tà Lang, xã
                 Hòa Bắc, huyện Hòa Vang, TP. Đà Nẵng, đang duy trì thường xuyên sứ mệnh “đi từng ngõ, gõ từng nhà, hướng
@@ -2928,8 +2969,8 @@
                 một quảng đường xa hàng chục cây số, vừa tốn kém thời gian vừa tiềm ẩn rủi ro khi tham gia giao thông,
                 lúc đến còn phải phải xếp hàng chờ đợi.
               </p>
+              <img src="./images/13_DichVuCong_color.jpg" alt="">
 
-              <img src="../image/img-so/03_Tranh tong hop_color.jpg" alt="">
 
 
               <p>
@@ -2939,12 +2980,12 @@
                 người dân, đặc biệt là những nơi vùng sâu, vùng xa, đi lại khó khăn.
               </p>
 
-              <p>
-                <b>Dịch vụ công trực tuyến hướng đến sự hài lòng của người dân khi sử dụng dịch vụ do chính quyền cung
-                  cấp</b>
+              <p class="indented-p-w">
+                Dịch vụ công trực tuyến hướng đến sự hài lòng của người dân khi sử dụng dịch vụ do chính quyền cung
+                cấp
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Chia sẻ sau khi làm thủ tục xác nhận tình trạng hôn nhân qua cổng dịch vụ công, chị Phạm Thị Thùy Vy ở
                 phường An Lộc, thị xã Bình Long, tỉnh Bình Phước cho biết: chị vừa hoàn thành xong thủ tục xác nhận tình
                 trạng hôn nhân ở nhà, thay vì phải đến bộ phận một cửa như trước đây, giúp chị tiết kiệm thời gian đi
@@ -2954,7 +2995,7 @@
                 lợi”.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để sử dụng dịch vụ công trực tuyến, người dân có thể truy cập vào địa chỉ https://dichvucong.gov.vn/,
                 hoặc trên cổng dịch vụ công của các tỉnh, thành nơi người dân sinh sống theo địa chỉ
                 https://dichvucong.[tên tỉnh, thành].gov.vn/. Ví dụ, với một người dân đang sinh sống tại tỉnh Hà Giang
@@ -2963,7 +3004,7 @@
                 https://dichvucong.camau.gov.vn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Sau khi truy cập vào cổng dịch vụ công, người dân đăng ký cho mình một tài khoản bằng thuê bao di động
                 hoặc mã bảo hiểm xã hội, và đăng nhập vào để sử dụng dịch vụ mà mình có nhu cầu. Hiện trên tất cả các
                 cổng dịch vụ công đều có hướng chi tiết cách đăng ký và sử dụng để người dân thuận tiện thực hiện.
@@ -3090,12 +3131,13 @@
                 phép, có những ca bệnh ở miền núi, các huyện đảo khởi phát ban đêm không còn cách nào khác ngoài việc
                 người dân phải tự biết cách xử lý tại chỗ.
               </p>
+              <img src="./images/02_Y tế số_color.jpg" />
 
-              <p>
-                <b>Tư vấn, khám chữa bệnh từ xa với nền tảng VOV Bacsi24</b>
+              <p class="indented-p-w">
+                Tư vấn, khám chữa bệnh từ xa với nền tảng VOV Bacsi24
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Do bất cẩn khi làm việc, anh Lại Văn Hạnh ở huyện Lương Sơn, tỉnh Hòa Bình bị một tấm kính lớn
                 rơi vào cổ tay, giây phút tấm kính rơi xuống cổ tay quá nhanh, máu chảy rất nhiều, làm cả nhà anh Hạnh
                 hoang mang, bấn loạn. Nhờ đã cài đặt và biết sử dụng VOV Bacsi24 trên điện thoại, anh Hạnh may mắn được
@@ -3106,16 +3148,16 @@
                 thuật duy nhất để vừa nối lại gân, vừa nối dây thần kinh mạch máu”.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Được phát triển bởi Đài Tiếng nói Việt Nam, nền tảng VOV Bacsi24 hiện có quy mô như một bệnh viện thu
                 nhỏ với hơn 1.000 bác sĩ chuyên khoa II tại các bệnh viện hàng đầu trong cả nước như: Bệnh viện Việt
                 Đức, Bệnh viện Bạch Mai, Bệnh viện Nhiệt đới Trung ương, Bệnh viện Nội tiết Trung ương,… cho phép thực
                 hiện việc tư vấn và chăm sóc sức khỏe 24/24 giờ cho người dân trên mọi miền tổ quốc.
               </p>
 
-              <img src="../image/img-so/04_Tranh tong hop_color.jpg" alt="">
 
-              <p>
+
+              <p class="indented-p">
                 Chỉ cần vài bước đăng nhập cơ bản, nền tảng mở ra một không gian bệnh viện trực tuyến với các khoa và
                 phòng khám, người dùng được tự do lựa chọn vị bác sĩ mình mong muốn để được hỗ trợ kịp thời. Với sự hỗ
                 trợ của VOV Bacsi24, mỗi người dân, mỗi gia đình luôn có một mạng lưới các chuyên gia y tế “túc trực
@@ -3124,7 +3166,7 @@
                 cơ sở y tế.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Nền tảng VOV Bacsi24 là một kênh để giúp bệnh nhân không phải trực tiếp đi khám bệnh tại các bệnh viện
                 và phòng khám. Đặc biệt là người dân ở vùng sâu, vùng xa, biên giới, hải đảo, được kết nối với các
                 chuyên gia, bác sĩ đầu ngành, tạo cơ hội cho mọi người dân tiếp cận với nền y tế hiện đại, qua đó, cũng
@@ -3267,18 +3309,18 @@
                 trường học tập mở và sôi nổi.
               </p>
 
-              <p>
-                <b>Nền tảng học tập trực tuyến “Cốc Cốc học tập”: Người bạn đồng hành của học sinh Việt Nam, đặc biệt là
-                  học sinh tại các làng quê</b>
+              <p class="indented-p-w">
+                Nền tảng học tập trực tuyến “Cốc Cốc học tập”: Người bạn đồng hành của học sinh Việt Nam, đặc biệt là
+                học sinh tại các làng quê
               </p>
 
-              <img src="../image/img-so/05_Tranh tong hop_color.jpg" alt="">
+
 
 
               <!-- <h3 id="y-tế-đã-thay-đổi-như-thế-nào">Nền tảng học tập trực tuyến “Cốc Cốc học tập”: Người bạn đồng hành
                 của học sinh Việt Nam</h3> -->
 
-              <p>
+              <p class="indented-p">
                 Những bữa ăn vội vàng, những ca học thêm nối tiếp, rồi cả những đêm thao thức ôn bài. Mỗi ngày, dường
                 như thời gian dành cho học tập của con còn nhiều hơn thời gian mà cha mẹ và con cái thực sự “chạm” nhau.
                 Vì lẽ đó, nền tảng “Cốc Cốc học tập” đã ra đời với hy vọng trở thành người bạn đáng tin cậy luôn sát
@@ -3287,17 +3329,17 @@
                 nhau.
               </p>
 
-              <!-- <img src="../image/img-so/10_Hoctap_color.jpg" alt=""> -->
+              <img src="./images/10_Hoctap_color.jpg" />
 
               <!-- <h3 id="giáo-dục-đã-thay-đổi-như-thế-nào">Giáo dục đã thay đổi như thế nào?</h3> -->
-              <p>
+              <p class="indented-p">
                 Được phát triển bởi công ty TNHH Cốc Cốc, nền tảng “Cốc Cốc học tập” có địa chỉ truy cập tại:
                 https://hoctap.coccoc.com, là một nền tảng giáo dục điện tử thu hút hơn 90 ngàn lượt truy cập mỗi ngày,
                 cung cấp các công cụ, tính năng và tài liệu hỗ trợ học tập, kênh tổng hợp thông tin tuyển sinh, ôn thi
                 trực tuyến miễn phí, dành cho học sinh phổ thông Việt Nam từ lớp 1 đến lớp 12.
               </p>
 
-              <p>
+              <p class="indented-p">
                 “Cốc cốc học tập” cung cấp một nền tảng mở, đa phương tiện giúp các học sinh và phụ huynh tìm kiếm thông
                 tin học tập theo lớp, môn học và bài học một cách chính xác, thuận tiện, bao gồm 8 nhóm công cụ chính:
                 Toán học; Hóa học; dịch thuật lên tới 80 ngôn ngữ trên thế giới; kiểm tra chính tả tiếng Việt cho các
@@ -3440,10 +3482,13 @@
               </p>
 
 
-              <h3 id="điện-thoại-thông-minh-đã-trở-thành-gián-điệp-như-thế-nào">“Việc làm nhà máy” nền tảng giúp lao
-                động địa phương tìm việc làm nhanh chóng, uy tín</h3>
+              <!-- <h3 id="điện-thoại-thông-minh-đã-trở-thành-gián-điệp-như-thế-nào">“Việc làm nhà máy”
+                nền tảng giúp lao
+                động địa phương tìm việc làm nhanh chóng, uy tín</h3> -->
+              <p class="indented-p-w">“Việc làm nhà máy” nền tảng giúp lao động địa phương tìm việc làm nhanh chóng, uy
+                tín</p>
 
-              <p>
+              <p class="indented-p">
                 Hoạt động từ năm 2015, nền tảng “Việc làm nhà máy” được phát triển và vận hành bởi Công ty Santa Việt
                 Nam có địa chỉ tại https://vieclamnhamay.vn và ứng dụng “vieclamnhamay.vn” trên các kho ứng dụng, để mọi
                 người cài đặt và sử dụng trên điện thoại thông minh. Nền tảng được thiết kế đơn giản và dễ sử dụng, giúp
@@ -3454,7 +3499,7 @@
                 tuyển dụng.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Thông qua nền tảng này, người lao động vùng nông thôn có thể nhanh chóng tìm được một công việc trong
                 nhà máy, khu công nghiệp mà không cần phải “khăn gói” bắt xe khách vào các thành phố lớn, cũng không
                 phải tốn nhiều thời gian đi “rải hồ sơ” khắp nơi, người lao động nhanh chóng được kết nối, tìm kiếm việc
@@ -3556,7 +3601,7 @@
                 nối mạng.
               </p>
 
-              <p>
+              <p class="indented-p">
                 “Sinh sống ở vùng sâu, vùng xa của tỉnh Đồng Nai, nhưng chị Lê Huỳnh Nga trú tại xã Phú Tân, huyện
                 Định Quán, cách Thành phố Hồ Chí Minh khoảng 130 km, lại rất “siêng” mua sắm hàng hóa trực tuyến từ
                 các sàn thương mại điện tử như: Sendo, Tiki,… cho đến mạng xã hội như: Facebook, Zalo,... Thông qua
@@ -3574,17 +3619,18 @@
                 giá cả phù hợp với túi tiền.
               </p>
 
-              <p>
-                <b>Sàn thương mại điện tử Sendo: Chợ người Việt, giá bình dân</b>
+              <p class="indented-p-w">
+                Sàn thương mại điện tử Sendo: Chợ người Việt, giá bình dân
               </p>
 
-              <p>Bên cạnh các sàn giao dịch điện tử đã quá phổ biến như: Shopee, Tiki hay Lazada,… chúng ta tự hào khi
+              <p class="indented-p">Bên cạnh các sàn giao dịch điện tử đã quá phổ biến như: Shopee, Tiki hay Lazada,…
+                chúng ta tự hào khi
                 phát triển được một ứng dụng tương tự bởi đội ngũ kỹ sư người Việt, đó là Sendo, nền tảng mua sắm trực
                 tuyến do công ty Cổ phần Dịch vụ trực tuyến FPT sáng tạo. Vì là sản phẩm của người Việt, nên Sendo nắm
                 bắt nhu cầu, thị trường tiêu dùng của Việt Nam cũng chính xác hơn, mang lại một không gian chợ trực
                 tuyến phù hợp với thói quen của người Việt.</p>
 
-              <p>
+              <p class="indented-p">
                 Sendo có mặt trên cả giao diện website tại địa chỉ: Sendo.vn và ứng dụng “Sendo: Chợ Của Người Việt”
                 trên điện thoại, dễ dàng được tìm kiếm trên bất kỳ thiết bị nào có kết nối Internet. Việc mua sắm qua
                 Sendo giúp người dùng tiết kiệm thời gian mua sắm, người mua chỉ cần ngồi tại nhà, nhập từ khóa tìm kiếm
@@ -3592,7 +3638,7 @@
                 nghiên cứu thật kỹ tất cả các yếu tố của sản phẩm trước khi chọn mua.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Tất cả những món hàng được chọn mua, sẽ được nhân viên nhà sản xuất vận chuyển đến tận tay, vì thế,
                 không phải mất thời gian và công sức để chở những món hàng mà mình đã mua về nhà, nhất là những món hàng
                 cồng kềnh, dễ vỡ như điều hòa, tivi, tủ lạnh, máy giặt.
@@ -3682,18 +3728,19 @@
                 thanh toán số ở mỗi người dân trong làng mà không phụ thuộc vào ngân hàng.
               </p>
 
-              <p>
-                <b>Viettel Money: Câu chuyện thanh toán không tiền mặt qua điện thoại di động</b>
+              <p class="indented-p-w">
+                Viettel Money: Câu chuyện thanh toán không tiền mặt qua điện thoại di động
               </p>
 
-              <p>
+              <p class="indented-p">
                 Viettel Money được phát triển bởi Tổng Công ty dịch vụ số Viettel, có địa chỉ truy cập để cài đặt và
                 sử dụng tại địa chỉ: https://viettelmoney.vn, hoặc trên kho ứng dụng với tên gọi “Viettel Money”. Nền
                 tảng này được tích hợp các tính năng phục vụ cho mọi tiện ích, dịch vụ trong cuộc sống như thanh toán
                 học phí, mua vé tàu, xe, chuyển tiền đến số điện thoại khác, trả tiền điện nước,...
               </p>
+              <img src="./images/03_Thanh toán số_color.jpg" alt="">
 
-              <p>
+              <p class="indented-p-5">
                 “Là hộ nông dân nuôi gà ở huyện Ninh Hải, tỉnh Ninh Thuận, chị Giang cho biết mình chưa có bất cứ tài
                 khoản ngân hàng nào, việc nhận tiền khi mua bán gà thường qua nhiều lớp trung gian nhận tiền mặt và
                 đem về, nên nhiều lúc cũng bất tiện. Với một chiếc điện thoại chỉ dùng để nghe gọi, chị bắt đầu chú ý
@@ -3702,7 +3749,9 @@
                 di động. Khi cần, chị rút tiền ở đại lý ngay gần nhà, rất tiện lợi và dễ quản lý tiền nong.”
               </p>
 
-              <p>
+
+
+              <p class="indented-p">
                 Với Viettel Money, người dân trong làng dễ dàng thực hiện việc thanh toán các hóa đơn điện, nước,
                 Internet, mua vé tàu, xe và nhiều tiện ích khác nữa. Việc chuyển, nhận tiền được thực hiện miễn phí
                 giữa các tài khoản và không lo tới phí duy trì, đồng thời thỏa sức thanh toán trên mọi nền tảng bằng
@@ -3791,17 +3840,18 @@
                 vé... tùy vào nhu cầu để chọn được chuyến đi phù hợp nhất.
               </p>
 
-              <h3>Vexere: Nền tảng kết nối giữa hành khách và nhà xe, vì hàng chục triệu người Việt Nam không phải xếp
-                hàng mua vé.</h3>
+              <p class="indented-p-w">Vexere: Nền tảng kết nối giữa hành khách và nhà xe, vì hàng chục triệu người Việt
+                Nam không phải xếp
+                hàng mua vé.</p>
 
-              <p>
+              <p class="indented-p">
                 Trong một lần đọc báo về tình hình khan vé xe mùa tết, ý tưởng khởi nghiệp trong anh Trần Nguyễn Lê
                 Văn trỗi dậy, anh quyết định bỏ ngang chương trình học quản trị kinh doanh ở Mỹ và về nước tập hợp bạn
                 bè, cùng sáng lập ra Vexere. Nền tảng này đã tạo ra một cuộc cách mạng trong vận tải hành khách, giúp
                 kết nối hành khách với nhà xe, vì hàng chục triệu người Việt Nam không phải xếp hàng mua vé.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Gia đình anh Trung là công nhân từ Hà Giang xuống thành phố Hà Nội lập nghiệp. Nếu có ý định về quê,
                 vợ chồng anh đều lên kế hoạch từ sớm, hai vợ chồng còn có con nhỏ nên nhu cầu tìm được chỗ ngồi hợp lý
                 sẽ giúp các con có chuyến đi vui khỏe. Anh chia sẻ, lần đầu đặt trên Vexere, anh choáng ngợp trước hệ
@@ -3810,14 +3860,14 @@
                 được giải quyết, giúp yên tâm trên những chuyến đi dài”.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hiện tại, Vexere là nền tảng vé xe lớn nhất Việt Nam, với hơn 700 hãng xe hợp tác bán vé với Vexere,
                 phủ rộng hơn 2.600 tuyến đường trong và ngoài nước, giúp người dùng có thể tìm thông tin chuyến xe,
                 hãng xe, và mua vé trực tuyến dễ dàng. Mọi người dân có nhu cầu đi lại, có thể truy cập và đặt vé dễ
                 dàng trên website: https://vexere.com/ hoặc ứng dụng “Vexere” trên điện thoại..
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với kho vé xe khách chất lượng, đa dạng dòng xe và giờ xuất bến linh hoạt, người dùng có thể lựa chọn
                 hãng xe, dòng xe phù hợp nhất với nhu cầu di chuyển. Chỉ với vài thao tác, hành khách có thể đặt được
                 ngay vé xe khách chất lượng mọi lúc mọi nơi, thanh toán online nhanh chóng, tiện lợi ngay trên điện
@@ -3912,10 +3962,11 @@
                 của mình hàng ngày.
               </p>
 
-              <h3>Nền tảng Zalo: Thay đổi cách giao tiếp xã hội, tăng sự gắn kết, đưa mọi người xích lại gần nhau hơn
-              </h3>
+              <p class="indented-p-w">Nền tảng Zalo: Thay đổi cách giao tiếp xã hội, tăng sự gắn kết, đưa mọi người xích
+                lại gần nhau hơn
+              </p>
 
-              <p>
+              <p class="indented-p">
                 Zalo là một ứng dụng nhắn tin nhanh đa nền tảng được phát triển bởi Công ty cổ phần VNG, một công ty
                 công nghệ hàng đầu Việt Nam, với hệ sinh thái kỹ thuật số phong phú do chính kỹ sư người Việt phát
                 triển. Với lợi thế là nền tảng công nghệ do người Việt sáng tạo dựa trên thói quen sinh hoạt của người
@@ -3924,7 +3975,7 @@
                 hơn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Nền tảng Zalo cho phép người dùng nhắn tin miễn phí, có thể đính kèm biểu tượng cảm xúc, hình ảnh và
                 video. Ghi âm và gửi tin nhắn thoại, thực hiện các cuộc gọi thoại và gọi video miễn phí giúp tiết kiệm
                 chi phí liên lạc cho người dân. Nền tảng Zalo cho phép người dùng cài đặt, sử dụng ở bất cứ hệ điều
@@ -3932,7 +3983,7 @@
                 Appstore (dành cho hệ điều hành IOS).
               </p>
 
-              <p>
+              <p class="indented-p">
                 Một cái “chạm” miễn phí qua màn hình, khoảng cách địa lý cũng như được thu hẹp lại. Sợi dây gắn kết và
                 tương tác giữa mọi người cũng không bị mất đi. Nền tảng Zalo hay bất kỳ ứng dụng nghe gọi trực tuyến
                 nào khác đang thay đổi cách thức giao tiếp và kết nối của con người theo hướng tích cực, thuận tiện
@@ -4014,16 +4065,17 @@
                 nào và bất cứ nơi đâu.
               </p>
 
-              <h3>Nền tảng VTVGo: Tăng cường nhu cầu trải nghiệm trực tuyến của người dân mọi lúc, mọi nơi</h3>
+              <p class="indented-p-w">Nền tảng VTVGo: Tăng cường nhu cầu trải nghiệm trực tuyến của người dân mọi lúc,
+                mọi nơi</p>
 
-              <p>
+              <p class="indented-p">
                 Nền tảng truyền hình số quốc gia VTVGo là giải pháp giải quyết nhu cầu giải trí, tiếp cận thông tin
                 chính thống một cách nhanh chóng, thuận lợi và cải thiện đời sống văn hóa của người dân. Với điện
                 thoại thông minh có kết nối Internet, người dân có thể tìm kiếm người bạn này thông qua app CH Play
                 (đối với hệ điều hành Android) hoặc Appstore (đối với hệ điều hành IOS).
               </p>
-
-              <p>
+              
+              <p class="indented-p">
                 Ngay từ khi mở ứng dụng, người dùng sẽ được lựa chọn nội dung thuộc các lĩnh vực mình quan tâm, từ đó,
                 VTVGo sẽ đề xuất chương trình phù hợp với sở thích của mỗi người. Không chỉ xem các nội dung của VTV,
                 người dùng VTVGo có thể xem các nội dung của 7 kênh truyền hình thiết yếu quốc gia, các kênh của đài
@@ -4032,9 +4084,9 @@
                 kiều bào Việt Nam ở nước ngoài.
               </p>
 
-              <img src="../image/img-so/06_VTVGo_color.jpg" alt="">
+              <img src="./images/09_VTVGo_color.jpg" alt="">
 
-              <p>
+              <p class="indented-p">
                 Được tận hưởng nhu cầu giải trí ở bất cứ đâu, được đón xem các nội dung đã được kiểm duyệt, thẩm định
                 kỹ càng, đảm bảo sự phù hợp với lứa tuổi,… là quyền lợi được phát triển con người về mặt tâm hồn mà
                 chuyển đổi số mang lại. Giữa bộn bề những lo toan, phiền muộn, một chút thời gian nghỉ ngơi ít ỏi giờ
@@ -4109,10 +4161,11 @@
                 ro.
               </p>
 
-              <h3>Câu chuyện về tiếp cận vay vốn cho chị em phụ nữ thông qua ứng dụng của Tổ chức Tài chính Vi mô TNHH
-                Một thành viên Tình thương (TYM).</h3>
+              <p class="indented-p-w">Câu chuyện về tiếp cận vay vốn cho chị em phụ nữ thông qua ứng dụng của Tổ chức
+                Tài chính Vi mô TNHH
+                Một thành viên Tình thương (TYM).</p>
 
-              <p>
+              <p class="indented-p">
                 TYM (https://tymfund.org.vn/) là đơn vị trực thuộc Hội Liên hiệp Phụ nữ Việt Nam. TYM bắt đầu triển khai
                 hoạt động từ năm 1992 với tên gọi là Quỹ Tình thương, nhằm hỗ trợ phụ nữ phát triển kinh tế, góp phần
                 thực hiện chương trình xóa đói giảm nghèo của Chính phủ. Vốn vay không cần tài sản thế chấp lên đến 100
@@ -4120,7 +4173,7 @@
               </p>
 
 
-              <p>
+              <p class="indented-p">
                 Năm 2022, TYM phát triển và ra mắt ứng dụng TYM Mobile trên thiết bị di động cho khách hàng và cán bộ.
                 Ứng dụng giúp người dùng có thể quản lý các thông tin tài chính như vốn vay, tiết kiệm, thực hiện gửi và
                 xử lý các các đề nghị vay vốn, trả vốn, mở sổ tiết kiệm một cách dễ dàng, thuận tiện. Tính đến thời điểm
@@ -4129,7 +4182,7 @@
               </p>
 
 
-              <p>
+              <p class="indented-p-5">
                 “Chị Phan Thị Hoài Mai quê ở Nam Định, bị liệt ở chân nên đi lại khó khăn, chị cần phải sử dụng nạng,
                 hoặc xe 3 bánh để hỗ trợ bản thân trong việc di chuyển. Là một phụ nữ khuyết tật, cơ hội tìm kiếm công
                 việc với chị Mai cũng khó khăn hơn gấp bội so với những người bình thường. Thế nhưng không đầu hàng hoàn
@@ -4138,9 +4191,9 @@
                 Mai nhiều lúc gặp khó khăn trong vấn đề tài chính để duy trì và mở rộng hoạt động kinh doanh.
               </p>
 
-              <img src="../image/img-so/08_Tài chính vi mô_color.jpg" alt="">
+              <img src="./images/08_Tài chính vi mô_color.jpg" alt="">
 
-              <p>
+              <p class="indented-p-5">
                 Năm 2018, nhờ giới thiệu của Hội phụ nữ địa phương, chị Mai biết đến TYM khi đang cần vốn bổ sung thêm
                 vào cửa hàng của mình. Ban đầu chị cũng phân vân vì ngại đi lại, chị sợ mình vay ít tiền thôi nhưng thủ
                 tục lằng nhằng, phức tạp. Thế nhưng, trái với những suy nghĩ ban đầu của chị, thủ tục vay vốn không chỉ
@@ -4152,7 +4205,7 @@
                 đăng ký rút và kiểm soát được số dư nợ và dư tiết kiệm của mình”.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Việc sử dụng ứng dụng TYM Mobile không chỉ giúp khách hàng của TYM tiết kiệm được thời gian, công sức
                 hơn khi không phải tới cụm quản lý tài chính cá nhân mà còn giúp cho các chị em phụ nữ, đặc biệt là phụ
                 nữ ở khu vực nông thôn, vùng sâu, vùng xa,… quen dần với việc sử dụng công nghệ, giúp cho cuộc sống của
@@ -4230,9 +4283,10 @@
                 nhân, lừa đảo, làm phiền bởi các cuộc gọi rác, tin nhắn rác.
               </p>
 
-              <h3>Bkav Mobile Security (BMS): Giải pháp bảo vệ thiết bị di động khi sử dụng Internet</h3>
+              <p class="indented-p-w">Bkav Mobile Security (BMS): Giải pháp bảo vệ thiết bị di động khi sử dụng Internet
+              </p>
 
-              <p>
+              <p class="indented-p">
                 Hiện nay, tin nhắn có nội dung quảng cáo rác, cuộc gọi có nội dung lừa đảo đã trở thành vấn nạn gây nhức
                 nhối và ám ảnh đối với người dùng điện thoại di động. Chỉ cần một chiếc điện thoại đầy đủ chức năng nghe
                 - gọi và không bị chặn cuộc gọi đến, bất kỳ ai cũng có thể trở thành nạn nhân của những cuộc gọi lừa
@@ -4240,7 +4294,7 @@
                 nạn nhân và sập bẫy lừa đảo chỉ sau một cuộc điện thoại.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Sản phẩm BKAV Mobile Security (BMS) được phát triển bởi tập đoàn BKAV giúp bảo vệ thiết bị của người dân
                 khi sử dụng Internet, với các tính năng hoàn toàn miễn phí, được tin tưởng bởi hơn 2 triệu người. Nếu
                 người dân muốn an toàn hơn khi sử dụng internet có thể truy cập tải xuống phần mềm tại địa chỉ:
@@ -4320,9 +4374,9 @@
                 cùng sự hỗ trợ của các giải pháp công nghệ.
               </p>
 
-              <h3>SafeGate: Giải pháp làm cho Internet an toàn hơn từ trường học tới gia đình</h3>
+              <p class="indented-p-w0">SafeGate: Giải pháp làm cho Internet an toàn hơn từ trường học tới gia đình</p>
 
-              <p>
+              <p class="indented-p">
                 SafeGate (https://safegate.vn) được phát triển bởi Công ty An ninh mạng thông minh SCS, đây là giải pháp
                 quản lý, bảo vệ an toàn Internet theo mô hình “An toàn thông tin như một dịch vụ” - giải được bài toán
                 cần giải pháp công nghệ quản lý, bảo vệ cho mọi kết nối Internet nhưng phải đơn giản, dễ dùng, thuận
@@ -4333,7 +4387,7 @@
                 bộ, giáo viên đang sử dụng mạng Internet.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với SafeGate, ở bất kỳ nơi đâu, thầy, cô và phụ huynh cũng quản lý, giám sát được các hoạt động nhờ báo
                 cáo, cảnh báo an ninh, tình hình sử dụng Internet thông qua ứng dụng được cài đặt trên điện thoại di
                 động. SafeGate bảo vệ các thiết bị được kết nối mạng khỏi những địa chỉ lừa đảo, mã độc, cảnh báo các
@@ -4341,7 +4395,7 @@
                 hạn các ứng dụng được phép hoặc không được phép sử dụng mà không cần cài đặt vào thiết bị cần quản lý.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Việc triển khai SafeGate giúp các bậc phụ huynh có thể song hành cùng con em mình trong việc tiếp cận
                 thông tin trên môi trường mạng, đảm bảo trẻ con không phải tiếp cận với những thông tin xấu độc, ảnh
                 hưởng không tốt đến tâm hồn trẻ nhỏ. Đồng thời giúp tăng cường việc đảm bảo an toàn thông tin trước các
@@ -4461,10 +4515,11 @@
                 động thường xuyên của người dân.
               </p>
 
-              <h3>Hướng dẫn dịch vụ công trực tuyến tại nhà văn hóa thôn, góp phần bình dân hóa việc giải quyết các thủ
+              <p class="indented-p-w">Hướng dẫn dịch vụ công trực tuyến tại nhà văn hóa thôn, góp phần bình dân hóa việc
+                giải quyết các thủ
                 tục hành chính qua mạng</h3>
 
-              <p>
+              <p class="indented-p">
                 Được lắp đặt hệ thống máy tính, có kết nối Internet nhà văn hóa thôn Văn Hà, xã Đức Phong, huyện Mộ Đức,
                 tỉnh Quảng Ngãi, không chỉ là điểm sinh hoạt, hội họp trong thôn mà còn là điểm hướng dẫn làm dịch vụ
                 công trực tuyến. Các đoàn viên thanh niên, những người am hiểu công nghệ thông tin trong thôn có mặt
@@ -4566,9 +4621,9 @@
                 thấy các không gian sách, thư viện sách, các con đường sách như ở thành phố.
               </p>
 
-              <h3>Xây dựng thư viện sách số của làng trên nền tảng số</h3>
+              <p class="indented-p-w">Xây dựng thư viện sách số của làng trên nền tảng số</p>
 
-              <p>
+              <p class="indented-p">
                 Sự phát triển của công nghệ, cho ra đời các nền tảng, ứng dụng đọc sách số, mang lại trải nghiệm mới cho
                 những người yêu đọc sách, trong đó có Reavol. Reavol là một ứng dụng chuyên về đọc và nghe sách tóm tắt
                 của Công ty cổ phần Reavol. Ứng dụng bao gồm cả chế độ đọc và nghe sách, cung cấp một thư viện sách
@@ -4670,7 +4725,7 @@
                 nhiều đã có sự xáo trộn, không còn êm ả, yên bình như trước.
               </p>
 
-              <p>
+              <p class="indented-p">
                 “Quay lại vụ việc xảy ra tại Bắc Ninh vào năm 2020, khi một bé trai bị bắt cóc. Chỉ trong vòng 28 giờ
                 tìm kiếm, với sự hỗ trợ của 300 camera truy vết theo kẻ bắt cóc, công an tỉnh Bắc Ninh đã tìm ra manh
                 mối và bắt được kẻ gian. Đây chỉ là một trong rất nhiều câu chuyện, trong đó, các “mắt thần” camera đã
@@ -4693,10 +4748,11 @@
                 tham gia của người dân sẽ biến việc khó thành việc dễ.
               </p>
 
-              <h3>Mỗi làng quê đều có thể tự triển khai hệ thống camera giám sát an ninh từ sự đóng góp của người dân
-                trong làng thay vì trông chờ ngân sách nhà nước</h3>
+              <p class="indented-p-w">Mỗi làng quê đều có thể tự triển khai hệ thống camera giám sát an ninh từ sự đóng
+                góp của người dân
+                trong làng thay vì trông chờ ngân sách nhà nước</p>
 
-              <p>
+              <p class="indented-p">
                 Trước khi lắp đặt hệ thống camera an ninh, xã Mỹ Lộc, huyện Cần Giuộc, tỉnh Long An đã triển khai thực
                 hiện nhiều mô hình như “Tiếng kẻng báo động an ninh, trật tự”, kết hợp điện thoại nóng báo tin, cổng rào
                 nhân dân phòng, chống tội phạm; câu lạc bộ nhà trọ an toàn về an ninh trật tự,... Tuy nhiên, hoạt động
@@ -4704,7 +4760,7 @@
                 tài sản và tai nạn giao thông.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trước tình hình đó, người dân tại địa phương, con em đi làm ăn xa và các tổ chức đã ủng hộ hơn 300 triệu
                 đổng để chính quyền xã xây dựng mô hình camera an ninh. Từ cuối năm 2015, xã đã lắp đặt camera tại 21
                 điểm với 51 camera khép kín toàn tuyến trên địa bàn xã và khu vực giáp ranh, tập trung trên các tuyến:
@@ -4716,7 +4772,7 @@
                 xã xử lý và thông báo cho các chốt chặn phòng, chống tội phạm phối hợp truy bắt tội phạm.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Qua 1 tháng triển khai, mô hình camera an ninh của xã Mỹ Lộc đã ghi hình, giúp lực lượng công an huyện
                 Cần Giuộc truy xét và tổ chức chốt chặn truy bắt gần 20 vụ đột nhập nhà dân trộm cắp tài sản rồi tẩu
                 thoát, hoặc phát hiện xử lý đối tượng đua xe trái phép, tụ tập đêm khuya, đồng thời góp phần nâng cao ý
@@ -4810,10 +4866,11 @@
                 nhiều địa phương đã lắp đặt hệ thống điện năng lượng mặt trời từ sự hô hào, đóng góp của người dân.
               </p>
 
-              <h3>Dân làng đóng góp sức người, sức của, thắp sáng làng quê miền núi bằng hệ thống đèn năng lượng mặt
-                trời</h3>
+              <p class="indented-p-w">Dân làng đóng góp sức người, sức của, thắp sáng làng quê miền núi bằng hệ thống
+                đèn năng lượng mặt
+                trời</p>
 
-              <p>
+              <p class="indented-p">
                 Xã Sơn Phú, huyện Hương Sơn, tỉnh Hà Tĩnh là một địa phương miền núi có 8 thôn, 1.190 hộ, với khoảng
                 3.400 nhân khẩu. Người dân ở đây chủ yếu làm nông nghiệp. Trước đây, tuyến đường liên thôn của Sơn Phú
                 được lắp đặt một số đèn điện nhưng hay hỏng, không an toàn và phải mất tiền tiêu thụ hàng tháng. Trước
@@ -4912,17 +4969,18 @@
                 người dân.
               </p>
 
-              <h3>Chợ số mang lại nhiều lợi ích cho người bán lẫn người mua, hình thành nên thói quen thanh toán không
-                tiền mặt</h3>
+              <p class="indented-p-w">Chợ số mang lại nhiều lợi ích cho người bán lẫn người mua, hình thành nên thói
+                quen thanh toán không
+                tiền mặt</p>
 
-              <p>
+              <p class="indented-p">
                 Trước đây, người dân đi chợ thường mang theo tiền mặt, việc thanh toán dùng tiền mặt nhiều khi bất tiện,
                 khi mà người mua dùng tiền mệnh giá to mà người bán không đủ tiền trả lại, phải chạy đi đổi, ngoài ra
                 việc mua bán tại các quầy hàng thịt cá xong đổi trả bằng tiền mặt còn mất vệ sinh, chưa kể đến vấn đề
                 nguy cơ bị mất trộm, mất cắp, rơi dọc đường.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Đối với người bán hàng, điều lo lắng nhất đó là trả nhầm tiền cho khách hàng. Nếu trả thừa tiền cho
                 khách thì coi như ngày hôm đó cửa hàng phải chịu lỗ, mà trả thiếu tiền cho khách thì mất đi sự tin tưởng
                 từ họ. Khi áp dụng thanh toán không tiền mặt người bán sẽ không phải lo chuẩn bị tiền lẻ, tiền mua hàng
@@ -4932,11 +4990,12 @@
                 rất tiện lợi cho người bán và người mua.
               </p>
 
-              <img src="../image/img-so/08_Thanh toán số_color.jpg" alt="">
 
-              <h3>Chợ số Minh cầu: các tiểu thương từ bỡ ngỡ, ái ngại ban đầu đến sử dụng thường xuyên vì tiện lợi </h3>
 
-              <p>
+              <p class="indented-p-w">Chợ số Minh cầu: các tiểu thương từ bỡ ngỡ, ái ngại ban đầu đến sử dụng thường
+                xuyên vì tiện lợi </p>
+
+              <p class="indented-p">
                 Đi sâu vào bên trong chợ Minh Cầu, phường Phan Đình Phùng, thành phố Thái Nguyên, quan sát từ sạp bán
                 rau cho đến khu bán thịt cá, thực phẩm tươi sống, các quầy bán hàng khô, tạp hóa, đâu đâu cũng đều có
                 bảng mã QR được in, ép vuông vắn đặt ngay tại quầy. Không chỉ có 1 mã, nhiều sạp hàng có 2 đến 3 mã QR
@@ -4944,7 +5003,7 @@
                 thực hiện chuyển khoản.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Chủ quầy hàng bán hải sản tươi sống, bà Đào Thị Huyền, cho biết tiểu thương tại chợ Minh Cầu bắt đầu
                 làm quen với hình thức thanh toán không tiền mặt từ đầu năm 2022. Bà Huyền nói: Ban đầu, chúng tôi khá
                 bỡ ngỡ, rất ngại thao tác trên điện thoại di động, nhưng sau khi sử dụng thành thạo thì thấy vô cùng
@@ -4952,7 +5011,8 @@
                 doanh hàng ngày. Với đặc thù của bán hàng hải sản, nhiều lúc bàn tay vừa chặt cá, bóc tôm xong lại thu
                 đếm tiền, trả lại khách hàng vừa mất vệ sinh, vừa tốn thời gian. Từ ngày có mã QR đặt tại quầy, khách
                 mua bán xong đều chuyển khoản thanh toán, điện thoại mình cứ “ting ting” là biết tiền về. Không riêng
-                khách đi chợ, việc nhập hàng ra vào hàng ngày đều thực hiện thanh toán không tiền mặt, chuyển khoản hết
+                khách đi chợ, việc nhập hàng ra vào hàng ngày đều thực hiện thanh toán không tiền mặt, chuyển khoản
+                hết
                 nên không còn lo lắng khư khư ôm giữ tiền mặt như trước đây nữa, rất an toàn và tiện lợi”.
               </p>
 
@@ -4964,7 +5024,8 @@
               </p>
 
               <p>
-                Việc tạo mã QR rất dễ thực hiện, ngoài các ứng dụng của ngân hàng, thì người dân có thêm các lựa chọn từ
+                Việc tạo mã QR rất dễ thực hiện, ngoài các ứng dụng của ngân hàng, thì người dân có thêm các lựa chọn
+                từ
                 các nền tảng ứng dụng của các đơn vị viễn thông như: Viettel Money, VNPT Money, hay ví điện tử MoMo,
                 VNPay,… giúp người dân dễ dàng thực hiện các giao dịch có giá trị nhỏ lẻ đến từng đồng.
               </p>
@@ -5034,10 +5095,11 @@
                 đến người dân thuận tiện, nhanh chóng.
               </p>
 
-              <h3>Đa dạng nội dung thông tin truyền tải, nâng cao hiệu quả hệ thống truyền thanh cơ sở nhờ ứng dụng công
-                nghệ thông tin </h3>
+              <p class="indented-p-w">Đa dạng nội dung thông tin truyền tải, nâng cao hiệu quả hệ thống truyền thanh cơ
+                sở nhờ ứng dụng công
+                nghệ thông tin </p>
 
-              <p>
+              <p class="indented-p">
                 Hệ thống loa phường đến nay đã có nhiều cải tiến chất lượng hơn, thông minh hơn, với sự hỗ trợ của công
                 nghệ, phát thanh viên không cần phòng máy mà vẫn phát nội dung từ bất kỳ nơi đâu có kết nối Internet.
                 Phát thanh viên không cần đọc nội dung, thay vào đó, nội dung sẽ do máy tích hợp công nghệ trí tuệ nhân
@@ -5045,7 +5107,7 @@
                 đọc được lưu lại, cho phép phát thanh viên phát lại nhiều lần.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Đức Lĩnh là một xã miền núi nằm ở phía bắc huyện Vũ Quang, tỉnh Hà Tĩnh có đặc thù địa hình rộng lớn,
                 nhiều đồi núi lại thường xuyên phải chịu ảnh hưởng của thiên tai, lũ lụt. Do vậy, nhiều hệ thống cơ sở
                 hạ tầng bị tác động, hư hỏng, xuống cấp, trong đó có hệ thống đài truyền thanh không dây FM tại các xã,
@@ -5056,7 +5118,7 @@
                 trong đó có lĩnh vực truyền thanh ở cơ sở.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 Với sự hỗ trợ của công nghệ, thời gian chuẩn bị nội dung phát sóng đã được rút ngắn hơn rất nhiều, phát
                 thanh xã có thể tùy biến nội dung phát thanh theo từng thôn. Ví dụ ở xã Đức Lĩnh, thôn Mỹ Ngọc phát nội
                 dung về tình hình dịch bệnh; thôn Cừa Lĩnh lựa chọn phát thanh nội dung tuyên truyền về nông thôn mới,
@@ -5222,12 +5284,13 @@
                 tiết kiệm công sức và tránh được các nguy cơ ảnh hưởng đến sức khỏe.
               </p>
 
-              <img src="../image/img-so/09_maybaykonglai_color.jpg" alt="">
+              <img src="./images/04_maybaykonglai_color.jpg" alt="">
 
-              <h3>Ứng dụng công nghệ vào canh tác giúp nông dân tiết kiệm chi phí sản xuất, nâng cao chất lượng sản phẩm
-                so với phương thức sản xuất truyền thống</h3>
+              <p class="indented-p-w">Ứng dụng công nghệ vào canh tác giúp nông dân tiết kiệm chi phí sản xuất, nâng cao
+                chất lượng sản phẩm
+                so với phương thức sản xuất truyền thống</p>
 
-              <p>
+              <p class="indented-p">
                 Khởi đầu từ mô hình Canh tác lúa lý tưởng của nông dân, được sự hỗ trợ thực hiện bởi Công ty Rynan Smart
                 Fertilizers trong việc đưa công nghệ vào hoạt động sản xuất lúa. Đến nay hợp tác xã (HTX) Dịch vụ Nông
                 nghiệp Mỹ Ðông 2, xã Mỹ Ðông, huyện Tháp Mười, tỉnh Ðồng Tháp do ông Ngô Phước Dũng làm Giám đốc đã trở
@@ -5237,7 +5300,7 @@
                 dùng.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với việc đưa công nghệ vào sản xuất, trên khắp cánh đồng thông minh rộng 170 ha của HTX và trên một số
                 tuyến kênh, trạm bơm, hệ thống máng nước bê tông được lắp đặt rất nhiều cảm biến, các cảm biến này đóng
                 vai trò như “người dự báo”. Khi mực nước trong ruộng quá đầy hoặc quá khô thì cảm biến trên ruộng sẽ gửi
@@ -5246,14 +5309,14 @@
                 gọn và chính xác.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Nhờ ứng dụng công nghệ số vào sản xuất, nên mọi thông tin về đồng ruộng hầu như được cập nhật liên tục
                 trên điện thoại thông minh. Chỉ cần có Internet, dù đi đâu, người dân vẫn có thể nắm được tình hình trên
                 đồng ruộng. Chỉ cần một cú “lướt nhẹ”, nông dân có thể xử lý được rất nhiều công việc trên đồng áng mà
                 trước đây các công đoạn này phải mất rất nhiều thời gian và công lao động mới có thể giải quyết được.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Ngoài việc ứng dụng công nghệ vào việc hỗ trợ bơm tưới tự động, hiện HTX Dịch vụ Nông nghiệp Mỹ Đông 2
                 còn áp dụng thử nghiệm mô hình trạm giám sát sâu rầy thông minh của Công ty Công nghệ Rynan. Với việc
                 được lắp đặt một số thiết bị thông minh như cảm biến và hệ thống quan sát thông minh, trạm giám sát sâu
@@ -5263,7 +5326,7 @@
                 giám sát sâu rầy thu thập được hằng ngày sẽ được gửi về điện thoại thông minh của HTX.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hay trong vụ lúa thu đông năm 2022 vừa qua, người dân đã thuê máy bay không người lái (drone) phục vụ
                 cho ruộng đồng ở 3 khâu: phun giống gieo sạ, phun phân và phun thuốc bảo vệ thực vật. Cuối vụ, sau khi
                 trừ hết các chi phí, gia đình lãi từ 1,2 - 1,5 triệu tiền công (trên 1.000 m2). Đối với phun thuốc bảo
@@ -5273,7 +5336,7 @@
                 với bón phân thủ công.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Các giải pháp tiên tiến không những giúp nông dân, HTX tiết kiệm được nhiều chi phí sản xuất so với
                 phương thức sản xuất truyền thống mà còn giúp chất lượng lúa của HTX ngày một được nâng lên. Minh chứng
                 là từ những ngày đầu thành lập HTX chỉ có vài hecta lúa được doanh nghiệp liên kết tiêu thụ, đến vụ đông
@@ -5288,6 +5351,7 @@
               </p>
 
               <h3 id="Tự-động-tưới-tiêu-cây-trồng">Tự động tưới tiêu cây trồng</h3>
+              <!-- <q class="indented-p-w0">Tự động tưới tiêu cây trồng</q> -->
               <p>
                 Trước đây, việc tưới tiêu, châm phân được thực hiện hết sức thủ công, dựa trên kinh nghiệm được tích lũy
                 qua thời gian dài của người nông dân. Nhưng cách làm dựa trên kinh nghiệm này không phải lúc nào cũng
@@ -5316,17 +5380,18 @@
                 điều chỉnh chính xác lượng nước, lượng phân tùy theo nhu cầu của cây tại từng giai đoạn sinh trưởng.
               </p>
 
-              <h3>Hệ thống tưới tiêu tự động nâng cao tính chính xác và giảm thiểu tối đa sai sót từ con người, từ đó
-                tăng năng suất so với cách làm truyền thống </h3>
+              <p class="indented-p-w">Hệ thống tưới tiêu tự động nâng cao tính chính xác và giảm thiểu tối đa sai sót từ
+                con người, từ đó
+                tăng năng suất so với cách làm truyền thống </p>
 
-              <p>
+              <p class="indented-p">
                 Với diện tích 3 ha nhà lưới trồng dưa vàng tại xã Thọ Lâm, huyện Thọ Xuân, tỉnh Thanh Hóa, anh Đỗ Văn
                 Tùng, chủ trang trại nông nghiệp công nghệ cao Điền Trạch farm đã sử dụng hệ thống điều tiết dinh dưỡng
                 thông minh để nâng cao giá trị sản suất nông nghiệp cho sản phẩm dưa kim vàng hoàng hậu, đưa sản phẩm
                 tới khắp các siêu thị và các cơ sở kinh doanh thực phẩm sạch tại miền Bắc và miền Trung.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Yêu cầu về đầu ra đối với sản phẩm dưa kim vàng hoàng hậu là: chất lượng sản phẩm cần đồng đều về kích
                 thước, cân nặng và thẩm mỹ; sản lượng cần ổn định, không cần quá nhiều tại một thời điểm, nhưng phải đảm
                 bảo được tính liên tục thì mới bán được hàng. Do đó, cần chia ra làm nhiều giai đoạn trồng gối vụ. Quy
@@ -5336,14 +5401,14 @@
                 sót từ con người.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để nâng cao hiệu quả vận hành khu vực nhà kính, anh Tùng đã nghiên cứu và lựa chọn hệ thống điều tiết
                 dinh dưỡng thông minh Nextfarm Fertikit 4G để giải quyết bài toán sản xuất với yêu cầu độ chính xác cao
                 cho dưa kim vàng hoàng hậu. Thông qua hệ thống này, chế độ dinh dưỡng của cây trồng sẽ được định lượng
                 và pha chế phù hợp với từng giai đoạn phát triển của cây dưa.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hệ thống cho phép cài đặt chương trình cho từng khu vực theo từng công thức tưới, với các yêu cầu phù
                 hợp với từng giai đoạn phát triển của cây và các chỉ số dinh dưỡng trong vườn. Ví dụ ở các giai đoạn
                 phát triển khác nhau thì cài đặt chế độ phân sẽ khác nhau, cài đặt chương trình tưới nhắc lại bao nhiêu
@@ -5351,7 +5416,7 @@
                 nhật tưới nước), tưới vào các giờ nào trong ngày, mỗi ca tưới liều lượng bao nhiêu.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Việc đưa vào lắp đặt, thử nghiệm, vận hành, điều chỉnh qua từng vụ mùa đã giúp Điền Trạch Farm làm chủ
                 hệ thống công nghệ mới, từ đó chủ động hơn trong đầu ra sản phẩm và nâng cao năng suất 55 % - 60 % so
                 với trước đây. Đặc biệt ngoài tiết kiệm chi phí sản xuất từ phân bón và nước tiết, doanh nghiệp còn tiết
@@ -5372,6 +5437,7 @@
               </p>
 
               <h3 id="Chiếu-sáng-thông-minh-cho-nông-sản">Chiếu sáng thông minh cho nông sản</h3>
+              <!-- <p class="indented-p-w0">Chiếu sáng thông minh cho nông sản</p> -->
               <p>
                 Ánh sáng là yếu tố quan trọng ảnh hưởng tới quá trình sinh trưởng của động, thực vật. Mỗi một động, thực
                 vật có nhu cầu ánh sáng khác nhau. Chiếu sáng đúng nhu cầu của động, thực vật sẽ mang lại hiệu quả nuôi
@@ -5384,10 +5450,11 @@
                 loại cây trồng, nên không bị bó hẹp việc trồng cây theo thời vụ.
               </p>
 
-              <h3>Chiếu sáng thông minh giúp tăng năng suất, chất lượng sản phẩm cây Thanh Long, mang lại lợi ích kinh
-                tế cao cho bà con nông dân Bình Thuận</h3>
+              <p class="indented-p-w">Chiếu sáng thông minh giúp tăng năng suất, chất lượng sản phẩm cây Thanh Long,
+                mang lại lợi ích kinh
+                tế cao cho bà con nông dân Bình Thuận</p>
 
-              <p>
+              <p class="indented-p">
                 Hệ thống chiếu sáng thông minh cho phép điều chỉnh độ sáng, thời gian chiếu sáng và mức ánh sáng phù hợp
                 với từng loại cây trồng, với từng giai đoạn phát triển. Từ đó, giúp tối ưu hóa quá trình sinh trưởng và
                 phát triển của cây trồng, từ đó tăng năng suất và chất lượng sản phẩm. Việc điều chỉnh ánh sáng theo nhu
@@ -5395,7 +5462,7 @@
                 thụ và chi phí điện.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 “Tại tỉnh Bình Thuận, diện tích cây thanh long toàn tỉnh gần 27.000 ha, là một trong những loại cây ăn
                 quả phổ biến và đem lại giá trị kinh tế cao, với sản lượng 500.000 tấn/năm, giá trị thanh long mang lại
                 cho nền kinh tế Bình Thuận bình quân khoảng 350 - 400 triệu USD/năm. Nhằm giúp cây thanh long tăng sản
@@ -5403,7 +5470,7 @@
                 của Rạng Đông, vừa tiết kiệm chi phí, vừa tăng năng suất cây trồng.
               </p>
 
-              <p>
+              <p class="indented-p-5">
                 Nhờ ứng dụng đèn LED chiếu sáng thông minh của Rạng Đông, các hộ nông dân sản xuất thanh long trên địa
                 bàn tỉnh tiết kiệm chi phí điện năng 75 – 80 % so với bóng tròn 60 W: Tương đương tiết kiệm từ 2.100 -
                 2.800 đ/kg so với bóng 60 W. Bóng LED 9 W thay cho đèn CFL 20 W tiết kiệm 50 % điện năng: Tương đương
@@ -5419,6 +5486,7 @@
 
 
               <h3 id="Nông-trại-thông-minh">Nông trại thông minh</h3>
+              <!-- <p class="indented-p-w0">Nông trại thông minh</p> -->
               <p>
                 Kinh tế trang trại đang đóng vai trò quan trọng đối với sự phát triển nông nghiệp, nông thôn. Để các
                 trang trại trở thành lực lượng nòng cốt thúc đẩy sản xuất, qua đó giúp các địa phương hình thành nên các
@@ -5430,23 +5498,24 @@
                 lực, phát triển nông nghiệp địa phương.
               </p>
 
-              <h3>Ứng dụng công nghệ vào trồng cây ăn trái, mang lại hiệu quả kinh tế cao và tối ưu hiệu suất lao động
-                cho nông trại Thiên Nông</h3>
+              <p class="indented-p-w">Ứng dụng công nghệ vào trồng cây ăn trái, mang lại hiệu quả kinh tế cao và tối ưu
+                hiệu suất lao động
+                cho nông trại Thiên Nông</p>
 
-              <p>
+              <p class="indented-p">
                 Xuất thân từ một gia đình nhà nông tại Bình Phước, tỉnh có tiềm năng rất lớn về mặt nông nghiệp. Ngay từ
                 nhỏ Đặng Dương Minh Hoàng đã thấy gia đình mình và những người xung quanh “bán mặt cho đất, bán lưng cho
                 trời”, làm nông nghiệp nhưng hiệu quả kinh tế không cao.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Học chuyên ngành tự động hóa tại Pháp. Sau khi tốt nghiệp Minh Hoàng quyết định trở về để phát triển nền
                 nông nghiệp xanh, sạch, bền vững ngay trên chính quê hương mình. Nông trại Thiên Nông do anh thành lập
                 tại thôn Cây Da, xã Phú Văn, huyện Bù Gia Mập, tỉnh Bình Phước, sau một thời gian hoạt động đã trở thành
                 một trong những mô hình trồng cây ăn quả ứng dụng công nghệ số và mang lại hiệu quả kinh tế rất cao.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hiện nay, nông trại Thiên Nông đang áp dụng các công nghệ kỹ thuật cao vào sản xuất nông nghiệp từ giai
                 đoạn sản xuất đến tiêu thụ như: tưới tiêu tự động sử dụng Internet vạn vật (IoT), điện năng lượng mặt
                 trời áp mái, hệ thống camera giám sát toàn vườn, máy bay không người lái xịt thuốc phòng và trị bệnh cho
@@ -5457,7 +5526,7 @@
               </p>
 
 
-              <p>
+              <p class="indented-p">
                 Nông trại Thiên Nông có 3 loại cây trồng chủ lực: bơ, hồ tiêu, cao su. Trong đó, sản phẩm bơ với thương
                 hiệu Bơ Ông Hoàng đã được công nhận đạt chuẩn OCOP 4 sao và có mặt tại những siêu thị hữu cơ tại Thành
                 phố Hồ Chí Minh, Hà Nội và xuất khẩu ra một số nước như Trung Quốc, Nhật Bản, Đài Loan, Thái Lan,
@@ -5468,6 +5537,7 @@
 
 
               <h3 id="Trồng-rau-bằng-điện-thoại-thông-minh">Trồng rau bằng điện thoại thông minh</h3>
+              <!-- <p class="indented-p-w0">Trồng rau bằng điện thoại thông minh</p> -->
               <p>
                 Những năm gần đây, thực trạng thực phẩm bẩn, cũng như việc lạm dụng thuốc bảo vệ thực vật trong sản xuất
                 nông nghiệp khiến nhiều người tiêu dùng e ngại. Đã có nhiều mô hình sản xuất nông nghiệp sạch được phát
@@ -5483,10 +5553,11 @@
                 hàng trăm cây số.
               </p>
 
-              <h3>Ứng dụng công nghệ IoT vào trồng rau thủy canh, giúp tăng năng suất và chất lượng sản phẩm cho hợp tác
-                xã nông nghiệp Tuấn Ngọc </h3>
+              <p class="indented-p-w">Ứng dụng công nghệ IoT vào trồng rau thủy canh, giúp tăng năng suất và chất lượng
+                sản phẩm cho hợp tác
+                xã nông nghiệp Tuấn Ngọc </p>
 
-              <p>
+              <p class="indented-p">
                 Được thành lập vào tháng 3.2019, Hợp tác xã nông nghiệp Tuấn Ngọc do Lâm Ngọc Tuấn và Trần Xong Ngọc
                 chuyên trồng các loại rau ăn lá như cải, xà lách, rau muống, và một số loại rau khác. Hiện nay Hợp tác
                 xã Tuấn Ngọc phát triển diện tích trồng rau thủy canh hơn khoảng 1 ha, cung cấp khoảng 800 kg đến một
@@ -5496,7 +5567,7 @@
                 nồng độ dinh dưỡng, pH và điều kiện sinh trưởng tốt nhất cho rau.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để thiết lập quy trình trồng tự động mang lại năng suất và chất lượng cao cho rau, đồng thời theo dõi
                 các thông số môi trường và điều khiển các thiết bị trong nhà rau tự động mọi lúc, mọi nơi, kiểm soát rủi
                 ro dịch bệnh, phương án khắc phục, vệ sinh hệ thống. Tháng 2.2022, Hợp tác xã Tuấn Ngọc bắt đầu ứng dụng
@@ -5505,7 +5576,7 @@
                 thống mái che tự động điều chỉnh, nếu độ ẩm trong không khí thấp, hệ thống tự động kích hoạt phun sương.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Toàn bộ hệ thống IoT được cài đặt chỉ số và điều khiển qua điện thoại kết nối Wifi. Nhờ ứng dụng công
                 nghệ tạo điều kiện môi trường tốt nhất cho rau sinh trưởng nên rau phát triển nhanh. Công nghệ IoT còn
                 cho phép nông dân theo dõi hoạt động của vườn từ nhà qua máy tính hoặc điện thoại, phát hiện sớm và khắc
@@ -5519,6 +5590,7 @@
               </p>
 
               <h3 id="Nuôi-tôm-thông-minh">Nuôi tôm thông minh</h3>
+              <!-- <p class="indented-p-w0">Nuôi tôm thông minh</p> -->
               <p>
                 Không chỉ trồng trọt, chăn nuôi, công nghệ cũng dần đi vào những lĩnh vực khác của nông nghiệp như nuôi
                 trồng thủy, hải sản, đặc biệt là phát huy tiềm năng nuôi tôm tại một số vùng miền. Tuy nhiên, một trong
@@ -5526,29 +5598,30 @@
                 đất canh tác tương đối thấp, mà lý do chính là do thiếu công nghệ xử lý nước phù hợp.
               </p>
 
-              <h3>Ứng dụng công nghệ để kiểm soát môi trường nuôi, giảm tỉ lệ dịch bệnh, tăng năng suất, đem lại hiệu
-                quả kinh tế cao cho bà con nông dân nuôi tôm</h3>
+              <p class="indented-p-w">Ứng dụng công nghệ để kiểm soát môi trường nuôi, giảm tỉ lệ dịch bệnh, tăng năng
+                suất, đem lại hiệu
+                quả kinh tế cao cho bà con nông dân nuôi tôm</p>
 
-              <p>
+              <p class="indented-p">
                 Những năm gần đây, nhiều mô hình nuôi tôm thẻ chân trắng tại đồng bằng sông Cửu Long đã được mở rộng,
                 góp phần quan trọng vào việc đa dạng hóa sản phẩm phục vụ nhu cầu trong nước và xuất khẩu. Tuy nhiên,
                 trước diễn biến phức tạp của thời tiết và xâm nhập mặn, nhiều vùng nuôi tôm thẻ chân trắng đã bị ô nhiễm
                 nguồn nước, ảnh hưởng nghiêm trọng đến chất lượng và giá trị tôm nuôi.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để giải quyết vấn đề đó, trong những năm gần đây một số trại tôm ở Sóc Trăng, Bạc Liêu tiên phong triển
                 khai giải pháp công nghệ nuôi trồng tôm thông minh do Tập đoàn Rynan Technologies cung cấp.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hệ thống bao gồm các cảm biến giúp người dân nắm bắt được các thông số của môi trường, từ đó có điều
                 chỉnh phù hợp. Máy cho tôm ăn thông minh tự động điều chỉnh lượng thức ăn hàng ngày dựa trên tình trạng
                 của tôm như mật độ, trọng lượng trung bình, chu kỳ lột vỏ và sức khỏe của tôm, chất lượng nước như độ
                 pH, nhiệt độ, độ mặn và độ đục và các yếu tố thời tiết khác như nắng, mưa, gió.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Đồng thời, máy cấp ôxy tinh khiết tách từ không khí, giúp tăng hàm lượng ôxy tan trong nước và giảm chi
                 phí tiền điện tới hơn 50 %. Với nồng độ ôxy tan trong nước cao hơn 10 ppm, nước trong ao nuôi sạch hơn,
                 giúp tôm phát triển nhanh, ít bị bệnh và tiết kiệm chi phí xử lý nước và thay nước. Thông qua phần mềm
@@ -5665,13 +5738,14 @@
 
 
               <h3 id="Truy-xuất-nguồn-gốc-nông-sản">Truy xuất nguồn gốc nông sản</h3>
+              <!-- <p class="indented-p-w0">Truy xuất nguồn gốc nông sản</p> -->
               <p>
                 Hiện nay, việc dán tem truy xuất nguồn gốc hàng hóa có vai trò quan trọng đối với các doanh nghiệp, hợp
                 tác xã, cơ sở sản xuất. Hàng hóa được dán tem truy xuất sẽ giúp minh bạch về nguồn gốc sản phẩm bằng sự
                 giám sát của cơ quan quản lý nhà nước, góp phần tạo sự tin tưởng cho khách hàng, tăng sức cạnh tranh
                 trên thị trường và nâng tầm giá trị sản phẩm.
               </p>
-
+              <img src="./images/14_TruyXuatNguonGoc_color.jpg" alt="">
               <p>
                 Dữ liệu truy xuất nguồn gốc dựa trên nền tảng thiết bị thông minh, quản lý, phân tích về toàn bộ quá
                 trình sản xuất từ gieo trồng đến chăm sóc, thu hoạch, chế biến, sơ chế, tình trạng quản lý cây trồng,
@@ -5680,10 +5754,11 @@
                 Việt Nam thông qua dữ liệu hình ảnh từ camera.
               </p>
 
-              <h3>Truy xuất nguồn gốc nông sản giúp hợp tác xã Cự Nẫm tạo dựng được niềm tin của người tiêu dùng, từ đó
-                mở rộng thị trường và xây dựng thương hiệu</h3>
+              <p class="indented-p-w">Truy xuất nguồn gốc nông sản giúp hợp tác xã Cự Nẫm tạo dựng được niềm tin của
+                người tiêu dùng, từ đó
+                mở rộng thị trường và xây dựng thương hiệu</p>
 
-              <p>
+              <p class="indented-p">
                 Gia đình chị Nguyễn Thị Giang chủ hợp tác xã Cự Nẫm, xã Cự Nẫm, huyện Bố Trạch, tỉnh Quảng Bình bắt đầu
                 trồng và phát triển diện tích cây dược liệu cà gai leo từ năm 2015, để sản xuất bền vững và hiệu quả,
                 toàn bộ diện tích trồng cây cà gai leo đều được áp dụng quy trình trồng và chăm sóc cây nguyên liệu
@@ -5693,17 +5768,17 @@
                 trường vẫn gặp nhiều khó khăn, chưa có được niềm tin từ người tiêu dùng.
               </p>
 
-              <img src="../image/img-so/10_Nguon goc nong san_color.jpg" alt="">
 
 
-              <p>
+
+              <p class="indented-p">
                 Năm 2019, sau khi nghiên cứu, tìm hiểu về việc truy xuất nguồn gốc sản phẩm, chị Giang đã thực hiện thủ
                 tục đăng ký và sử dụng 20.000 tem mã QR của trung tâm mã số mã vạch quốc gia để truy xuất nguồn gốc sản
                 phẩm cho Cao cà gai leo Thanh Bình, việc này giúp gia đình chị quản lý được dòng hàng, bảo vệ thương
                 hiệu, chứng minh nguồn gốc xuất xứ cũng như bày tỏ thiện chí minh bạch mọi thông tin cần thiết.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Việc dán nhãn mã QR truy xuất nguồn gốc sản phẩm đã giúp người tiêu dùng biết rõ nguồn gốc, xuất xứ,
                 nguồn nguyên liệu làm ra sản phẩm Cao cà gai leo từ đó dần dần tạo được niềm tin nơi người tiêu dùng,
                 giúp hợp tác xã tiếp cận được với khách hàng khó tính, từ đó đi vào sản xuất ổn định, tổng doanh thu ước
@@ -5720,6 +5795,7 @@
               </p>
 
               <h3 id="Đưa-nông-sản-lên-sàn">Đưa nông sản lên sàn</h3>
+              <!-- <p class="indented-p-w0">Đưa nông sản lên sàn</p> -->
               <p>
                 Trước đây, đến mùa thu hoạch, người dân lại bán nông sản cho thương lái, hay mang ra chợ, còn bây giờ
                 người dân có thể bán nông sản trên các sàn thương mại điện tử. Cách làm này đang được nhiều bà con nông
@@ -5732,17 +5808,19 @@
                 trên cả nước.
               </p>
 
-              <h3>Thương mại điện tử giúp thay đổi cuộc sống người dân xã Yên Hòa, gợi mở mô hình làm giàu cho các địa
-                phương khác</h3>
+              <p class="indented-p-w">Thương mại điện tử giúp thay đổi cuộc sống người dân xã Yên Hòa, gợi mở mô hình
+                làm giàu cho các địa
+                phương khác</p>
 
-              <p>
+              <p class="indented-p">
                 Tại xã Yên Hòa, huyện Yên Mô, tỉnh Ninh Bình trước đây, mặc dù tại địa phương có một số sản phẩm nông
                 sản nổi bật, đặc sản, tuy nhiên việc buôn bán của nhân dân chủ yếu theo hình thức truyền thống, thương
                 mại điện tử chưa được áp dụng, các sản phẩm còn đơn điệu, bao bì chưa bắt mắt, chưa sử dụng tem truy
                 xuất nguồn gốc.
               </p>
+              <img src="./images/07_TMĐT PostMart_color.jpg" />
 
-              <p>
+              <p class="indented-p">
                 Để mở rộng thị trường tiêu thụ, người dân nơi đây đã triển khai đưa các sản phẩm của xã lên sàn thương
                 mại điện tử PostMart. Hiện đã có các sản phẩm như: cá chạch sụn kho niêu, đông lạnh, sấy khô; chuối tây
                 sấy dẻo. Người dân ý thức được lợi ích của việc bán hàng qua nền tảng thương mại điện tử và đầu tư xây
@@ -5752,40 +5830,42 @@
                 Facebook,...
               </p>
 
-              <p>
+              <p class="indented-p">
                 Thương mại điện tử đã thay đổi cuộc sống người dân tại xã Yên Hòa, huyện Yên Mô, tỉnh Ninh Bình, và chắc
                 chắn trong thời gian tới, thương mại điện tử cũng sẽ thay đổi cuộc sống người dân tại nhiều địa phương,
                 đặc biệt là những địa phương đang có nhiều sản phẩm đặc trưng nhưng chưa biết cách tiếp cận công nghệ để
                 mở mang thị trường.
               </p>
 
-              <img src="../image/img-so/11_TMĐT PostMart_color.jpg" alt="">
+
 
 
               <h3 id="Mô-hình-Cây-xoài-nhà-tôi">Mô hình “Cây xoài nhà tôi”</h3>
+              <!-- <p class="indented-p-w0">Mô hình “Cây xoài nhà tôi”</p> -->
               <p>
                 Đồng Tháp là địa phương có diện tích trồng xoài lớn nhất đồng bằng sông Cửu Long với hơn 9.000 ha, sản
                 lượng hàng năm đạt trên 90.000 tấn. Trước đây xoài chủ yếu bán cho thương lái, giá cả bấp bênh nên giá
                 trị trái xoài không được phát huy.
               </p>
 
-              <h3> Sáng tạo trong lao động sản xuất, bà con nông dân xã Mỹ Xương hình thành mô hình phát triển kinh tế
-                mới, giúp nâng tầm cây xoài địa phương</h3>
+              <p class="indented-p-w"> Sáng tạo trong lao động sản xuất, bà con nông dân xã Mỹ Xương hình thành mô hình
+                phát triển kinh tế
+                mới, giúp nâng tầm cây xoài địa phương</p>
 
-              <p>
+              <p class="indented-p">
                 Để mở rộng đầu ra cho đặc sản quê nhà, những nông dân Hợp tác xã Xoài Mỹ Xương, Xã Mỹ Xương, Huyện Cao
                 Lãnh, Đồng Tháp đã nghĩ ra cách bán trái cây qua mạng cho khách hàng khắp cả nước theo mô hình “Cây xoài
                 nhà tôi”. Mô hình này sau đó đã nhân rộng ra khắp toàn tỉnh, mang lại thu nhập cao, thay đổi tư duy làm
                 kinh tế của những người nông dân trồng xoài.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Những cây xoài được chọn vào mô hình “Cây xoài nhà tôi” phải đảm bảo các tiêu chí như: cây to khỏe, gần
                 đường lớn, người canh tác chuẩn, điều kiện vệ sinh tốt, sản lượng cây xoài cao và phải trồng theo tiêu
                 chuẩn, quy trình VietGap, Global Gap.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trên mỗi cây xoài đều có gắn mã QR, các nông hộ tham gia mô hình “Cây xoài nhà tôi” được tạo lập cơ sở
                 dữ liệu riêng, quản lý tất cả các cây xoài tham gia mô hình bao gồm: tên nông hộ, địa chỉ, số điện thoại
                 liên hệ, thông tin định danh của từng cây xoài gồm có: Giống cây, mã định danh, tuổi cây, giá bán, thời
@@ -5795,7 +5875,7 @@
                 đồng/cây, thậm chí với giống xoài cát Hòa Lộc còn có giá lên đến 10 triệu đồng/cây.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Theo thỏa thuận, trong suốt một năm, với hai vụ thu hoạch, người mua được hưởng toàn bộ số quả trên cây
                 (khoảng 70 – 150 kg/vụ). Xoài sẽ được đóng gói chuyển đến tận nhà người mua, ngoài ra, người sở hữu cây
                 xoài còn có thể đến thăm hoặc quan sát từ xa qua hình ảnh được cập nhật trên website. Người tiêu dùng sẽ
@@ -5812,6 +5892,7 @@
 
 
               <h3 id="Thiết-lập-kênh-bán-hàng-riêng-biệt">Thiết lập kênh bán hàng riêng biệt</h3>
+              <!-- <p class="indented-p-w0">Thiết lập kênh bán hàng riêng biệt</p> -->
               <p>
                 Mặc dù các kênh bán hàng thông qua sàn thương mại điện tử, trên các trang mạng xã hội đã mở ra cho hộ
                 sản xuất, doanh nghiệp địa phương cơ hội lớn, hiệu quả để tiếp cận với thị trường tiêu trong lớn trong
@@ -5824,10 +5905,11 @@
                 bán hàng riêng để tiếp cận và bán hành trực tiếp tới người tiêu dùng.
               </p>
 
-              <h3>Xây dựng website phục vụ bán hàng trực tuyến cho các hộ kinh doanh vừa và nhỏ với nền tảng Ladipage
-              </h3>
+              <p class="indented-p-w">Xây dựng website phục vụ bán hàng trực tuyến cho các hộ kinh doanh vừa và nhỏ với
+                nền tảng Ladipage
+              </p>
 
-              <p>
+              <p class="indented-p">
                 DFarm là một hệ thống trang trại cung cấp các loại nông sản, rau củ quả hữu cơ đến người tiêu dùng.
                 DFarm có 4 trang trại ở các tỉnh, thành: Hà Nội, Hưng Yên, Sơn La và Quảng Trị, cung cấp một lượng lớn
                 nông sản hữu cơ tới các hệ thống siêu thị và cửa hàng nông sản sạch, cao cấp trên cả nước. Với đặc trưng
@@ -5836,14 +5918,14 @@
                 thuộc vào thương lái, phân phối cho bên thứ ba.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Kể từ 2018, DFarm đã tìm tòi xây dựng một trang thông tin sản phẩm và bán hàng trực tuyến cho nông trại
                 mình. Qua quá trình tìm hiểu và thử nghiệm, DFarm quyết định chọn phương án xây dựng một gian hàng trực
                 tuyến nhỏ, một trang web đơn sử dụng nền tảng Ladipage. Một Website đơn như vậy vừa đủ với nhu cầu quảng
                 bá sản phẩm hữu cơ của người nông dân, vốn có số lượng sản phẩm ít nhưng thông tin mỗi sản phẩm đa dạng,
                 yêu cầu nội dung, hình ảnh chân thực đủ sức thuyết phục khách hàng.
               </p>
-              <p>
+              <p class="indented-p">
                 Sử dụng Ladipage, không cần kiến thức lập trình chuyên sâu, phù hợp với những hộ kinh doanh vừa và nhỏ,
                 hạn chế nguồn lực công nghệ như DFarm. Dựa trên các mẫu thiết kế website, doanh nghiệp chỉ cần kéo thả
                 các thiết kế, giao diện và tính năng website từ các bảng mẫu có sẵn, không cần đầu tư vào lập trình cấu
@@ -5852,7 +5934,7 @@
                 phân tích hiệu quả các chiến dịch tiếp thị của doanh nghiệp.
               </p>
 
-              <p>
+              <p class="indented-p">
                 So với một số nền tảng tạo landing page quốc tế, Ladipage có giá cả phải chăng và phù hợp với ngân sách
                 của nhiều hợp tác xã, doanh nghiệp quy mô nhỏ tại Việt Nam, đặc biệt là doanh nghiệp vừa và nhỏ sản
                 xuất, kinh doanh nông sản. Thông qua làm chủ trang web, DFarm đã tự chủ động xây dựng được một kênh tiêu
@@ -5862,6 +5944,7 @@
               </p>
 
               <h3 id="Giao-hàng-tiết-kiệm">Giao hàng tiết kiệm</h3>
+              <!-- <p class="indented-p-w0">Giao hàng tiết kiệm</p> -->
               <p>
                 Với việc bán hàng trực tuyến, một trong những khó khăn của hộ kinh doanh là vận chuyển hàng hóa tới
                 khách mua hàng. Với quy mô nhỏ lẻ, nhân sự hạn chế, các hộ kinh doanh sẽ đối mặt với vấn đề chuyển hàng
@@ -5869,53 +5952,56 @@
                 ăn, cây cảnh.
               </p>
 
-              <h3>Kết nối, vận chuyển hàng hóa qua nền tảng “Giao hàng tiết kiệm” tạo điều kiện thuận lợi phát triển
-                thương mại điện tử khu vực nông thôn</h3>
+              <p class="indented-p-w">Kết nối, vận chuyển hàng hóa qua nền tảng “Giao hàng tiết kiệm” tạo điều kiện
+                thuận lợi phát triển
+                thương mại điện tử khu vực nông thôn</p>
 
-              <p>
+              <p class="indented-p">
                 Cụm 700 nhà kinh doanh cây cảnh tại tỉnh Vĩnh Phúc, trước đây chỉ phục vụ khách đến mua trực tiếp. Việc
                 mua hàng trực tuyến là rất hiếm bởi cây cối là loại hàng hóa yêu cầu quy trình bảo quản, vận chuyển đặc
                 biệt. Tuy nhiên, từ khi biết đến dịch vụ vận chuyển của Giao hàng tiết kiệm (GHTK), việc mua bán cây cối
                 đã trở nên thuận tiện, giúp các hộ kinh doanh mở rộng thêm thị trường.
               </p>
+              <img src="./images/06_GHTK_color.jpg" />
 
-              <p>
+              <p class="indented-p">
                 Mỗi hộ kinh doanh sử dụng dịch vụ của GHTK ở mọi lúc, mọi nơi thông qua website và ứng dụng dành riêng.
                 Tất cả thông tin đều được công khai, minh bạch giúp cửa hàng quản lý việc kinh doanh hiệu quả.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Để đảm bảo an toàn hàng hóa, GHTK đã thiết kế quy trình xếp đặt và luồng hàng riêng để phục vụ. Khâu
                 trung chuyển đảm bảo tốc độ nhanh nhất, đảm bảo hình thức cây vẫn tươi tốt. Cây đi nội tỉnh được giao
                 trong ngày, nội vùng trong vòng 24 giờ và liên vùng chỉ trong vòng 55 giờ.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Khâu giao hàng đáp ứng hỗ trợ giúp shop cho phép khách tùy chọn sản phẩm, không ưng có thể hoàn trả dễ
                 dàng, xóa bỏ tâm lý không an tâm khi mua hàng trên mạng. Hàng cây giống phải đủ ngày, đạt chất lượng mới
                 đánh gốc và chuyển đi, GHTK còn có kịch bản lấy cho từng cửa hàng về thời gian hẹn lấy, phương tiện lấy
                 hàng phù hợp và lấy rất nhanh để giao được ngay cho khách.
               </p>
 
-              <p>
+              <p class="indented-p">
                 GHTK sở hữu hệ thống xe tải riêng luân chuyển hàng hóa liên tục. Mạng lưới vận chuyển linh hoạt bằng cả
                 đường bộ và đường bay đáp ứng mọi nhu cầu giao vận.
               </p>
 
-              <img src="../image/img-so/12_GHTK_color.jpg" alt="">
 
-              <p>
+
+              <p class="indented-p">
                 Bưu cục GHTK phủ sóng 99 % huyện, xã trên toàn quốc, thuận lợi cho các tuyến giao nhận hàng ở khắp mọi
                 miền. Việc gửi nhận hàng cũng nhờ đó trở nên dễ dàng hơn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với sự trợ giúp của GHTK, cụm 700 nhà kinh doanh cây cảnh tại tỉnh Vĩnh Phúc đã đạt sản lượng phục vụ
                 lên tới 20 nghìn đơn hàng/ ngày. Nền tảng giao hàng GHTK giúp các hàng giải quyết bài toán đóng gói và
                 vận chuyển xa cho các loại hàng hóa cây cối, đảm bảo không hư hỏng dập nát.
               </p>
 
               <h3 id="Tiếp-thị-quảng-cáo-số">Tiếp thị quảng cáo số</h3>
+              <!-- <p class="indented-p-w0">Tiếp thị quảng cáo số</p> -->
               <p>
                 Công nghệ luôn thay đổi, thậm chí thay đổi nhanh chóng mặt, mang lại công cụ mới, cách làm mới hiệu quả
                 hơn. Bán hàng trực tuyến cũng vậy. Trước đây, người dân chỉ cần đưa nông sản lên sàn thương mại điện tử.
@@ -5931,24 +6017,27 @@
                 đối với sản phẩm trước khi quyết định mua hàng.
               </p>
 
-              <h3>Tương tác trực tiếp với người tiêu dùng trong bán hàng trực tuyến mở ra nhiều cơ hội kinh doanh cho bà
-                con nông dân khu vực nông thôn</h3>
 
-              <p>
+              <p class="indented-p-w">Tương tác trực tiếp với người tiêu dùng trong bán hàng trực tuyến mở ra nhiều cơ
+                hội kinh doanh cho bà
+                con nông dân khu vực nông thôn</p>
+
+              <p class="indented-p">
                 Trước nay, Hợp tác xã Noọng Piêu, tỉnh Sơn La vẫn bán sỉ, bán lẻ mận trực tiếp và qua sàn thương mại
                 điện tử, giao hàng ngay sau khi thu hoạch nên quả luôn tươi, ngon. Để tăng niềm tin về chất lượng sản
                 phẩm, Hợp tác xã đã phát trực tiếp để giới thiệu về loại trái cây đặc sản này. Không chỉ bán được hàng
                 trong lúc live stream mà sau đó, nhiều khách biết đến đã tiếp tục đặt mua, mang hiệu quả tiêu thụ cao
                 hơn, giá bán tốt hơn.
               </p>
+              <img src="./images/05_Tiếp thị quảng cáo số_color.jpg" />
 
-              <p>
+              <p class="indented-p">
                 Hợp tác xã Noọng Piêu, tỉnh Sơn La đã livestream qua mạng xã hội TikTok, quay phát trực tiếp hình ảnh
                 những trái mận chín đỏ trong khu vườn hơn 50 ha, nhiều khách hàng đã đặt mua ở ô bình luận, có người mua
                 5 – 10 kg, có người mua mấy chục ký mận.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Sau khi live stream trên TikTok, video còn được đăng trên trang Facebook, được hàng ngàn người xem. Hợp
                 tác xã tiến tới xây dựng kênh “Nông sản Sơn La” trên TikTok để bán các sản phẩm OCOP gồm xoài, lê, mận,
                 khoai sọ,… tươi lẫn sấy khô. Ngoài hơn 50ha mận hậu với sản lượng 180 tấn trái/năm, hợp tác xã còn liên
@@ -5956,9 +6045,10 @@
                 cấp mã vùng trồng để xuất khẩu sang EU, New Zealand, Mỹ.
               </p>
 
-              <img src="../image/img-so/13_Tiếp thị quảng cáo số_color.jpg" alt="">
+
 
               <h3 id="Bán-hàng-đa-kênh">Bán hàng đa kênh</h3>
+              <!-- <p class="indented-p-w0">Bán hàng đa kênh</p> -->
               <p>
                 Một chủ hộ kinh doanh, hợp tác xã kinh doanh trực tuyến có thể sử dụng nhiều kênh bán hàng trực tuyến
                 khác nhau. Đó có thể là bán hàng qua Zalo, qua Facebook, qua wesite hay thậm chí là qua kênh điện thoại
@@ -5971,10 +6061,11 @@
                 hàng đều có số liệu về hàng tồn kho.
               </p>
 
-              <h3>Sử dụng nền tảng Haravan giúp thuận tiện trong chăm sóc khách hàng và quản lý hàng hóa cùng lúc trên
-                nhiều kênh thương mại điện tử</h3>
+              <p class="indented-p-w">Sử dụng nền tảng Haravan giúp thuận tiện trong chăm sóc khách hàng và quản lý hàng
+                hóa cùng lúc trên
+                nhiều kênh thương mại điện tử</p>
 
-              <p>
+              <p class="indented-p">
                 Là một trong những thương hiệu nông sản, thực phẩm đồ ăn “hot” trên các kênh thương mại điện tử hiện
                 nay. Ba Thức Food có một khởi đầu khiêm tốn. Nửa cuối năm 2021, hai nhà sáng lập của Ba Thức Food - vợ
                 chồng chị Trần Phương Dung và anh Phan Minh Thức - trở về quê nhà Gia Lai tìm kiếm cơ hội kinh doanh mới
@@ -5983,7 +6074,7 @@
                 trên cả nước.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Từ tháng 4.2022, Ba Thức Food đã mở bán trên một nền tảng mua sắm kết hợp giải trí. Trong một thời gian
                 ngắn, Ba Thức Food nhanh chóng mở rộng kinh doanh bằng việc mở thêm gian hàng chính hãng trên một sàn
                 thương mại điện tử lớn, một fanpage chính thức trên mạng xã hội Facebook và kênh thông tin chính thức
@@ -5993,13 +6084,13 @@
                 mại điện tử.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Sự phát triển nóng trên nhiều kênh bán hàng đã khiến Ba Thức Food gặp nhiều khó khăn trong việc quản trị
                 hàng tồn kho, vận hành, tài chính và chăm sóc khách hàng như nhiều doanh nghiệp kinh doanh nông sản
                 khác.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Doanh nghiệp đã lựa chọn giải pháp quản lý bán hàng đa kênh của Haravan để giúp quản lý sản phẩm cùng
                 lúc trên nhiều kênh thương mại điện tử. Thay vì phải vào từng trung tâm nhà bán hàng của từng kênh
                 thương mại điện tử để đăng tải sản phẩm, khai báo tồn kho, cài đặt giá và các chương trình khuyến mại,
@@ -6022,6 +6113,7 @@
               </p>
 
               <h3 id="Kết-nối-tiêu-thụ-nông-sản">Kết nối tiêu thụ nông sản</h3>
+              <!-- <p class="indented-p-w0">Kết nối tiêu thụ nông sản</p> -->
               <p>
                 Vấn đề “được mùa, mất giá” hay “mất mùa, được giá” của nông sản Việt đã diễn ra từ nhiều năm nay. Một
                 trong những nguyên nhân chính là thiếu kênh phân phối trực tiếp tới người tiêu dùng, dẫn tới việc phụ
@@ -6029,10 +6121,11 @@
                 thương hiệu do chất lượng chưa cao, chưa đồng đều.
               </p>
 
-              <h3>Kết nối tiêu thụ nông sản qua nền tảng FoodMap, giúp bà con nông dân mở rộng thị trường tiêu thụ, hạn
-                chế vấn nạn được mùa mất giá</h3>
+              <p class="indented-p-w">Kết nối tiêu thụ nông sản qua nền tảng FoodMap, giúp bà con nông dân mở rộng thị
+                trường tiêu thụ, hạn
+                chế vấn nạn được mùa mất giá</p>
 
-              <p>
+              <p class="indented-p">
                 Hợp tác xã Lục Ngạn Xanh là một mô hình kết nối chuỗi giá trị nông sản, góp phần tăng cường kết nối cung
                 - cầu, tạo thành chuỗi giá trị tiêu thụ sản phẩm cho nông dân. Đồng thời, mang đến những sản phẩm nông
                 sản, thực phẩm an toàn, chất lượng, cung ứng tất cả các sản phẩm nông sản hàng hóa cho tất cả các cửa
@@ -6041,7 +6134,7 @@
                 Bắc Giang và đặc biệt là vải thiều – nông sản chủ lực của huyện Lục Ngạn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Lục Ngạn Xanh là hợp tác xã đã đồng hành cùng FoodMap trong suốt nhiều năm vừa qua. FoodMap là đơn vị
                 cung ứng và kiểm soát chất lượng nông sản. Toàn bộ nông sản sẽ được thu mua, đóng gói, bảo quản và vận
                 chuyển đến người tiêu dùng theo quy trình nghiêm ngặt, đảm bảo đưa nông sản ngon lành nhất đến với mọi
@@ -6049,13 +6142,13 @@
                 chợ số.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với ứng dụng công nghệ IoT, phân tích dữ liệu vào kiểm soát chất lượng nông sản, FoodMap đã trở thành
                 một đối tác tin cậy cung cấp nông sản cho các sàn thương mại điện tử, hay phân phối trực tiếp tới người
                 dùng cuối.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Thông qua các kênh số của FoodMap và các kênh bán hàng trực tuyến hàng đầu Việt Nam, hàng trăm tấn vải
                 thiều - nông sản chủ lực của huyện Lục Ngạn, tỉnh Bắc Giang đã được phân phối và tiêu thụ. Với mô hình
                 như vậy, FoodMap đã cùng các đối tác hướng đến mục tiêu hỗ trợ nhà vườn trồng cây ăn trái tại nhiều
@@ -6065,7 +6158,7 @@
                 nâng cao chất lượng nông sản Việt Nam, đồng thời nâng cao sinh kế dài lâu cho người nông dân.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trong hơn 4 năm hoạt động, FoodMap đã cung ứng hơn 2.000 nông sản và thực phẩm có nguồn gốc từ hơn 300
                 trang trại, 500 nhà sản xuất nông nghiệp Việt Nam. Trong đó, có thể kể tới các hợp tác xã như: Hợp tác
                 xã Thuận Phát, Hợp tác xã Nông lâm nghiệp Nam Hà, Hợp tác xã Nông sản sạch Mộc Châu, Hợp tác xã Sơ ri
@@ -6171,18 +6264,20 @@
                 làm giàu, thoát nghèo ngay chính tại quê hương của mình.
               </p>
 
-              <h3>Sử dụng nền tảng ezCloud giúp các hộ kinh doanh dễ dàng quản trị và kinh doanh hiệu quả hoạt động
-                trong lĩnh vực du lịch </h3>
+              <p class="indented-p-w">Sử dụng nền tảng ezCloud giúp các hộ kinh doanh dễ dàng quản trị và kinh doanh
+                hiệu quả hoạt động
+                trong lĩnh vực du lịch </p>
 
-              <p>
+              <p class="indented-p">
                 Măng Đen được mệnh danh là “nàng thơ giữa đại ngàn Tây Nguyên” với “ba hồ bảy núi”. Khí hậu mát mẻ, rừng
                 nguyên sinh chiếm hơn 80 % diện tích tự nhiên. Từ đầu năm 2021 đến nay, lượng khách du lịch đến Khu Du
                 lịch sinh thái quốc gia Măng Đen tăng dần. Trung bình mỗi tháng có hàng ngàn lượt khách. Theo số liệu
                 thống kê năm 2021, trên địa bàn huyện Kon Plông có 39 cơ sở lưu trú với 462 phòng ở. Trong đó loại hình
                 lưu trú homestay chiếm trên 60 % cơ sở.
               </p>
-
-              <p>Sóc’s House là cơ sở lưu trú hoàn hảo với những người ưa thích trải nghiệm thiên nhiên và văn hóa địa
+              <img src="./images/11_ezCloud_color.jpg" />
+              <p class="indented-p">Sóc’s House là cơ sở lưu trú hoàn hảo với những người ưa thích trải nghiệm thiên
+                nhiên và văn hóa địa
                 phương. Sứ mệnh của Sóc’s House là “lưu giữ những ký ức về Măng Đen đại ngàn”, đó là quá trình khách đến
                 - trải nghiệm - cảm nhận - ghi nhớ và quay trở lại. Mỗi ngôi nhà nhỏ là một câu chuyện và tổng thể Sóc’s
                 House như một bản làng thu nhỏ đầy mộc mạc và đậm chất núi rừng. Hiện Sóc’s House sở hữu 16 căn nhà và
@@ -6190,7 +6285,7 @@
                 cafe với đặc sản cà phê xứ lạnh Măng Đen. Đội ngũ nhân sự của Sóc’s House từ xây dựng đến vận hành chủ
                 yếu là những bạn dân tộc thiểu số sống tại Măng Đen.</p>
 
-              <p>
+              <p class="indented-p">
                 Với đội ngũ cộng sự chủ yếu là người dân tộc thiểu số sống tại đây/ Hệ thống quản lý sẽ gặp phải một số
                 vấn đề, chủ yếu liên quan đến hoạt động quảng bá và vận hành. Quản lý một homestay đòi hỏi kiến thức cơ
                 bản về ngành du lịch, kỹ năng quản lý, và khả năng tương tác với khách hàng. Chưa kể, Sóc’s House còn
@@ -6199,17 +6294,17 @@
                 sắp xếp phòng, nâng cấp dịch vụ, hoạt động check out, thanh toán đa dạng các dịch vụ đi kèm khác.
               </p>
 
-              <img src="../image/img-so/14_Quan tri va kinh doanh du lich_color.jpg" alt="">
 
 
-              <p>
+
+              <p class="indented-p">
                 Thấu hiểu được thực trạng kinh doanh hiện tại và nhu cầu cấp thiết về một phần mềm quản lý chuyên
                 nghiệp, Sóc’s House đã lựa chọn sử dụng nền tảng quản trị khách sạn ezCloud - nền tảng quản trị khách
                 sạn thị phần số 1 Việt Nam. Các tính năng được thiết kế phù hợp giải quyết các vấn đề mà Sóc’s House
                 đang gặp phải.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Giao diện ezCloud thân thiện, dễ sử dụng, cung cấp khả năng quản lý từ xa với khả năng phân quyền hiệu
                 quả. Quản lý bán hàng thông minh, kết nối mọi điểm bán hàng. Không chỉ lưu trú, ezCloud là nền tảng phân
                 phối vé tham quan các danh lam thắng cảnh, di tích lịch sử, khu vui chơi, các làng nghề truyền thống.
@@ -6235,7 +6330,7 @@
                 phần quảng bá du lịch của các địa phương tới các du khách muôn phương.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Mặc dù không sinh ra và lớn lên tại Hà Giang, song bằng tình yêu mãnh liệt với mảnh đất nơi địa đầu tổ
                 quốc, anh Ngô Sỹ Ngọc, hay còn được mọi người biết đến với biệt danh A Páo, đã phác họa nét đẹp của Hà
                 Giang thông qua các tác phẩm âm nhạc. Những sản phẩm của anh được nhiều người biết đến qua đó cũng góp
@@ -6244,7 +6339,7 @@
                 vừa làm du lịch, tạo ấn tượng tốt với du khách trong và ngoài nước.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Say với tình người, ở nơi đá chồng đá, núi chồng núi, mây len vào khe đá, đá đội mây lên trời, Youtuber
                 A Páo đang miệt mài lan tỏa hình ảnh cao nguyên đá tới mọi người qua những sáng tác âm nhạc, những cảnh
                 quay núi rừng hùng vĩ. Hơn 3.000 MV A Páo truyền tải trên kênh YouTube của mình, đã khiến du khách đều
@@ -6273,7 +6368,7 @@
                 chương trình du lịch thực tế ảo là một hướng đi mới để bảo tồn các di sản.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Triển khai tại Bắc Ninh, mảnh đất Kinh Bắc xưa, nơi khai mở nền văn minh Đại Việt, với trọng tâm là Khu
                 bảo tồn văn hóa Luy Lâu tại xã Ngũ Thái, huyện Thuận Thành, tỉnh Bắc Ninh. Nơi đây là tổng hợp của hệ
                 sinh thái như: không gian bảo tồn và quảng bá rối nước Đồng Ngư; không gian nhà Việt xưa; không gian nhà
@@ -6282,19 +6377,19 @@
                 cùng nhiều hiện vật độc đáo, quý giá của người Việt xưa.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Ban Quản lý Khu bảo tồn văn hóa Luy Lâu đã đặt hàng công ty VietsoftPro, một doanh nghiệp có hơn 15 năm
                 kinh nghiệm trong việc số hóa di sản trên mọi miền của tổ quốc.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Tại đây, đã lưu lại những thước phim, hình ảnh tiêu biểu nhất về đời sống vật chất, đời sống văn hóa
                 tinh thần và nghệ thuật trình diễn của đồng bào dân tộc Kinh; xây dựng tour tham quan 3D các di tích
                 lịch sử, điểm du lịch nổi bật; số hóa3D các hiện vật như: trang phục (hiện đại, truyền thống), công cụ
                 lao động, nhạc cụ biểu diễn,… thường xuất hiện trong đời sống thường nhật của đồng bào.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Tất cả những tư liệu quý giá ấy sẽ được xử lý và xuất bản dưới dạng sách điện tử với giao diện đẹp mắt,
                 bố cục rõ ràng, logic, mang đến cho mọi người một cái nhìn tổng quan về nơi được coi là cội nguồn dân
                 tộc và văn hóaViệt, nơi hội tụ của kho tàng văn hóa dân gian với nhiều công trình văn hóa nghệ thuật đặc
@@ -6422,37 +6517,37 @@
                 trường sinh thái để thu hút du khách.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Làng gốm Bát Tràng nằm ở tả ngạn sông Hồng, nay thuộc xã Bát Tràng, huyện Gia Lâm, thành phố Hà Nội,
                 cách trung tâm thành phố hơn 10 km về phía đông nam. Đây là làng nghề truyền thống nổi tiếng về các sản
                 phầm bằng gốm sứ.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Làng gốm Bát Tràng thường xuyên là điểm dừng chân của nhiều khách du lịch đến tham quan thủ đô. Đến mảnh
                 đất cổ xưa này, du khách sẽ cảm thấy vô cùng thú vị khi bắt gặp những bình hoa, chậu gốm trưng bày khắp
                 các ngõ ngách trong làng hay những bức tường phơi than thật đặc sắc..
               </p>
 
-              <p>
+              <p class="indented-p">
                 Gốm bát tràng được lưu hành trên khắp mọi miền đất nước, thậm chí ra đến cả nước ngoài. Làng gốm Bát
                 Tràng không chỉ là nơi làm nên một thương hiệu sản phẩm mang tính quốc gia, góp phần gìn giữ giá trị văn
                 hóa của thủ đô mà còn là một trong những địa điểm du lịch ở Hà Nội được nhiều người ưa thích.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hoạt động của làng nghề Bát Tràng dường như lắng xuống, không còn nhộn nhịp, tấp nập như trước. Đại dịch
                 COVID-19 ập đến đã ảnh hưởng lớn tới nguồn thu, hoạt động sản xuất của người dân trong làng nghề.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Trước tình hình đó, để việc sản xuất, kinh doanh không bị “đứt gãy”, nhiều hộ gia đình trong làng nghề
                 đã linh hoạt tìm kiếm thị trường thông qua mạng xã hội, fanpage và sàn thương mại điện tử. Những hình
                 ảnh, video về quá trình sản xuất và sản phẩm của làng nghề được tích cực giới thiệu, quảng bá trên
                 Facebook, Zalo,… đến với đông đảo khách hàng.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Với việc đa dạng các phương thức tiếp cận thị trường, các hộ đơn vị doanh nghiệp ở Bát Tràng đang từng
                 bước thích nghi trong bối cảnh dịch COVID-19 diễn biến phức tạp. Với việc áp dụng công nghệ số, Làng
                 nghề đã giới thiệu sản phẩm được đến các nơi, đồng thời gắn mã truy xuất nguồn gốc cho từng sản phẩm.
@@ -6460,20 +6555,20 @@
                 khiến khách hàng ở xa rất hứng thú, bởi họ như được trải nghiệm trực tiếp mà không cần đến tận nơi.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Mặc dù, sản lượng tiêu thụ không thể bằng trước đây nhưng hình thức kinh doanh trực tuyến đã giúp nhiều
                 hộ gia đình duy trì sản xuất, tạo việc làm và đem lại thu nhập cho người lao động trong giai đoạn khó
                 khăn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Việc thay đổi phương thức kinh doanh, từ giới thiệu sản phẩm qua không gian mạng, bán hàng trực tuyến
                 kết hợp giao hàng tận nơi đã góp phần mở rộng đối tượng khách hàng, qua đó số lượng hàng hóa tiêu thụ
                 tăng đáng kể. Nhờ đó, tổng thu ngân sách nhà nước 6 tháng đầu năm 2021 của xã Bát Tràng ước đạt 91,51 %
                 dự toán huyện giao.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Bên cạnh đó, từ một xã báo động đỏ về ô nhiễm khí thải, bụi và phụ phẩm sau sản xuất là chất thải rắn,
                 đến nay nhờ áp dụng kỹ thuật mới, Bát Tràng đã khắc phục được cơ bản tình trạng ô nhiễm môi trường; chất
                 lượng, giá trị sản phẩm được nâng cao.
@@ -6494,7 +6589,7 @@
                 khó khăn trong việc quản lý, theo dõi tình trạng phòng, thu tiền và tương tác với khách thuê.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Phường Phương Canh là một phường nằm ở phía tây bắc quận Nam Từ Liêm, thành phố Hà Nội. Phường Phương
                 Canh cũng nằm trong cụm công nghiệp Bắc Từ Liêm, gần các trường đại học, cao đẳng lớn của thành phố. Do
                 đó nhu cầu thuê nhà trọ của công nhân các nhà máy, xí nghiệp, sinh viên các trường, người lao động đến
@@ -6502,7 +6597,7 @@
                 công tác, học tập, làm việc,… còn nhiều khó khăn.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Từ khi biết đến ứng dụng quản lý nhà trọ (https://nhatrochuyendoiso.vn) của Công ty B&T, trên 90 % các
                 chủ trọ trên địa bàn Phương Canh đã cài đặt và sử dụng. Ứng dụng cho phép chủ nhà trọ tự động hóa và tối
                 ưu hóa các quy trình quản lý, giúp khách thuê trọ dễ dàng hơn trong việc tìm nhà trọ phù hợp với nhu
@@ -6512,7 +6607,7 @@
                 tin về nhà trọ của mình và các khách thuê trọ vào hệ thống phần mềm.
               </p>
 
-              <p>
+              <p class="indented-p">
                 Hệ thống cho phép các chủ nhà trọ theo dõi tình trạng phòng trống và xem lịch sử thuê trọ. Chủ nhà trọ
                 có thể tạo hợp đồng thuê và tạo các khoản thanh toán định kỳ cho khách thuê trọ. Phần mềm quản lý nhà
                 trọ còn cung cấp cho mỗi nhà trọ một mã QR thông minh. Các khách thuê có thể dễ dàng quét khai báo đăng
