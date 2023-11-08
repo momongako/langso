@@ -547,8 +547,13 @@ img.alignnone.wp-image-4801.size-medium {
 }
 
 #main-header .container {
-  width : 90%;
+  /* width : 90%;
+  height: 80px; */
+  width: 100% !important;
   height: 80px;
+  justify-content: center !important;
+  /* margin-bottom: 30px !important;
+    padding-top: 10px !important; */
 }
 
 #logo,
