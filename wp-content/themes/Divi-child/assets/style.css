@@ -95,6 +95,8 @@ h6 {}
 @media only screen and (min-width: 980px) {
   #et-top-navigation a {
     padding-bottom: 0px !important;
+    /* font-size: 22px ; */
+    font-size: 18px ;
   }
 
   .et_pb_row,
@@ -726,6 +728,7 @@ div#et-top-navigation {
   #main-header .container {
     width: 100% !important;
     height: 125px !important;
+    /* align-items: center; */
     /* justify-content: center; */
   }
 }

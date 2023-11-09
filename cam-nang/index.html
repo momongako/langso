@@ -1130,7 +1130,46 @@
   class="home page-template-default page page-id-6 et_pb_button_helper_class et_non_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
 
   <!-- header -->
+  <style>
+    .mobile-mig-decktop {
+      height: auto;
+    }
 
+    @media (max-width: 980px) {
+      .mobile-mig-decktop {
+        height: 100%;
+        display: none;
+      }
+
+      .background-img-show {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        position: absolute;
+        width: 100%;
+        height: -webkit-fill-available;
+        background-image: url(../image/Rectangle27-2.png);
+      }
+    }
+
+    header#main-header {
+      margin-bottom: 38px;
+    }
+
+    /* .background-img-show {
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+				background-image: url(./image/back-ground-pc.png);
+			} */
+  </style>
+  <div>
+    <div class="background-img-show"></div>
+    <img src="../image/back-ground-pc-2.png" class="mobile-mig-decktop" alt=""
+      style=" position: absolute; width: 100%;">
+  </div>
   <header
     style="position: absolute; width: 100%; background-color: rgb(0,0,0,0); z-index: 1;     height: 80px;display: flex;"
     data-height-onload="90" class="white white1" class="md-header md-header--shadow md-header--lifted white"
@@ -1184,46 +1223,42 @@
       <div id="et-top-navigation" data-height="90" data-fixed-height="40" class="iconHeadl1">
         <nav id="top-menu-nav">
           <ul id="top-menu" class="nav">
-              <li id="menu-item-45"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-                      href="../index.html">Làng Số</a></li>
-              <li id="menu-item-45"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a class=""
-                      href="../cam-nang/index.html#text-0">Cẩm
-                      nang</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
+                href="../index.html">Làng Số</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
+                class="" href="../cam-nang/index.html#text-0">Cẩm
+                nang</a></li>
 
-              <!-- <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+            <!-- <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
       href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
 
-              <li id="menu-item-2314"
-                  class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
-                  <a href="../chuyen-langso/index.html">Chuyện làng số</a>
+            <li id="menu-item-2314" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
+              <a href="../chuyen-langso/index.html">Chuyện làng số</a>
 
-              </li>
-              <li id="menu-item-44"
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
-                      href="../dong-gop-y-kien/index.html">Chia sẻ Câu chuyện</a></li>
-              <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+            </li>
+            <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+                href="../dong-gop-y-kien/index.html">Chia sẻ Câu chuyện</a></li>
+            <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
       href="../nentang-so/index.html">Nền tảng số</a></li> -->
 
 
-              <li id="menu-item-1338"
-                  class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
-                  <a href="../tailieu/Lang_So.pdf" target="_blank">Tải PDF</a>
-                  <!-- <a href="/demo/">Demo</a> -->
-              </li>
+            <li id="menu-item-1338"
+              class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
+              <a href="../tailieu/Lang_So.pdf" target="_blank">Tải PDF</a>
+              <!-- <a href="/demo/">Demo</a> -->
+            </li>
           </ul>
-      </nav>
+        </nav>
 
 
 
 
-        <div id="et_mobile_nav_menu">
+        <!-- <div id="et_mobile_nav_menu">
           <div class="mobile_nav closed">
             <span class="select_page">Select Page</span>
             <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
           </div>
-        </div>
+        </div> -->
       </div> <!-- #et-top-navigation -->
     </div>
     <!-- <div class="container clearfix et_menu_container" style="margin-bottom: 19px;
@@ -1571,7 +1606,7 @@
           }
         </style>
 
-        <div class="uk-width-1-1 uk-width-expand@m content toggle-button" style="min-height: 700px;">
+        <div class="uk-width-1-1 uk-width-expand@m content toggle-button" style="min-height: 700px;z-index: 1;">
           <!-- Lời mời cộng tác -->
           <div class="my-detail-class ">
             <ul>
@@ -7525,153 +7560,6 @@
       cursor: pointer;
     }
   </style>
-  <!-- list mobile -->
-  <!-- <div>
-    <div>
-      <span class="close">&times;</span>
-      <h5>Mở đầu </h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-        <li class=""><a class="sidebar-item" href="text-0" data-index="0">Lời nói đầu</a>
-        </li>
-      </ul>
-
-      <h5>Người dân làng số</h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-
-        <li class=""><a class="sidebar-item" href="#" data-index="1">Mở rộng hạ tầng số trong làng</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="2">Được phổ cập kỹ năng số</a></li>
-
-
-
-        <li><a class="sidebar-item" href="#" data-index="3">Ai cũng có danh tính số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" data-index="4" href="#">Được trang bị chữ ký số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" data-index="5" href="#">Biết sử dụng nền tảng số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" data-index="6" href="#">Xây dựng gia đình số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" data-index="7" href="#">Hình ảnh văn hóa số</a></li>
-
-        <li class=""><a class="sidebar-item" data-index="26" href="#text-26">Tham gia tổ công nghệ số cộng
-            đồng</a></li>
-
-      </ul>
-
-      <h5>Dân làng sử dụng dịch vụ, tiện ích số</h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="8">Dịch vụ công trực tuyến</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="9">Khám chữa bệnh từ xa</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="10">Học tập trực tuyến</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="11">Tiếp cận việc làm qua mạng</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="12">Mua sắm trực tuyến</a></li>
-
-        <li class=""><a class="sidebar-item" href="#" data-index="27">Thanh toán di động</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="28">Đặt vé trực tuyến</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="29">Giao tiếp số trong làng</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="30">Truyền hình số di động</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="31">Tiếp cận tín dụng số</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="32">Bảo vệ thiết bị di động người dân</a></li>
-        <li class=""><a class="sidebar-item" href="#" data-index="33">Bảo vệ trẻ em trên môi trường số</a></li>
-     
-
-      </ul>
-
-      <h5>DÂN LÀNG XÂY DỰNG KHÔNG GIAN KIẾN TRÚC LÀNG SỐ</h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="13">Nhà văn hóa số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="14">Thư viện sách số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="15">Mắt thần 24/7</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="16">Hệ thống chiếu sáng xanh</a>
-        </li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="17">Chợ số</a></li>
-
-
-        <li class=""><a class="sidebar-item" href="#text-25" data-index="25">Truyền thanh số</a></li>
-
-      </ul>
-
-      <h5>DÂN LÀNG LÀM KINH TẾ SỐ</h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="18">Nông nghiệp số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="19">Thương mại số</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="20">Phát triển du lịch địa phương</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="21">Làng kinh tế số đặc thù</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="22">LÝ LUẬN VỀ PHÁT TRIỂN LÀNG SỐ VIỆT NAM NĂM
-            2023</a></li>
-
-      </ul>
-
-      <h5>Tổng kết</h5>
-      <ul class="uk-nav uk-nav-default doc-nav sidebar">
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="23">Lời tổng kết</a></li>
-
-
-
-        <li class=""><a class="sidebar-item" href="#" data-index="24">Lời cảm ơn !</a></li>
-
-      </ul>
-    </div>
-  </div> -->
   <script>
     // Lấy tham chiếu đến modal và nút mở modal
     var modal = document.getElementById('myModal');
@@ -7694,82 +7582,14 @@
       }
     });
   </script>
-  <!-- <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const sidebarItems = document.querySelectorAll('.sidebar-item');
-              const contentDivs = document.querySelectorAll('.content > div');
-              function showContent(index) {
-                // Ẩn tất cả các đoạn văn bản
-                contentDivs.forEach(function (div) {
-                  div.style.display = 'none';
-                });
 
-                // Hiển thị đoạn văn bản tương ứng
-                document.getElementById(index).style.display = 'block';
-
-                // Loại bỏ trạng thái active từ tất cả các sidebar items
-                sidebarItems.forEach(function (item) {
-                  item.classList.remove('active');
-                });
-
-                // Thêm trạng thái active cho sidebar item được chọn
-                sidebarItems[index].classList.add('active');
-              }
-
-              // Thiết lập trạng thái mặc định (văn bản của Tiêu đề 1)
-              showContent(0);
-
-              sidebarItems.forEach(function (item, index) {
-                item.addEventListener('click', function (event) {
-                  event.preventDefault();
-                  showContent(index);
-                });
-              });
-              sidebarItems.forEach(function (item) {
-                item.addEventListener('click', function (event) {
-                  event.preventDefault();
-                  const index = item.getAttribute('data-index');
-                  contentDivs.forEach(function (div) {
-                    div.style.display = 'none'; // Ẩn tất cả các đoạn văn bản
-                  });
-                  document.getElementById('text-' + index).style.display = 'block'; // Hiển thị đoạn văn bản tương ứng
-                  // Loại bỏ trạng thái active từ tất cả các sidebar items
-                  sidebarItems.forEach(function (item) {
-                    item.classList.remove('active');
-                  });
-
-                  // Thêm trạng thái active cho sidebar item được chọn
-                  item.classList.add('active');
-                  // Thiết lập trạng thái mặc định (văn bản của Tiêu đề 1)
-
-                });
-              });
-              const hash = window.location.hash;
-              const targetSection = document.querySelector(hash);
-              if (targetSection) {
-                const index = Array.from(sections).indexOf(targetSection);
-                showContent(index);
-              }
-            });
-          </script> -->
-
-
-
-  <!-- <div class="mainBgImgFooter" style="position: relative;">
-    <div class="boxTexBottom">
-      <div class="texImgBottom1">
-        <div class="texEndBottom1">CỔNG THÔNG TIN ĐIỆN TỬ CHUYỂN ĐỔI SỐ QUỐC GIA</div>
-        <div class="texEndBottom2">Đăng ký để cập nhật các thông tin về chuyển đổi số quốc gia</div>
-      </div>
-    </div>
-  </div> -->
   <style>
 
   </style>
   <link rel="stylesheet" href="../footer/css/all.css">
 
   <!-- footer -->
-  <div class="et_pb_gutters3 threshold-element">
+  <footer class="et_pb_gutters3 threshold-element">
     <style>
       footer {
         border-top: 4px solid #00aa55;
@@ -8047,7 +7867,7 @@
         </div>
       </div>
     </footer>
-  </div>
+  </footer>
   <!-- footer End-->
 
   <script>
@@ -8407,85 +8227,6 @@
     }
   </style>
 
-  <!-- <script>
-    const fixedElement = document.querySelector(".fixed-element");
-    const threshold = 970; // Điểm scroll khi nào bạn muốn tắt position: fixed;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > threshold) {
-        fixedElement.classList.add("relative"); // Thêm lớp CSS "relative"
-        setTimeout(() => {
-          fixedElement.style.position = "relative";
-        }, 500); // Chờ 0.5 giây trước khi đặt "position" thành "relative"
-      } else {
-        fixedElement.style.position = "fixed";
-        fixedElement.classList.remove("relative"); // Loại bỏ lớp CSS "relative"
-      }
-    });
-  </script> -->
-
-
-  <!-- <script>
-    const fixedElement = document.querySelector(".fixed-element");
-    const thresholdElement = document.getElementById("threshold-element");
-    const newClass = "new-class";
-
-    window.addEventListener("scroll", () => {
-      const thresholdPosition = thresholdElement.getBoundingClientRect();
-
-      if (thresholdPosition.top < window.innerHeight) {
-        fixedElement.classList.add(newClass);
-      } else {
-        fixedElement.classList.remove(newClass);
-      }
-    });
-  </script> -->
-
-  <!-- <script>
-    const fixedElement = document.querySelector(".fixed-element");
-    const thresholdElement = document.getElementById("threshold-element");
-
-    window.addEventListener("scroll", () => {
-      const thresholdPosition = thresholdElement.getBoundingClientRect();
-
-      if (thresholdPosition.top > window.innerHeight) {
-        fixedElement.classList.add("relative"); // Thêm lớp CSS "relative"
-        setTimeout(() => {
-          fixedElement.style.position = "relative";
-        }, 500); // Chờ 0.5 giây trước khi đặt "position" thành "relative"
-      } else {
-        fixedElement.style.position = "fixed";
-        fixedElement.classList.remove("relative"); // Loại bỏ lớp CSS "relative"
-      }
-    });
-  </script> -->
-  <!-- <script>
-    const fixedElement = document.querySelector(".fixed-element");
-    const thresholdElement = document.querySelector(".threshold-element");
-    let isFixed = true;
-
-    window.addEventListener("scroll", () => {
-      const thresholdPosition = thresholdElement.getBoundingClientRect();
-
-      if (thresholdPosition.top < window.innerHeight && isFixed) {
-        // Scroll đến phần tử threshold
-        fixedElement.style.opacity = 0;
-        fixedElement.style.transform = "translateY(50px)"; // Di chuyển yếu 50px
-        isFixed = false;
-        setTimeout(() => {
-          fixedElement.style.position = "relative";
-        }, 700); // Chờ 0.7 giây trước khi đặt "position" thành "relative"
-      } else if (thresholdPosition.top >= window.innerHeight && !isFixed) {
-        // Khi cuộn ra ngoài phần tử threshold
-        fixedElement.style.position = "fixed";
-        setTimeout(() => {
-          fixedElement.style.opacity = 1;
-          fixedElement.style.transform = "translateY(0)";
-        }, 0); // Tắt hiệu ứng từ từ
-        isFixed = true;
-      }
-    });
-  </script> -->
   <script>
     window.onload = function () {
       // Cuộn trang lên đầu khi trang được tải lại

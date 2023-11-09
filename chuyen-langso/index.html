@@ -783,6 +783,12 @@
 		#footer-widgets .footer-widget li:before {
 			top: 9.75px
 		}
+		@media (min-width: 768px){
+			.container{
+    max-width: 1200px !important;
+}
+
+		}
 
 		@media only screen and (min-width:981px) {
 
@@ -1075,7 +1081,18 @@
 		fetchDataAndProcess1(); // Gọi hàm để lấy và hiển thị dữ liệu từ API
 		fetchDataAndProcess()
 	</script>
-	<div id="page-container">
+	<style>
+				.bgchuyenlangso {
+					/* background-repeat: no-repeat;
+					background-size: cover;
+					height: 100%; */
+					/* position: absolute; */
+					/* width: 100%; */
+					background-image: url(../image/back-ground-pc.png);
+				}
+			
+		</style>
+	<div id="page-container" class="bgchuyenlangso" >
 
 
 
@@ -1183,13 +1200,11 @@
 							</div> -->
 
 
-							<div class="et_builder_inner_content et_pb_gutters3">
+							<!-- <div class="et_builder_inner_content et_pb_gutters3">
 
-								<!-- chuyenlangsobody" data-aos="fade-right -->
 								<div style="" class="post-item " data-aos-duration="700">
 									<div class="post-inner">
 										<div class="et_pb_text_inner">
-											<!-- HEADLE-V2-->
 											<div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"
 												data-stellar-background-ratio="0.5"
 												style="background-image: url(../image/chuyenlangso.png);display: flex;">
@@ -1220,11 +1235,10 @@
 													</div>
 												</div>
 											</div>
-											<!-- HEADLE-V2 END -->
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 
 
 

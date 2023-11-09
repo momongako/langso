@@ -3560,7 +3560,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
 .swiper-wrapper {
     position                   : relative;
     width                      : 100%;
-    height                     : 100%;
+    height                     : 67%;
     z-index                    : 1;
     display                    : -webkit-box;
     display                    : -ms-flexbox;

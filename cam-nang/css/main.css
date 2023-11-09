@@ -3323,7 +3323,7 @@ ul.uk-nav-sub {
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
-    background: #fff
+    background: transparent
 }
 
 .uk-navbar-container>::before,
