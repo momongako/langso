@@ -1131,7 +1131,8 @@
 
   <!-- header -->
 
-  <header style="position: absolute; width: 100%; background-color: rgb(0,0,0,0); z-index: 1;     height: 80px;display: flex;"
+  <header
+    style="position: absolute; width: 100%; background-color: rgb(0,0,0,0); z-index: 1;     height: 80px;display: flex;"
     data-height-onload="90" class="white white1" class="md-header md-header--shadow md-header--lifted white"
     data-md-component="header">
     <div class="container clearfix et_menu_container headleCn">
@@ -1147,31 +1148,37 @@
         #top-menu {
           display: flex !important;
         }
+
         .et_header_style_left #et-top-navigation nav>ul>li>a {
-    font-weight: 700;
-}
+          font-weight: 700;
+        }
 
         @media (max-width: 980px) {
           #top-menu li {
             font-size: 13px !important;
           }
+
           .et_header_style_left #et-top-navigation nav>ul>li>a {
             padding-bottom: 0px !important;
           }
+
           #top-menu li {
             font-size: 8px !important;
           }
+
           #top-menu li {
 
-    padding-right: 5px !important;
-}
-.nav-i-detail {
-    position: absolute !important;
-}
-.et_header_style_left #et-top-navigation nav>ul>li>a {
-    font-size: 8px !important;
-    font-weight: 700 !important;
-}
+            padding-right: 5px !important;
+          }
+
+          .nav-i-detail {
+            position: absolute !important;
+          }
+
+          .et_header_style_left #et-top-navigation nav>ul>li>a {
+            font-size: 8px !important;
+            font-weight: 700 !important;
+          }
         }
       </style>
       <div id="et-top-navigation" data-height="90" data-fixed-height="40" class="iconHeadl1">
@@ -7410,7 +7417,7 @@
       }
     }
   </style>
-  
+
   <style>
     .modal {
       display: none;
@@ -7703,6 +7710,10 @@
       footer {
         border-top: 4px solid #00aa55;
       }
+
+      .et_pb_image_wrap img {
+        width: 34px !important;
+      }
     </style>
     <footer>
       <div class="container" style="width: 100% !important;">
@@ -7722,11 +7733,6 @@
               </h4>
             </div>
 
-            <div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3"
-              class="widget_kamperen_core_title_widget" data-area="qodef-footer-top-area-column-1">
-              <!-- <h5 class="qodef-widget-title" style="color: #52606b;">
-    								LIÊN KẾT </h5> -->
-            </div>
             <div id="kamperen_core_social_icons_group-4" class="widget widget_kamperen_core_social_icons_group"
               data-area="qodef-footer-top-area-column-1">
               <div class="qodef-social-icons-group">
@@ -7789,6 +7795,50 @@
             .footer-new {
               padding: 0% 3% 2%;
             }
+
+            @media (max-width: 480px) {
+              .title {
+                padding-bottom: 0px !important;
+              }
+
+              .svg-inline--fa.fa-w-9 {
+                width: 0.35em;
+              }
+
+              span.qodef-shortcode.qodef-m.qodef-icon-holder.qodef-layout--normal {
+                margin: 0px 10px 0 0 !important;
+              }
+
+              .title {
+                font-size: 11px !important;
+
+              }
+
+              ul#menu-domains li a {
+                font-size: 10px;
+              }
+
+              #footer-widgets .title+div ul {
+                margin-top: -2px;
+              }
+
+              #menu-domains {
+                line-height: 1.4em;
+              }
+
+              svg.svg-inline--fa.fa-instagram.fa-w-14.qodef-icon-font-awesome.qodef-icon.qodef-e {
+                width: 0.55em;
+              }
+
+              .svg-inline--fa.fa-w-18 {
+                width: 0.7em;
+              }
+
+              .svg-inline--fa.fa-w-16 {
+                width: 0.7em;
+              }
+            }
+
 
             @media (max-width: 980px) {
               .footer-new {
