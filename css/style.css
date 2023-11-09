@@ -3581,13 +3581,6 @@ ul.icon-style-list>li:last-child i:after {
   background-size: cover !important;
 }
 
-@media(max-height:980px) {
-  .campaign-pagination {
-
-    margin-bottom: 28px;
-  }
-}
-
 .volunteer-pagination,
 .testimonial-pagination,
 .campaign-pagination {
@@ -3595,7 +3588,7 @@ ul.icon-style-list>li:last-child i:after {
   margin-top   : 55px;
   z-index      : 1;
   position     : relative;
-  margin-bottom: 60px;
+  margin-bottom: 14px;
 }
 
 .volunteer-pagination span,
