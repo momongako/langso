@@ -1184,43 +1184,46 @@
       <div id="et-top-navigation" data-height="90" data-fixed-height="40" class="iconHeadl1">
         <nav id="top-menu-nav">
           <ul id="top-menu" class="nav">
-            <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-                href="../index.html">Làng Số</a></li>
-            <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-                class="" href="../cam-nang/index.html#text-0">Cẩm
-                nang</a></li>
-            <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
-                href="../nentang-so/index.html">Nền tảng số</a></li> -->
+              <li id="menu-item-45"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
+                      href="../index.html">Làng Số</a></li>
+              <li id="menu-item-45"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a class=""
+                      href="../cam-nang/index.html#text-0">Cẩm
+                      nang</a></li>
 
-            <!-- <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
-                href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
+              <!-- <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+      href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
 
-            <li id="menu-item-2314" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
-              <a href="../chuyen-langso/index.html">Chuyện làng số</a>
+              <li id="menu-item-2314"
+                  class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
+                  <a href="../chuyen-langso/index.html">Chuyện làng số</a>
 
-            </li>
-            <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
-                href="../dong-gop-y-kien/index.html">Chia sẻ Câu chuyện</a></li>
+              </li>
+              <li id="menu-item-44"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+                      href="../dong-gop-y-kien/index.html">Chia sẻ Câu chuyện</a></li>
+              <!-- <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+      href="../nentang-so/index.html">Nền tảng số</a></li> -->
 
 
-
-            <li id="menu-item-1338"
-              class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
-              <a href="../tailieu/Lang_So.pdf" target="_blank">Tải tài liệu</a>
-              <!-- <a href="/demo/">Demo</a> -->
-            </li>
+              <li id="menu-item-1338"
+                  class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
+                  <a href="../tailieu/Lang_So.pdf" target="_blank">Tải PDF</a>
+                  <!-- <a href="/demo/">Demo</a> -->
+              </li>
           </ul>
-        </nav>
+      </nav>
 
 
 
 
-        <!-- <div id="et_mobile_nav_menu">
+        <div id="et_mobile_nav_menu">
           <div class="mobile_nav closed">
             <span class="select_page">Select Page</span>
             <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
           </div>
-        </div> -->
+        </div>
       </div> <!-- #et-top-navigation -->
     </div>
     <!-- <div class="container clearfix et_menu_container" style="margin-bottom: 19px;
@@ -7384,6 +7387,73 @@
       </div>
     </div>
   </div>
+  <script>
+    // Lấy tham chiếu đến button và div chứa nội dung
+    var toggleButton = document.getElementById('toggleButton');
+    var contentDiv = document.querySelector('.context-hide');
+    var toggleButton2 = document.getElementById('toggleButton2');
+    var toggleButton3 = document.getElementById('toggleButton3');
+    var toggleButtons = document.querySelectorAll('.toggle-button');
+    var scrollDiv = document.getElementById("scrollDiv");
+
+    // Thêm sự kiện click vào nút
+    toggleButton.addEventListener('click', function () {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+
+        contentDiv.classList.remove('uk-visible@m');
+
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    });
+    toggleButton2.addEventListener('click', function () {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+        contentDiv.classList.remove('uk-visible@m');
+
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    });
+    function toggleContent() {
+      // Kiểm tra xem div có class "hidden" không
+      if (contentDiv.classList.contains('uk-visible@m')) {
+        // Nếu có, loại bỏ class "hidden" để hiển thị div
+
+      } else {
+        // Nếu không, thêm class "hidden" để ẩn div
+        contentDiv.classList.add('uk-visible@m');
+      }
+    }
+
+    toggleButtons.forEach(function (button) {
+      button.addEventListener('click', toggleContent);
+    });
+    // Lắng nghe sự kiện scroll
+    window.addEventListener("scroll", function () {
+      // Kiểm tra vị trí cuộn của trang
+      if (window.scrollY > 1) { // Thay đổi class khi trang cuộn qua vị trí 200 pixels
+
+        if (contentDiv.classList.contains('context-hide')) {
+          // Nếu có, loại bỏ class "hidden" để hiển thị div
+          contentDiv.classList.add('uk-visible@m');
+        } else {
+          // Nếu không, thêm class "hidden" để ẩn div
+          contentDiv.classList.add('uk-visible@m');
+        }
+      } else {
+        // scrollDiv.classList.remove("uk-visible@m");
+
+      }
+    });
+
+  </script>
+
   <style>
     .menu-in-from-left {
       animation: slideInFromLeft 0.5s ease forwards;
