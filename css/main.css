@@ -55,6 +55,7 @@
 .et_header_style_left #et-top-navigation nav>ul>li>a {
 	text-transform: none !important;
 	font-size     : 20px;
+	font-weight: 700;
 }
 
 .titleContens {
@@ -861,7 +862,7 @@
 
 	.et_header_style_left #et-top-navigation nav>ul>li>a {
 		font-weight   : 700;
-		padding-bottom: 33px;
+		/* padding-bottom: 33px; */
 		font-size     : 20px;
 	}
 

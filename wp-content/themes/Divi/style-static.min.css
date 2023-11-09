@@ -723,7 +723,7 @@ body #main-content .et_builder_inner_content>p {
 
 @media (max-width:980px) {
 	#page-container {
-		padding-top: 80px
+		/* padding-top: 80px */
 	}
 
 	.et-tb #page-container,
@@ -3520,7 +3520,8 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
 	}
 
 	#top-menu {
-		display: none !important
+		/* display: none !important */
+		display: flex !important
 	}
 
 	.et_hide_nav.et_fixed_nav #main-header {

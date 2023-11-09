@@ -7,7 +7,7 @@
     margin-right: 125px !important;
 }
 .mt-bnr-inr-entry {
-    padding-top: 68px !important;
+    /* padding-top: 68px !important; */
 
 }
 .mt-bnr-inr-entry .banner-title-outer h2 {
@@ -15,8 +15,8 @@
    
 }
 .mt-bnr-inr {
-    /* height: 349px !important; */
-    height: 402px !important;
+    height: 349px !important;
+    /* height: 402px !important; */
 
 }
 .mt-bnr-inr-entry {

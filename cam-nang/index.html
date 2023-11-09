@@ -1131,7 +1131,7 @@
 
   <!-- header -->
 
-  <header style="position: fixed; width: 100%; background-color: #00aa55; z-index: 1;     height: 80px;display: flex;"
+  <header style="position: absolute; width: 100%; background-color: rgb(0,0,0,0); z-index: 1;     height: 80px;display: flex;"
     data-height-onload="90" class="white white1" class="md-header md-header--shadow md-header--lifted white"
     data-md-component="header">
     <div class="container clearfix et_menu_container headleCn">
@@ -1143,6 +1143,37 @@
             src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo" data-height-percentage="54" />
         </a>
       </div>
+      <style>
+        #top-menu {
+          display: flex !important;
+        }
+        .et_header_style_left #et-top-navigation nav>ul>li>a {
+    font-weight: 700;
+}
+
+        @media (max-width: 980px) {
+          #top-menu li {
+            font-size: 13px !important;
+          }
+          .et_header_style_left #et-top-navigation nav>ul>li>a {
+            padding-bottom: 0px !important;
+          }
+          #top-menu li {
+            font-size: 8px !important;
+          }
+          #top-menu li {
+
+    padding-right: 5px !important;
+}
+.nav-i-detail {
+    position: absolute !important;
+}
+.et_header_style_left #et-top-navigation nav>ul>li>a {
+    font-size: 8px !important;
+    font-weight: 700 !important;
+}
+        }
+      </style>
       <div id="et-top-navigation" data-height="90" data-fixed-height="40" class="iconHeadl1">
         <nav id="top-menu-nav">
           <ul id="top-menu" class="nav">
@@ -1177,12 +1208,12 @@
 
 
 
-        <div id="et_mobile_nav_menu">
+        <!-- <div id="et_mobile_nav_menu">
           <div class="mobile_nav closed">
             <span class="select_page">Select Page</span>
             <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
           </div>
-        </div>
+        </div> -->
       </div> <!-- #et-top-navigation -->
     </div>
     <!-- <div class="container clearfix et_menu_container" style="margin-bottom: 19px;
@@ -7379,72 +7410,7 @@
       }
     }
   </style>
-  <script>
-    // Lấy tham chiếu đến button và div chứa nội dung
-    var toggleButton = document.getElementById('toggleButton');
-    var contentDiv = document.querySelector('.context-hide');
-    var toggleButton2 = document.getElementById('toggleButton2');
-    var toggleButton3 = document.getElementById('toggleButton3');
-    var toggleButtons = document.querySelectorAll('.toggle-button');
-    var scrollDiv = document.getElementById("scrollDiv");
-
-    // Thêm sự kiện click vào nút
-    toggleButton.addEventListener('click', function () {
-      // Kiểm tra xem div có class "hidden" không
-      if (contentDiv.classList.contains('uk-visible@m')) {
-        // Nếu có, loại bỏ class "hidden" để hiển thị div
-
-        contentDiv.classList.remove('uk-visible@m');
-
-      } else {
-        // Nếu không, thêm class "hidden" để ẩn div
-        contentDiv.classList.add('uk-visible@m');
-      }
-    });
-    toggleButton2.addEventListener('click', function () {
-      // Kiểm tra xem div có class "hidden" không
-      if (contentDiv.classList.contains('uk-visible@m')) {
-        // Nếu có, loại bỏ class "hidden" để hiển thị div
-        contentDiv.classList.remove('uk-visible@m');
-
-      } else {
-        // Nếu không, thêm class "hidden" để ẩn div
-        contentDiv.classList.add('uk-visible@m');
-      }
-    });
-    function toggleContent() {
-      // Kiểm tra xem div có class "hidden" không
-      if (contentDiv.classList.contains('uk-visible@m')) {
-        // Nếu có, loại bỏ class "hidden" để hiển thị div
-
-      } else {
-        // Nếu không, thêm class "hidden" để ẩn div
-        contentDiv.classList.add('uk-visible@m');
-      }
-    }
-
-    toggleButtons.forEach(function (button) {
-      button.addEventListener('click', toggleContent);
-    });
-    // Lắng nghe sự kiện scroll
-    window.addEventListener("scroll", function () {
-      // Kiểm tra vị trí cuộn của trang
-      if (window.scrollY > 1) { // Thay đổi class khi trang cuộn qua vị trí 200 pixels
-
-        if (contentDiv.classList.contains('context-hide')) {
-          // Nếu có, loại bỏ class "hidden" để hiển thị div
-          contentDiv.classList.add('uk-visible@m');
-        } else {
-          // Nếu không, thêm class "hidden" để ẩn div
-          contentDiv.classList.add('uk-visible@m');
-        }
-      } else {
-        // scrollDiv.classList.remove("uk-visible@m");
-
-      }
-    });
-
-  </script>
+  
   <style>
     .modal {
       display: none;
@@ -7739,13 +7705,13 @@
       }
     </style>
     <footer>
-      <div class="container">
+      <div class="container" style="width: 100% !important;">
         <div id="footer-widgets" class="clearfix">
-          <div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
+          <div class="footer-new" style="text-align: center;width: 29%;    margin-top: 13px;">
 
             <div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
               data-area="qodef-footer-top-area-column-1">
-              <div class="logo-test">
+              <div class="">
                 <span class="et_pb_image_wrap ">
                   <img src="../image/logo.png" style="width: 49px;">
                 </span>
@@ -7814,7 +7780,58 @@
               </div>
             </div>
           </div>
-          <div class="footer-widget" style=" width: 29%;">
+          <style>
+            #footer-widgets {
+              display: flex;
+              width: 100%;
+            }
+
+            .footer-new {
+              padding: 0% 3% 2%;
+            }
+
+            @media (max-width: 980px) {
+              .footer-new {
+                float: left;
+                color: #fff;
+                width: 46.25% !important;
+                margin: 5% 7.5% 1.5% 0 !important;
+                font-size: 12px;
+                margin-right: 0 !important;
+                margin-bottom: 25px !important;
+
+              }
+
+              #footer-widgets {
+                padding: 0px;
+              }
+
+              ul#menu-domains li {
+                text-align: center;
+              }
+            }
+
+            @media only screen and (max-width: 980px) {
+              #footer-widgets {
+                display: flex;
+                flex-direction: row;
+              }
+
+              div#kamperen_core_title_widget-3 {
+                text-align: center;
+              }
+
+              .title {
+                text-align: center;
+              }
+            }
+
+            .title {
+              font-size: 16px;
+              color: #00aa55;
+            }
+          </style>
+          <div class="footer-new" style=" width: 29%;">
             <div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
               <h4 class="title">LIÊN HỆ</h4>
               <div class="menu-domains-container">
@@ -7842,7 +7859,7 @@
               </div>
             </div>
           </div>
-          <div class="footer-widget texBottomNone" style=" width: 29%;">
+          <div class="footer-new footer-widget texBottomNone" style=" width: 29%;">
             <div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
               <h4 class="title">TÌM KIẾM</h4>
               <div class="menu-solutions-container">
@@ -8342,6 +8359,8 @@
     });
 
   </script>
+
 </body>
+
 
 </html>
