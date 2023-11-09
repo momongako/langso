@@ -3584,10 +3584,11 @@ ul.icon-style-list>li:last-child i:after {
 .volunteer-pagination,
 .testimonial-pagination,
 .campaign-pagination {
-  text-align: center;
-  margin-top: 40px;
-  z-index   : 1;
-  position  : relative;
+  text-align   : center;
+  margin-top   : 55px;
+  z-index      : 1;
+  position     : relative;
+  margin-bottom: 14px;
 }
 
 .volunteer-pagination span,
