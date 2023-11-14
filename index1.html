@@ -33,7 +33,8 @@
 		let jqueryParams = [], jQuery = function (r) { return jqueryParams = [...jqueryParams, r], jQuery }, $ = function (r) { return jqueryParams = [...jqueryParams, r], $ }; window.jQuery = jQuery, window.$ = jQuery; let customHeadScripts = !1; jQuery.fn = jQuery.prototype = {}, $.fn = jQuery.prototype = {}, jQuery.noConflict = function (r) { if (window.jQuery) return jQuery = window.jQuery, $ = window.jQuery, customHeadScripts = !0, jQuery.noConflict }, jQuery.ready = function (r) { jqueryParams = [...jqueryParams, r] }, $.ready = function (r) { jqueryParams = [...jqueryParams, r] }, jQuery.load = function (r) { jqueryParams = [...jqueryParams, r] }, $.load = function (r) { jqueryParams = [...jqueryParams, r] }, jQuery.fn.ready = function (r) { jqueryParams = [...jqueryParams, r] }, $.fn.ready = function (r) { jqueryParams = [...jqueryParams, r] };</script>
 	<!-- This site is optimized with the Yoast SEO plugin v19.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Trang Chủ Làng Số</title>
-	<meta name="description" content="Làng Số" />
+	<meta name="description"
+		content="Làng Số" />
 	<!-- new css -->
 	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300,400,500,700,900&amp;display=swap"
 		rel="stylesheet">
@@ -682,7 +683,32 @@
 			background-color: transparent
 		}
 	</style>
-
+	<!-- JS CÔNG NGHỆ HỖ TRỢ -->
+	<script>
+		$(document).ready(function () {
+			$('.customer-logos').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 4
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 1
+					}
+				}]
+			});
+		});
+	</script>
+	<!-- JS CÔNG NGHỆ HỖ TRỢ END -->
 	<script>
 		window.addEventListener("scroll", function () {
 			var header = document.querySelector(".header");
@@ -810,6 +836,15 @@
 			header#main-header {
 				margin-bottom: 38px;
 			}
+
+			/* .background-img-show {
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+				background-image: url(./image/back-ground-pc.png);
+			} */
 		</style>
 		<div>
 			<div class="background-img-show"></div>
@@ -885,7 +920,12 @@
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
 										class="myLink" href="./cam-nang/index.html#text-34">Cẩm
 										nang</a></li>
-
+								<!-- <li id="menu-item-43"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+										href="./nentang-so/index.html">Nền tảng số</a></li> -->
+								<!-- <li id="menu-item-44"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+									href="./dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
 								<li id="menu-item-2314"
 									class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
 									<a href="./chuyen-langso/index.html">Chuyện làng số</a>
@@ -893,13 +933,34 @@
 								<li id="menu-item-44"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
 										href="./dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a></li>
+								<!-- <li id="menu-item-44"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+										href="/tailieu/Lang_So.pdf" target="_blank">Tải PDF</a></li> -->
 
+								<!-- <li id="menu-item-1338"
+								class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
+								<a href="./tailieu/Lang_So.pdf" target="_blank">Tải tài liệu</a>
+								
+							</li> -->
 							</ul>
 						</nav>
-
+						<!-- <div id="et_mobile_nav_menu" >
+							<div class="mobile_nav closed">
+								<span class="select_page">Select Page</span>
+								<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+							</div>
+						</div> -->
+					</div> <!-- #et-top-navigation -->
+				</div> <!-- .container -->
+				<div class="et_search_outer">
+					<div class="container et_search_form_container">
+						<form role="search" method="get" class="et-search-form" action="/">
+							<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s"
+								title="Search for:" />
+						</form>
+						<span class="et_close_search_field"></span>
 					</div>
 				</div>
-
 
 			</header> <!-- #main-header -->
 			<div id="et-main-area">
@@ -1015,10 +1076,34 @@
 																<div data-elementor-type="wp-page"
 																	data-elementor-id="12"
 																	class="elementor elementor  elementor-12">
+																	<!-- copy page -->
+																	<!-- TEST VIDEO -->
+																	<!-- <div
+																	class="et_builder_inner_content et_pb_gutters3 destop">
+																	<div id="project-title"
+																		class="et_pb_section et_pb_section_0 project-title-container et_pb_section_video et_pb_with_background et_pb_fullwidth_section et_section_regular styleMarginTopLeftHead"
+																		style="height: 100vh;width: 100%;border: none;">
+																		<span class="et_pb_section_video_bg  ">
+																			
+																			<section class="wrapVd" >
+																				<div class="video-bgVd">
+																					<iframe class="bg-videoVd" src="https://www.youtube.com/embed/3t6xze9fwzM?autoplay=1&mute=1&controls=0&loop=1&playlist=3t6xze9fwzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+																				  </div>
+																				  <div class="contentVd">
+																					<div class="containerVd">
+																					  <h1 class="titleVd">
+																						Làng Quê Việt Nam
+																					  </h1>
+																					</div>
+																				  </div>
+																		  	</section>
+																			
+																		</span>
+																	</div>
+																</div> -->
 
 
-
-
+																	<!-- TEST VIDEO END -->
 																	<section class="qodef-alignment--center"
 																		style="display: flex; justify-content: center;margin-bottom: 10px;">
 																		<div
@@ -1055,7 +1140,9 @@
 																					}
 																				</style>
 
+																				<!-- TESTVIDEO -->
 
+																				<!-- TESTVIDEO END -->
 
 
 
@@ -1071,7 +1158,10 @@
 																							<!-- BACKGROU MAINE -->
 																							<div class=""
 																								style="background-image: url('./images/nha.png');">
-
+																								<!-- <div class="element-with-background"
+																								style="background-image: url('./images/may-2.png');
+																									position: absolute;bottom: 99px;left: 165px;width: 417px;height: 100px;background-repeat: no-repeat;background-position: center;background-size: cover;z-index: 0;">
+																							</div> -->
 																							</div>
 																							<div
 																								class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
@@ -1361,7 +1451,18 @@
 																			</div>
 
 																		</div>
+																		<!-- VIDEO MOBILE -->
 
+																		<!-- VIDEO MOBILE END -->
+
+																		<!-- <section class="wrapVd" > -->
+
+
+																		<!-- </section> -->
+																		<!-- <div style="text-align: center;" class="custom-btn">
+
+																		Xem thêm
+																	</div> -->
 
 
 																	</section>
@@ -1389,7 +1490,24 @@
 																				data-id="e66be58"
 																				data-element_type="column">
 
+																				<!-- <style>
+																					.element-with-background {
+																						animation: moveBackground 3s linear infinite;
+																						/* Di chuyển trong khoảng thời gian 5 giây, lặp vô hạn */
+																					}
 
+																					@keyframes moveBackground {
+																						from {
+																							background-position: 1px 0px;
+																							/* Vị trí ban đầu */
+																						}
+
+																						to {
+																							background-position: 100% 0px;
+																							/* Vị trí cuối cùng */
+																						}
+																					}
+																				</style> -->
 
 
 																				<div
@@ -1416,7 +1534,12 @@
 																									text-align: center;
 																								}
 																							</style>
-
+																							<!-- <div class="contact-one__bg1 float-bob-x"
+																							style="background-image: url('./images/nha.png'); bottom: 84px;">
+																							<div class="element-with-background mobile-style"
+																								style="background-image: url('./images/may-2.png');bottom: 105px;position: absolute;left: 165px;width: 417px;height: 100px;background-repeat: no-repeat;background-position: center;background-size: cover;z-index: 0;">
+																							</div>
+																						</div> -->
 																							<div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center "
 																								style="margin-bottom: 45px;margin-top: 50px;">
 																								<div class="qodef-m-tagline-mark"
@@ -1475,6 +1598,14 @@
 																			</div>
 																		</div>
 
+																		<!-- 
+																		<div class="green-line "
+																			style="margin-bottom: 50px;">
+																		</div> -->
+
+																		<!-- BACKGROU MAINE -->
+																		<!-- <img class="contact-one__bg2 float-bob-x"
+																			src="./image/imgBg/anhbg8.png"> -->
 
 
 
@@ -3209,901 +3340,1727 @@
 
 									</div>
 								</section>
+								<!-- CONTEN END  -->
+								<div id="tab-integrator"
+									class="et_pb_section et_pb_section_2 bb-tab-panel et_section_regular">
 
 
 
-							</div>
-							<!-- style popup -->
-							<style>
-								.show-more-text-popup {
 
-									margin-bottom: 20px;
-									justify-content: end;
-									display: flex;
-									margin-right: 17px;
-								}
 
-								.title-header-card-popup {
-									text-align: center;
-									color: #00aa55;
 
-								}
-							</style>
-							<!-- popup -->
-							<div id="popup1" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Xây dựng gia đình số</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
-											<a href="#popup14">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
+									<div class="et_pb_row et_pb_row_6 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_12 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_24 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>USE OUR MQTT/HTTP/WEBSOCKET API OR PROTOCOL AGENTS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_25 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Connect your sites</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_26 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Add remote monitoring and control to your customer sites. Connect
+														to any installed system using (custom) agents or our
+														API&#8217;s. This way all systems will be available in one
+														platform.</p>
+												</div>
+											</div>
 										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/01_Tranh tong hop_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
-											<a href="#popup2">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_13 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_27 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_1.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_7 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_14 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_28 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_2.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_15 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_29 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CREATE RULES TO MONITOR YOUR ASSETS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_30 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Maintain and update assets</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_31 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Monitor your sites and receive alarms. This cuts unnecessary
+														maintenance or replacement costs. Errors can be prevented by
+														predictive maintenance without interrupting your customers key
+														processes.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_8 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_16 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_32 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>DEVELOP ALGORITHMS TO IMPROVE YOUR SYSTEM</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_33 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Optimise your sites</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_34 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>With your sites connected, you can optimise individual device
+														settings by adding forecasting and optimisation routines. Some
+														are built in, while we easily can add more.</p>
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_17 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_35 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_3.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_9 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_18 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_36 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_4.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_19 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_37 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>DATA PROCESSING AND ANALYSIS IN WEB UI</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_38 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Learn from your data</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_39 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>In addition to optimisation and maintenance, collecting data
+														gives new insights to your service organisation and domain
+														experts through dedicated dashboards. This helps your engineers
+														to improve the on site installations, or find opportunities for
+														a new service.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_10 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_20 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_40 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CREATE AND SHARE DATA DASHBOARDS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_41 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Insights for your customers</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_42 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>Create one page drag-and-drop apps for your customer. These
+														insight apps are made to fit your customers&#8217; role, giving
+														them a quick overview and basic control.</p>
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_21 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_43 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_5.json
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+									<div class="et_pb_row et_pb_row_11 bb-tab-panel__row">
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_22 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_44 bb-tab-panel__animation  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													/wp-content/themes/Divi-child/assets/animations/Integrator_6.json
+												</div>
+											</div>
+										</div>
+										<div
+											class="et_pb_column et_pb_column_1_2 et_pb_column_23 bb-tab-panel__column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+											<div
+												class="et_pb_module et_pb_text et_pb_text_45 bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<p>CONNECT TO EXTERNAL TOOLS</p>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_46 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+												<div class="et_pb_text_inner">
+													<h3>Integrate your services</h3>
+												</div>
+											</div>
+											<div
+												class="et_pb_module et_pb_text et_pb_text_47 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+
+												<div class="et_pb_text_inner">
+													<p>Link into your existing workflows. We seamlessly integrate into
+														your business applications like ERP or CRM.</p>
+												</div>
+											</div>
+										</div>
+
+
+
+
+									</div>
+
+
+								</div>
+								<!-- nền móng - kinh tế hide -->
+								<!-- <section id="home-domain" class="project-section padding-tb"
+									style="background-image: url(images/bg-image_1.jpg); background-size: cover; overflow: hidden;background-color: #f4f4f4 !important;">
+									<div class="container">
+										<div class="section-header" data-aos="fade-up" data-aos-duration="700">
+											<h2>Dịch vụ</h2>
+											<h2><span>Các dịch vụ tiện ích làng số</span></h2>
+										</div>
+										<div class="section-wrapper">
+											<div class="post-item">
+												<div class="post-thumb" data-aos="fade-right" data-aos-duration="700">
+													<a href="#"><img
+															src="https://demos.codexcoder.com/labartisan/html/EnviShare/assets/images/project/01.jpg"
+															alt="project"></a>
+												</div>
+												<div class="post-content" data-aos="fade-left" data-aos-duration="700">
+													<h4><a href="#">Dịch vụ công trực tuyến</a></h4>
+													
+													<p>Cảnh người dân xếp hàng, lấy số, chờ cán bộ tiếp nhận hồ sơ, ngó
+														nghiêng khi nào gọi đến tên mình để làm thủ tục là một
+														trong những hình ảnh minh họa cho những bất cập về giải quyết
+														các thủ tục hành chính trong những năm qua.</p>
+													<a href="#" class="custom-btn">Chi tiết</a>
+												</div>
+											</div>
+											<div class="post-item">
+												<div class="post-thumb" data-aos="fade-right" data-aos-duration="700">
+													<a href="#"><img
+															src="https://demos.codexcoder.com/labartisan/html/EnviShare/assets/images/project/02.jpg"
+															alt="project"></a>
+												</div>
+												<div class="post-content" data-aos="fade-left" data-aos-duration="700">
+													<h4><a href="#">Khám chữa bệnh từ xa</a></h4>
+													
+													<p>Những tiếng cầu cứu trong lúc nguy cấp, sự quá tải, vỡ trận của
+														các bệnh viện trong đại dịch Covid-19 đã cướp đi mạng
+														sống của nhiều người, và để lại biết bao nỗi đau cho các gia
+														đình không may bị mất người thân</p>
+													<a href="#" class="custom-btn">Chi Tiết</a>
+												</div>
+											</div>
 										</div>
 									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-6">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+								</section> -->
+								<!-- end nền móng - kinh tế hide -->
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+								<!-- <section class="campaign-section style-two padding-tb ">
 
-									</a>
-								</div>
 
-							</div>
-							<div id="popup2" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Khám chữa bệnh từ xa</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
-											<a href="#popup1">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
+									<div class="service-content-box container">
+
+										<div class="healthy-food-one__bg float-bob-x"
+											style="background-image: url(images/healthy-food-one-shape-1.png);"></div>
+
+										<style>
+											@media (max-width: 980px) {
+												.service-content-box {
+													padding-left: 0px;
+													padding-right: 0px;
+												}
+
+												.section-header>h2 {
+													font-size: 25px;
+
+												}
+
+												.section-header>p {
+													text-align: justify;
+												}
+
+												.post-thumb.style-2 {
+													align-items: flex-end;
+													display: flex;
+													height: 364px;
+												}
+
+												.post-content h4 {
+													font-size: 17px;
+												}
+											}
+										</style>
+										<div class="cta-one__bg" data-jarallax="" data-speed="0.2"
+											data-imgposition="50% 0%"
+											style="background-image: url(image/imgBg/cta-one-bg.jpg);"></div>
+										<div class="service-content-box container" style="padding-top: 0px;">
+											<div class="section-header" data-aos="fade-up" data-aos-duration="700">
+												<h2>DỊCH VỤ - TIỆN ÍCH LÀNG SỐ</h2>
+												<div class="green-line "></div>
+												<p><span>Dịch vụ, tiện ích làng số giới thiệu tới người dân những nền
+														tảng
+														số, dịch vụ số, mà có thể giúp giải quyết những nhu
+														cầu thường gặp phải trong cuộc sống hàng ngày của người dân. Một
+														ngôi làng luôn có sự hiện diện của các nền tảng số,
+														tiện ích số khi người dân cần, là một ngôi làng đang tích lũy để
+														phát triển thành làng số.</span></p>
+											</div>
+											<div class="section-wrapper" data-aos="fade-up" data-aos-duration="700">
+												<div class="campaign-slider-two">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<div class="post-item">
+																<div class="post-inner">
+																	<div class="post-thumb style-2">
+																		<a href="#"><img class="img-style-cover"
+																				src="./image/img-so/07_TMĐT PostMart_color.jpg"
+																				alt="campaign"></a>
+																	</div>
+																	<div class="post-content">
+																		<h4><a href="#">MUA SẮM TRỰC TUYẾN</a></h4>
+																		<p>Bên cạnh các sàn giao dịch điện tử đã quá phổ
+																			biến như Shoppe, Tiki hay Lazada, chúng ta
+																			tự
+																			hào khi phát triển được một
+																			ứng dụng tương tự, 100% Make in VietNam, đó
+																			là
+																			Sendo.
+																		</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide">
+															<div class="post-item">
+																<div class="post-inner">
+																	<div class="post-thumb style-2">
+																		<a href="#"><img class="img-style-cover"
+																				src="./image/img-so/02_Y tế số_color.jpg"
+																				alt="campaign"></a>
+																	</div>
+																	<div class="post-content">
+																		<h4><a href="#">KHÁM CHỮA BỆNH TỪ XA</a></h4>
+																		<p>Bây giờ, nếu muốn làm hộ chiếu, người dân có
+																			thể
+																			ngồi ngay tại nhà, với một chiếc điện thoại
+																			thông minh hoặc một máy
+																			tính có kết nối mạng, tất cả mọi thủ tục sẽ
+																			được
+																			xử lý mà không cần hiện diện tại...</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide">
+															<div class="post-item">
+																<div class="post-inner">
+																	<div class="post-thumb style-2">
+																		<a href="#"><img class="img-style-cover"
+																				src="./image/img-so/10_Hoctap_color.jpg"
+																				alt="campaign"></a>
+																	</div>
+																	<div class="post-content">
+																		<h4><a href="#">HỌC TẬP TRỰC TUYẾN</a></h4>
+																		<p>Các nền tảng học tập trực tuyến giúp mở ra
+																			không
+																			gian học tập không biên giới, cho phép học
+																			sinh
+																			ở các khu vực nông thôn
+																			truy cập vào các khóa học, tài liệu và nguồn
+																			kiến thức từ xa, mang đến những cơ...</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+
+													</div>
+
+													<div class="campaign-pagination"></div>
+												</div>
+												<div style="text-align: center;margin-top: 15px;">
+													<a href="./dichvu-tienich/index.html" class="custom-btn">
+														Xem thêm
+													</a>
+												</div>
+											</div>
 										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/02_Y tế số_color.jpg" class="" alt="c" decoding="async"
-											sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
-											<a href="#popup3">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
+
 									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-9">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+								</section> -->
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+								<!-- CÔNG NGHỆ HỖ TRỢ -->
 
-									</a>
-								</div>
-							</div>
-							<div id="popup3" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Thanh toán di động</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
-
-											<a href="#popup2">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/03_Thanh toán số_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
-											<a href="#popup4">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
+								<!-- <div class="container" style="background-color: #fcf9f3;">
+									<div class="cta-one__bg" data-jarallax="" data-speed="0.2" data-imgposition="50% 0%"
+										style="background-image: url(image/imgBg/bgcongnge.jpg);">
 									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-27">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+									<section class="campaign-section style-two padding-tb">
 
-									</a>
-								</div>
+										<div class="container" style="padding-top: 0px;">
+
+											<div class="section-header" data-aos="fade-up" data-aos-duration="700">
+												<h2 class="textNone">CÔNG NGHỆ HỖ TRỢ</h2>
+												<div class="green-line "></div>
+											</div>
+
+											<div class="section-wrapper" data-aos="fade-up" data-aos-duration="700">
+
+												<div class="campaign-slider-two">
+
+													<div class="swiper-wrapper">
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/foodmap.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/lamp.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/lamp.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/ghtk.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</section>
+
+									<section class="campaign-section style-two padding-tb">
+										<div class="container" style="padding-top: 0px;">
+											<div class="section-wrapper" data-aos="fade-up" data-aos-duration="700">
+
+												<div class="campaign-slider-two">
+
+													<div class="swiper-wrapper">
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/foodmap.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/foodmap.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/foodmap.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide slideWidth">
+															<div class="post-item ">
+																<div class="post-inner ">
+																	<div class="box">
+																		<div class="boxLeft">
+																			<div class="boderBoxLeft">
+																				<div class="Child1"></div>
+																				<div class="Child2">
+																					<img class="imgInChild2 "
+																						src="./image/img-so/foodmap.png"
+																						alt="campaign">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="boxRight">
+																			<div class="boderbox">
+																				<div class="TextHead">FOODMAP</div>
+																				<div class="TextCenter">foodMap là một
+																					ứng dụng di động giúp người dùng tìm
+																					kiếm và đánh giá cacs nhà hàng quán
+																					an và món ăn ngon trong khu vực của
+																					họ </div>
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</section>
+
+
+								</div> -->
 							</div>
-							<div id="popup4" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Nông nghiệp số</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
-											<a href="#popup3">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/04_maybaykonglai_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
-											<a href="#popup5">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-18">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+						</div>
+				</div>
+			</div>
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
 
-									</a>
-								</div>
-							</div>
-							<div id="popup5" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Tiếp thị quảng cáo số</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+			<!-- SỬA CÔNG NGHỆ HỖ TRỌ -->
 
-											<a href="#popup4">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/05_Tiếp thị quảng cáo số_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+			<!-- SỬA CÔNG NGHỆ HỖ TRỌ END -->
+			<!-- <div class="container">
+				<section class="customer-logos slider">
+					<div class="slide"><img src="../image/img-so/foodmap.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/ghtk.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/lamp.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/nbc.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/next_vision.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/viettelmoney.png">
+					</div>
+					<div class="slide"><img src="../image/img-so/vneid.png">
+					</div>
 
-											<a href="#popup6">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+					<div class="slide"><img src="../image/img-so/zalo.png">
+					</div>
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+				</section>
+			</div> -->
+			<!-- CÔNG NGHỆ HỖ TRỌ END -->
 
-									</a>
-								</div>
-							</div>
-							<div id="popup6" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Giao hàng tiết kiệm</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
 
-											<a href="#popup5">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/06_GHTK_color.jpg" class="" alt="c" decoding="async"
-											sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+		</div>
+		<!-- style popup -->
+		<style>
+			.show-more-text-popup {
 
-											<a href="#popup7">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+				margin-bottom: 20px;
+				justify-content: end;
+				display: flex;
+				margin-right: 17px;
+			}
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+			.title-header-card-popup {
+				text-align: center;
+				color: #00aa55;
 
-									</a>
-								</div>
-							</div>
-							<div id="popup7" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Đưa nông sản lên sàn</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+			}
+		</style>
+		<!-- popup -->
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Xây dựng gia đình số</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+						<a href="#popup14">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/01_Tranh tong hop_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+						<a href="#popup2">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-6">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup6">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/07_TMĐT PostMart_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<a href="#popup8">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+				</a>
+			</div>
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+		</div>
+		<div id="popup2" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Khám chữa bệnh từ xa</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+						<a href="#popup1">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/02_Y tế số_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+						<a href="#popup3">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-9">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-									</a>
-								</div>
-							</div>
-							<div id="popup8" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Tiếp cận tín dụng số</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<a href="#popup7">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/08_Tài chính vi mô_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+				</a>
+			</div>
+		</div>
+		<div id="popup3" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Thanh toán di động</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-											<a href="#popup9">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-31">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+						<a href="#popup2">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/03_Thanh toán số_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+						<a href="#popup4">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-27">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-									</a>
-								</div>
-							</div>
-							<div id="popup9" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Truyền hình số di động</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+				</a>
+			</div>
+		</div>
+		<div id="popup4" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Nông nghiệp số</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+						<a href="#popup3">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/04_maybaykonglai_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+						<a href="#popup5">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-18">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup8">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/09_VTVGo_color.jpg" class="" alt="c" decoding="async"
-											sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<a href="#popup10">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-30">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+				</a>
+			</div>
+		</div>
+		<div id="popup5" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Tiếp thị quảng cáo số</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+						<a href="#popup4">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/05_Tiếp thị quảng cáo số_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
 
-									</a>
-								</div>
-							</div>
-							<div id="popup10" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Học tập trực tuyến</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+						<a href="#popup6">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup9">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/10_Hoctap_color.jpg" class="" alt="c" decoding="async"
-											sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<a href="#popup11">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-10">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+				</a>
+			</div>
+		</div>
+		<div id="popup6" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Giao hàng tiết kiệm</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+						<a href="#popup5">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/06_GHTK_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
 
-									</a>
-								</div>
-							</div>
-							<div id="popup11" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Phát triển du lịch địa phương</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+						<a href="#popup7">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup10">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/11_ezCloud_color.jpg" class="" alt="c" decoding="async"
-											sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<a href="#popup12">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-20">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+				</a>
+			</div>
+		</div>
+		<div id="popup7" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Đưa nông sản lên sàn</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+						<a href="#popup6">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/07_TMĐT PostMart_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
 
-									</a>
-								</div>
-							</div>
-							<div id="popup12" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Tổ công nghệ số cộng đồng</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
-											<a href="#popup11">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/12_To_Cong_Nghe_So_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<a href="#popup8">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup13">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-26">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+				</a>
+			</div>
+		</div>
+		<div id="popup8" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Tiếp cận tín dụng số</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-									</a>
-								</div>
-							</div>
-							<div id="popup13" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Dịch vụ công trực tuyến</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+						<a href="#popup7">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/08_Tài chính vi mô_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
 
-											<a href="#popup12">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/13_DichVuCong_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
+						<a href="#popup9">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-31">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<a href="#popup14">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-8">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+				</a>
+			</div>
+		</div>
+		<div id="popup9" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Truyền hình số di động</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
 
-									</a>
-								</div>
-							</div>
-							<div id="popup14" class="overlay">
-								<div class="popup">
-									<h2 class="title-header-card-popup">Truy xuất nguồn gốc nông sản</h2>
-									<a class="close" href="#">&times;</a>
-									<div class="content">
-										<div class="next-popup">
+						<a href="#popup8">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/09_VTVGo_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
 
-											<a href="#popup13">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 404.258 404.258" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-										<img loading="lazy" style="width: 85% !important;" width="800" height="574"
-											src="./image/color/14_TruyXuatNguonGoc_color.jpg" class="" alt="c"
-											decoding="async" sizes="(max-width: 800px) 100vw, 800px">
-										<div class="next-popup">
-											<a href="#popup1">
-												<svg fill="#70bf6c" height="64px" width="64px" version="1.1"
-													id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<polygon
-															points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
-														</polygon>
-													</g>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
-										<h3 style="font-weight: 700;">
-											CHI TIẾT
+						<a href="#popup10">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-30">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
 
-											<span class="qodef-m-icon arrow-animation">
-												<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
-													viewBox="0 0 20.053 10.039">
-													<path
-														d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
-														transform="translate(-2.875 -11.252)">
-													</path>
-												</svg>
-											</span>
-										</h3>
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
 
-									</a>
-								</div>
-							</div>
+				</a>
+			</div>
+		</div>
+		<div id="popup10" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Học tập trực tuyến</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+
+						<a href="#popup9">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/10_Hoctap_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+
+						<a href="#popup11">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-10">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
+
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
+
+				</a>
+			</div>
+		</div>
+		<div id="popup11" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Phát triển du lịch địa phương</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+
+						<a href="#popup10">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/11_ezCloud_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+
+						<a href="#popup12">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-20">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
+
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
+
+				</a>
+			</div>
+		</div>
+		<div id="popup12" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Tổ công nghệ số cộng đồng</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+						<a href="#popup11">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/12_To_Cong_Nghe_So_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+
+						<a href="#popup13">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-26">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
+
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
+
+				</a>
+			</div>
+		</div>
+		<div id="popup13" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Dịch vụ công trực tuyến</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+
+						<a href="#popup12">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/13_DichVuCong_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+
+						<a href="#popup14">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-8">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
+
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
+
+				</a>
+			</div>
+		</div>
+		<div id="popup14" class="overlay">
+			<div class="popup">
+				<h2 class="title-header-card-popup">Truy xuất nguồn gốc nông sản</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+					<div class="next-popup">
+
+						<a href="#popup13">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 404.258 404.258" xml:space="preserve">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="289.927,18 265.927,0 114.331,202.129 265.927,404.258 289.927,386.258 151.831,202.129 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<img loading="lazy" style="width: 85% !important;" width="800" height="574"
+						src="./image/color/14_TruyXuatNguonGoc_color.jpg" class="" alt="c" decoding="async"
+						sizes="(max-width: 800px) 100vw, 800px">
+					<div class="next-popup">
+						<a href="#popup1">
+							<svg fill="#70bf6c" height="64px" width="64px" version="1.1" id="Layer_1"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								viewBox="0 0 407.436 407.436" xml:space="preserve" stroke="#70bf6c">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<polygon
+										points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 ">
+									</polygon>
+								</g>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<a class="show-more-text-popup myLink" href="./cam-nang/index.html#text-19">
+					<h3 style="font-weight: 700;">
+						CHI TIẾT
+
+						<span class="qodef-m-icon arrow-animation">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40.053" height="20.039"
+								viewBox="0 0 20.053 10.039">
+								<path
+									d="M17.474,11.444a.683.683,0,0,0-.005.962l3.179,3.184H3.549a.68.68,0,0,0,0,1.359H20.643l-3.179,3.184a.688.688,0,0,0,.005.962.677.677,0,0,0,.957-.005l4.308-4.34h0a.763.763,0,0,0,.141-.214.649.649,0,0,0,.052-.261.681.681,0,0,0-.193-.476l-4.308-4.34A.666.666,0,0,0,17.474,11.444Z"
+									transform="translate(-2.875 -11.252)">
+								</path>
+							</svg>
+						</span>
+					</h3>
+
+				</a>
+			</div>
+		</div>
 </body>
 </div>
 </div>
@@ -4114,7 +5071,14 @@
 
 </div>
 
-
+<!-- <div class="mainBgImgFooter">
+		<div class="boxTexBottom">
+			<div class="texImgBottom1">
+				<div class="texEndBottom1">CỔNG THÔNG TIN ĐIỆN TỬ CHUYỂN ĐỔI SỐ QUỐC GIA</div>
+				<div class="texEndBottom2"> Đăng ký để cập nhật các thông tin về chuyển đổi số quốc gia</div>
+			</div>
+		</div>
+	</div> -->
 <style>
 	footer {
 		position: relative;
@@ -4130,7 +5094,7 @@
 <footer>
 	<div class="container">
 		<div id="footer-widgets" class="clearfix">
-			<div class="footer-widget" style="text-align: center;width: 25%;    margin-top: 13px;">
+			<div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
 
 				<div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
 					data-area="qodef-footer-top-area-column-1">
@@ -4141,6 +5105,12 @@
 					</h4>
 					<h4 class="title">
 						VỤ KINH TẾ SỐ VÀ XÃ HỘI SỐ </h4>
+				</div>
+
+				<div style="margin-bottom: 10px;" id="kamperen_core_title_widget-3"
+					class="widget_kamperen_core_title_widget" data-area="qodef-footer-top-area-column-1">
+					<!-- <h5 class="qodef-widget-title" style="color: #52606b;">
+								LIÊN KẾT </h5> -->
 				</div>
 				<div id="kamperen_core_social_icons_group-4" class="widget widget_kamperen_core_social_icons_group"
 					data-area="qodef-footer-top-area-column-1">
@@ -4193,7 +5163,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-widget" style=" width: 25%;">
+			<div class="footer-widget" style=" width: 29%;">
 				<div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
 					<h4 class="title">LIÊN HỆ</h4>
 					<div class="menu-domains-container">
@@ -4220,7 +5190,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-widget texBottomNone" style=" width: 14%;">
+			<div class="footer-widget texBottomNone" style=" width: 29%;">
 				<div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
 					<h4 class="title">DANH MỤC</h4>
 					<div class="menu-solutions-container">
@@ -4245,15 +5215,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-widget img-box-right" style="text-align: center;width: 21%;    margin-top: 13px;">
-				<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/langsodxgovvn-1699602537"
-					title="Chung nhan Tin Nhiem Mang" target="_blank" style="
-			    width: 100%;
-			"><img style="
-			    width: 100%;
-			" src="https://tinnhiemmang.vn/handle_cert?id=langso.dx.gov.vn" width="150px" height="auto"
-						alt="Chung nhan Tin Nhiem Mang"></a>
-			</div>
+
 		</div>
 	</div>
 

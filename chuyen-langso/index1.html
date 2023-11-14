@@ -4,11 +4,9 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- giới thiệu trang web -->
 	<meta property="og:title" content=" Chuyện làng số">
 
-	<link rel="icon" href="./image/logotitle.png" sizes="32x32" />
-	<link rel="icon" href="./image/logotitle.png" sizes="192x192" />
+	<meta property="og:url" content="https://dx.mic.gov.vn/uploads/fb-thumb.jpg" />
 
 
 	<script type="text/javascript">
@@ -35,17 +33,9 @@
 	<!-- This site is optimized with the Yoast SEO plugin v19.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Chuyện Làng Số</title>
 
-	<link rel="canonical" href="https://www./developers/" />
-
-
-
 
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 	<style id='global-styles-inline-css' type='text/css'>
-		footer {
-			position: relative;
-		}
-
 		body {
 			--wp--preset--color--black: #000000;
 			--wp--preset--color--cyan-bluish-gray: #abb8c3;
@@ -682,7 +672,9 @@
 	<script type='text/javascript' src='/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
 	<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
 		id='jquery-migrate-js'></script>
-
+	<script type='text/javascript' id='jquery-js-after'>
+		jqueryParams.length && $.each(jqueryParams, function (e, r) { if ("function" == typeof r) { var n = String(r); n.replace("$", "jQuery"); var a = new Function("return " + n)(); $(document).ready(a) } });
+	</script>
 	<script type='text/javascript' src='/wp-content/plugins/cr3ativ-carousel/js/owl.carousel.js?ver=6.0.5'
 		id='creativ_carousel_js-js'></script>
 	<script type='text/javascript' src='/wp-content/plugins/cr3ativ-carousel/js/owl.script.js?ver=6.0.5'
@@ -695,7 +687,7 @@
 		id='lottie-js-js'></script>
 	<script type='text/javascript' src='/wp-content/themes/Divi-child/js/archive-categories.js?ver=6.0.5'
 		id='archive-categories-js-js'></script>
-
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
 	<link rel='shortlink' href='/' />
 
@@ -738,7 +730,6 @@
 	</style>
 	<link rel="icon" href="../image/logotitle.png" sizes="32x32" />
 	<link rel="icon" href="../image/logotitle.png" sizes="192x192" />
-	<link rel="apple-touch-icon" href="/wp-content/uploads/2018/06/cropped-OpenRemote-favicon-180x180.png" />
 
 	<style id="et-divi-customizer-global-cached-inline-styles">
 		body,
@@ -1003,7 +994,83 @@
 			}
 		}
 	</style>
+	<script>
+		function fetchDataAndProcess1() {
+			document.addEventListener("DOMContentLoaded", async function () {
+				try {
+					const response = await axios.get(`${apiUrl}/home_posts?id=4&per_page=50`);
 
+					if (response.status !== 200) {
+						throw new Error("Lỗi kết nối API");
+					}
+
+					const data = response.data;
+					const titleContainer = document.querySelector(".titleApi");
+					const contentContainer = document.querySelector(".contenApi");
+
+					data.forEach(item => {
+						const title = item.title;
+						const content = item.excerpt;
+
+						// Tạo các thẻ cho tiêu đề và nội dung
+						const titleElement = document.createElement("h2");
+						const contentElement = document.createElement("p");
+
+						// Gán nội dung cho các thẻ
+						titleElement.textContent = title;
+						contentElement.textContent = content;
+
+						// Thêm các thẻ vào các container tương ứng
+						titleContainer.appendChild(titleElement);
+						contentContainer.appendChild(contentElement);
+
+					});
+
+				} catch (error) {
+					console.error("Lỗi: " + error);
+				}
+			});
+		}
+
+
+		function fetchDataAndProcess() {
+			document.addEventListener("DOMContentLoaded", async function () {
+				try {
+					const postData = {
+						// Dữ liệu bạn muốn gửi đi
+						key1: "value1",
+						key2: "value2",
+					};
+
+					const response = await axios.get(`${apiUrl}/home_posts?id=4&per_page=50`);
+
+					if (response.status !== 200) {
+						throw new Error("Lỗi kết nối API");
+					}
+
+					const data = response.data;
+					// Xử lý dữ liệu từ API ở đây
+
+					// Sử dụng forEach để lặp qua mảng và log ra tiêu đề từ mỗi phần tử
+					data.forEach(item => {
+						const title = item.title;
+						// console.log("Tiêu đề:", title);
+					});
+				} catch (error) {
+					console.error("Lỗi: " + error);
+				}
+			});
+		}
+
+
+
+
+
+
+
+		fetchDataAndProcess1(); // Gọi hàm để lấy và hiển thị dữ liệu từ API
+		fetchDataAndProcess()
+	</script>
 	<style>
 		.bgchuyenlangso {
 			/* background-repeat: no-repeat;
@@ -1027,43 +1094,17 @@
 			}
 		}
 	</style>
-	<style>
-		.mobile-mig-decktop {
-			/* height: auto; */
-		}
+	<div id="page-container" class="bgchuyenlangso">
 
-		@media (max-width: 980px) {
-			.mobile-mig-decktop {
-				height: 100%;
-				display: none;
-			}
 
-			.background-img-show {
-				background-repeat: no-repeat;
-				background-size: cover;
-				height: auto;
-				position: absolute;
-				width: 100%;
-				height: 100vh;
-				background-image: url(../image/Rectangle27-2.png);
-			}
-		}
 
-		header#main-header {}
-	</style>
-	<div>
-		<div class="background-img-show"></div>
-		<img src="../image/back-ground-pc-2(cam-nang).png" class="mobile-mig-decktop" alt=""
-			style=" position: absolute; width: 100%;">
-	</div>
-	<div id="page-container" class="">
 		<header id="main-header" data-height-onload="90" class="white">
 			<div class="container clearfix et_menu_container">
 				<div class="logo_container" style="visibility: hidden;">
 					<span class="logo_helper"></span>
 					<a href="#" style="margin-left: 30px;">
 						<img style="height: 50px;width: 50px;object-fit: cover; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 10px rgb(63 194 92 / 40%);"
-							src="../image/logo.png" alt="OpenRemote" height="50" width="57" id="logo"
+							src="../image/logo.png" alt="" height="50" width="57" id="logo"
 							data-height-percentage="54" />
 					</a>
 				</div>
@@ -1083,12 +1124,17 @@
 						<ul id="top-menu" class="nav">
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
-									href="../index.html">Làng số</a></li>
+									href="../index.html">Làng Số</a></li>
 							<li id="menu-item-45"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a
 									class="myLink" href="../cam-nang/index.html#text-34">Cẩm
 									nang</a></li>
-
+							<!-- <li id="menu-item-43"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+									href="../nentang-so/index.html">Nền tảng số</a></li> -->
+							<!-- <li id="menu-item-44"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
+									href="../dichvu-tienich/index.html">Dịch vụ tiện ích</a></li> -->
 
 							<li id="menu-item-2314"
 								class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-2314">
@@ -1097,7 +1143,10 @@
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a
 									href="../dong-gop-y-kien/index.html">Chia sẻ câu chuyện</a></li>
 							</li>
-
+							<!-- <li id="menu-item-1338"
+								class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-1338">
+								<a href="../tailieu/Lang_So.pdf" style="color: #00aa55;" target="_blank">Tải PDF</a>
+							</li> -->
 						</ul>
 					</nav>
 
@@ -1107,10 +1156,15 @@
 						}
 					</style>
 
-
+					<!-- <div id="et_mobile_nav_menu">
+						<div class="mobile_nav closed">
+							<span class="select_page">Select Page</span>
+							<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+						</div>
+					</div> -->
 				</div> <!-- #et-top-navigation -->
 			</div> <!-- .container -->
-
+		
 		</header> <!-- #main-header -->
 
 		<div id="et-main-area">
@@ -1125,12 +1179,13 @@
 						<div class="et-l et-l--post">
 							<div class="et_builder_inner_content et_pb_gutters3">
 
-								<div class="post-item chuyenlangsobody" data-aos="fade-right" data-aos-duration="700">
+								<div style="margin-top: 50px;" class="post-item chuyenlangsobody" data-aos="fade-right"
+									data-aos-duration="700">
 									<div class="post-inner">
 										<div class="et_pb_text_inner">
 											<h1
-												style="padding: 40px 0px 0px 0px;justify-content: center;align-items: center;display: flex;font-size: 38px; color: #00aa55;">
-												Chuyện Làng Số</h1>
+												style="padding: 40px 0px 0px 0px;justify-content: center;align-items: center;display: flex;font-size: 34.5px; color: #00aa55;">
+												CHUYỆN LÀNG SỐ</h1>
 											<!-- <div class="green-line "></div> -->
 											<div style="width: 100%;padding-top: 30px;">
 												<div class="row-crossbar">
@@ -1144,527 +1199,70 @@
 							</div>
 
 
+							<!-- <div class="et_builder_inner_content et_pb_gutters3">
 
+								<div style="" class="post-item " data-aos-duration="700">
+									<div class="post-inner">
+										<div class="et_pb_text_inner">
+											<div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"
+												data-stellar-background-ratio="0.5"
+												style="background-image: url(../image/chuyenlangso.png);display: flex;">
+												<div class="overlay-main bg-black opacity-07"></div>
+												<div class="container containerv2" style="display: flex ;">
+													<div class="mt-bnr-inr-entry">
+														<div class="iconHeadv1  arrow-animation "><img class="imgv2"
+																src="../image/img_nentangsov2/icon.png" alt=""></div>
+														<div class="banner-title-outer">
+															<div class="banner-title-name">
+																<h2 class="m-b0">
+																	CHUYỆN LÀNG SỐ
+																</h2>
 
+															</div>
 
-						</div>
+															<div style="width: 100%">
+																<div class="row-crossbar">
+																	<div class="row-crossbar-bg">
+																	</div>
+																</div>
+															</div>
+														</div>
 
+														<div class="iconHeadv2   arrow-animation"><img class="imgv2"
+																src="../image/img_nentangsov2/icon.png" alt=""></div>
 
-
-						<style>
-							figure.wp-block-image.size-full img {
-								display: none;
-							}
-
-							.section-wrapper-wrappers {
-								display: flex;
-								width: 100%;
-							}
-
-							.menu-box-wrapper {
-								width: 20%;
-								background-color: #F4F6FB;
-							}
-
-							.section-wrapper {
-								width: 80%;
-							}
-						</style>
-						<!-- select -->
-						<style>
-							/*the container must be positioned relative:*/
-							.custom-select {
-								width: 77%;
-							}
-
-
-
-							.select-selected {
-								background-color: DodgerBlue;
-							}
-
-							/*style the arrow inside the select element:*/
-							.select-selected:after {
-								position: absolute;
-								content: "";
-								top: 14px;
-								right: 10px;
-								width: 0;
-								height: 0;
-								border: 6px solid transparent;
-								border-color: #fff transparent transparent transparent;
-							}
-
-							/*point the arrow upwards when the select box is open (active):*/
-							.select-selected.select-arrow-active:after {
-								border-color: transparent transparent #fff transparent;
-								top: 7px;
-							}
-
-							/*style the items (options), including the selected item:*/
-							.select-items div,
-							.select-selected {
-								color: #ffffff;
-								padding: 8px 16px;
-								border: 1px solid transparent;
-								border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-								cursor: pointer;
-								user-select: none;
-							}
-
-							/*style items (options):*/
-							.select-items {
-								position: absolute;
-								background-color: DodgerBlue;
-								top: 100%;
-								left: 0;
-								right: 0;
-								z-index: 99;
-							}
-
-							/*hide the items when the select box is closed:*/
-							.select-hide {
-								display: none;
-							}
-
-							.select-items div:hover,
-							.same-as-selected {
-								background-color: rgba(0, 0, 0, 0.1);
-							}
-
-							.custom-select {
-								display: none;
-							}
-						</style>
-						<section class="project-section ">
-							<div class="container" style="padding-top: 0px;">
-								<div class="selcet-key"
-									style="justify-content: center;display: flex; margin-bottom: 10px;">
-									<div class="custom-select">
-										<select style="height: 35px;">
-											<option onclick="openTab(this, 1)" value="0">Tất cả</option>
-											<option onclick="openTab(this, 2)" value="1">Kinh Tế</option>
-											<option onclick="openTab(this, 3)" value="2">Phát triển nông thôn</option>
-											<option onclick="openTab(this, 4)" value="3">Khác</option>
-
-										</select>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="section-wrapper-wrappers">
-									<div class="menu-box-wrapper">
-										<style>
-											/* Style the tab */
-											.tab {
-
-												height: 94vh;
-												float: left;
-												background-color: transparent;
-
-
-											}
-
-											/* Style the buttons inside the tab */
-											.tab button {
-												display: block;
-												background-color: inherit;
-												color: #00aa55;
-												padding: 12px 16px;
-												width: 100%;
-												border-bottom: 2px solid white;
-												outline: none;
-												text-align: left;
-												cursor: pointer;
-												transition: 0.3s;
-												font-size: 17px;
-											}
-
-											/* Change background color of buttons on hover */
-											.tab button:hover {
-												background-color: #ddd;
-											}
-
-											/* Create an active/current "tab button" class */
-											.tab button.active {
-												background-color: #00aa55;
-												color: white;
-											}
-
-											/* Style the tab content */
-											.tabcontent {
-												float: left;
-												padding: 0px 12px;
-												border: 1px solid #ccc;
-												width: 70%;
-												border-left: none;
-												height: 300px;
-											}
-
-											@media(max-width:980px) {
-												img.imgbox {
-													height: auto !important;
-												}
-
-												.tab {
-													display: none !important;
-												}
-
-												.menu-box-wrapper {
-													width: 0%;
-												}
-
-
-												.section-wrapper-wrappers {
-													justify-content: center;
-												}
-
-												.custom-select {
-													display: block;
-												}
-											}
-
-
-											.back-scroll {
-												position: fixed;
-												bottom: 54px;
-											}
-
-											.tab {
-												display: block;
-											}
-
-											button.active svg {
-												fill: white;
-											}
-
-											button.active svg.c {
-												fill: white;
-											}
-										</style>
-										<script>
-											document.addEventListener("DOMContentLoaded", function () {
-												const tabElement = document.querySelector('.tab');
-
-												// Thêm sự kiện scroll
-												window.addEventListener('scroll', function () {
-													// Kiểm tra vị trí cuộn của trang
-													if (window.scrollY > 300) {
-														// Nếu vị trí cuộn lớn hơn 0, thêm class 'back-scroll'
-														tabElement.classList.add('back-scroll');
-													} else {
-														// Nếu vị trí cuộn là 0, loại bỏ class 'back-scroll'
-														tabElement.classList.remove('back-scroll');
-													}
-												});
-
-												// Các hàm khác ở đây
-											});
-										</script>
-										<div class="tab">
-											<button class="tablinks" onclick="openTab(this, 1)" id="tab1">
-
-												<svg fill="#00aa55" version="1.1" id="icon"
-													xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" width="34px"
-													height="34px" viewBox="0 0 32 32" xml:space="preserve"
-													stroke="#00aa55">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<style type="text/css">
-															.st0 {
-																fill: none;
-															}
-														</style>
-														<rect class="st0" width="32" height="32"></rect>
-														<rect x="14" y="4" width="4" height="4"></rect>
-														<rect x="4" y="4" width="4" height="4"></rect>
-														<rect x="24" y="4" width="4" height="4"></rect>
-														<rect x="14" y="14" width="4" height="4"></rect>
-														<rect x="4" y="14" width="4" height="4"></rect>
-														<rect x="24" y="14" width="4" height="4"></rect>
-														<rect x="14" y="24" width="4" height="4"></rect>
-														<rect x="4" y="24" width="4" height="4"></rect>
-														<rect x="24" y="24" width="4" height="4"></rect>
-													</g>
-												</svg>
-												Tất
-												cả</button>
-											<button class="tablinks" onclick="openTab(this, 2)" id="tab2">
-												<svg fill="#00aa55" height="34px" width="34px" version="1.1" id="Capa_1"
-													xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink"
-													viewBox="0 0 386.651 386.651" xml:space="preserve">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<g>
-															<path
-																d="M342.367,135.781c-2.674-1.367-5.889-1.122-8.324,0.635l-138.556,99.968l-89.233-83.725 c-3.032-2.844-7.736-2.892-10.826-0.112l-74.395,66.959c-1.685,1.518-2.648,3.679-2.648,5.946v91.451c0,4.418,3.582,8,8,8h312.339 c4.418,0,8-3.582,8-8v-174C346.724,139.899,345.041,137.149,342.367,135.781z M53.507,308.903H34.385v-79.889l19.122-17.211 V308.903z M88.045,308.903H69.507v-111.5l18.538-16.685V308.903z M122.582,308.903h-18.538V172.526l18.538,17.393V308.903z M157.12,308.903h-18.538V204.931l18.538,17.394V308.903z M192.015,308.903H173.12v-71.565l16.227,15.226 c0.791,0.741,1.702,1.288,2.667,1.65V308.903z M226.91,308.903h-18.896v-61.828l18.896-13.634V308.903z M261.806,308.903H242.91 v-87.006l18.895-13.633V308.903z M296.701,308.903h-18.896V196.72l18.896-13.634V308.903z M330.724,308.903h-18.022v-137.36 l18.022-13.003V308.903z">
-															</path>
-															<path
-																d="M385.375,65.087c-1.439-2.148-3.904-3.404-6.461-3.337l-50.696,1.368c-3.471,0.094-6.429,2.547-7.161,5.941 c-0.732,3.395,0.95,6.85,4.074,8.366l11.846,5.75L196.96,183.012l-95.409-86.504c-4.738-4.296-11.955-4.322-16.723-0.062 L4.173,168.491c-5.149,4.599-5.594,12.501-0.995,17.649c4.598,5.148,12.499,5.594,17.649,0.995l72.265-64.55l94.533,85.709 c2.369,2.147,5.376,3.239,8.398,3.239c2.532,0,5.074-0.767,7.255-2.322L350.82,104.01l0.701,11.074 c0.22,3.464,2.777,6.329,6.193,6.939c0.444,0.079,0.889,0.118,1.328,0.118c2.938,0,5.662-1.724,6.885-4.483l20.077-45.327 C387.052,69.968,386.815,67.234,385.375,65.087z">
-															</path>
-														</g>
-													</g>
-												</svg>
-												Kinh
-												tế
-											</button>
-											<button class="tablinks" onclick="openTab(this, 3)" id="tab3">
-												<svg fill="#00aa55" version="1.1" id="Layer_1"
-													xmlns="http://www.w3.org/2000/svg"
-													xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
-													xml:space="preserve" width="29px" height="24px">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<g>
-															<g>
-																<g>
-																	<path
-																		d="M376,320h80c13.232,0,24-10.768,24-24v-33.472c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24 s-24,10.768-24,24c0,10.416,6.712,19.216,16,22.528V296c0,4.416-3.584,8-8,8h-80c-13.232,0-24,10.768-24,24v152h-16V288 c0-4.416,3.584-8,8-8h56c13.232,0,24-10.768,24-24v-25.472c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24 s-24,10.768-24,24c0,10.416,6.712,19.216,16,22.528V256c0,4.416-3.584,8-8,8h-56c-13.232,0-24,10.768-24,24v192h-16v-64h-16v64 h-16v-32h-16v32h-16v-32h-16v32h-16v-64h-16v64h-16V272c0-13.232-10.768-24-24-24H88c-4.416,0-8-3.584-8-8v-57.472 c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24s-24,10.768-24,24c0,10.416,6.712,19.216,16,22.528V240 c0,13.232,10.768,24,24,24h64c4.416,0,8,3.584,8,8v208h-16V312c0-13.232-10.768-24-24-24H40c-4.416,0-8-3.584-8-8v-57.472 c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24S0,186.768,0,200c0,10.416,6.712,19.216,16,22.528V280 c0,13.232,10.768,24,24,24h80c4.416,0,8,3.584,8,8v168H32v16h432v-16h-96V328C368,323.584,371.584,320,376,320z M472,232 c4.416,0,8,3.584,8,8s-3.584,8-8,8c-4.416,0-8-3.584-8-8S467.584,232,472,232z M416,200c4.416,0,8,3.584,8,8s-3.584,8-8,8 c-4.416,0-8-3.584-8-8S411.584,200,416,200z M72,168c-4.416,0-8-3.584-8-8s3.584-8,8-8s8,3.584,8,8S76.416,168,72,168z M24,208 c-4.416,0-8-3.584-8-8s3.584-8,8-8s8,3.584,8,8S28.416,208,24,208z">
-																	</path>
-																	<path
-																		d="M183.072,110.984l-8.608,8.6l33.936,33.952l8.616-8.608c2.272,1.088,4.6,2.048,6.984,2.888V160h48v-12.176 c2.384-0.84,4.712-1.808,6.984-2.888l8.616,8.608l33.936-33.952l-8.608-8.6c1.088-2.272,2.048-4.6,2.888-6.984H328V56h-12.176 c-0.84-2.384-1.808-4.712-2.888-6.984l8.608-8.616L287.6,6.464l-8.616,8.608c-2.272-1.088-4.6-2.048-6.984-2.896V0h-48v12.176 c-2.384,0.84-4.712,1.808-6.984,2.888l-8.616-8.6L174.464,40.4l8.608,8.616c-1.088,2.272-2.048,4.6-2.896,6.984H168v48h12.176 C181.024,106.384,181.984,108.712,183.072,110.984z M184,72h8.288l1.544-6c1.312-5.072,3.32-9.912,5.968-14.392l3.152-5.344 l-5.864-5.864L208.4,29.088l5.864,5.864l5.344-3.152c4.48-2.648,9.32-4.656,14.392-5.968l6-1.544V16h16v8.288l6,1.544 c5.072,1.312,9.912,3.32,14.392,5.968l5.344,3.152l5.864-5.864L298.912,40.4l-5.864,5.864l3.152,5.344 c2.648,4.48,4.656,9.32,5.968,14.392l1.544,6H312v16h-8.288l-1.544,6c-1.312,5.072-3.32,9.912-5.968,14.392l-3.16,5.344 l5.872,5.864L287.6,130.912l-5.864-5.864l-5.344,3.152c-4.48,2.648-9.32,4.656-14.392,5.968l-6,1.544V144h-16v-8.288l-6-1.544 c-5.072-1.312-9.912-3.32-14.392-5.968l-5.344-3.152l-5.864,5.864L197.088,119.6l5.872-5.864l-3.16-5.344 c-2.648-4.48-4.656-9.32-5.968-14.392l-1.544-6H184V72z">
-																	</path>
-																	<path
-																		d="M248,120c22.056,0,40-17.944,40-40c0-22.056-17.944-40-40-40c-22.056,0-40,17.944-40,40C208,102.056,225.944,120,248,120 z M248,56c13.232,0,24,10.768,24,24s-10.768,24-24,24s-24-10.768-24-24S234.768,56,248,56z">
-																	</path>
-																	<rect x="224" y="176" width="16" height="112">
-																	</rect>
-																	<rect x="256" y="176" width="16" height="112">
-																	</rect>
-																	<path
-																		d="M112,110.528V200c0,13.232,10.768,24,24,24h48c4.416,0,8,3.584,8,8v88h16v-88c0-13.232-10.768-24-24-24h-48 c-4.416,0-8-3.584-8-8v-89.472c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24S96,74.768,96,88 C96,98.416,102.712,107.216,112,110.528z M120,80c4.416,0,8,3.584,8,8s-3.584,8-8,8s-8-3.584-8-8S115.584,80,120,80z">
-																	</path>
-																	<path
-																		d="M360,150.528V216c0,4.416-3.584,8-8,8h-40c-13.232,0-24,10.768-24,24v72h16v-72c0-4.416,3.584-8,8-8h40 c13.232,0,24-10.768,24-24v-65.472c9.288-3.312,16-12.112,16-22.528c0-13.232-10.768-24-24-24s-24,10.768-24,24 C344,138.416,350.712,147.216,360,150.528z M368,120c4.416,0,8,3.584,8,8s-3.584,8-8,8c-4.416,0-8-3.584-8-8S363.584,120,368,120 z">
-																	</path>
-																	<path
-																		d="M288,352v-4c0-15.44-12.56-28-28-28h-4v-16h-16v16h-4c-15.44,0-28,12.56-28,28s12.56,28,28,28h24c6.616,0,12,5.384,12,12 c0,6.616-5.384,12-12,12h-24c-6.616,0-12-5.384-12-12v-4h-16v4c0,15.44,12.56,28,28,28h4v16h16v-16h4c15.44,0,28-12.56,28-28 s-12.56-28-28-28h-24c-6.616,0-12-5.384-12-12c0-6.616,5.384-12,12-12h24c6.616,0,12,5.384,12,12v4H288z">
-																	</path>
-																	<rect x="480" y="480" width="16" height="16"></rect>
-																	<rect y="480" width="16" height="16"></rect>
-																</g>
-															</g>
-														</g>
-													</g>
-												</svg>
+							</div> -->
 
 
 
-												Phát triển
-												nông thôn</button>
-											<button class="tablinks" onclick="openTab(this, 4)" id="tab4">
-												<svg fill="#00aa55" width="34px" height="34px" viewBox="0 0 256 256"
-													id="Flat" xmlns="http://www.w3.org/2000/svg" stroke="#00aa55">
-													<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-													<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-														stroke-linejoin="round"></g>
-													<g id="SVGRepo_iconCarrier">
-														<path
-															d="M128,28A100,100,0,1,0,228,128,100.11332,100.11332,0,0,0,128,28Zm0,192a92,92,0,1,1,92-92A92.10416,92.10416,0,0,1,128,220Zm8-92a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,136,128Zm48,0a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,184,128Zm-96,0a8,8,0,1,1-8-8A8.00917,8.00917,0,0,1,88,128Z">
-														</path>
-													</g>
-												</svg>
-
-
-												Khác</button>
-										</div>
-
-									</div>
+							<style>
+								figure.wp-block-image.size-full img {
+									display: none;
+								}
+							</style>
+							<section class="project-section ">
+								<div class="container" style="padding-top: 0px;">
 
 									<div class="section-wrapper">
 
 										<!-- TEST API -->
+
 										<script>
 											const perPage = 10; // Số bài viết trên mỗi trang
 											let currentPage = 1; // Trang hiện tại
-											let tabNumber = 1;
-											const elementToScroll = document.querySelector('.scroll-to-element'); // class scroll đến phần tử chỉ định
-
-											function openTab(tabElement, event) {
-												// Loại bỏ lớp 'active' từ tất cả các nút
-												const allTabLinks = document.querySelectorAll('.tablinks');
-												allTabLinks.forEach(link => {
-													link.classList.remove('active');
-												});
-
-												// Thêm lớp 'active' vào nút tab được click
-												tabElement.classList.add('active');
-												tabNumber = event;
-												fetchPosts(currentPage, tabNumber);
-											}
-
-											function fetchPosts(page, tab) {
-												console.log(tab);
-
-												fetch(`${apiUrl}/home_posts?id=4&per_page=10&page=${page}&content=1`, {
-													method: 'GET',
-												})
-													.then(response => response.json())
-													.then(apiData => {
-														const myElement = document.querySelector(".section-wrapper");
-
-														const usersHTML = apiData.map(user => {
-															return `
-															<div class="post-item " style="align-items: center;">
-																		<div class="post-thumb post-thumb-fire" style="margin-top: 10px;height: 100%;"
-																			data-aos-duration="700">
-																			<a href="#"><img class="imgbox"
-																					style="width: 100%; border-radius: 0px;height: 250px; object-fit: contain;"
-																					src="${user.img}" alt=""></a>
-																		</div>
-
-																		<div class="post-content post-content1" "
-																			data-aos-duration="700">
-
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-																				
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					<div class="section-header text-mobile">
-																						<p class="quote-icon"><span class="iconHeadlText">“</span>
-																						</p>
-																						<h2>${user.title}</h2>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					${user.content}
-																					
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-														`;
-														}).join('');
-
-														myElement.innerHTML = `${usersHTML}`;
-														displayPagination(3);
-														window.scrollTo(0, 0);
-													})
-													.catch(error => {
-														console.error("There has been a problem with your fetch operation:", error);
-													});
-											}
-
-											function displayPagination(totalPages) {
-												const paginationContainer = document.getElementById('pagination');
-												paginationContainer.innerHTML = '';
-
-												// Tạo nút "Quay lại"
-												const prevButton = document.createElement('a');
-												prevButton.innerHTML = '<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>';
-												prevButton.href = '#';
-												prevButton.classList.add('pagination-button');
-												prevButton.addEventListener('click', function (event) {
-													event.preventDefault();
-													if (currentPage > 1) {
-														currentPage--;
-														fetchPosts(currentPage, tabNumber);
-														updateActiveButton();
-														scrollToTop();
-														window.scrollTo(0, 0);
-													}
-												});
-												paginationContainer.appendChild(prevButton);
-
-												for (let i = 1; i <= totalPages; i++) {
-													const button = document.createElement('a');
-													button.innerText = i;
-													button.href = '#';
-													// Thêm lớp active khi nút được nhấp vào
-													if (i === currentPage) {
-														button.classList.add('show-botton');
-													}
-
-													button.addEventListener('click', function (event) {
-														event.preventDefault();
-														currentPage = i;
-														fetchPosts(currentPage, tabNumber);
-														updateActiveButton();
-														scrollToTop();
-														window.scrollTo(0, 0);
-													});
-													paginationContainer.appendChild(button);
-												}
-
-												// Tạo nút "Tiếp theo"
-												const nextButton = document.createElement('a');
-												nextButton.innerHTML = `
-<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>
-`; nextButton.href = '#';
-												nextButton.classList.add('pagination-button');
-												nextButton.addEventListener('click', function (event) {
-													event.preventDefault();
-													if (currentPage < totalPages) {
-														currentPage++;
-														fetchPosts(currentPage, tabNumber);
-														updateActiveButton();
-														scrollToTop();
-														window.scrollTo(0, 0);
-													}
-												});
-												paginationContainer.appendChild(nextButton);
-											}
-
-											function updateActiveButton() {
-												const buttons = document.querySelectorAll('#pagination a');
-												buttons.forEach(button => {
-													if (parseInt(button.innerText) === currentPage) {
-														button.classList.add('show-botton');
-													}
-												});
-											}
-
-											function scrollToTop() {
-												window.scrollTo({
-													top: 0,
-													behavior: 'smooth',
-													objectFit: 'contain',
-													transition: 'all 0.3s ease'
-												});
-											}
-
-											// Hàm này để giả định apiUrl, bạn cần thay đổi theo API thực tế của mình
-
-
-											document.addEventListener("DOMContentLoaded", function () {
-												const myElement = document.querySelector(".section-wrapper");
-												// Tự động chọn nút có id = "tab1"
-												const defaultTab = document.getElementById('tab1');
-												defaultTab.classList.add('active');
-												fetchPosts(currentPage, 1);
-											});
-										</script>
-										<!-- <script>
-											const perPage = 10; // Số bài viết trên mỗi trang
-											let currentPage = 1; // Trang hiện tại
-											let tabNumber = 1;
 											const elementToScroll = document.querySelector('.scroll-to-element'); // class scroll đến phần tử chỉ địnhs
-											function openTab(event) {
-												tabNumber = event;
-												fetchPosts(currentPage, tabNumber);
-											}
 
 											document.addEventListener("DOMContentLoaded", function () {
 												// Chọn phần tử có class là "my-custom-class"
 												const myElement = document.querySelector(".section-wrapper");
-												fetchPosts(currentPage, tabNumber);
-												// fetchPosts(1)
-
-												function fetchPosts(page, tab) {
-													console.log(tab)
-
+												fetchPosts(1)
+												function fetchPosts(page) {
 													fetch(`${apiUrl}/home_posts?id=4&per_page=10&page=${page}&content=1`, {
 														method: 'GET',
 													})
@@ -1674,41 +1272,41 @@
 															// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
 															const usersHTML = apiData.map(user => {
 																return `
-																	<div class="post-item " style="align-items: center;">
-																		<div class="post-thumb post-thumb-fire" style="margin-top: 10px;height: 100%;" 
-																			data-aos-duration="700">
-																			<a href="#"><img class="imgbox"
-																					style=" border-radius: 0px;height: 250px; object-fit: contain;"
-																					src="${user.img}" alt=""></a>
-																		</div>
+															<div class="post-item " style="margin-bottom: 40px;">
+																<div class="post-thumb post-thumb-fire" style="margin-top: 10px;" "
+																	data-aos-duration="700">
+																	<a href="#"><img class="imgbox"
+																			style=" border-radius: 0px;height: 450px; object-fit: cover;"
+																			src="${user.img}" alt=""></a>
+																</div>
 
-																		<div class="post-content post-content1" "
-																			data-aos-duration="700">
+																<div class="post-content post-content1" "
+																	data-aos-duration="700">
 
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-																				
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					<div class="section-header text-mobile">
-																						<p class="quote-icon"><span class="iconHeadlText">“</span>
-																						</p>
-																						<h2>${user.title}</h2>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					${user.content}
-																					
-																				</div>
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
+																		
+																	</div>
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
+																		<div class="et_pb_text_inner">
+																			<div class="section-header text-mobile">
+																				<p class="quote-icon"><span class="iconHeadlText">“</span>
+																				</p>
+																				<h2>${user.title}</h2>
 																			</div>
 																		</div>
 																	</div>
-																	`;
+																	<div
+																		class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
+																		<div class="et_pb_text_inner">
+																			${user.content}
+																			
+																		</div>
+																	</div>
+																</div>
+															</div>
+															`;
 															}).join(''); // Sử dụng join('') để chuyển mảng thành chuỗi
 
 															// Gán chuỗi HTML vào phần tử có class "my-custom-class"
@@ -1771,7 +1369,7 @@
 													// Tạo nút "Tiếp theo"
 													const nextButton = document.createElement('a');
 													nextButton.innerHTML = `
-<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>
+    <svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>
 `; nextButton.href = '#';
 													nextButton.classList.add('pagination-button');
 													nextButton.addEventListener('click', function (event) {
@@ -1808,7 +1406,7 @@
 
 											});
 
-										</script> -->
+										</script>
 
 
 
@@ -1818,29 +1416,28 @@
 
 
 									</div>
-								</div>
-								<style>
-									.pagination {
-										display: flex;
-										justify-content: center;
-									}
+									<style>
+										.pagination {
+											display: flex;
+											justify-content: center;
+										}
 
-									.pagination a {
-										color: black;
-										float: left;
-										padding: 8px 16px;
-										text-decoration: none;
-										transition: background-color .3s;
-									}
+										.pagination a {
+											color: black;
+											float: left;
+											padding: 8px 16px;
+											text-decoration: none;
+											transition: background-color .3s;
+										}
 
-									.show-botton {
-										background-color: #00aa55;
-										color: #fff !important;
-									}
-								</style>
-								<div id="pagination" class="pagination"></div>
-						</section>
-					</div>
+										.show-botton {
+											background-color: #00aa55;
+											color: #fff !important;
+										}
+									</style>
+									<div id="pagination" class="pagination"></div>
+							</section>
+						</div>
 				</article>
 			</div>
 
@@ -1876,7 +1473,7 @@
 		<footer>
 			<div class="container">
 				<div id="footer-widgets" class="clearfix">
-					<div class="footer-widget" style="text-align: center;width: 25%;    margin-top: 13px;">
+					<div class="footer-widget" style="text-align: center;width: 29%;    margin-top: 13px;">
 
 						<div style="" id="kamperen_core_title_widget-3" class="widget_kamperen_core_title_widget"
 							data-area="qodef-footer-top-area-column-1">
@@ -1949,7 +1546,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="footer-widget" style=" width: 25%;">
+					<div class="footer-widget" style=" width: 29%;">
 						<div id="nav_menu-5" class="fwidget et_pb_widget widget_nav_menu">
 							<h4 class="title">LIÊN HỆ</h4>
 							<div class="menu-domains-container">
@@ -1965,7 +1562,7 @@
 									<li id="menu-item-2330"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2330">
 										<a><i style=" transform: rotateY(180deg); display: inline-block; margin-right: 10px" "="" class="
-												fas fa-phone"></i>Số điện thoại: 024.39454461</a>
+												fas fa-phone"></i>Số điện thoại: 012333888</a>
 									</li>
 									<li id="menu-item-2329"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329">
@@ -1977,7 +1574,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="footer-widget texBottomNone" style=" width: 14%;">
+					<div class="footer-widget texBottomNone" style=" width: 29%;">
 						<div id="nav_menu-2" class="fwidget et_pb_widget widget_nav_menu">
 							<h4 class="title">DANH MỤC</h4>
 							<div class="menu-solutions-container">
@@ -2004,16 +1601,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="footer-widget img-box-right"
-						style="text-align: center;width: 21%;    margin-top: 13px;">
-						<a href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/langsodxgovvn-1699602537"
-							title="Chung nhan Tin Nhiem Mang" target="_blank" style="
-			    width: 100%;
-			"><img style="
-			    width: 100%;
-			" src="https://tinnhiemmang.vn/handle_cert?id=langso.dx.gov.vn" width="150px" height="auto"
-								alt="Chung nhan Tin Nhiem Mang"></a>
-					</div>
+
 				</div>
 			</div>
 
@@ -2041,30 +1629,21 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWP6C7F" height="0" width="0"
 			style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/js/customize.js?ver=04.1'
-		id='customize-js-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/js/lottie-custom-1550.js?ver=6.0.5'
-		id='lottie-custom-js-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/portfolio_carousel/slick/slick.min.js?ver=01'
-		id='click_js-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/portfolio_carousel/portfolio_carousel.js?ver=03'
-		id='gfp_product_js-js'></script>
-	<script type='text/javascript'
-		src='/wp-content/themes/Divi-child/includes/use_cases/select2/js/select2.min.js?ver=01'
-		id='select2_js-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/includes/use_cases/index.js?ver=1677634286'
-		id='op_use_cases_js-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi-child/includes/other_customer/index.js?ver=1677634223'
-		id='op_other_customer_js-js'></script>
-	<script type='text/javascript' id='divi-custom-script-js-extra'>
-		/* <![CDATA[ */
-		var DIVI = { "item_count": "%d Item", "items_count": "%d Items" };
-		var et_builder_utils_params = { "condition": { "diviTheme": true, "extraTheme": false }, "scrollLocations": ["app", "top"], "builderScrollLocations": { "desktop": "app", "tablet": "app", "phone": "app" }, "onloadScrollLocation": "app", "builderType": "fe" };
-		var et_frontend_scripts = { "builderCssContainerPrefix": "#et-boc", "builderCssLayoutPrefix": "#et-boc .et-l" };
-
-		/* ]]> */
+	<!-- Start of StatCounter Code -->
+	<script>
+		var sc_project = 12552357;
+		var sc_security = "5f0049d4";
+		var sc_invisible = 1;
+		var scJsHost = (("https:" == document.location.protocol) ?
+			"https://secure." : "http://www.");
+		//-->
 	</script>
+
+	<script type="text/javascript" src="https://secure.statcounter.com/counter/counter.js" async></script> <noscript>
+		<div class="statcounter"><a title="web analytics" href="https://statcounter.com/"><img class="statcounter"
+					src="https://c.statcounter.com/12552357/0/5f0049d4/1/" alt="web analytics" /></a></div>
+	</noscript>
+	<!-- End of StatCounter Code -->
 	<!-- đường link gồm id -->
 	<script>
 		// Lấy tất cả các thẻ <a> với class "myLink"
@@ -2085,12 +1664,33 @@
 		});
 
 	</script>
-	<script type='text/javascript' src='/wp-content/themes/Divi/js/scripts.min.js?ver=4.17.6'
-		id='divi-custom-script-js'></script>
-	<script type='text/javascript' src='/wp-content/themes/Divi/core/admin/js/common.js?ver=4.17.6'
-		id='et-core-common-js'></script>
+	<!-- <style id="et-builder-module-design-28-cached-inline-styles">
+		.et_pb_divider_0,
+		.et_pb_divider_1,
+		.et_pb_divider_2 {
+			height: 0px
+		}
 
+		.et_pb_divider_0:before,
+		.et_pb_divider_1:before,
+		.et_pb_divider_2:before {
+			border-top-color: #cdcdcd
+		}
 
+		.et_pb_toggle_9.et_pb_toggle h5,
+		.et_pb_toggle_9.et_pb_toggle h1.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h2.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h3.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h4.et_pb_toggle_title,
+		.et_pb_toggle_9.et_pb_toggle h6.et_pb_toggle_title {
+			color: #000000 !important
+		}
+
+		div.et_pb_section.et_pb_section_2,
+		div.et_pb_section.et_pb_section_3 {
+			background-position: left center;
+		}
+	</styl> -->
 	<div class="xxx17" style="display:none;"></div>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/waypoints.min.js"></script>
