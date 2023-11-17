@@ -1222,10 +1222,10 @@
 								<div class="selcet-key"
 									style="justify-content: center;display: flex; margin-bottom: 10px;">
 									<div class="custom-select">
-										<select style="height: 35px;">
-											<option onclick="openTab(this, 4)" value="0">Tất cả</option>
-											<option onclick="openTab(this, 12)" value="1">Kinh Tế</option>
-											<option onclick="openTab(this, 13)" value="2">Đời sống</option>
+										<select style="height: 35px;" id="tabSelect" onchange="openTab2(this)">
+											<option value="4">Tất cả</option>
+											<option value="12">Kinh Tế</option>
+											<option value="13">Đời sống</option>
 											<!-- <option onclick="openTab(this, 4)" value="3">Khác</option> -->
 
 										</select>
@@ -1350,6 +1350,8 @@
 											}
 										</style>
 										<script>
+
+
 											document.addEventListener("DOMContentLoaded", function () {
 												const tabElement = document.querySelector('.tab');
 
@@ -1482,8 +1484,14 @@
 											let currentPage = 1; // Trang hiện tại
 											let tabNumber = 4;
 											const elementToScroll = document.querySelector('.scroll-to-element'); // class scroll đến phần tử chỉ định
+											function openTab2(selectElement) {
+												const selectedValue = selectElement.value;
+												// console.log(selectedValue)
+												fetchPosts(currentPage, selectedValue);
 
+											}
 											function openTab(tabElement, event) {
+
 												// Loại bỏ lớp 'active' từ tất cả các nút
 												const allTabLinks = document.querySelectorAll('.tablinks');
 												allTabLinks.forEach(link => {
@@ -1501,7 +1509,7 @@
 											}
 
 											function fetchPosts(page, tab) {
-
+												// console.log('check tab', tab)
 
 												fetch(`${apiUrl}/home_posts?id=${tab}&per_page=10&page=${page}&content=1`, {
 
@@ -1511,7 +1519,7 @@
 													.then(response => {
 
 														response.headers.forEach((value, name) => {
-															console.log(`${name}: ${value}`);
+															// console.log(`${name}: ${value}`);
 														});
 
 
@@ -1566,13 +1574,13 @@
 
 														myElement.innerHTML = `${usersHTML}`;
 														// số trang
-														if (tab === 4) {
+														if (tab == 4) {
 															displayPagination(3);
 														}
-														else if (tab === 12) {
+														else if (tab == 12) {
 															displayPagination(2);
 														}
-														else if (tab === 13) {
+														else if (tab == 13) {
 															displayPagination(1);
 														}
 														// displayPagination(3);
@@ -1587,6 +1595,7 @@
 											}
 
 											function displayPagination(totalPages) {
+
 												const paginationContainer = document.getElementById('pagination');
 												paginationContainer.innerHTML = '';
 
