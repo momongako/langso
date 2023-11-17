@@ -1487,11 +1487,12 @@
 											function openTab2(selectElement) {
 												const selectedValue = selectElement.value;
 												// console.log(selectedValue)
-												fetchPosts(currentPage, selectedValue);
+												currentPage = 1;
+												fetchPosts(1, selectedValue);
 
 											}
 											function openTab(tabElement, event) {
-
+												currentPage = 1;
 												// Loại bỏ lớp 'active' từ tất cả các nút
 												const allTabLinks = document.querySelectorAll('.tablinks');
 												allTabLinks.forEach(link => {
@@ -1505,12 +1506,12 @@
 												}
 
 
-												fetchPosts(currentPage, tabNumber);
+												fetchPosts(1, tabNumber);
 											}
 
 											function fetchPosts(page, tab) {
 												// console.log('check tab', tab)
-
+												console.log('check page', page)
 												fetch(`${apiUrl}/home_posts?id=${tab}&per_page=10&page=${page}&content=1`, {
 
 
@@ -1584,7 +1585,7 @@
 															displayPagination(1);
 														}
 														// displayPagination(3);
-														window.scrollTo(0, 0);
+
 
 
 													})
@@ -1595,7 +1596,7 @@
 											}
 
 											function displayPagination(totalPages) {
-
+												window.scrollTo(0, 0);
 												const paginationContainer = document.getElementById('pagination');
 												paginationContainer.innerHTML = '';
 
@@ -1631,7 +1632,7 @@
 														fetchPosts(currentPage, tabNumber);
 														updateActiveButton();
 														scrollToTop();
-														window.scrollTo(0, 0);
+
 													});
 													paginationContainer.appendChild(button);
 												}
@@ -1649,7 +1650,7 @@
 														fetchPosts(currentPage, tabNumber);
 														updateActiveButton();
 														scrollToTop();
-														window.scrollTo(0, 0);
+
 													}
 												});
 												paginationContainer.appendChild(nextButton);
@@ -1684,176 +1685,6 @@
 												fetchPosts(currentPage, 4);
 											});
 										</script>
-										<!-- <script>
-											const perPage = 10; // Số bài viết trên mỗi trang
-											let currentPage = 1; // Trang hiện tại
-											let tabNumber = 1;
-											const elementToScroll = document.querySelector('.scroll-to-element'); // class scroll đến phần tử chỉ địnhs
-											function openTab(event) {
-												tabNumber = event;
-												fetchPosts(currentPage, tabNumber);
-											}
-
-											document.addEventListener("DOMContentLoaded", function () {
-												// Chọn phần tử có class là "my-custom-class"
-												const myElement = document.querySelector(".section-wrapper");
-												fetchPosts(currentPage, tabNumber);
-												// fetchPosts(1)
-
-												function fetchPosts(page, tab) {
-													console.log(tab)
-
-													fetch(`${apiUrl}/home_posts?id=4&per_page=10&page=${page}&content=1`, {
-														method: 'GET',
-													})
-														.then(response => response.json())
-														.then(apiData => {
-
-															// Truy cập mảng users từ đối tượng apiData và chuyển đổi thành chuỗi HTML
-															const usersHTML = apiData.map(user => {
-																return `
-																	<div class="post-item " style="align-items: center;">
-																		<div class="post-thumb post-thumb-fire" style="margin-top: 10px;height: 100%;" 
-																			data-aos-duration="700">
-																			<a href="#"><img class="imgbox"
-																					style=" border-radius: 0px;height: 250px; object-fit: contain;"
-																					src="${user.img}" alt=""></a>
-																		</div>
-
-																		<div class="post-content post-content1" "
-																			data-aos-duration="700">
-
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_1  bb-tab-panel__subheading  et_pb_text_align_left et_pb_bg_layout_light">
-																				
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_2 bb-tab-panel__heading  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					<div class="section-header text-mobile">
-																						<p class="quote-icon"><span class="iconHeadlText">“</span>
-																						</p>
-																						<h2>${user.title}</h2>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="et_pb_module et_pb_text et_pb_text_3 bb-tab-panel__description  et_pb_text_align_left et_pb_bg_layout_light">
-																				<div class="et_pb_text_inner">
-																					${user.content}
-																					
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	`;
-															}).join(''); // Sử dụng join('') để chuyển mảng thành chuỗi
-
-															// Gán chuỗi HTML vào phần tử có class "my-custom-class"
-															myElement.innerHTML = `${usersHTML}`;
-															displayPagination(3);
-															window.scrollTo(0, 0);
-															console.log(user.headers)
-														})
-														.catch(error => {
-															// Xử lý lỗi nếu có
-															console.error("There has been a problem with your fetch operation:", error);
-														});
-												}
-
-
-
-												function displayPagination(totalPages) {
-													const paginationContainer = document.getElementById('pagination');
-													paginationContainer.innerHTML = '';
-
-													// Tạo nút "Quay lại"
-													const prevButton = document.createElement('a');
-													prevButton.innerHTML = '<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>';
-													prevButton.href = '#';
-													prevButton.classList.add('pagination-button');
-													prevButton.addEventListener('click', function (event) {
-														event.preventDefault();
-														if (currentPage > 1) {
-															currentPage--;
-															fetchPosts(currentPage);
-															updateActiveButton();
-															scrollToTop();
-															window.scrollTo(0, 0);
-														}
-													});
-													paginationContainer.appendChild(prevButton);
-
-													for (let i = 1; i <= totalPages; i++) {
-														const button = document.createElement('a');
-														button.innerText = i;
-														button.href = '#';
-														// Thêm lớp active khi nút được nhấp vào
-														if (i === currentPage) {
-
-															button.classList.add('show-botton');
-														}
-
-
-
-														button.addEventListener('click', function () {
-															event.preventDefault(); // Ngừng sự kiện mặc định của thẻ a
-															currentPage = i;
-															fetchPosts(currentPage); // Cập nhật trang và gọi API với trang mới
-															pdateActiveButton(); // Cập nhật lớp active khi nút được nhấp vào
-															scrollToTop();
-															window.scrollTo(0, 0);
-														});
-														paginationContainer.appendChild(button);
-													}
-													// Tạo nút "Tiếp theo"
-													const nextButton = document.createElement('a');
-													nextButton.innerHTML = `
-<svg height="14px" width="14px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.656 49.656" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#00aa55;" points="14.535,48.242 11.707,45.414 32.292,24.828 11.707,4.242 14.535,1.414 37.949,24.828 "></polygon> <path style="fill:#00aa55;" d="M14.535,49.656l-4.242-4.242l20.585-20.586L10.293,4.242L14.535,0l24.829,24.828L14.535,49.656z M13.121,45.414l1.414,1.414l22-22l-22-22l-1.414,1.414l20.585,20.586L13.121,45.414z"></path> </g> </g></svg>
-`; nextButton.href = '#';
-													nextButton.classList.add('pagination-button');
-													nextButton.addEventListener('click', function (event) {
-														event.preventDefault();
-														if (currentPage < totalPages) {
-															currentPage++;
-															fetchPosts(currentPage);
-															updateActiveButton();
-															scrollToTop();
-															window.scrollTo(0, 0);
-														}
-													});
-													paginationContainer.appendChild(nextButton);
-												}
-												function updateActiveButton() {
-													const buttons = document.querySelectorAll('#pagination a');
-													buttons.forEach(button => {
-
-														if (parseInt(button.innerText) === currentPage) {
-															button.classList.add('show-botton');
-														}
-													});
-												}
-												function scrollToTop() {
-													window.scrollTo({
-														top: 0,
-														behavior: 'smooth',
-														objectFit: 'contain',
-														transition: 'all 0.3s ease'
-
-													});
-												}
-
-
-											});
-
-										</script> -->
-
-
-
-
-
-
-
 
 									</div>
 								</div>

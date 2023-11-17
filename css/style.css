@@ -3577,7 +3577,7 @@ ul.icon-style-list>li:last-child i:after {
 }
 
 .pattern-bg {
-  background     : url(../images/pattern.png) no-repeat center center !important;
+  /* background     : url(../images/pattern.png) no-repeat center center !important; */
   background-size: cover !important;
 }
 
@@ -4092,7 +4092,7 @@ ul.icon-style-list>li i,
   font-size    : 18px;
 }
 
-.background-example .body-bg.bg-1 {
+/* .background-example .body-bg.bg-1 {
   background-image: url(../images/01_10.jpg);
 }
 
@@ -4126,7 +4126,7 @@ ul.icon-style-list>li i,
 
 .background-example .body-bg.bg-9 {
   background-image: url(../images/09.jpg);
-}
+} */
 
 .background-pattern {
   padding: 15px 0;
@@ -4144,7 +4144,7 @@ ul.icon-style-list>li i,
   margin-right: 2px;
 }
 
-.background-pattern .body-pt.pattan-1 {
+/* .background-pattern .body-pt.pattan-1 {
   background-image: url(../images/01_6.png);
 }
 
@@ -4178,7 +4178,7 @@ ul.icon-style-list>li i,
 
 .background-pattern .body-pt.pattan-9 {
   background-image: url(../../assets/css/images/pattan-bg/09.png);
-}
+} */
 
 .cp-box {
   overflow-y: scroll;
@@ -4627,12 +4627,12 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 /*@@@@@@@@@@@@@@   04. Page Header   @@@@@@@@@@@@@@@@@*/
 .page-header {
-  min-height         : 500px;
-  background         : url(../images/bg-image_8.jpg) no-repeat;
-  background-size    : cover;
-  background-position: center;
-  margin-top         : 67px;
-  padding            : 0;
+  min-height            : 500px;
+  /* background         : url(../images/bg-image_8.jpg) no-repeat; */
+  background-size       : cover;
+  background-position   : center;
+  margin-top            : 67px;
+  padding               : 0;
 }
 
 @media (min-width: 1200px) {
@@ -4650,12 +4650,12 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .page-header .page-header-area .page-header-content .page-header-title:after {
-  width     : 160px;
-  height    : 15px;
-  left      : 50%;
-  top       : calc(100% + 15px);
-  background: url(../images/01_4.png) no-repeat bottom left;
-  transform : translateX(-50%);
+  width        : 160px;
+  height       : 15px;
+  left         : 50%;
+  top          : calc(100% + 15px);
+  /* background: url(../images/01_4.png) no-repeat bottom left; */
+  transform    : translateX(-50%);
 }
 
 .page-header .page-header-area .page-header-content .page-header-title h2 {
@@ -5066,7 +5066,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
   background-size        : cover;
 }
 
-.banner.style-3 .banner-area .banner-slider .swiper-slide.b_slide_1 {
+/* .banner.style-3 .banner-area .banner-slider .swiper-slide.b_slide_1 {
   background: url(../images/bg-image-4.jpg) no-repeat center center;
 }
 
@@ -5076,7 +5076,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 .banner.style-3 .banner-area .banner-slider .swiper-slide.b_slide_3 {
   background: url(../images/bg-image-5.jpg) no-repeat center center;
-}
+} */
 
 .banner.style-3 .banner-area .banner-slider .slider-content .banner-content {
   display: inline-block;
@@ -5125,9 +5125,9 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .box-banner::before {
-  bottom    : 0;
-  height    : 100%;
-  background: url(../images/pattern.png);
+  bottom       : 0;
+  height       : 100%;
+  /* background: url(../images/pattern.png); */
 }
 
 .box-banner::after {
@@ -5137,7 +5137,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .b_slide_1 {
-  background             : url(../images/bg-image-4.jpg) no-repeat center center;
+  /* background             : url(../images/bg-image-4.jpg) no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size   : cover;
   -o-background-size     : cover;
@@ -5145,7 +5145,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .b_slide_2 {
-  background             : url(../images/bg-image-5.jpg) no-repeat center center;
+  /* background             : url(../images/bg-image-5.jpg) no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size   : cover;
   -o-background-size     : cover;
@@ -5230,11 +5230,11 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .feature-section .section-wrapper .post-item .post-inner .post-thumb:after {
-  height            : 100%;
-  background        : url(../images/01_5.png) no-repeat bottom center;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition   : all 0.3s ease;
-  transition        : all 0.3s ease;
+  height               : 100%;
+  /* background        : url(../images/01_5.png) no-repeat bottom center; */
+  -webkit-transition   : all 0.3s ease;
+  -moz-transition      : all 0.3s ease;
+  transition           : all 0.3s ease;
 }
 
 .feature-section .section-wrapper .post-item .post-inner .post-thumb img {
@@ -5982,15 +5982,15 @@ div#scrollbar::-webkit-scrollbar-thumb {
 
 @media (min-width: 576px) {
   .campaign-single .section-wrapper .tab-section .tab-content .tab-item.description blockquote:before {
-    display          : inherit;
-    content          : "";
-    width            : 40px;
-    height           : 40px;
-    left             : 35px;
-    top              : 35px;
-    background       : url(../images/blockquote1.png);
-    background-size  : contain;
-    background-repeat: no-repeat;
+    display             : inherit;
+    content             : "";
+    width               : 40px;
+    height              : 40px;
+    left                : 35px;
+    top                 : 35px;
+    /* background       : url(../images/blockquote1.png); */
+    background-size     : contain;
+    background-repeat   : no-repeat;
   }
 }
 
@@ -6556,12 +6556,12 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .testimonial-section .testimonial-slider .post-item .post-inner .post-body:after {
-  bottom         : 20px;
-  right          : 30px;
-  width          : 60px;
-  height         : 40px;
-  background     : url(../images/quote.png) no-repeat;
-  background-size: contain;
+  bottom            : 20px;
+  right             : 30px;
+  width             : 60px;
+  height            : 40px;
+  /* background     : url(../images/quote.png) no-repeat; */
+  background-size   : contain;
 }
 
 .testimonial-section .testimonial-slider .post-item .post-inner:hover .round-shape {
@@ -7677,7 +7677,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .contact-us .section-wrapper .main-addres {
-  background         : url(../images/bg-image_7.jpg) no-repeat;
+  /* background         : url(../images/bg-image_7.jpg) no-repeat; */
   background-position: bottom right;
   background-size    : cover;
 }
@@ -8864,13 +8864,13 @@ div#scrollbar::-webkit-scrollbar-thumb {
 }
 
 .footer-section .footer-top:after {
-  height             : 150px;
-  width              : 100%;
-  bottom             : 0;
-  left               : 0;
-  background-position: center;
-  background-size    : cover;
-  background         : url(../images/footer-shape.png) no-repeat bottom left;
+  height                : 150px;
+  width                 : 100%;
+  bottom                : 0;
+  left                  : 0;
+  background-position   : center;
+  background-size       : cover;
+  /* background         : url(../images/footer-shape.png) no-repeat bottom left; */
 }
 
 .footer-section .footer-top .top {
